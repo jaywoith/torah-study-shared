@@ -1,4 +1,4 @@
-# Torah Independent Study App
+# Torah Independent Study App – Shared Packages
 
 Multi-platform (iOS, Android, web) Torah study application with a shared backend.
 
@@ -41,7 +41,18 @@ Multi-platform (iOS, Android, web) Torah study application with a shared backend
 
 Conservative framework, Intermediate level, interests in Siddur/davening/kavannah, Musar, and Kabbalah, medium study length, mixed language mode. Attends Shacharit minyan.
 
-## Repository Layout
+## Related Repositories
+
+| Repo | Purpose |
+|------|---------|
+| [torah-study-backend](https://github.com/jaywoith/torah-study-backend) | Backend service (loads these packages) |
+| [torah-study-web](https://github.com/jaywoith/torah-study-web) | Web client |
+| [torah-study-ios](https://github.com/jaywoith/torah-study-ios) | iOS client |
+| [torah-study-android](https://github.com/jaywoith/torah-study-android) | Android client |
+
+See [docs/multi-repo-architecture.md](docs/multi-repo-architecture.md) for how drift is prevented.
+
+## Repository Layout (this repo)
 
 ```
 packages/
