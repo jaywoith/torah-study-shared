@@ -1,0 +1,47 @@
+{
+  "meta": {
+    "version": "0.1.0",
+    "description": "Shared UI strings that must stay consistent across web, iOS, and Android. Backend should expose these (or clients may fetch this file). Local platform chrome remains in each client."
+  },
+  "common": {
+    "appName": "Torah Study",
+    "startDailyStudy": "Start Daily Study",
+    "continueStudy": "Continue Study",
+    "nextUnit": "Next",
+    "previousUnit": "Previous",
+    "askTheRabbi": "Ask the Rabbi",
+    "siddurPath": "Siddur Path",
+    "musarPath": "Musar Path",
+    "kabbalahPath": "Kabbalah Path",
+    "halachahPath": "Halachah Path",
+    "settings": "Settings",
+    "profile": "Profile",
+    "progress": "Progress",
+    "languageMode": "Language Mode",
+    "framework": "Framework",
+    "learningLevel": "Learning Level",
+    "studyLength": "Study Length",
+    "interests": "Interests",
+    "save": "Save",
+    "cancel": "Cancel",
+    "done": "Done",
+    "loading": "Loading…",
+    "errorGeneric": "Something went wrong. Please try again.",
+    "offline": "You are offline. Showing saved content."
+  },
+  "study": {
+    "kavannah": "Kavannah",
+    "commentary": "Commentary",
+    "source": "Source",
+    "review": "Review",
+    "hebrew": "Hebrew",
+    "transliteration": "Transliteration",
+    "english": "English",
+    "estimatedTime": "Estimated time"
+  },
+  "coach": {
+    "weeklyCheckIn": "Weekly Check-in",
+    "sendMessage": "Send",
+    "typeMessage": "Ask a question…"
+  }
+}
