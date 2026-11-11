@@ -1,0 +1,14 @@
+{
+  "name": "@torah/core",
+  "version": "0.1.0",
+  "description": "Shared business logic and models for the Torah Study App. Single source of truth for rules.",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}

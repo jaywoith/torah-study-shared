@@ -1,0 +1,65 @@
+{
+  "date": "2026-11-11",
+  "profile": {
+    "framework": "masorti_conservative",
+    "level": "intermediate",
+    "studyLength": "medium",
+    "languageMode": "mixed"
+  },
+  "units": [
+    {
+      "id": "2026-11-11-siddur-1",
+      "type": "siddur",
+      "title": "Pesukei Dezimra – Baruch She’amar",
+      "hebrew": "בָּרוּךְ שֶׁאָמַר וְהָיָה הָעוֹלָם",
+      "transliteration": "Baruch she’amar ve’hayah ha’olam",
+      "english": "Blessed is He who spoke, and the world came into being.",
+      "commentary": "In the Conservative tradition this opening of the morning praises focuses on God as Creator through speech. Kavannah is directed toward recognizing the ongoing creative power of the Divine Word.",
+      "kavannahPrompt": "Before continuing, take a moment to feel gratitude that the world exists because God spoke.",
+      "source": "Siddur, Pesukei Dezimra",
+      "reviewItems": [
+        { "type": "hebrew_recognition", "text": "בָּרוּךְ", "expected": "Baruch" },
+        { "type": "shoresh", "text": "אָמַר", "expected": "אמר" }
+      ],
+      "estimatedMinutes": 5
+    },
+    {
+      "id": "2026-11-11-musar-1",
+      "type": "musar",
+      "title": "From Mesillat Yesharim – on Kavannah",
+      "english": "The beginning of all avodah is the intention of the heart. Without kavannah, the external act remains incomplete.",
+      "commentary": "Classic Musar teaching appropriate for intermediate Conservative study: practical focus on directing the heart during prayer and daily life.",
+      "kavannahPrompt": "Where in your davening today can you strengthen your kavannah?",
+      "source": "Mesillat Yesharim (selected)",
+      "estimatedMinutes": 4
+    },
+    {
+      "id": "2026-11-11-kabbalah-1",
+      "type": "kabbalah",
+      "title": "Symbolic Light – a Conservative framing",
+      "english": "The light of the first day is understood in many traditional sources as a spiritual light hidden for the righteous. For intermediate study we focus on its ethical and symbolic meaning: clarity and kindness in our actions.",
+      "commentary": "Presented within Conservative bounds – symbolic and ethical emphasis, not deep theosophy.",
+      "kavannahPrompt": "How can the idea of hidden light inspire one act of kindness today?",
+      "source": "Midrashic / Kabbalistic framing (introductory)",
+      "estimatedMinutes": 4
+    },
+    {
+      "id": "2026-11-11-tanakh-1",
+      "type": "tanakh",
+      "title": "Psalm 145 (Ashrei) – selected verse",
+      "hebrew": "טוֹב־יְהוָה לַכֹּל וְרַחֲמָיו עַל־כָּל־מַעֲשָׂיו",
+      "transliteration": "Tov Adonai lakol verachamav al kol ma’asav",
+      "english": "The Lord is good to all, and His mercy is upon all His works.",
+      "commentary": "Traditional Conservative reading emphasizes universal divine compassion and the call to emulate it in our own conduct.",
+      "kavannahPrompt": "As you recite Ashrei this morning, which of God’s works around you invites your gratitude?",
+      "source": "Tehillim 145:9",
+      "reviewItems": [
+        { "type": "hebrew_recognition", "text": "טוֹב", "expected": "tov" },
+        { "type": "kavannah", "text": "Divine compassion" }
+      ],
+      "estimatedMinutes": 6
+    }
+  ],
+  "totalEstimatedMinutes": 19,
+  "notes": "Generated for Masorti / Conservative – Intermediate. Focus on kavannah and traditional sources."
+}
