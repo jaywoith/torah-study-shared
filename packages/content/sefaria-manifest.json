@@ -1,5 +1,5 @@
 {
-  "$comment": "Sefaria import manifest (ADR-010). Run: npm run content:import. Siddur units are ordered by this list within each section. Ids are stable: never rename one (progress references it).",
+  "$comment": "Sefaria import manifest (ADR-010, ADR-012). Run: npm run content:import. Units are ordered by this list (Siddur within each section; study units within each type, which is the daily rotation order). Ids are stable: never rename one (progress references it). Mesillat Yesharim ranges were split at ~800 Hebrew characters.",
   "versionSets": {
     "tanakh": {
       "hebrew": "Miqra according to the Masorah",
@@ -8,6 +8,14 @@
     "siddur": {
       "hebrew": "The Metsudah siddur, 1981",
       "english": "Translation based on the Metsudah linear siddur, by Avrohom Davis, 1981"
+    },
+    "mesillat_yesharim": {
+      "hebrew": "Sefaria Vocalized Edition",
+      "english": "Path of the Just. Trans. Rabbi Yosef Sebag"
+    },
+    "avot": {
+      "hebrew": "Torat Emet 357",
+      "english": "Mishnah Yomit by Dr. Joshua Kulp"
     }
   },
   "studyUnits": [
@@ -893,6 +901,5112 @@
         "title": "Lamentations 3:22–23 – new every morning",
         "interests": [
           "tanakh"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-intro-1",
+      "ref": "Mesillat Yesharim, Introduction 1-2",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, Introduction (1 of 11)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-intro-3",
+      "ref": "Mesillat Yesharim, Introduction 3-5",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, Introduction (2 of 11)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-intro-6",
+      "ref": "Mesillat Yesharim, Introduction 6-10",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, Introduction (3 of 11)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-intro-11",
+      "ref": "Mesillat Yesharim, Introduction 11-14",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, Introduction (4 of 11)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-intro-15",
+      "ref": "Mesillat Yesharim, Introduction 15-19",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, Introduction (5 of 11)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-intro-20",
+      "ref": "Mesillat Yesharim, Introduction 20-23",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, Introduction (6 of 11)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-intro-24",
+      "ref": "Mesillat Yesharim, Introduction 24-27",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, Introduction (7 of 11)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-intro-28",
+      "ref": "Mesillat Yesharim, Introduction 28-31",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, Introduction (8 of 11)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-intro-32",
+      "ref": "Mesillat Yesharim, Introduction 32-35",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, Introduction (9 of 11)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-intro-36",
+      "ref": "Mesillat Yesharim, Introduction 36-40",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, Introduction (10 of 11)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-intro-41",
+      "ref": "Mesillat Yesharim, Introduction 41-54",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, Introduction (11 of 11)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-1-1",
+      "ref": "Mesillat Yesharim 1:1-3",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 1 (1 of 11)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-1-4",
+      "ref": "Mesillat Yesharim 1:4-5",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 1 (2 of 11)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-1-6",
+      "ref": "Mesillat Yesharim 1:6-8",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 1 (3 of 11)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-1-9",
+      "ref": "Mesillat Yesharim 1:9-11",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 1 (4 of 11)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-1-12",
+      "ref": "Mesillat Yesharim 1:12-14",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 1 (5 of 11)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-1-15",
+      "ref": "Mesillat Yesharim 1:15-17",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 1 (6 of 11)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-1-18",
+      "ref": "Mesillat Yesharim 1:18-20",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 1 (7 of 11)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-1-21",
+      "ref": "Mesillat Yesharim 1:21-23",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 1 (8 of 11)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-1-24",
+      "ref": "Mesillat Yesharim 1:24-26",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 1 (9 of 11)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-1-27",
+      "ref": "Mesillat Yesharim 1:27-30",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 1 (10 of 11)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-1-31",
+      "ref": "Mesillat Yesharim 1:31-33",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 1 (11 of 11)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-2-1",
+      "ref": "Mesillat Yesharim 2:1-4",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 2 (1 of 4)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-2-5",
+      "ref": "Mesillat Yesharim 2:5-8",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 2 (2 of 4)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-2-9",
+      "ref": "Mesillat Yesharim 2:9-11",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 2 (3 of 4)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-2-12",
+      "ref": "Mesillat Yesharim 2:12-16",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 2 (4 of 4)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-3-1",
+      "ref": "Mesillat Yesharim 3:1-6",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 3 (1 of 8)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-3-7",
+      "ref": "Mesillat Yesharim 3:7-10",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 3 (2 of 8)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-3-11",
+      "ref": "Mesillat Yesharim 3:11-14",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 3 (3 of 8)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-3-15",
+      "ref": "Mesillat Yesharim 3:15-17",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 3 (4 of 8)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-3-18",
+      "ref": "Mesillat Yesharim 3:18-21",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 3 (5 of 8)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-3-22",
+      "ref": "Mesillat Yesharim 3:22-25",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 3 (6 of 8)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-3-26",
+      "ref": "Mesillat Yesharim 3:26-29",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 3 (7 of 8)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-3-30",
+      "ref": "Mesillat Yesharim 3:30-31",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 3 (8 of 8)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-4-1",
+      "ref": "Mesillat Yesharim 4:1-3",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 4 (1 of 16)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-4-4",
+      "ref": "Mesillat Yesharim 4:4-5",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 4 (2 of 16)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-4-6",
+      "ref": "Mesillat Yesharim 4:6-9",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 4 (3 of 16)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-4-10",
+      "ref": "Mesillat Yesharim 4:10-12",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 4 (4 of 16)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-4-13",
+      "ref": "Mesillat Yesharim 4:13-14",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 4 (5 of 16)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-4-15",
+      "ref": "Mesillat Yesharim 4:15-16",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 4 (6 of 16)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-4-17",
+      "ref": "Mesillat Yesharim 4:17-18",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 4 (7 of 16)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-4-19",
+      "ref": "Mesillat Yesharim 4:19-22",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 4 (8 of 16)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-4-23",
+      "ref": "Mesillat Yesharim 4:23-25",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 4 (9 of 16)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-4-26",
+      "ref": "Mesillat Yesharim 4:26-31",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 4 (10 of 16)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-4-32",
+      "ref": "Mesillat Yesharim 4:32-33",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 4 (11 of 16)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-4-34",
+      "ref": "Mesillat Yesharim 4:34-35",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 4 (12 of 16)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-4-36",
+      "ref": "Mesillat Yesharim 4:36-43",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 4 (13 of 16)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-4-44",
+      "ref": "Mesillat Yesharim 4:44-45",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 4 (14 of 16)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-4-46",
+      "ref": "Mesillat Yesharim 4:46-49",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 4 (15 of 16)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-4-50",
+      "ref": "Mesillat Yesharim 4:50",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 4 (16 of 16)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-5-1",
+      "ref": "Mesillat Yesharim 5:1-5",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 5 (1 of 10)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-5-6",
+      "ref": "Mesillat Yesharim 5:6-9",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 5 (2 of 10)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-5-10",
+      "ref": "Mesillat Yesharim 5:10-12",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 5 (3 of 10)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-5-13",
+      "ref": "Mesillat Yesharim 5:13-16",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 5 (4 of 10)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-5-17",
+      "ref": "Mesillat Yesharim 5:17-18",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 5 (5 of 10)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-5-19",
+      "ref": "Mesillat Yesharim 5:19-21",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 5 (6 of 10)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-5-22",
+      "ref": "Mesillat Yesharim 5:22-24",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 5 (7 of 10)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-5-25",
+      "ref": "Mesillat Yesharim 5:25-26",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 5 (8 of 10)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-5-27",
+      "ref": "Mesillat Yesharim 5:27-29",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 5 (9 of 10)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-5-30",
+      "ref": "Mesillat Yesharim 5:30",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 5 (10 of 10)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-6-1",
+      "ref": "Mesillat Yesharim 6:1-4",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 6 (1 of 7)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-6-5",
+      "ref": "Mesillat Yesharim 6:5-7",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 6 (2 of 7)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-6-8",
+      "ref": "Mesillat Yesharim 6:8-10",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 6 (3 of 7)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-6-11",
+      "ref": "Mesillat Yesharim 6:11-15",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 6 (4 of 7)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-6-16",
+      "ref": "Mesillat Yesharim 6:16-18",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 6 (5 of 7)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-6-19",
+      "ref": "Mesillat Yesharim 6:19-21",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 6 (6 of 7)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-6-22",
+      "ref": "Mesillat Yesharim 6:22-25",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 6 (7 of 7)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-7-1",
+      "ref": "Mesillat Yesharim 7:1-5",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 7 (1 of 5)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-7-6",
+      "ref": "Mesillat Yesharim 7:6-10",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 7 (2 of 5)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-7-11",
+      "ref": "Mesillat Yesharim 7:11-15",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 7 (3 of 5)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-7-16",
+      "ref": "Mesillat Yesharim 7:16-20",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 7 (4 of 5)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-7-21",
+      "ref": "Mesillat Yesharim 7:21-22",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 7 (5 of 5)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-8-1",
+      "ref": "Mesillat Yesharim 8:1-4",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 8 (1 of 3)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-8-5",
+      "ref": "Mesillat Yesharim 8:5-10",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 8 (2 of 3)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-8-11",
+      "ref": "Mesillat Yesharim 8:11-16",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 8 (3 of 3)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-9-1",
+      "ref": "Mesillat Yesharim 9:1-2",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 9 (1 of 8)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-9-3",
+      "ref": "Mesillat Yesharim 9:3-5",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 9 (2 of 8)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-9-6",
+      "ref": "Mesillat Yesharim 9:6-9",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 9 (3 of 8)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-9-10",
+      "ref": "Mesillat Yesharim 9:10-13",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 9 (4 of 8)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-9-14",
+      "ref": "Mesillat Yesharim 9:14-17",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 9 (5 of 8)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-9-18",
+      "ref": "Mesillat Yesharim 9:18-21",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 9 (6 of 8)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-9-22",
+      "ref": "Mesillat Yesharim 9:22-30",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 9 (7 of 8)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-9-31",
+      "ref": "Mesillat Yesharim 9:31-32",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 9 (8 of 8)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-10-1",
+      "ref": "Mesillat Yesharim 10:1-2",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 10 (1 of 5)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-10-3",
+      "ref": "Mesillat Yesharim 10:3-5",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 10 (2 of 5)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-10-6",
+      "ref": "Mesillat Yesharim 10:6-7",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 10 (3 of 5)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-10-8",
+      "ref": "Mesillat Yesharim 10:8-10",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 10 (4 of 5)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-10-11",
+      "ref": "Mesillat Yesharim 10:11-12",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 10 (5 of 5)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-11-1",
+      "ref": "Mesillat Yesharim 11:1-3",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 11 (1 of 56)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-11-4",
+      "ref": "Mesillat Yesharim 11:4-6",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 11 (2 of 56)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-11-7",
+      "ref": "Mesillat Yesharim 11:7-9",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 11 (3 of 56)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-11-10",
+      "ref": "Mesillat Yesharim 11:10-12",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 11 (4 of 56)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-11-13",
+      "ref": "Mesillat Yesharim 11:13-16",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 11 (5 of 56)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-11-17",
+      "ref": "Mesillat Yesharim 11:17-19",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 11 (6 of 56)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-11-20",
+      "ref": "Mesillat Yesharim 11:20-22",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 11 (7 of 56)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-11-23",
+      "ref": "Mesillat Yesharim 11:23-25",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 11 (8 of 56)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-11-26",
+      "ref": "Mesillat Yesharim 11:26-28",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 11 (9 of 56)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-11-29",
+      "ref": "Mesillat Yesharim 11:29-31",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 11 (10 of 56)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-11-32",
+      "ref": "Mesillat Yesharim 11:32-33",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 11 (11 of 56)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-11-34",
+      "ref": "Mesillat Yesharim 11:34-36",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 11 (12 of 56)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-11-37",
+      "ref": "Mesillat Yesharim 11:37-39",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 11 (13 of 56)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-11-40",
+      "ref": "Mesillat Yesharim 11:40-45",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 11 (14 of 56)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-11-46",
+      "ref": "Mesillat Yesharim 11:46-49",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 11 (15 of 56)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-11-50",
+      "ref": "Mesillat Yesharim 11:50-52",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 11 (16 of 56)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-11-53",
+      "ref": "Mesillat Yesharim 11:53-54",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 11 (17 of 56)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-11-55",
+      "ref": "Mesillat Yesharim 11:55-57",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 11 (18 of 56)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-11-58",
+      "ref": "Mesillat Yesharim 11:58-61",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 11 (19 of 56)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-11-62",
+      "ref": "Mesillat Yesharim 11:62-64",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 11 (20 of 56)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-11-65",
+      "ref": "Mesillat Yesharim 11:65-66",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 11 (21 of 56)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-11-67",
+      "ref": "Mesillat Yesharim 11:67-69",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 11 (22 of 56)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-11-70",
+      "ref": "Mesillat Yesharim 11:70-72",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 11 (23 of 56)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-11-73",
+      "ref": "Mesillat Yesharim 11:73-75",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 11 (24 of 56)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-11-76",
+      "ref": "Mesillat Yesharim 11:76-78",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 11 (25 of 56)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-11-79",
+      "ref": "Mesillat Yesharim 11:79-83",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 11 (26 of 56)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-11-84",
+      "ref": "Mesillat Yesharim 11:84",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 11 (27 of 56)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-11-85",
+      "ref": "Mesillat Yesharim 11:85-87",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 11 (28 of 56)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-11-88",
+      "ref": "Mesillat Yesharim 11:88-90",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 11 (29 of 56)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-11-91",
+      "ref": "Mesillat Yesharim 11:91",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 11 (30 of 56)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-11-92",
+      "ref": "Mesillat Yesharim 11:92-93",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 11 (31 of 56)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-11-94",
+      "ref": "Mesillat Yesharim 11:94-97",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 11 (32 of 56)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-11-98",
+      "ref": "Mesillat Yesharim 11:98-101",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 11 (33 of 56)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-11-102",
+      "ref": "Mesillat Yesharim 11:102-104",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 11 (34 of 56)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-11-105",
+      "ref": "Mesillat Yesharim 11:105-107",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 11 (35 of 56)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-11-108",
+      "ref": "Mesillat Yesharim 11:108-110",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 11 (36 of 56)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-11-111",
+      "ref": "Mesillat Yesharim 11:111-114",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 11 (37 of 56)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-11-115",
+      "ref": "Mesillat Yesharim 11:115-119",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 11 (38 of 56)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-11-120",
+      "ref": "Mesillat Yesharim 11:120-123",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 11 (39 of 56)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-11-124",
+      "ref": "Mesillat Yesharim 11:124-125",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 11 (40 of 56)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-11-126",
+      "ref": "Mesillat Yesharim 11:126-127",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 11 (41 of 56)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-11-128",
+      "ref": "Mesillat Yesharim 11:128-129",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 11 (42 of 56)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-11-130",
+      "ref": "Mesillat Yesharim 11:130-132",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 11 (43 of 56)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-11-133",
+      "ref": "Mesillat Yesharim 11:133-136",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 11 (44 of 56)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-11-137",
+      "ref": "Mesillat Yesharim 11:137-138",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 11 (45 of 56)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-11-139",
+      "ref": "Mesillat Yesharim 11:139-140",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 11 (46 of 56)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-11-141",
+      "ref": "Mesillat Yesharim 11:141-143",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 11 (47 of 56)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-11-144",
+      "ref": "Mesillat Yesharim 11:144-146",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 11 (48 of 56)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-11-147",
+      "ref": "Mesillat Yesharim 11:147-149",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 11 (49 of 56)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-11-150",
+      "ref": "Mesillat Yesharim 11:150-153",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 11 (50 of 56)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-11-154",
+      "ref": "Mesillat Yesharim 11:154-156",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 11 (51 of 56)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-11-157",
+      "ref": "Mesillat Yesharim 11:157-159",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 11 (52 of 56)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-11-160",
+      "ref": "Mesillat Yesharim 11:160-163",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 11 (53 of 56)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-11-164",
+      "ref": "Mesillat Yesharim 11:164-166",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 11 (54 of 56)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-11-167",
+      "ref": "Mesillat Yesharim 11:167-170",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 11 (55 of 56)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-11-171",
+      "ref": "Mesillat Yesharim 11:171",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 11 (56 of 56)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-12-1",
+      "ref": "Mesillat Yesharim 12:1-4",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 12 (1 of 2)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-12-5",
+      "ref": "Mesillat Yesharim 12:5-7",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 12 (2 of 2)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-13-1",
+      "ref": "Mesillat Yesharim 13:1-4",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 13 (1 of 12)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-13-5",
+      "ref": "Mesillat Yesharim 13:5-9",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 13 (2 of 12)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-13-10",
+      "ref": "Mesillat Yesharim 13:10-13",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 13 (3 of 12)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-13-14",
+      "ref": "Mesillat Yesharim 13:14-17",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 13 (4 of 12)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-13-18",
+      "ref": "Mesillat Yesharim 13:18-19",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 13 (5 of 12)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-13-20",
+      "ref": "Mesillat Yesharim 13:20-24",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 13 (6 of 12)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-13-25",
+      "ref": "Mesillat Yesharim 13:25-27",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 13 (7 of 12)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-13-28",
+      "ref": "Mesillat Yesharim 13:28-30",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 13 (8 of 12)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-13-31",
+      "ref": "Mesillat Yesharim 13:31-33",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 13 (9 of 12)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-13-34",
+      "ref": "Mesillat Yesharim 13:34-36",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 13 (10 of 12)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-13-37",
+      "ref": "Mesillat Yesharim 13:37-40",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 13 (11 of 12)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-13-41",
+      "ref": "Mesillat Yesharim 13:41-43",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 13 (12 of 12)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-14-1",
+      "ref": "Mesillat Yesharim 14:1-4",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 14 (1 of 4)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-14-5",
+      "ref": "Mesillat Yesharim 14:5",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 14 (2 of 4)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-14-6",
+      "ref": "Mesillat Yesharim 14:6-7",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 14 (3 of 4)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-14-8",
+      "ref": "Mesillat Yesharim 14:8",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 14 (4 of 4)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-15-1",
+      "ref": "Mesillat Yesharim 15:1-3",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 15 (1 of 4)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-15-4",
+      "ref": "Mesillat Yesharim 15:4-5",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 15 (2 of 4)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-15-6",
+      "ref": "Mesillat Yesharim 15:6-7",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 15 (3 of 4)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-15-8",
+      "ref": "Mesillat Yesharim 15:8-9",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 15 (4 of 4)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-16-1",
+      "ref": "Mesillat Yesharim 16:1-4",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 16 (1 of 7)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-16-5",
+      "ref": "Mesillat Yesharim 16:5-7",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 16 (2 of 7)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-16-8",
+      "ref": "Mesillat Yesharim 16:8-9",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 16 (3 of 7)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-16-10",
+      "ref": "Mesillat Yesharim 16:10-11",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 16 (4 of 7)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-16-12",
+      "ref": "Mesillat Yesharim 16:12-13",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 16 (5 of 7)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-16-14",
+      "ref": "Mesillat Yesharim 16:14-16",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 16 (6 of 7)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-16-17",
+      "ref": "Mesillat Yesharim 16:17-19",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 16 (7 of 7)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-17-1",
+      "ref": "Mesillat Yesharim 17:1-2",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 17 (1 of 4)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-17-3",
+      "ref": "Mesillat Yesharim 17:3-5",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 17 (2 of 4)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-17-6",
+      "ref": "Mesillat Yesharim 17:6-8",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 17 (3 of 4)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-17-9",
+      "ref": "Mesillat Yesharim 17:9-12",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 17 (4 of 4)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-18-1",
+      "ref": "Mesillat Yesharim 18:1-3",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 18 (1 of 5)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-18-4",
+      "ref": "Mesillat Yesharim 18:4-8",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 18 (2 of 5)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-18-9",
+      "ref": "Mesillat Yesharim 18:9-10",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 18 (3 of 5)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-18-11",
+      "ref": "Mesillat Yesharim 18:11-12",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 18 (4 of 5)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-18-13",
+      "ref": "Mesillat Yesharim 18:13-15",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 18 (5 of 5)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-19-1",
+      "ref": "Mesillat Yesharim 19:1-3",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 19 (1 of 42)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-19-4",
+      "ref": "Mesillat Yesharim 19:4-7",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 19 (2 of 42)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-19-8",
+      "ref": "Mesillat Yesharim 19:8-11",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 19 (3 of 42)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-19-12",
+      "ref": "Mesillat Yesharim 19:12-16",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 19 (4 of 42)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-19-17",
+      "ref": "Mesillat Yesharim 19:17-20",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 19 (5 of 42)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-19-21",
+      "ref": "Mesillat Yesharim 19:21-23",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 19 (6 of 42)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-19-24",
+      "ref": "Mesillat Yesharim 19:24-28",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 19 (7 of 42)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-19-29",
+      "ref": "Mesillat Yesharim 19:29-31",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 19 (8 of 42)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-19-32",
+      "ref": "Mesillat Yesharim 19:32-34",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 19 (9 of 42)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-19-35",
+      "ref": "Mesillat Yesharim 19:35-38",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 19 (10 of 42)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-19-39",
+      "ref": "Mesillat Yesharim 19:39-41",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 19 (11 of 42)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-19-42",
+      "ref": "Mesillat Yesharim 19:42-44",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 19 (12 of 42)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-19-45",
+      "ref": "Mesillat Yesharim 19:45-47",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 19 (13 of 42)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-19-48",
+      "ref": "Mesillat Yesharim 19:48-51",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 19 (14 of 42)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-19-52",
+      "ref": "Mesillat Yesharim 19:52-56",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 19 (15 of 42)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-19-57",
+      "ref": "Mesillat Yesharim 19:57-59",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 19 (16 of 42)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-19-60",
+      "ref": "Mesillat Yesharim 19:60-63",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 19 (17 of 42)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-19-64",
+      "ref": "Mesillat Yesharim 19:64-66",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 19 (18 of 42)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-19-67",
+      "ref": "Mesillat Yesharim 19:67-69",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 19 (19 of 42)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-19-70",
+      "ref": "Mesillat Yesharim 19:70-73",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 19 (20 of 42)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-19-74",
+      "ref": "Mesillat Yesharim 19:74-77",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 19 (21 of 42)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-19-78",
+      "ref": "Mesillat Yesharim 19:78-81",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 19 (22 of 42)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-19-82",
+      "ref": "Mesillat Yesharim 19:82-84",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 19 (23 of 42)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-19-85",
+      "ref": "Mesillat Yesharim 19:85-86",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 19 (24 of 42)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-19-87",
+      "ref": "Mesillat Yesharim 19:87-89",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 19 (25 of 42)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-19-90",
+      "ref": "Mesillat Yesharim 19:90-91",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 19 (26 of 42)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-19-92",
+      "ref": "Mesillat Yesharim 19:92-94",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 19 (27 of 42)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-19-95",
+      "ref": "Mesillat Yesharim 19:95-96",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 19 (28 of 42)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-19-97",
+      "ref": "Mesillat Yesharim 19:97-98",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 19 (29 of 42)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-19-99",
+      "ref": "Mesillat Yesharim 19:99-100",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 19 (30 of 42)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-19-101",
+      "ref": "Mesillat Yesharim 19:101-103",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 19 (31 of 42)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-19-104",
+      "ref": "Mesillat Yesharim 19:104-106",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 19 (32 of 42)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-19-107",
+      "ref": "Mesillat Yesharim 19:107-108",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 19 (33 of 42)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-19-109",
+      "ref": "Mesillat Yesharim 19:109-110",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 19 (34 of 42)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-19-111",
+      "ref": "Mesillat Yesharim 19:111-115",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 19 (35 of 42)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-19-116",
+      "ref": "Mesillat Yesharim 19:116-118",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 19 (36 of 42)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-19-119",
+      "ref": "Mesillat Yesharim 19:119-120",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 19 (37 of 42)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-19-121",
+      "ref": "Mesillat Yesharim 19:121-123",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 19 (38 of 42)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-19-124",
+      "ref": "Mesillat Yesharim 19:124-126",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 19 (39 of 42)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-19-127",
+      "ref": "Mesillat Yesharim 19:127-130",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 19 (40 of 42)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-19-131",
+      "ref": "Mesillat Yesharim 19:131-134",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 19 (41 of 42)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-19-135",
+      "ref": "Mesillat Yesharim 19:135-137",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 19 (42 of 42)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-20-1",
+      "ref": "Mesillat Yesharim 20:1-5",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 20 (1 of 9)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-20-6",
+      "ref": "Mesillat Yesharim 20:6-8",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 20 (2 of 9)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-20-9",
+      "ref": "Mesillat Yesharim 20:9-10",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 20 (3 of 9)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-20-11",
+      "ref": "Mesillat Yesharim 20:11-13",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 20 (4 of 9)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-20-14",
+      "ref": "Mesillat Yesharim 20:14-15",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 20 (5 of 9)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-20-16",
+      "ref": "Mesillat Yesharim 20:16-18",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 20 (6 of 9)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-20-19",
+      "ref": "Mesillat Yesharim 20:19-21",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 20 (7 of 9)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-20-22",
+      "ref": "Mesillat Yesharim 20:22-25",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 20 (8 of 9)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-20-26",
+      "ref": "Mesillat Yesharim 20:26",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 20 (9 of 9)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-21-1",
+      "ref": "Mesillat Yesharim 21:1-2",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 21 (1 of 5)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-21-3",
+      "ref": "Mesillat Yesharim 21:3-4",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 21 (2 of 5)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-21-5",
+      "ref": "Mesillat Yesharim 21:5-7",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 21 (3 of 5)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-21-8",
+      "ref": "Mesillat Yesharim 21:8-10",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 21 (4 of 5)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-21-11",
+      "ref": "Mesillat Yesharim 21:11",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 21 (5 of 5)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-22-1",
+      "ref": "Mesillat Yesharim 22:1-4",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 22 (1 of 16)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-22-5",
+      "ref": "Mesillat Yesharim 22:5-6",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 22 (2 of 16)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-22-7",
+      "ref": "Mesillat Yesharim 22:7-9",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 22 (3 of 16)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-22-10",
+      "ref": "Mesillat Yesharim 22:10-13",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 22 (4 of 16)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-22-14",
+      "ref": "Mesillat Yesharim 22:14-16",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 22 (5 of 16)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-22-17",
+      "ref": "Mesillat Yesharim 22:17-19",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 22 (6 of 16)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-22-20",
+      "ref": "Mesillat Yesharim 22:20-24",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 22 (7 of 16)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-22-25",
+      "ref": "Mesillat Yesharim 22:25-27",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 22 (8 of 16)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-22-28",
+      "ref": "Mesillat Yesharim 22:28-31",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 22 (9 of 16)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-22-32",
+      "ref": "Mesillat Yesharim 22:32-35",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 22 (10 of 16)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-22-36",
+      "ref": "Mesillat Yesharim 22:36-40",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 22 (11 of 16)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-22-41",
+      "ref": "Mesillat Yesharim 22:41-43",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 22 (12 of 16)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-22-44",
+      "ref": "Mesillat Yesharim 22:44-48",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 22 (13 of 16)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-22-49",
+      "ref": "Mesillat Yesharim 22:49-50",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 22 (14 of 16)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-22-51",
+      "ref": "Mesillat Yesharim 22:51-54",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 22 (15 of 16)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-22-55",
+      "ref": "Mesillat Yesharim 22:55",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 22 (16 of 16)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-23-1",
+      "ref": "Mesillat Yesharim 23:1-3",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 23 (1 of 8)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-23-4",
+      "ref": "Mesillat Yesharim 23:4-6",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 23 (2 of 8)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-23-7",
+      "ref": "Mesillat Yesharim 23:7-8",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 23 (3 of 8)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-23-9",
+      "ref": "Mesillat Yesharim 23:9-10",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 23 (4 of 8)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-23-11",
+      "ref": "Mesillat Yesharim 23:11-12",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 23 (5 of 8)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-23-13",
+      "ref": "Mesillat Yesharim 23:13-16",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 23 (6 of 8)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-23-17",
+      "ref": "Mesillat Yesharim 23:17-20",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 23 (7 of 8)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-23-21",
+      "ref": "Mesillat Yesharim 23:21-23",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 23 (8 of 8)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-24-1",
+      "ref": "Mesillat Yesharim 24:1-3",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 24 (1 of 9)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-24-4",
+      "ref": "Mesillat Yesharim 24:4-7",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 24 (2 of 9)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-24-8",
+      "ref": "Mesillat Yesharim 24:8-10",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 24 (3 of 9)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-24-11",
+      "ref": "Mesillat Yesharim 24:11-13",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 24 (4 of 9)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-24-14",
+      "ref": "Mesillat Yesharim 24:14-16",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 24 (5 of 9)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-24-17",
+      "ref": "Mesillat Yesharim 24:17-19",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 24 (6 of 9)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-24-20",
+      "ref": "Mesillat Yesharim 24:20-24",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 24 (7 of 9)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-24-25",
+      "ref": "Mesillat Yesharim 24:25-27",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 24 (8 of 9)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-24-28",
+      "ref": "Mesillat Yesharim 24:28",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 24 (9 of 9)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-25-1",
+      "ref": "Mesillat Yesharim 25:1-3",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 25 (1 of 3)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-25-4",
+      "ref": "Mesillat Yesharim 25:4-6",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 25 (2 of 3)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-25-7",
+      "ref": "Mesillat Yesharim 25:7-10",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 25 (3 of 3)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-26-1",
+      "ref": "Mesillat Yesharim 26:1-2",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 26 (1 of 12)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-26-3",
+      "ref": "Mesillat Yesharim 26:3-6",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 26 (2 of 12)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-26-7",
+      "ref": "Mesillat Yesharim 26:7-9",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 26 (3 of 12)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-26-10",
+      "ref": "Mesillat Yesharim 26:10-12",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 26 (4 of 12)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-26-13",
+      "ref": "Mesillat Yesharim 26:13-14",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 26 (5 of 12)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-26-15",
+      "ref": "Mesillat Yesharim 26:15-17",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 26 (6 of 12)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-26-18",
+      "ref": "Mesillat Yesharim 26:18-20",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 26 (7 of 12)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-26-21",
+      "ref": "Mesillat Yesharim 26:21-24",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 26 (8 of 12)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-26-25",
+      "ref": "Mesillat Yesharim 26:25-26",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 26 (9 of 12)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-26-27",
+      "ref": "Mesillat Yesharim 26:27-28",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 26 (10 of 12)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-26-29",
+      "ref": "Mesillat Yesharim 26:29-30",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 26 (11 of 12)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-mesillat-yesharim-26-31",
+      "ref": "Mesillat Yesharim 26:31",
+      "versions": "mesillat_yesharim",
+      "defaults": {
+        "type": "musar",
+        "title": "Mesillat Yesharim, chapter 26 (12 of 12)",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-1-1",
+      "ref": "Pirkei Avot 1:1",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 1:1",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-1-2",
+      "ref": "Pirkei Avot 1:2",
+      "versions": "avot"
+    },
+    {
+      "id": "musar-avot-1-3",
+      "ref": "Pirkei Avot 1:3",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 1:3",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-1-4",
+      "ref": "Pirkei Avot 1:4",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 1:4",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-1-5",
+      "ref": "Pirkei Avot 1:5",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 1:5",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-1-6",
+      "ref": "Pirkei Avot 1:6",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 1:6",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-1-7",
+      "ref": "Pirkei Avot 1:7",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 1:7",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-1-8",
+      "ref": "Pirkei Avot 1:8",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 1:8",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-1-9",
+      "ref": "Pirkei Avot 1:9",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 1:9",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-1-10",
+      "ref": "Pirkei Avot 1:10",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 1:10",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-1-11",
+      "ref": "Pirkei Avot 1:11",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 1:11",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-1-12",
+      "ref": "Pirkei Avot 1:12",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 1:12",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-1-13",
+      "ref": "Pirkei Avot 1:13",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 1:13",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-1-14",
+      "ref": "Pirkei Avot 1:14",
+      "versions": "avot"
+    },
+    {
+      "id": "musar-avot-1-15",
+      "ref": "Pirkei Avot 1:15",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 1:15",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-1-16",
+      "ref": "Pirkei Avot 1:16",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 1:16",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-1-17",
+      "ref": "Pirkei Avot 1:17",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 1:17",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-1-18",
+      "ref": "Pirkei Avot 1:18",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 1:18",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-2-1",
+      "ref": "Pirkei Avot 2:1",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 2:1",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-2-2",
+      "ref": "Pirkei Avot 2:2",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 2:2",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-2-3",
+      "ref": "Pirkei Avot 2:3",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 2:3",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-2-4",
+      "ref": "Pirkei Avot 2:4",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 2:4",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-2-5",
+      "ref": "Pirkei Avot 2:5",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 2:5",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-2-6",
+      "ref": "Pirkei Avot 2:6",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 2:6",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-2-7",
+      "ref": "Pirkei Avot 2:7",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 2:7",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-2-8",
+      "ref": "Pirkei Avot 2:8",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 2:8",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-2-9",
+      "ref": "Pirkei Avot 2:9",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 2:9",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-2-10",
+      "ref": "Pirkei Avot 2:10",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 2:10",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-2-11",
+      "ref": "Pirkei Avot 2:11",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 2:11",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-2-12",
+      "ref": "Pirkei Avot 2:12",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 2:12",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-2-13",
+      "ref": "Pirkei Avot 2:13",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 2:13",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-2-14",
+      "ref": "Pirkei Avot 2:14",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 2:14",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-2-15",
+      "ref": "Pirkei Avot 2:15",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 2:15",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-2-16",
+      "ref": "Pirkei Avot 2:16",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 2:16",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-3-1",
+      "ref": "Pirkei Avot 3:1",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 3:1",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-3-2",
+      "ref": "Pirkei Avot 3:2",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 3:2",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-3-3",
+      "ref": "Pirkei Avot 3:3",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 3:3",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-3-4",
+      "ref": "Pirkei Avot 3:4",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 3:4",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-3-5",
+      "ref": "Pirkei Avot 3:5",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 3:5",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-3-6",
+      "ref": "Pirkei Avot 3:6",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 3:6",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-3-7",
+      "ref": "Pirkei Avot 3:7",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 3:7",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-3-8",
+      "ref": "Pirkei Avot 3:8",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 3:8",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-3-9",
+      "ref": "Pirkei Avot 3:9",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 3:9",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-3-10",
+      "ref": "Pirkei Avot 3:10",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 3:10",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-3-11",
+      "ref": "Pirkei Avot 3:11",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 3:11",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-3-12",
+      "ref": "Pirkei Avot 3:12",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 3:12",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-3-13",
+      "ref": "Pirkei Avot 3:13",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 3:13",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-3-14",
+      "ref": "Pirkei Avot 3:14",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 3:14",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-3-15",
+      "ref": "Pirkei Avot 3:15",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 3:15",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-3-16",
+      "ref": "Pirkei Avot 3:16",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 3:16",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-3-17",
+      "ref": "Pirkei Avot 3:17",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 3:17",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-3-18",
+      "ref": "Pirkei Avot 3:18",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 3:18",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-4-1",
+      "ref": "Pirkei Avot 4:1",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 4:1",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-4-2",
+      "ref": "Pirkei Avot 4:2",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 4:2",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-4-3",
+      "ref": "Pirkei Avot 4:3",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 4:3",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-4-4",
+      "ref": "Pirkei Avot 4:4",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 4:4",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-4-5",
+      "ref": "Pirkei Avot 4:5",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 4:5",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-4-6",
+      "ref": "Pirkei Avot 4:6",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 4:6",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-4-7",
+      "ref": "Pirkei Avot 4:7",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 4:7",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-4-8",
+      "ref": "Pirkei Avot 4:8",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 4:8",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-4-9",
+      "ref": "Pirkei Avot 4:9",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 4:9",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-4-10",
+      "ref": "Pirkei Avot 4:10",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 4:10",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-4-11",
+      "ref": "Pirkei Avot 4:11",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 4:11",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-4-12",
+      "ref": "Pirkei Avot 4:12",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 4:12",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-4-13",
+      "ref": "Pirkei Avot 4:13",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 4:13",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-4-14",
+      "ref": "Pirkei Avot 4:14",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 4:14",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-4-15",
+      "ref": "Pirkei Avot 4:15",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 4:15",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-4-16",
+      "ref": "Pirkei Avot 4:16",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 4:16",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-4-17",
+      "ref": "Pirkei Avot 4:17",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 4:17",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-4-18",
+      "ref": "Pirkei Avot 4:18",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 4:18",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-4-19",
+      "ref": "Pirkei Avot 4:19",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 4:19",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-4-20",
+      "ref": "Pirkei Avot 4:20",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 4:20",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-4-21",
+      "ref": "Pirkei Avot 4:21",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 4:21",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-4-22",
+      "ref": "Pirkei Avot 4:22",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 4:22",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-5-1",
+      "ref": "Pirkei Avot 5:1",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 5:1",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-5-2",
+      "ref": "Pirkei Avot 5:2",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 5:2",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-5-3",
+      "ref": "Pirkei Avot 5:3",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 5:3",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-5-4",
+      "ref": "Pirkei Avot 5:4",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 5:4",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-5-5",
+      "ref": "Pirkei Avot 5:5",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 5:5",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-5-6",
+      "ref": "Pirkei Avot 5:6",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 5:6",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-5-7",
+      "ref": "Pirkei Avot 5:7",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 5:7",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-5-8",
+      "ref": "Pirkei Avot 5:8",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 5:8",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-5-9",
+      "ref": "Pirkei Avot 5:9",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 5:9",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-5-10",
+      "ref": "Pirkei Avot 5:10",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 5:10",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-5-11",
+      "ref": "Pirkei Avot 5:11",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 5:11",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-5-12",
+      "ref": "Pirkei Avot 5:12",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 5:12",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-5-13",
+      "ref": "Pirkei Avot 5:13",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 5:13",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-5-14",
+      "ref": "Pirkei Avot 5:14",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 5:14",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-5-15",
+      "ref": "Pirkei Avot 5:15",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 5:15",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-5-16",
+      "ref": "Pirkei Avot 5:16",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 5:16",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-5-17",
+      "ref": "Pirkei Avot 5:17",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 5:17",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-5-18",
+      "ref": "Pirkei Avot 5:18",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 5:18",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-5-19",
+      "ref": "Pirkei Avot 5:19",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 5:19",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-5-20",
+      "ref": "Pirkei Avot 5:20",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 5:20",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-5-21",
+      "ref": "Pirkei Avot 5:21",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 5:21",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-5-22",
+      "ref": "Pirkei Avot 5:22",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 5:22",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-5-23",
+      "ref": "Pirkei Avot 5:23",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 5:23",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-6-1",
+      "ref": "Pirkei Avot 6:1",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 6:1",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-6-2",
+      "ref": "Pirkei Avot 6:2",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 6:2",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-6-3",
+      "ref": "Pirkei Avot 6:3",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 6:3",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-6-4",
+      "ref": "Pirkei Avot 6:4",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 6:4",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-6-5",
+      "ref": "Pirkei Avot 6:5",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 6:5",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-6-6",
+      "ref": "Pirkei Avot 6:6",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 6:6",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-6-7",
+      "ref": "Pirkei Avot 6:7",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 6:7",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-6-8",
+      "ref": "Pirkei Avot 6:8",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 6:8",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-6-9",
+      "ref": "Pirkei Avot 6:9",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 6:9",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-6-10",
+      "ref": "Pirkei Avot 6:10",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 6:10",
+        "interests": [
+          "musar"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "musar-avot-6-11",
+      "ref": "Pirkei Avot 6:11",
+      "versions": "avot",
+      "defaults": {
+        "type": "musar",
+        "title": "Pirkei Avot 6:11",
+        "interests": [
+          "musar"
         ],
         "minLevel": "beginner"
       }

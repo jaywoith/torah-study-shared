@@ -11,11 +11,14 @@ All notable changes. Format: [Keep a Changelog](https://keepachangelog.com); ver
 - Web Settings: "Text display" group with the cantillation toggle and Divine Name selector.
 - **Sefaria import (ADR-010, ADR-012):** `npm run content:import` (`scripts/import-sefaria.ts`) reads `packages/content/sefaria-manifest.json`, fetches pinned versions, strips HTML/footnotes/parasha markers, keeps te'amim, enforces the license policy and merges into the content JSON. Idempotent, `--dry-run`, `--only=<prefix>`, `--force` (verified entries), `--refresh` (bypass the gitignored `.cache/sefaria`). Throttled with 429 retry. Fetch source is pluggable (`SEFARIA_BASE_URL` or a `TextSource`) for the planned mirror.
 - `Provenance` on content entries: `sefariaRef`, `sefariaUrl`, `importedAt`, per-language `versionTitle` + `license`, optional `personalUseOnly`.
+- The import keeps study units in manifest order, which is the daily rotation order within each type (so Musar reads sequentially).
 - Tests: sanitizer, license policy, merge rules, and content checks for provenance, allowed licenses, no leftover HTML, te'amim, and a Tanakh pool of 60+.
 
 ### Content
 - **Tanakh:** 70 units (3 existing re-imported + 67 new), Hebrew *Miqra according to the Masorah* (CC-BY-SA) and English NJPS 1985 (CC-BY-NC). Citations now use Sefaria's names (e.g. "Psalms 145:9").
 - **Siddur:** complete weekday Pesukei Dezimra in Ashkenaz order (19 units) and the Shema and its Blessings (5 units), Metsudah Hebrew + English (CC-BY). Existing ids kept: `baruch_sheamar`, `ashrei_opening` (now all of Ashrei), `yishtabach_opening` (now all of Yishtabach); their hand-written transliterations were removed because they covered only the opening lines. New units have no transliteration, commentary or kavannah yet (pending owner-reviewed drafts).
+- **Musar:** Mesillat Yesharim in full, in reading order (286 units of ~800 Hebrew characters; Hebrew *Sefaria Vocalized Edition*, CC0; English *Path of the Just*, trans. Yosef Sebag, CC-BY) followed by Pirkei Avot, one mishnah per unit (108 units; Hebrew *Torat Emet 357*, Public Domain; English *Mishnah Yomit*, Joshua Kulp, CC-BY). Existing `musar-avot-1-2` / `musar-avot-1-14` kept.
+- **D2 resolved:** removed the unverified, possibly paraphrased Mesillat Yesharim seed quote (`musar-mesillat-yesharim-kavannah`); the real text now comes from the import. The hidden-light unit now cites Chagigah 12a and Bereishit Rabbah 3:6, both checked against Sefaria.
 - All imported entries are `verified: false`.
 
 ### Changed

@@ -129,9 +129,9 @@ Updated 2026-11-21: the owner has a server and will set it up from a computer. D
 - [x] **Apply at render time** in the API (daily study and Siddur) next to the language mode, so clients stay dumb
 - [x] **Open questions to settle and record** (settled 2026-11-21, recorded in ADR-011: plan recommendation for (a), Tetragrammaton only for (b)): (a) transliteration and English when abbreviated, e.g. "Adonai" → "Hashem"? Recommendation: Hebrew follows the setting, transliteration uses "Adonai" for full/yud-yud and "Hashem" for abbreviated, English is left as the translation renders it; (b) other Divine Names (אֱלֹהִים etc.): out of scope unless the owner asks
 - [ ] **Siddur:** ✅ Pesukei Dezimra (19 units) and ✅ Shema and its Blessings (5 units), Metsudah he+en (ADR-012). ⏳ **Amidah: waiting on owner** (Metsudah is an Orthodox text: no Imahot option; Sim Shalom isn't on Sefaria). ✅ Seed units replaced, ids kept.
-- [ ] **Musar:** sequential Mesillat Yesharim path (chapter by chapter; check which versions are openly licensed) + Pirkei Avot
+- [x] **Musar:** Mesillat Yesharim (CC0 + CC-BY) in reading order, then Pirkei Avot (PD + CC-BY): 394 units. The daily rotation steps through them in order by date. Follow-up (not started): a progress-tracked Musar path like the Siddur path (`PROGRESS_PATHS` + `/v1/musar/next`), so missed days don't skip text
 - [x] **Tanakh pool:** at least 60 units (70) so rotation doesn't repeat for two months
-- [ ] Resolve deferred D2: replace or verify the Mesillat Yesharim seed quote; cite Chagigah 12a / Bereishit Rabbah 3:6 for the hidden-light unit
+- [x] Resolve deferred D2: replace or verify the Mesillat Yesharim seed quote; cite Chagigah 12a / Bereishit Rabbah 3:6 for the hidden-light unit
 - [ ] Commentary and kavannah prompts on imported units stay **owner-reviewed**. An LLM may draft them, but they're marked `verified: false` until the owner approves
 - [ ] `npm run content:report`: counts by type, unverified entries, NC-licensed entries, missing fields
 - [x] Content tests: required license/provenance fields; allowed licenses only; no HTML left in text; te'amim present only where the source has them
@@ -194,7 +194,7 @@ These were flagged and intentionally deferred. Each has a target milestone.
 | ID | Issue | Target |
 |---|---|---|
 | D1 | `docs/user-personas.md` contains the owner's name and personal observance details. Low risk once repos are private; genericize before ever making the repo public. | before any public release |
-| D2 | **Source accuracy.** The Mesillat Yesharim quote in `study-units.json` is unverified and may be a paraphrase; the hidden-light unit should cite Chagigah 12a / Bereishit Rabbah 3:6. All seed content is `verified: false`. | v0.5.0 |
+| D2 | ✅ Resolved 2026-11-21 (seed quote removed; hidden-light citations checked). **Source accuracy.** The Mesillat Yesharim quote in `study-units.json` is unverified and may be a paraphrase; the hidden-light unit should cite Chagigah 12a / Bereishit Rabbah 3:6. All seed content is `verified: false`. | v0.5.0 |
 | D3 | **Divine Name display.** ✅ Decided 2026-11-21: a user setting with abbreviated ה׳ (default), full, or יְיָ (ADR-011). Implementation in v0.5.0. | v0.5.0 |
 | D4 | **"AI Rabbi" framing.** An AI giving practical halachic rulings under the title "Rabbi" carries trust and accuracy risk. Rename to a study companion, state plainly that it is not a posek, and send practical psak questions to the user's own rabbi. | v0.6.0 (before the coach ships) |
 | D5 | `docs/handoff.md` is a stale chat-handoff note (marked historical). Delete or fold into history. | v0.5.0 |

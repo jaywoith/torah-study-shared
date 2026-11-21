@@ -27,17 +27,15 @@
       "contentId": "psalm_147"
     },
     {
-      "id": "2026-11-11-musar-avot-1-14",
-      "type": "musar",
-      "title": "Pirkei Avot 1:14 – Hillel’s three questions",
-      "hebrew": "אִם אֵין אֲנִי לִי, מִי לִי. וּכְשֶׁאֲנִי לְעַצְמִי, מָה אֲנִי. וְאִם לֹא עַכְשָׁיו, אֵימָתָי.",
-      "transliteration": "Im ein ani li, mi li? Ukhshe’ani le’atzmi, mah ani? Ve’im lo achshav, eimatai?",
-      "english": "If I am not for myself, who will be for me? And when I am for myself alone, what am I? And if not now, when?",
-      "commentary": "Hillel balances personal responsibility against self-absorption, then removes the excuse of delay.",
-      "kavannahPrompt": "What is one thing you have been postponing that 'if not now, when?' applies to?",
-      "source": "Pirkei Avot 1:14",
+      "id": "2026-11-11-kabbalah-hidden-light",
+      "type": "kabbalah",
+      "title": "Symbolic Light – the hidden light of the first day",
+      "english": "The light of the first day is understood in many traditional sources as a spiritual light hidden for the righteous. Here we focus on its ethical and symbolic meaning: clarity and kindness in our actions.",
+      "commentary": "Symbolic and ethical emphasis, not theosophy.",
+      "kavannahPrompt": "How can the idea of hidden light inspire one act of kindness today?",
+      "source": "Chagigah 12a; Bereishit Rabbah 3:6",
       "estimatedMinutes": 4,
-      "contentId": "musar-avot-1-14"
+      "contentId": "kabbalah-hidden-light"
     },
     {
       "id": "2026-11-11-tanakh-zechariah-4-6",

@@ -243,6 +243,11 @@ async function main() {
       errors.push((err as Error).message);
     }
   }
+  // Study units follow manifest order (the daily rotation order within a type);
+  // hand-written units not in the manifest keep their place at the front.
+  const studyOrder = new Map(manifest.studyUnits.map((e, i) => [e.id, i]));
+  study.units.sort((a, b) => (studyOrder.get(a.id) ?? -1) - (studyOrder.get(b.id) ?? -1));
+
   for (const section of siddur.sections) {
     const order = manifest.siddur.filter((e) => e.section === section.id).map((e) => e.id);
     const rank = (id: string) => (order.includes(id) ? order.indexOf(id) : order.length);
@@ -260,7 +265,10 @@ async function main() {
   );
   errors.forEach((e) => console.error(`ERROR ${e}`));
 
-  const changedAny = results.some((r) => r.result.status === 'created' || r.result.status === 'updated');
+  const changedAny =
+    results.some((r) => r.result.status === 'created' || r.result.status === 'updated') ||
+    JSON.stringify(study) !== JSON.stringify(readJson(studyPath)) ||
+    JSON.stringify(siddur) !== JSON.stringify(readJson(siddurPath));
   if (!dryRun && changedAny) {
     writeJson(studyPath, study);
     writeJson(siddurPath, siddur);
