@@ -47,7 +47,7 @@ curl -X POST localhost:3000/v1/study/daily -H 'Content-Type: application/json' \
 ```
 apps/
   api/                 Express API — the only runtime that loads the shared packages
-  web/                 React + Vite web client (phone-first; PWA in v0.8.0)
+  web/                 React + Vite web client (phone-first; PWA in v0.9.0)
 packages/
   core/                Pure logic: models, generator, Siddur path, language modes, validation
   ai-rules/            AI coach personas, system prompts, constraints

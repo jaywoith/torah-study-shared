@@ -1,6 +1,6 @@
 # apps/web (`@torah/web`)
 
-The phone-first web client. React + Vite + TypeScript. Becomes an installable PWA in v0.8.0.
+The phone-first web client. React + Vite + TypeScript. Becomes an installable PWA in v0.9.0.
 
 ```bash
 npm run dev        # from repo root: API + web at http://localhost:5173

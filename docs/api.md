@@ -139,7 +139,7 @@ Type: `SourcesResponse` in `packages/core/src/api-types.ts`.
 ## `POST /v1/coach/message` (stub)
 
 **Body:** `{ "framework"?: FrameworkId (default "masorti_conservative"), "message": string }`
-**200:** `{ reply, persona: { name, tone, systemPromptFragment }, constraints: string[], note }`. The reply is a placeholder until v0.6.0.
+**200:** `{ reply, persona: { name, tone, systemPromptFragment }, constraints: string[], note }`. The reply is a placeholder until v0.7.0.
 **400:** missing message or unknown framework.
 
 ---
@@ -148,5 +148,5 @@ Type: `SourcesResponse` in `packages/core/src/api-types.ts`.
 
 | Endpoint | Milestone |
 |---|---|
-| Real streaming coach replies; conversation history | v0.6.0 |
-| Review queue / quiz endpoints; weekly check-in | v0.7.0 |
+| Real streaming coach replies; conversation history | v0.7.0 |
+| Review queue / quiz endpoints; weekly check-in | v0.8.0 |

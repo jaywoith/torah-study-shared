@@ -1,7 +1,7 @@
 # Development Plan
 
 **Current version:** 0.5.0-rc.1
-**Current milestone:** v0.5.0 Real Content, **rc.1 cut**. Waiting on the owner: content review (nothing is `verified` yet) and the G2 phone check (needs hosting). v0.4.0 is likewise waiting on its phone check. **Next: v0.6.0 AI Study Coach.** Hosting on the owner's server whenever the owner is at a computer (see "Hosting" under v0.3.0).
+**Current milestone:** v0.5.0 Real Content, **rc.1 cut**. Waiting on the owner: content review (nothing is `verified` yet) and the G2 phone check (needs hosting). v0.4.0 is likewise waiting on its phone check. **Next: v0.6.0 Design Refresh** (P0 mockups awaiting owner approval; ADR-013), then v0.7.0 AI Study Coach. Hosting on the owner's server whenever the owner is at a computer (see "Hosting" under v0.3.0).
 **Last updated:** 2026-11-21
 
 This is the master plan. Every milestone is a minor version (pre-1.0). Tick the boxes as work lands; an agent picking up the project starts at the first unchecked task in the current milestone. Release gates (G1–G3) are defined in [TESTING.md](TESTING.md#release-gates).
@@ -23,9 +23,10 @@ This is the master plan. Every milestone is a minor version (pre-1.0). Tick the 
 | 0.3.0 | Web App Shell ✅ (superseded by 0.4.0-rc.1) | Usable daily study + Siddur path in a browser | G2 |
 | 0.4.0 | Persistence & Progress 🟡 rc.1 | Profile and progress saved server-side; sign-in; backups | G2 |
 | 0.5.0 | Real Content 🟡 rc.1 | Verified texts from a licensed source; full Pesukei Dezimra; Musar sequence | G2 |
-| 0.6.0 | AI Study Coach | Real LLM coach bound by shared personas and constraints, with an eval suite | G3 |
-| 0.7.0 | Review & Check-ins | Spaced-repetition review from reviewItems; weekly check-in | G2 |
-| 0.8.0 | PWA & Deploy | Installed on phone, works offline, hosted privately | G2 |
+| 0.6.0 | Design Refresh 🟡 P0 | Calm, reading-first UI ("Sefer"): new type, color, dark mode, focus reader, path progress | G2 |
+| 0.7.0 | AI Study Coach | Real LLM coach bound by shared personas and constraints, with an eval suite | G3 |
+| 0.8.0 | Review & Check-ins | Spaced-repetition review from reviewItems; weekly check-in | G2 |
+| 0.9.0 | PWA & Deploy | Installed on phone, works offline, hosted privately | G2 |
 | 1.0.0 | Daily Driver | Used daily for 30 days; all deferred accuracy issues resolved | G3 |
 | post-1.0 | Expansion | Other frameworks fleshed out, Kabbalah/Halachah paths, Hebrew analyzer | per release |
 
@@ -70,7 +71,7 @@ This is the master plan. Every milestone is a minor version (pre-1.0). Tick the 
 
 ### Hosting (on the owner's own server, done with the owner at a computer)
 
-Updated 2026-11-21: the owner has a server and will set it up from a computer. Do this **with** the owner, since server details (OS, reverse proxy, domain) are needed. PWA/offline stays in v0.8.0.
+Updated 2026-11-21: the owner has a server and will set it up from a computer. Do this **with** the owner, since server details (OS, reverse proxy, domain) are needed. PWA/offline stays in v0.9.0.
 
 - [x] API serves the built web app (`apps/web/dist`) from the same origin: one service, one URL, no CORS (`npm run start:prod`)
 - [x] Single-user auth: passphrase env var, login screen, signed httpOnly session cookie, login rate limit (done in v0.4.0)
@@ -91,7 +92,7 @@ Updated 2026-11-21: the owner has a server and will set it up from a computer. D
 **Goal:** the app remembers who you are and where you are.
 
 - [x] SQLite via better-sqlite3; append-only migrations in `apps/api/src/db/migrations.ts`, applied on start (ADR-008)
-- [x] Tables: `profile` (single row, JSON), `completed_units` (path, unit id, study date). `review_results` deferred to v0.7.0, when its shape is known
+- [x] Tables: `profile` (single row, JSON), `completed_units` (path, unit id, study date). `review_results` deferred to v0.8.0, when its shape is known
 - [x] Single-user auth: `APP_PASSPHRASE` → signed httpOnly session cookie (30 days), login rate limit, sign-out. Off when unset in development; required in production (ADR-009)
 - [x] Endpoints: `GET/PUT /v1/profile`; `GET /v1/progress`; `POST/DELETE /v1/progress/complete`; `POST /v1/progress/reset`; `POST /v1/progress/import`; `/v1/siddur/next` reads completed units from the DB
 - [x] `StudyUnit.contentId` added, so progress is recorded against stable content ids
@@ -141,7 +142,43 @@ Updated 2026-11-21: the owner has a server and will set it up from a computer. D
 - [x] Web: Settings gets the cantillation toggle and Divine Name selector; Hebrew font check (verified 2026-11-21) with te'amim (Noto Serif Hebrew supports them; verify visually)
 - [x] Attribution (`GET /v1/sources` + Sources & licenses screen): a simple "Sources & licenses" screen or footer listing versions used (required by CC-BY/CC-BY-SA)
 
-## v0.6.0: AI Study Coach
+## v0.6.0: Design Refresh
+
+**Goal:** a calm, reading-first interface ("Sefer", ADR-013) that keeps Hebrew rendering correct in all four language modes and in dark mode. Web-only: no API, core or content changes unless a task says so. Owner confirmed 2026-11-21: single user (no multi-user work), mockups before code, this milestone before the AI coach.
+
+**P0: direction (no app code)**
+- [x] Review the current UI (phone screenshots, light and dark)
+- [x] ADR-013 drafted (status Proposed until the owner approves the mockups)
+- [x] Mockups: Today, focus reader (Split, Mixed), Siddur path, Settings with live preview, day complete; light and dark. Canvas: https://claude.ai/artifact/7pH98DogMEPwDwf4k7o2mU (private to the owner)
+- [ ] **Owner approves the mockups** (or asks for changes); ADR-013 moves to Accepted
+
+**P1: foundation (every screen)**
+- [ ] Design tokens in CSS custom properties (color, type scale, spacing, radius), light and dark from one set
+- [ ] Self-host Source Serif 4 and Inter via `@fontsource` (Noto Serif Hebrew already is); Hebrew size and line height tuned for nikkud + te'amim
+- [ ] Icon tab bar (inline SVG components, no icon dependency unless justified), safe areas, 44px targets
+- [ ] Remove the solid header bar; per-screen headers
+
+**P2: Today and the reader**
+- [ ] Today: date header, week strip (completion per day from existing progress data), progress ring, "Up next" card, plan list
+- [ ] Date picker in a sheet instead of the inline native input
+- [ ] Focus reader: full-screen unit view, text-size control (stored per device), "Mark done · next" flow, source and license line
+- [ ] Commentary and kavannah as collapsible panels with a visible "Draft · not verified" label when `verified` is false or a `reviewNote` marks a draft
+- [ ] Day-complete state
+
+**P3: other screens**
+- [ ] Siddur and Musar paths: overall progress, section progress, "Continue" card
+- [ ] Settings: grouped lists, segmented controls, live language-mode preview
+- [ ] Login and Sources & licenses restyled
+
+**P4: polish and guardrails**
+- [ ] Motion: small CSS transitions (card enter, completion check, view transitions); none under `prefers-reduced-motion`
+- [ ] Accessibility pass: contrast AA in both themes, focus states, screen-reader labels
+- [ ] Playwright screenshot tests: Today and reader in all 4 language modes × light/dark, so a Hebrew rendering regression fails CI
+- [ ] Any new copy added to `ui-strings.json`; `docs/ARCHITECTURE.md` web section updated
+
+**Open option (needs owner say-so):** Hebrew date on Today. It needs calendar logic in `@torah/core` (e.g. `@hebcal/core`), so it is listed under Calendar awareness in the backlog rather than here.
+
+## v0.7.0: AI Study Coach
 
 **Goal:** a real coach that stays inside the framework and cites sources.
 
@@ -155,14 +192,14 @@ Updated 2026-11-21: the owner has a server and will set it up from a computer. D
 - [ ] **Eval suite** `evals/coach/*.yaml`: ~30 fixed prompts with expected properties (cites sources, stays in framework, refuses psak, handles off-topic). `npm run eval:coach`. Required for gate G3
 - [ ] Cost guard: per-day token cap configured in `.env`
 
-## v0.7.0: Review & Check-ins
+## v0.8.0: Review & Check-ins
 
 - [ ] Quiz generation from `reviewItems` (recognition, shoresh, kavannah, source)
 - [ ] Spaced repetition (SM-2 or simpler Leitner boxes) on Hebrew words and shorashim
 - [ ] Weekly check-in screen: summary of completed units, Musar reflections, Hebrew progress; optional coach conversation
 - [ ] Hebrew familiarity tracking (`Progress.hebrewFamiliarity`)
 
-## v0.8.0: PWA & Deploy
+## v0.9.0: PWA & Deploy
 
 - [ ] Web app manifest, icons, service worker (Workbox / vite-plugin-pwa)
 - [ ] Offline: cache today's and tomorrow's study, the next Siddur units, and UI strings
@@ -199,7 +236,7 @@ These were flagged and intentionally deferred. Each has a target milestone.
 | D1 | `docs/user-personas.md` contains the owner's name and personal observance details. Low risk once repos are private; genericize before ever making the repo public. | before any public release |
 | D2 | ✅ Resolved 2026-11-21 (seed quote removed; hidden-light citations checked). **Source accuracy.** The Mesillat Yesharim quote in `study-units.json` is unverified and may be a paraphrase; the hidden-light unit should cite Chagigah 12a / Bereishit Rabbah 3:6. All seed content is `verified: false`. | v0.5.0 |
 | D3 | **Divine Name display.** ✅ Decided 2026-11-21: a user setting with abbreviated ה׳ (default), full, or יְיָ (ADR-011). Implementation in v0.5.0. | v0.5.0 |
-| D4 | **"AI Rabbi" framing.** An AI giving practical halachic rulings under the title "Rabbi" carries trust and accuracy risk. Rename to a study companion, state plainly that it is not a posek, and send practical psak questions to the user's own rabbi. | v0.6.0 (before the coach ships) |
+| D4 | **"AI Rabbi" framing.** An AI giving practical halachic rulings under the title "Rabbi" carries trust and accuracy risk. Rename to a study companion, state plainly that it is not a posek, and send practical psak questions to the user's own rabbi. | v0.7.0 (before the coach ships) |
 | D5 | `docs/handoff.md` is a stale chat-handoff note (marked historical). Delete or fold into history. | v0.5.0 |
 
 ## Open decisions

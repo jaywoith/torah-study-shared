@@ -4,6 +4,12 @@ All notable changes. Format: [Keep a Changelog](https://keepachangelog.com); ver
 
 ## [Unreleased]
 
+### Changed
+- **Roadmap:** new v0.6.0 Design Refresh; AI Study Coach, Review & Check-ins and PWA & Deploy move to v0.7.0, v0.8.0 and v0.9.0. Version references in the docs updated.
+
+### Docs
+- ADR-013 (Proposed): "Sefer" design direction for the web app. P0 mockups published for owner review.
+
 ## [0.5.0-rc.1] – 2026-11-21 — Real Content
 
 ### Added

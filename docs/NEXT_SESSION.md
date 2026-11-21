@@ -3,8 +3,10 @@
 **Written:** 2026-11-21 · **Version:** 0.5.0-rc.1 merged to `main` (tag `v0.5.0-rc.1` not pushed: cloud tag pushes fail) · `npm run check` (1,778 tests) and `npm run test:e2e` pass
 
 1. Read `AGENTS.md`.
-2. `docs/DEVELOPMENT_PLAN.md`: v0.5.0 is rc.1. What remains is the owner's (below). The next milestone to build is **v0.6.0 AI Study Coach**.
-3. Decisions: ADR-010 (Sefaria import), ADR-011 (display settings, with the details settled on 2026-11-21), ADR-012 (versions, personal-use license rule).
+2. `docs/DEVELOPMENT_PLAN.md`: v0.5.0 is rc.1. What remains is the owner's (below). The milestone in progress is **v0.6.0 Design Refresh** (ADR-013): P0 mockups are done and **waiting on the owner's approval** before any app code (canvas: https://claude.ai/artifact/7pH98DogMEPwDwf4k7o2mU). Then P1–P4 in the plan. AI Study Coach is now v0.7.0.
+3. Decisions: ADR-010 (Sefaria import), ADR-011 (display settings, with the details settled on 2026-11-21), ADR-012 (versions, personal-use license rule), ADR-013 (Sefer design direction, Proposed).
+
+**Design refresh, settled with the owner 2026-11-21:** single user ("staff" was a slip), mockups before code, refresh before the AI coach. Not adopted: Aceternity / React Bits (see ADR-013). Work on branch `feature/ui-redesign`.
 
 **v0.5.0 delivered**
 - Cantillation toggle; Divine Name setting (ה׳ / full / יְיָ), including transliteration, plus English for Metsudah's "Adonoy".

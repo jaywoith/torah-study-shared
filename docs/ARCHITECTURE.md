@@ -54,7 +54,7 @@ Express, run with `tsx` (no build step).
 | `scripts/backup.ts` | `npm run db:backup`. |
 
 ### `apps/web` (`@torah/web`)
-React + Vite + TypeScript, phone-first. Becomes an installable PWA in v0.8.0.
+React + Vite + TypeScript, phone-first. Becomes an installable PWA in v0.9.0.
 
 | File | Responsibility |
 |---|---|

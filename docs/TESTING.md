@@ -26,7 +26,7 @@ Test runner: **Vitest** (root `vitest.config.mts` picks up `packages/*/test/**/*
 | **End-to-end smoke** | `apps/web/e2e/` (Playwright) | Production build + real API (auth on, fresh in-memory DB) in a phone-sized browser: wrong then right passphrase; RTL Hebrew; mark done survives reload; next day differs; Siddur advances and survives reload; settings persist; sign-out. No page errors. | 0.3.0 |
 | **Persistence** | `apps/api/test/db.test.ts` | Migrations apply from empty, are idempotent and ordered; repository reads/writes profile and progress; schema rejects bad paths. In-memory SQLite. | 0.4.0 |
 | **Auth** | `apps/api/test/auth.test.ts` | Token signing/expiry/tampering, constant-time passphrase check, production config refusal, protected vs. public routes, login/logout cookie flow, rate limiting, forged cookies. | 0.4.0 |
-| **AI coach evals** | `evals/coach/` | A fixed prompt set scored for: cites sources, stays in framework, declines practical psak, pointed Hebrew, no progressive default for traditional frameworks. Calls the real model, so it costs money and is **not** run in CI on every push. | 0.6.0 (planned) |
+| **AI coach evals** | `evals/coach/` | A fixed prompt set scored for: cites sources, stays in framework, declines practical psak, pointed Hebrew, no progressive default for traditional frameworks. Calls the real model, so it costs money and is **not** run in CI on every push. | 0.7.0 (planned) |
 
 ## Conventions
 
@@ -43,7 +43,7 @@ Which checks must pass before tagging a release.
 |---|---|---|
 | **G1** | every patch release, every merge to `main` | CI green: typecheck + unit + rules + content + golden + API (+ web component and e2e smoke once they exist) |
 | **G2** | minor releases (milestones) | G1 + Playwright smoke passes locally against a production build + **manual checklist** below completed on a phone |
-| **G3** | releases that touch AI behavior (0.6.0+ prompt/constraint changes) and 1.0.0 | G2 + `npm run eval:coach` pass rate ≥ 90% with **zero** failures in the "framework boundary" and "declines psak" categories |
+| **G3** | releases that touch AI behavior (0.7.0+ prompt/constraint changes) and 1.0.0 | G2 + `npm run eval:coach` pass rate ≥ 90% with **zero** failures in the "framework boundary" and "declines psak" categories |
 
 ### Manual checklist (G2)
 

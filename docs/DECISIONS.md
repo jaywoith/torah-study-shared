@@ -113,3 +113,18 @@ Short records of decisions that are settled. Each one has the context, the decis
 - **Pinned in** `packages/content/sefaria-manifest.json` (`versionSets`), so changing a version is a one-line edit plus a re-import.
 
 **Consequences.** Before the app is used beyond personal use: clear or replace every `personalUseOnly` entry, and every CC-BY-NC version (NJPS) if use becomes commercial. Metsudah's English writes the Name as "Adonoy"; per the owner it reads "Hashem" when the setting is abbreviated (ADR-011).
+
+## ADR-013: "Sefer" design direction for the web app
+**Date:** 2026-11-21 · **Status:** Proposed (accepted when the owner approves the P0 mockups)
+
+**Context.** The owner asked for a world-class UI/UX update and pointed to Aceternity UI, React Bits, benji.org/stageshow and heydamir/unslop as optional inspiration. The audience is confirmed as the owner alone (single user, ADR-009 unchanged). The current UI works but reads as generic: system font, a solid header that turns bright in dark mode, native date controls above the text, text-only tabs, no reading mode or sense of progress.
+
+**Decision.**
+- **Direction "Sefer": calm and reading-first.** The text is the hero; chrome stays quiet. Noto Serif Hebrew for Hebrew (larger, room for nikkud and te'amim), Source Serif 4 for English text, Inter for interface labels, all self-hosted. Parchment-and-ink light theme and a warm low-glare dark theme with one tekhelet-blue accent.
+- **Not adopted: Aceternity UI and React Bits.** Their effects (spotlights, particles, glowing borders, text scrambles) suit marketing pages, require Tailwind and framer-motion, and would cost readability, battery and tone in a daily text reader. **Adopted from unslop: the process** (audit, agree a direction, then ordered passes over spacing, color, type, layout, motion). benji.org was unreachable from the build environment and was not reviewed.
+- **Styling stays plain CSS** with design tokens as custom properties. No Tailwind migration, no animation library unless CSS proves insufficient.
+- **Honesty is part of the design:** drafted commentary and kavannah carry a visible "Draft · not verified" label; each text shows its source and license.
+- **Roadmap:** the refresh is v0.6.0; AI Study Coach, Review & Check-ins and PWA & Deploy move to v0.7.0, v0.8.0 and v0.9.0 (owner decision). Earlier ADRs that cite the old numbers (ADR-002: PWA in v0.8.0) are historical; the plan is authoritative.
+
+**Consequences.** Web-only work; the architecture rules are unchanged (clients call the API, types-only imports, shared copy in `ui-strings.json`). Two new font packages. Screenshot tests across the four language modes and both themes become part of the web test suite.
+
