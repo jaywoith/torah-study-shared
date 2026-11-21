@@ -1,6 +1,11 @@
 import { describe, expect, it } from 'vitest';
 import request from 'supertest';
+import { getSiddurSequence } from '@torah/core';
+import { contentLibrary } from '@torah/content';
 import { testApp } from './helpers';
+
+// The Siddur path's first two units, from real content (not hard-coded ids).
+const [FIRST, SECOND] = getSiddurSequence(contentLibrary.siddur).map((u) => u.id);
 import pkg from '../package.json';
 
 const { app } = testApp();
@@ -101,14 +106,14 @@ describe('GET /v1/siddur/next', () => {
   it('starts at the first unit', async () => {
     const res = await request(app).get('/v1/siddur/next');
     expect(res.status).toBe(200);
-    expect(res.body.unit.id).toBe('baruch_sheamar');
+    expect(res.body.unit.id).toBe(FIRST);
     expect(res.body.position).toBe(1);
   });
 
   it('advances past completed units', async () => {
-    const res = await request(app).get('/v1/siddur/next?completed=baruch_sheamar');
+    const res = await request(app).get(`/v1/siddur/next?completed=${FIRST}`);
     expect(res.status).toBe(200);
-    expect(res.body.unit.id).not.toBe('baruch_sheamar');
+    expect(res.body.unit.id).not.toBe(FIRST);
     expect(res.body.position).toBe(2);
   });
 

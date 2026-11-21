@@ -1,0 +1,1206 @@
+{
+  "$comment": "Sefaria import manifest (ADR-010). Run: npm run content:import. Siddur units are ordered by this list within each section. Ids are stable: never rename one (progress references it).",
+  "versionSets": {
+    "tanakh": {
+      "hebrew": "Miqra according to the Masorah",
+      "english": "Tanakh: The Holy Scriptures, published by JPS"
+    },
+    "siddur": {
+      "hebrew": "The Metsudah siddur, 1981",
+      "english": "Translation based on the Metsudah linear siddur, by Avrohom Davis, 1981"
+    }
+  },
+  "studyUnits": [
+    {
+      "id": "tanakh-tehillim-145-9",
+      "ref": "Psalms 145:9",
+      "versions": "tanakh"
+    },
+    {
+      "id": "tanakh-tehillim-145-18",
+      "ref": "Psalms 145:18",
+      "versions": "tanakh"
+    },
+    {
+      "id": "tanakh-micah-6-8",
+      "ref": "Micah 6:8",
+      "versions": "tanakh"
+    },
+    {
+      "id": "tanakh-bereishit-1-1",
+      "ref": "Genesis 1:1-5",
+      "versions": "tanakh",
+      "defaults": {
+        "type": "tanakh",
+        "title": "Genesis 1:1–5 – the first day of Creation",
+        "interests": [
+          "tanakh"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "tanakh-bereishit-1-26",
+      "ref": "Genesis 1:26-28",
+      "versions": "tanakh",
+      "defaults": {
+        "type": "tanakh",
+        "title": "Genesis 1:26–28 – humanity in the divine image",
+        "interests": [
+          "tanakh"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "tanakh-bereishit-2-15",
+      "ref": "Genesis 2:15",
+      "versions": "tanakh",
+      "defaults": {
+        "type": "tanakh",
+        "title": "Genesis 2:15 – to till and tend the garden",
+        "interests": [
+          "tanakh"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "tanakh-bereishit-4-9",
+      "ref": "Genesis 4:9-10",
+      "versions": "tanakh",
+      "defaults": {
+        "type": "tanakh",
+        "title": "Genesis 4:9–10 – “Am I my brother’s keeper?”",
+        "interests": [
+          "tanakh"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "tanakh-bereishit-12-1",
+      "ref": "Genesis 12:1-3",
+      "versions": "tanakh",
+      "defaults": {
+        "type": "tanakh",
+        "title": "Genesis 12:1–3 – Lech Lecha",
+        "interests": [
+          "tanakh"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "tanakh-bereishit-18-1",
+      "ref": "Genesis 18:1-5",
+      "versions": "tanakh",
+      "defaults": {
+        "type": "tanakh",
+        "title": "Genesis 18:1–5 – Abraham welcomes guests",
+        "interests": [
+          "tanakh"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "tanakh-bereishit-18-23",
+      "ref": "Genesis 18:23-25",
+      "versions": "tanakh",
+      "defaults": {
+        "type": "tanakh",
+        "title": "Genesis 18:23–25 – Abraham pleads for Sodom",
+        "interests": [
+          "tanakh"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "tanakh-bereishit-22-1",
+      "ref": "Genesis 22:1-2",
+      "versions": "tanakh",
+      "defaults": {
+        "type": "tanakh",
+        "title": "Genesis 22:1–2 – the Akedah begins",
+        "interests": [
+          "tanakh"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "tanakh-bereishit-28-16",
+      "ref": "Genesis 28:16-17",
+      "versions": "tanakh",
+      "defaults": {
+        "type": "tanakh",
+        "title": "Genesis 28:16–17 – Jacob wakes from his dream",
+        "interests": [
+          "tanakh"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "tanakh-bereishit-32-25",
+      "ref": "Genesis 32:25-29",
+      "versions": "tanakh",
+      "defaults": {
+        "type": "tanakh",
+        "title": "Genesis 32 – Jacob wrestles and is named Israel",
+        "interests": [
+          "tanakh"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "tanakh-shemot-3-1",
+      "ref": "Exodus 3:1-6",
+      "versions": "tanakh",
+      "defaults": {
+        "type": "tanakh",
+        "title": "Exodus 3:1–6 – the burning bush",
+        "interests": [
+          "tanakh"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "tanakh-shemot-3-13",
+      "ref": "Exodus 3:13-14",
+      "versions": "tanakh",
+      "defaults": {
+        "type": "tanakh",
+        "title": "Exodus 3:13–14 – “Ehyeh asher ehyeh”",
+        "interests": [
+          "tanakh"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "tanakh-shemot-14-30",
+      "ref": "Exodus 14:30-31",
+      "versions": "tanakh",
+      "defaults": {
+        "type": "tanakh",
+        "title": "Exodus 14:30–31 – Israel sees and believes",
+        "interests": [
+          "tanakh"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "tanakh-shemot-20-1",
+      "ref": "Exodus 20:1-3",
+      "versions": "tanakh",
+      "defaults": {
+        "type": "tanakh",
+        "title": "Exodus 20:1–3 – the Ten Commandments begin",
+        "interests": [
+          "tanakh"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "tanakh-shemot-20-8",
+      "ref": "Exodus 20:8-11",
+      "versions": "tanakh",
+      "defaults": {
+        "type": "tanakh",
+        "title": "Exodus 20:8–11 – remember the Sabbath day",
+        "interests": [
+          "tanakh"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "tanakh-shemot-23-9",
+      "ref": "Exodus 23:9",
+      "versions": "tanakh",
+      "defaults": {
+        "type": "tanakh",
+        "title": "Exodus 23:9 – do not oppress the stranger",
+        "interests": [
+          "tanakh"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "tanakh-shemot-34-6",
+      "ref": "Exodus 34:6-7",
+      "versions": "tanakh",
+      "defaults": {
+        "type": "tanakh",
+        "title": "Exodus 34:6–7 – the Thirteen Attributes",
+        "interests": [
+          "tanakh"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "tanakh-vayikra-19-1",
+      "ref": "Leviticus 19:1-2",
+      "versions": "tanakh",
+      "defaults": {
+        "type": "tanakh",
+        "title": "Leviticus 19:1–2 – you shall be holy",
+        "interests": [
+          "tanakh"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "tanakh-vayikra-19-16",
+      "ref": "Leviticus 19:16-18",
+      "versions": "tanakh",
+      "defaults": {
+        "type": "tanakh",
+        "title": "Leviticus 19:16–18 – love your neighbor",
+        "interests": [
+          "tanakh"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "tanakh-vayikra-19-32",
+      "ref": "Leviticus 19:32",
+      "versions": "tanakh",
+      "defaults": {
+        "type": "tanakh",
+        "title": "Leviticus 19:32 – rise before the aged",
+        "interests": [
+          "tanakh"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "tanakh-vayikra-25-10",
+      "ref": "Leviticus 25:10",
+      "versions": "tanakh",
+      "defaults": {
+        "type": "tanakh",
+        "title": "Leviticus 25:10 – proclaim liberty",
+        "interests": [
+          "tanakh"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "tanakh-bamidbar-6-24",
+      "ref": "Numbers 6:24-26",
+      "versions": "tanakh",
+      "defaults": {
+        "type": "tanakh",
+        "title": "Numbers 6:24–26 – the Priestly Blessing",
+        "interests": [
+          "tanakh"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "tanakh-bamidbar-15-37",
+      "ref": "Numbers 15:37-41",
+      "versions": "tanakh",
+      "defaults": {
+        "type": "tanakh",
+        "title": "Numbers 15:37–41 – tzitzit",
+        "interests": [
+          "tanakh"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "tanakh-devarim-6-4",
+      "ref": "Deuteronomy 6:4-9",
+      "versions": "tanakh",
+      "defaults": {
+        "type": "tanakh",
+        "title": "Deuteronomy 6:4–9 – the Shema",
+        "interests": [
+          "tanakh"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "tanakh-devarim-10-12",
+      "ref": "Deuteronomy 10:12-13",
+      "versions": "tanakh",
+      "defaults": {
+        "type": "tanakh",
+        "title": "Deuteronomy 10:12–13 – what God asks of you",
+        "interests": [
+          "tanakh"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "tanakh-devarim-10-17",
+      "ref": "Deuteronomy 10:17-19",
+      "versions": "tanakh",
+      "defaults": {
+        "type": "tanakh",
+        "title": "Deuteronomy 10:17–19 – love the stranger",
+        "interests": [
+          "tanakh"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "tanakh-devarim-16-20",
+      "ref": "Deuteronomy 16:20",
+      "versions": "tanakh",
+      "defaults": {
+        "type": "tanakh",
+        "title": "Deuteronomy 16:20 – justice, justice shall you pursue",
+        "interests": [
+          "tanakh"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "tanakh-devarim-30-11",
+      "ref": "Deuteronomy 30:11-14",
+      "versions": "tanakh",
+      "defaults": {
+        "type": "tanakh",
+        "title": "Deuteronomy 30:11–14 – not in the heavens",
+        "interests": [
+          "tanakh"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "tanakh-devarim-30-19",
+      "ref": "Deuteronomy 30:19-20",
+      "versions": "tanakh",
+      "defaults": {
+        "type": "tanakh",
+        "title": "Deuteronomy 30:19–20 – choose life",
+        "interests": [
+          "tanakh"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "tanakh-devarim-34-10",
+      "ref": "Deuteronomy 34:10",
+      "versions": "tanakh",
+      "defaults": {
+        "type": "tanakh",
+        "title": "Deuteronomy 34:10 – no prophet like Moses",
+        "interests": [
+          "tanakh"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "tanakh-yehoshua-1-9",
+      "ref": "Joshua 1:9",
+      "versions": "tanakh",
+      "defaults": {
+        "type": "tanakh",
+        "title": "Joshua 1:9 – be strong and resolute",
+        "interests": [
+          "tanakh"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "tanakh-shmuel-1-16-7",
+      "ref": "I Samuel 16:7",
+      "versions": "tanakh",
+      "defaults": {
+        "type": "tanakh",
+        "title": "1 Samuel 16:7 – God sees the heart",
+        "interests": [
+          "tanakh"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "tanakh-melachim-1-19-11",
+      "ref": "I Kings 19:11-12",
+      "versions": "tanakh",
+      "defaults": {
+        "type": "tanakh",
+        "title": "1 Kings 19:11–12 – the still, small voice",
+        "interests": [
+          "tanakh"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "tanakh-yeshayahu-2-4",
+      "ref": "Isaiah 2:4",
+      "versions": "tanakh",
+      "defaults": {
+        "type": "tanakh",
+        "title": "Isaiah 2:4 – swords into plowshares",
+        "interests": [
+          "tanakh"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "tanakh-yeshayahu-6-1",
+      "ref": "Isaiah 6:1-3",
+      "versions": "tanakh",
+      "defaults": {
+        "type": "tanakh",
+        "title": "Isaiah 6:1–3 – “Holy, holy, holy”",
+        "interests": [
+          "tanakh"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "tanakh-yeshayahu-11-6",
+      "ref": "Isaiah 11:6-9",
+      "versions": "tanakh",
+      "defaults": {
+        "type": "tanakh",
+        "title": "Isaiah 11:6–9 – the wolf and the lamb",
+        "interests": [
+          "tanakh"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "tanakh-yeshayahu-40-28",
+      "ref": "Isaiah 40:28-31",
+      "versions": "tanakh",
+      "defaults": {
+        "type": "tanakh",
+        "title": "Isaiah 40:28–31 – renewed strength",
+        "interests": [
+          "tanakh"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "tanakh-yeshayahu-42-6",
+      "ref": "Isaiah 42:6-7",
+      "versions": "tanakh",
+      "defaults": {
+        "type": "tanakh",
+        "title": "Isaiah 42:6–7 – a light of nations",
+        "interests": [
+          "tanakh"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "tanakh-yeshayahu-58-6",
+      "ref": "Isaiah 58:6-7",
+      "versions": "tanakh",
+      "defaults": {
+        "type": "tanakh",
+        "title": "Isaiah 58:6–7 – the fast God desires",
+        "interests": [
+          "tanakh"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "tanakh-yirmeyahu-9-22",
+      "ref": "Jeremiah 9:22-23",
+      "versions": "tanakh",
+      "defaults": {
+        "type": "tanakh",
+        "title": "Jeremiah 9:22–23 – what is worth boasting of",
+        "interests": [
+          "tanakh"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "tanakh-yirmeyahu-17-7",
+      "ref": "Jeremiah 17:7-8",
+      "versions": "tanakh",
+      "defaults": {
+        "type": "tanakh",
+        "title": "Jeremiah 17:7–8 – like a tree planted by water",
+        "interests": [
+          "tanakh"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "tanakh-yechezkel-37-4",
+      "ref": "Ezekiel 37:4-6",
+      "versions": "tanakh",
+      "defaults": {
+        "type": "tanakh",
+        "title": "Ezekiel 37:4–6 – the dry bones",
+        "interests": [
+          "tanakh"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "tanakh-hoshea-2-21",
+      "ref": "Hosea 2:21-22",
+      "versions": "tanakh",
+      "defaults": {
+        "type": "tanakh",
+        "title": "Hosea 2:21–22 – “I will betroth you”",
+        "interests": [
+          "tanakh"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "tanakh-amos-5-24",
+      "ref": "Amos 5:24",
+      "versions": "tanakh",
+      "defaults": {
+        "type": "tanakh",
+        "title": "Amos 5:24 – let justice well up like water",
+        "interests": [
+          "tanakh"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "tanakh-yonah-4-10",
+      "ref": "Jonah 4:10-11",
+      "versions": "tanakh",
+      "defaults": {
+        "type": "tanakh",
+        "title": "Jonah 4:10–11 – God’s compassion for Nineveh",
+        "interests": [
+          "tanakh"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "tanakh-zechariah-4-6",
+      "ref": "Zechariah 4:6",
+      "versions": "tanakh",
+      "defaults": {
+        "type": "tanakh",
+        "title": "Zechariah 4:6 – not by might",
+        "interests": [
+          "tanakh"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "tanakh-zechariah-14-9",
+      "ref": "Zechariah 14:9",
+      "versions": "tanakh",
+      "defaults": {
+        "type": "tanakh",
+        "title": "Zechariah 14:9 – on that day God shall be one",
+        "interests": [
+          "tanakh"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "tanakh-malachi-3-23",
+      "ref": "Malachi 3:23-24",
+      "versions": "tanakh",
+      "defaults": {
+        "type": "tanakh",
+        "title": "Malachi 3:23–24 – Elijah and the hearts of parents and children",
+        "interests": [
+          "tanakh"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "tanakh-tehillim-1-1",
+      "ref": "Psalms 1:1-3",
+      "versions": "tanakh",
+      "defaults": {
+        "type": "tanakh",
+        "title": "Psalm 1:1–3 – the tree by streams of water",
+        "interests": [
+          "tanakh"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "tanakh-tehillim-15-1",
+      "ref": "Psalms 15:1-5",
+      "versions": "tanakh",
+      "defaults": {
+        "type": "tanakh",
+        "title": "Psalm 15 – who may dwell on Your holy mountain",
+        "interests": [
+          "tanakh"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "tanakh-tehillim-19-8",
+      "ref": "Psalms 19:8-9",
+      "versions": "tanakh",
+      "defaults": {
+        "type": "tanakh",
+        "title": "Psalm 19:8–9 – the teaching of the LORD is perfect",
+        "interests": [
+          "tanakh"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "tanakh-tehillim-23-1",
+      "ref": "Psalms 23:1-6",
+      "versions": "tanakh",
+      "defaults": {
+        "type": "tanakh",
+        "title": "Psalm 23",
+        "interests": [
+          "tanakh"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "tanakh-tehillim-24-3",
+      "ref": "Psalms 24:3-5",
+      "versions": "tanakh",
+      "defaults": {
+        "type": "tanakh",
+        "title": "Psalm 24:3–5 – clean hands and a pure heart",
+        "interests": [
+          "tanakh"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "tanakh-tehillim-27-1",
+      "ref": "Psalms 27:1",
+      "versions": "tanakh",
+      "defaults": {
+        "type": "tanakh",
+        "title": "Psalm 27:1 – the LORD is my light",
+        "interests": [
+          "tanakh"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "tanakh-tehillim-27-4",
+      "ref": "Psalms 27:4",
+      "versions": "tanakh",
+      "defaults": {
+        "type": "tanakh",
+        "title": "Psalm 27:4 – one thing I ask",
+        "interests": [
+          "tanakh"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "tanakh-tehillim-34-13",
+      "ref": "Psalms 34:13-15",
+      "versions": "tanakh",
+      "defaults": {
+        "type": "tanakh",
+        "title": "Psalm 34:13–15 – guard your tongue",
+        "interests": [
+          "tanakh"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "tanakh-tehillim-90-12",
+      "ref": "Psalms 90:12",
+      "versions": "tanakh",
+      "defaults": {
+        "type": "tanakh",
+        "title": "Psalm 90:12 – teach us to number our days",
+        "interests": [
+          "tanakh"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "tanakh-tehillim-92-2",
+      "ref": "Psalms 92:2-3",
+      "versions": "tanakh",
+      "defaults": {
+        "type": "tanakh",
+        "title": "Psalm 92:2–3 – it is good to give thanks",
+        "interests": [
+          "tanakh"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "tanakh-tehillim-100-1",
+      "ref": "Psalms 100:1-5",
+      "versions": "tanakh",
+      "defaults": {
+        "type": "tanakh",
+        "title": "Psalm 100",
+        "interests": [
+          "tanakh"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "tanakh-tehillim-121-1",
+      "ref": "Psalms 121:1-8",
+      "versions": "tanakh",
+      "defaults": {
+        "type": "tanakh",
+        "title": "Psalm 121",
+        "interests": [
+          "tanakh"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "tanakh-tehillim-133-1",
+      "ref": "Psalms 133:1",
+      "versions": "tanakh",
+      "defaults": {
+        "type": "tanakh",
+        "title": "Psalm 133:1 – how good when brothers dwell together",
+        "interests": [
+          "tanakh"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "tanakh-mishlei-3-5",
+      "ref": "Proverbs 3:5-6",
+      "versions": "tanakh",
+      "defaults": {
+        "type": "tanakh",
+        "title": "Proverbs 3:5–6 – trust with all your heart",
+        "interests": [
+          "tanakh"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "tanakh-mishlei-3-17",
+      "ref": "Proverbs 3:17-18",
+      "versions": "tanakh",
+      "defaults": {
+        "type": "tanakh",
+        "title": "Proverbs 3:17–18 – a tree of life",
+        "interests": [
+          "tanakh"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "tanakh-kohelet-3-1",
+      "ref": "Ecclesiastes 3:1-8",
+      "versions": "tanakh",
+      "defaults": {
+        "type": "tanakh",
+        "title": "Ecclesiastes 3:1–8 – a season for everything",
+        "interests": [
+          "tanakh"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "tanakh-kohelet-12-13",
+      "ref": "Ecclesiastes 12:13",
+      "versions": "tanakh",
+      "defaults": {
+        "type": "tanakh",
+        "title": "Ecclesiastes 12:13 – the sum of the matter",
+        "interests": [
+          "tanakh"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "tanakh-ruth-1-16",
+      "ref": "Ruth 1:16-17",
+      "versions": "tanakh",
+      "defaults": {
+        "type": "tanakh",
+        "title": "Ruth 1:16–17 – “your people shall be my people”",
+        "interests": [
+          "tanakh"
+        ],
+        "minLevel": "beginner"
+      }
+    },
+    {
+      "id": "tanakh-eicha-3-22",
+      "ref": "Lamentations 3:22-23",
+      "versions": "tanakh",
+      "defaults": {
+        "type": "tanakh",
+        "title": "Lamentations 3:22–23 – new every morning",
+        "interests": [
+          "tanakh"
+        ],
+        "minLevel": "beginner"
+      }
+    }
+  ],
+  "siddur": [
+    {
+      "section": "pesukei_dezimra",
+      "id": "psalm_30",
+      "ref": "Siddur Ashkenaz, Weekday, Shacharit, Pesukei Dezimra, Introductory Psalm",
+      "versions": "siddur",
+      "defaults": {
+        "blessingOrLine": "Mizmor Shir (Psalm 30)",
+        "relatedInterests": [
+          "siddur",
+          "kavannah"
+        ]
+      }
+    },
+    {
+      "section": "pesukei_dezimra",
+      "id": "pd_mourners_kaddish",
+      "ref": "Siddur Ashkenaz, Weekday, Shacharit, Pesukei Dezimra, Mourner's Kaddish",
+      "versions": "siddur",
+      "defaults": {
+        "blessingOrLine": "Mourner’s Kaddish",
+        "relatedInterests": [
+          "siddur",
+          "kavannah"
+        ]
+      }
+    },
+    {
+      "section": "pesukei_dezimra",
+      "id": "baruch_sheamar",
+      "ref": "Siddur Ashkenaz, Weekday, Shacharit, Pesukei Dezimra, Barukh She'amar",
+      "versions": "siddur",
+      "remove": [
+        "transliteration",
+        "estimatedMinutes"
+      ]
+    },
+    {
+      "section": "pesukei_dezimra",
+      "id": "hodu",
+      "ref": "Siddur Ashkenaz, Weekday, Shacharit, Pesukei Dezimra, Hodu",
+      "versions": "siddur",
+      "defaults": {
+        "blessingOrLine": "Hodu",
+        "relatedInterests": [
+          "siddur",
+          "kavannah"
+        ]
+      }
+    },
+    {
+      "section": "pesukei_dezimra",
+      "id": "mizmor_letodah",
+      "ref": "Siddur Ashkenaz, Weekday, Shacharit, Pesukei Dezimra, Mizmor Letoda",
+      "versions": "siddur",
+      "defaults": {
+        "blessingOrLine": "Mizmor Letodah (Psalm 100)",
+        "relatedInterests": [
+          "siddur",
+          "kavannah"
+        ]
+      }
+    },
+    {
+      "section": "pesukei_dezimra",
+      "id": "yehi_chevod",
+      "ref": "Siddur Ashkenaz, Weekday, Shacharit, Pesukei Dezimra, Yehi Chevod",
+      "versions": "siddur",
+      "defaults": {
+        "blessingOrLine": "Yehi Chevod",
+        "relatedInterests": [
+          "siddur",
+          "kavannah"
+        ]
+      }
+    },
+    {
+      "section": "pesukei_dezimra",
+      "id": "ashrei_opening",
+      "ref": "Siddur Ashkenaz, Weekday, Shacharit, Pesukei Dezimra, Ashrei",
+      "versions": "siddur",
+      "remove": [
+        "transliteration",
+        "estimatedMinutes"
+      ]
+    },
+    {
+      "section": "pesukei_dezimra",
+      "id": "psalm_146",
+      "ref": "Siddur Ashkenaz, Weekday, Shacharit, Pesukei Dezimra, Psalm 146",
+      "versions": "siddur",
+      "defaults": {
+        "blessingOrLine": "Psalm 146",
+        "relatedInterests": [
+          "siddur",
+          "kavannah"
+        ]
+      }
+    },
+    {
+      "section": "pesukei_dezimra",
+      "id": "psalm_147",
+      "ref": "Siddur Ashkenaz, Weekday, Shacharit, Pesukei Dezimra, Psalm 147",
+      "versions": "siddur",
+      "defaults": {
+        "blessingOrLine": "Psalm 147",
+        "relatedInterests": [
+          "siddur",
+          "kavannah"
+        ]
+      }
+    },
+    {
+      "section": "pesukei_dezimra",
+      "id": "psalm_148",
+      "ref": "Siddur Ashkenaz, Weekday, Shacharit, Pesukei Dezimra, Psalm 148",
+      "versions": "siddur",
+      "defaults": {
+        "blessingOrLine": "Psalm 148",
+        "relatedInterests": [
+          "siddur",
+          "kavannah"
+        ]
+      }
+    },
+    {
+      "section": "pesukei_dezimra",
+      "id": "psalm_149",
+      "ref": "Siddur Ashkenaz, Weekday, Shacharit, Pesukei Dezimra, Psalm 149",
+      "versions": "siddur",
+      "defaults": {
+        "blessingOrLine": "Psalm 149",
+        "relatedInterests": [
+          "siddur",
+          "kavannah"
+        ]
+      }
+    },
+    {
+      "section": "pesukei_dezimra",
+      "id": "psalm_150",
+      "ref": "Siddur Ashkenaz, Weekday, Shacharit, Pesukei Dezimra, Psalm 150",
+      "versions": "siddur",
+      "defaults": {
+        "blessingOrLine": "Psalm 150",
+        "relatedInterests": [
+          "siddur",
+          "kavannah"
+        ]
+      }
+    },
+    {
+      "section": "pesukei_dezimra",
+      "id": "baruch_hashem_leolam",
+      "ref": "Siddur Ashkenaz, Weekday, Shacharit, Pesukei Dezimra, Closing Verses",
+      "versions": "siddur",
+      "defaults": {
+        "blessingOrLine": "Closing verses (Baruch Hashem Le’olam)",
+        "relatedInterests": [
+          "siddur",
+          "kavannah"
+        ]
+      }
+    },
+    {
+      "section": "pesukei_dezimra",
+      "id": "vayevarech_david",
+      "ref": "Siddur Ashkenaz, Weekday, Shacharit, Pesukei Dezimra, Vayevarech David",
+      "versions": "siddur",
+      "defaults": {
+        "blessingOrLine": "Vayevarech David",
+        "relatedInterests": [
+          "siddur",
+          "kavannah"
+        ]
+      }
+    },
+    {
+      "section": "pesukei_dezimra",
+      "id": "atah_hu",
+      "ref": "Siddur Ashkenaz, Weekday, Shacharit, Pesukei Dezimra, Ata Hu",
+      "versions": "siddur",
+      "defaults": {
+        "blessingOrLine": "Atah Hu",
+        "relatedInterests": [
+          "siddur",
+          "kavannah"
+        ]
+      }
+    },
+    {
+      "section": "pesukei_dezimra",
+      "id": "az_yashir",
+      "ref": "Siddur Ashkenaz, Weekday, Shacharit, Pesukei Dezimra, Az Yashir",
+      "versions": "siddur",
+      "defaults": {
+        "blessingOrLine": "Az Yashir (Song at the Sea)",
+        "relatedInterests": [
+          "siddur",
+          "kavannah"
+        ]
+      }
+    },
+    {
+      "section": "pesukei_dezimra",
+      "id": "yishtabach_opening",
+      "ref": "Siddur Ashkenaz, Weekday, Shacharit, Pesukei Dezimra, Yishtabach",
+      "versions": "siddur",
+      "remove": [
+        "transliteration",
+        "estimatedMinutes"
+      ]
+    },
+    {
+      "section": "pesukei_dezimra",
+      "id": "psalm_130",
+      "ref": "Siddur Ashkenaz, Weekday, Shacharit, Pesukei Dezimra, Psalm 130",
+      "versions": "siddur",
+      "defaults": {
+        "blessingOrLine": "Psalm 130 (Ten Days of Repentance)",
+        "relatedInterests": [
+          "siddur",
+          "kavannah"
+        ]
+      }
+    },
+    {
+      "section": "pesukei_dezimra",
+      "id": "pd_half_kaddish",
+      "ref": "Siddur Ashkenaz, Weekday, Shacharit, Pesukei Dezimra, Half Kaddish",
+      "versions": "siddur",
+      "defaults": {
+        "blessingOrLine": "Half Kaddish",
+        "relatedInterests": [
+          "siddur",
+          "kavannah"
+        ]
+      }
+    },
+    {
+      "section": "shema",
+      "id": "barchu",
+      "ref": "Siddur Ashkenaz, Weekday, Shacharit, Blessings of the Shema, Barchu",
+      "versions": "siddur",
+      "defaults": {
+        "blessingOrLine": "Barchu",
+        "relatedInterests": [
+          "siddur",
+          "kavannah"
+        ]
+      }
+    },
+    {
+      "section": "shema",
+      "id": "yotzer_or",
+      "ref": "Siddur Ashkenaz, Weekday, Shacharit, Blessings of the Shema, First Blessing before Shema",
+      "versions": "siddur",
+      "defaults": {
+        "blessingOrLine": "First blessing before the Shema (Yotzer Or)",
+        "relatedInterests": [
+          "siddur",
+          "kavannah"
+        ]
+      }
+    },
+    {
+      "section": "shema",
+      "id": "ahavah_rabbah",
+      "ref": "Siddur Ashkenaz, Weekday, Shacharit, Blessings of the Shema, Second Blessing before Shema",
+      "versions": "siddur",
+      "defaults": {
+        "blessingOrLine": "Second blessing before the Shema (Ahavah Rabbah)",
+        "relatedInterests": [
+          "siddur",
+          "kavannah"
+        ]
+      }
+    },
+    {
+      "section": "shema",
+      "id": "shema",
+      "ref": "Siddur Ashkenaz, Weekday, Shacharit, Blessings of the Shema, Shema",
+      "versions": "siddur",
+      "defaults": {
+        "blessingOrLine": "The Shema",
+        "relatedInterests": [
+          "siddur",
+          "kavannah"
+        ]
+      }
+    },
+    {
+      "section": "shema",
+      "id": "emet_veyatziv",
+      "ref": "Siddur Ashkenaz, Weekday, Shacharit, Blessings of the Shema, Blessing after Shema",
+      "versions": "siddur",
+      "defaults": {
+        "blessingOrLine": "Blessing after the Shema (Emet Veyatziv)",
+        "relatedInterests": [
+          "siddur",
+          "kavannah"
+        ]
+      }
+    }
+  ]
+}

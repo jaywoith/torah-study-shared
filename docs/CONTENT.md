@@ -6,6 +6,7 @@ Content is **data**, in `packages/content/data/`. Adding or fixing content never
 |---|---|
 | `siddur.json` | Siddur path: ordered `sections`, each with ordered `units`. Also the source for the daily study's Siddur slot. |
 | `study-units.json` | Everything else (Tanakh, Musar, Kabbalah, Halachah, Midrash). Each unit carries selection metadata. |
+| `../sefaria-manifest.json` | Which refs and versions `npm run content:import` brings in from Sefaria. |
 | `ui-strings.json` | Shared UI labels served at `/v1/ui-strings`. |
 
 ## Rules (enforced by `packages/content/test/content.test.ts`)
@@ -47,6 +48,23 @@ Content is **data**, in `packages/content/data/`. Adding or fixing content never
 - A unit is eligible if its `frameworks` include the user's framework (or are omitted), `minLevel` ≤ the user's level, and (for Kabbalah) `depth` ≤ min(framework cap, level cap).
 - Within a type, units rotate by date in file order. More units means longer before repeats.
 
+## Importing from Sefaria (ADR-010, ADR-012)
+
+Texts come from Sefaria at **build time**; the app never calls Sefaria at runtime.
+
+1. Add an entry to `packages/content/sefaria-manifest.json`:
+   - `studyUnits[]`: `{ "id", "ref", "versions": "tanakh", "defaults": { type, title, interests, minLevel } }`
+   - `siddur[]`: `{ "section", "id", "ref", "versions": "siddur", "defaults": { blessingOrLine, relatedInterests } }` (order in the list = order in the path)
+   - optional: `source` (citation override), `remove` (hand-written fields to drop when the text changes), `personalUseOnly` (allow an uncleared license, ADR-012)
+2. `npm run content:import -- --dry-run`, then `npm run content:import`.
+3. Review the diff, `npm run check`, regenerate examples if needed.
+
+The import owns `hebrew`, `english`, `source` and `provenance`; every other field is hand-written and kept. `verified: true` entries are never changed without `--force`, and a forced change resets `verified`.
+
+**License policy:** Public Domain, CC0, CC-BY, CC-BY-SA allowed; CC-BY-NC allowed but flagged; anything else rejected unless `personalUseOnly`. Every imported entry stores `provenance` (ref, URL, import time, per-language version title and license).
+
+**Sanitizing:** HTML tags unwrapped; footnotes, `<sup>` markers and Masorah parasha markers ({פ}/{ס}) removed with their content; whole-segment editorial notes (Metsudah's `<small>`/`<i>` notes) skipped; whitespace collapsed. Te'amim are kept; hiding them is a display setting.
+
 ## After editing content
 
 ```bash
@@ -58,5 +76,5 @@ Add a CHANGELOG line under **Content**.
 
 ## Pending content policy decisions
 
-- **Divine Name display** (deferred issue D3): currently shown fully pointed. A policy will be set in v0.5.0.
-- **Text source and licensing** (v0.5.0): translations must be public domain or openly licensed, and each entry will get a `license` field.
+- **Divine Name display:** decided (ADR-011). Content stores the source form; the API renders it per the user's setting.
+- **Text source and licensing:** decided (ADR-010, ADR-012). See "Importing from Sefaria" above.

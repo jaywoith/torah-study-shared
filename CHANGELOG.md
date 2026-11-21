@@ -9,9 +9,19 @@ All notable changes. Format: [Keep a Changelog](https://keepachangelog.com); ver
 - Core: `stripCantillation`, `hasCantillation`, `applyDivineName`, `applyDivineNameTransliteration`, `applyTextPreferences`; `DIVINE_NAME_MODES` enum.
 - `GET /v1/options` returns `divineNames`; `study.profile` echoes both settings.
 - Web Settings: "Text display" group with the cantillation toggle and Divine Name selector.
+- **Sefaria import (ADR-010, ADR-012):** `npm run content:import` (`scripts/import-sefaria.ts`) reads `packages/content/sefaria-manifest.json`, fetches pinned versions, strips HTML/footnotes/parasha markers, keeps te'amim, enforces the license policy and merges into the content JSON. Idempotent, `--dry-run`, `--only=<prefix>`, `--force` (verified entries), `--refresh` (bypass the gitignored `.cache/sefaria`). Throttled with 429 retry. Fetch source is pluggable (`SEFARIA_BASE_URL` or a `TextSource`) for the planned mirror.
+- `Provenance` on content entries: `sefariaRef`, `sefariaUrl`, `importedAt`, per-language `versionTitle` + `license`, optional `personalUseOnly`.
+- Tests: sanitizer, license policy, merge rules, and content checks for provenance, allowed licenses, no leftover HTML, te'amim, and a Tanakh pool of 60+.
+
+### Content
+- **Tanakh:** 70 units (3 existing re-imported + 67 new), Hebrew *Miqra according to the Masorah* (CC-BY-SA) and English NJPS 1985 (CC-BY-NC). Citations now use Sefaria's names (e.g. "Psalms 145:9").
+- **Siddur:** complete weekday Pesukei Dezimra in Ashkenaz order (19 units) and the Shema and its Blessings (5 units), Metsudah Hebrew + English (CC-BY). Existing ids kept: `baruch_sheamar`, `ashrei_opening` (now all of Ashrei), `yishtabach_opening` (now all of Yishtabach); their hand-written transliterations were removed because they covered only the opening lines. New units have no transliteration, commentary or kavannah yet (pending owner-reviewed drafts).
+- All imported entries are `verified: false`.
 
 ### Changed
 - Profiles saved by v0.4 (or sent without the new fields) get the defaults; `GET /v1/profile` always returns both fields. Non-breaking.
+- `SiddurUnit.transliteration`, `commentary` and `kavannahPrompt` are optional (imported units may lack them). Additive for clients; the web already handled missing values.
+- `/v1/siddur/next` now starts at `psalm_30` (the path begins with the introductory psalm). API tests derive Siddur ids from content instead of hard-coding them.
 - With the default setting, Tanakh Hebrew now shows ה׳ and transliteration "Hashem" where they previously showed the Name and "Adonai".
 - Plan: v0.5.0 detailed with owner decisions: Sefaria build-time import (ADR-010); cantillation toggle and Divine Name setting, default ה׳ (ADR-011); full Sefaria mirror with monthly sync and a cantillation track added to the backlog. Deferred issue D3 decided.
 

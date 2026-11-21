@@ -108,7 +108,7 @@ function candidatesFor(type: UnitType, profile: UserProfile, library: ContentLib
 }
 
 function toStudyUnit(unit: ContentUnit, date: string): StudyUnit {
-  const { interests, minLevel, frameworks, depth, verified, reviewNote, ...rest } = unit;
+  const { interests, minLevel, frameworks, depth, verified, reviewNote, provenance, ...rest } = unit;
   return { ...rest, id: `${date}-${unit.id}`, contentId: unit.id };
 }
 

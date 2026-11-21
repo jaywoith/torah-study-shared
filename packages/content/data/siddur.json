@@ -6,57 +6,695 @@
       "order": 1,
       "units": [
         {
+          "id": "psalm_30",
+          "section": "Pesukei Dezimra",
+          "estimatedMinutes": 9,
+          "blessingOrLine": "Mizmor Shir (Psalm 30)",
+          "relatedInterests": [
+            "siddur",
+            "kavannah"
+          ],
+          "hebrew": "מִזְמוֹר שִׁיר־חֲנֻכַּת הַבַּֽיִת לְדָוִד: אֲרוֹמִמְךָ יְהֹוָה כִּי דִלִּיתָֽנִי וְלֹא־שִׂמַּֽחְתָּ אֹיְ֒בַי לִי: יְהֹוָה אֱלֹהָי שִׁוַּעְתִּי אֵלֶֽיךָ וַתִּרְפָּאֵֽנִי: יְהֹוָה הֶעֱלִֽיתָ מִן־שְׁאוֹל נַפְשִׁי חִיִּיתַֽנִי מִיָּרְ֒דִי־בוֹר: זַמְּ֒רוּ לַיהוָֹה חֲסִידָיו וְהוֹדוּ לְזֵֽכֶר קָדְשׁוֹ: כִּי רֶֽגַע בְּאַפּוֹ חַיִּים בִּרְצוֹנוֹ בָּעֶֽרֶב יָלִין בֶּֽכִי וְלַבֹּֽקֶר רִנָּה: וַאֲנִי אָמַֽרְתִּי בְשַׁלְוִי בַּל־אֶמּוֹט לְעוֹלָם: יְהֹוָה בִּרְצוֹנְ֒ךָ הֶעֱמַֽדְתָּה לְהַרְרִי עֹז הִסְתַּֽרְתָּ פָנֶֽיךָ הָיִֽיתִי נִבְהָל: אֵלֶֽיךָ יְהֹוָה אֶקְרָא וְאֶל־אֲדֹנָי אֶתְחַנָּן: מַה־בֶּֽצַע בְּדָמִי בְּרִדְתִּי אֶל שָֽׁחַת הֲיוֹדְ֒ךָ עָפָר הֲיַגִּיד אֲמִתֶּֽךָ: שְׁמַע יְהֹוָה וְחָנֵּֽנִי יְהֹוָה הֱיֵה־עֹזֵר לִי: הָפַֽכְתָּ מִסְפְּדִי לְמָחוֹל לִי פִּתַּחְתָּ שַׂקִּי וַתְּ֒אַזְּ֒רֵֽנִי שִׂמְחָה: לְמַֽעַן יְזַמֶּרְךָ כָבוֹד וְלֹא יִדֹּם יְהֹוָה אֱלֹהַי לְעוֹלָם אוֹדֶֽךָּ:",
+          "english": "A Psalm, a song for the inauguration of the Temple, by David. I will exalt You, Adonoy, for You have upheld me, and not let my foes rejoice over me. Adonoy, my God, I cried out to You, and You healed me. Adonoy, You have raised my soul from the lower world. You have kept me alive, lest I descend to the Pit. Sing to Adonoy, [you,] His pious ones, and give thanks to His holy Name. For His anger lasts only a moment, but there is [long] life, in His conciliation. In the evening, one retires weeping, but in the morning there is [a cry of] joy! I said, in my serenity, I would never be moved. [But,] Adonoy, it was Your will [alone] that established my mountain as a stronghold. When You concealed Your Presence, I was terrified. To You, Adonoy, I called, and my Master I beseeched. What gain is there in [the shedding of] my blood? In my going down to destruction? Will the dust acknowledge You? Will it proclaim Your truth? Hear [me] Adonoy, and be gracious to me, Adonoy, be a help to me. You have turned my mourning into dancing, You have loosened my sackcloth and supported me with joy. In order that my soul might sing to You and not be stilled, Adonoy, my God, forever will I thank You.",
+          "source": "Siddur Ashkenaz, Weekday, Shacharit, Pesukei Dezimra, Introductory Psalm",
+          "provenance": {
+            "sefariaRef": "Siddur Ashkenaz, Weekday, Shacharit, Pesukei Dezimra, Introductory Psalm",
+            "sefariaUrl": "https://www.sefaria.org/Siddur_Ashkenaz,_Weekday,_Shacharit,_Pesukei_Dezimra,_Introductory_Psalm",
+            "hebrew": {
+              "versionTitle": "The Metsudah siddur, 1981",
+              "license": "CC-BY"
+            },
+            "english": {
+              "versionTitle": "Translation based on the Metsudah linear siddur, by Avrohom Davis, 1981",
+              "license": "CC-BY"
+            },
+            "importedAt": "2026-11-21T13:56:07.200Z"
+          },
+          "verified": false
+        },
+        {
+          "id": "pd_mourners_kaddish",
+          "section": "Pesukei Dezimra",
+          "estimatedMinutes": 7,
+          "blessingOrLine": "Mourner’s Kaddish",
+          "relatedInterests": [
+            "siddur",
+            "kavannah"
+          ],
+          "hebrew": "יִתְגַּדַּל וְיִתְקַדַּשׁ שְׁמֵהּ רַבָּא (אָמֵן) בְּעָלְ֒מָֽא דִּי־בְרָא כִרְעוּתֵהּ וְיַמְלִיךְ מַלְכוּתֵהּ בְּחַיֵּיכוֹן וּבְיוֹמֵיכוֹן וּבְחַיֵּי דְכָל־בֵּית יִשְׂרָאֵל בַּעֲגָלָא וּבִזְמַן קָרִיב וְאִמְרוּ אָמֵן: יְהֵא שְׁמֵהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְ֒מֵי עָלְ֒מַיָּא יִתְבָּרַךְ וְיִשְׁתַּבַּח וְיִתְפָּאַר וְיִתְרוֹמַם וְיִתְנַשֵּׂא וְיִתְהַדָּר וְיִתְעַלֶּה וְיִתְהַלָּל שְׁמֵהּ דְקוּדְשָׁא בְּרִיךְ הוּא לְעֵֽלָּא מִן־כָּל־ (בעשי\"ת לְעֵֽלָּא לְעֵֽלָּא מִכָּל) בִּרְכָתָֽא וְשִׁירָתָֽא תֻּשְׁבְּ֒חָתָֽא וְנֶחָמָתָֽא דַּאֲמִירָן בְּעָלְ֒מָֽא וְאִמְרוּ אָמֵן: יְהֵא שְׁלָמָֽא רַבָּֽא מִן־שְׁמַיָּֽא וְחַיִּים עָלֵֽינוּ וְעַל־כָּל־יִשְׂרָאֵל וְאִמְרוּ אָמֵן: עוֹשֶׂה שָׁלוֹם (בעשי\"ת הַשָּׁלוֹם) בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵֽינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ אָמֵן:",
+          "english": "Exalted and sanctified be His great Name in the world which He created according to His will and may He rule His kingdom. In your lifetime and in your days, and in the lifetime of the entire House of Israel, speedily and in the near future— and say Amein. May His great Name be blessed forever and for all eternity. Blessed and praised, glorified, and exalted and uplifted, honored and elevated and extolled be the Name of the Holy One, blessed is He; above (Ten Days of Penitence: far above) all the blessings and hymns, praises and consolations which we utter in the world—and say Amein. May there be abundant peace from heaven and a good life for us and for all Israel, —and say Amein. He Who makes peace (Ten Days of Penitence: the peace) in His high heavens may He, in His mercy, make peace for us and for all Israel, —and say Amein.",
+          "source": "Siddur Ashkenaz, Weekday, Shacharit, Pesukei Dezimra, Mourner's Kaddish",
+          "provenance": {
+            "sefariaRef": "Siddur Ashkenaz, Weekday, Shacharit, Pesukei Dezimra, Mourner's Kaddish",
+            "sefariaUrl": "https://www.sefaria.org/Siddur_Ashkenaz,_Weekday,_Shacharit,_Pesukei_Dezimra,_Mourner%27s_Kaddish",
+            "hebrew": {
+              "versionTitle": "The Metsudah siddur, 1981",
+              "license": "CC-BY"
+            },
+            "english": {
+              "versionTitle": "Translation based on the Metsudah linear siddur, by Avrohom Davis, 1981",
+              "license": "CC-BY"
+            },
+            "importedAt": "2026-11-21T13:56:07.200Z"
+          },
+          "verified": false
+        },
+        {
           "id": "baruch_sheamar",
           "section": "Pesukei Dezimra",
           "blessingOrLine": "Baruch She’amar",
-          "hebrew": "בָּרוּךְ שֶׁאָמַר וְהָיָה הָעוֹלָם. בָּרוּךְ הוּא. בָּרוּךְ עוֹשֵׂה בְרֵאשִׁית. בָּרוּךְ אוֹמֵר וְעוֹשֶׂה. בָּרוּךְ גּוֹזֵר וּמְקַיֵּם. בָּרוּךְ מְרַחֵם עַל הָאָרֶץ. בָּרוּךְ מְרַחֵם עַל הַבְּרִיּוֹת. בָּרוּךְ מְשַׁלֵּם שָׂכָר טוֹב לִירֵאָיו. בָּרוּךְ חַי לָעַד וְקַיָּם לָנֶצַח. בָּרוּךְ פּוֹדֶה וּמַצִּיל. בָּרוּךְ שְׁמוֹ.",
-          "transliteration": "Baruch she’amar ve’hayah ha’olam. Baruch hu. Baruch oseh bereishit. Baruch omer ve’oseh. Baruch gozer umekayem. Baruch merachem al ha’aretz. Baruch merachem al habriyot. Baruch meshalem sachar tov liy’re’av. Baruch chai la’ad vekayam lanetzach. Baruch podeh umatzil. Baruch shemo.",
-          "english": "Blessed is He who spoke, and the world came into being. Blessed is He. Blessed is He who makes the beginning. Blessed is He who speaks and does. Blessed is He who decrees and fulfills. Blessed is He who has mercy on the earth. Blessed is He who has mercy on the creatures. Blessed is He who pays a good reward to those who fear Him. Blessed is He who lives forever and endures to eternity. Blessed is He who redeems and rescues. Blessed is His name.",
+          "hebrew": "בָּרוּךְ שֶׁאָמַר וְהָיָה הָעוֹלָם. בָּרוּךְ הוּא. בָּרוּךְ עוֹשֶׂה בְרֵאשִׁית. בָּרוּךְ אוֹמֵר וְעוֹשֶׂה. בָּרוּךְ גּוֹזֵר וּמְקַיֵּם. בָּרוּךְ מְרַחֵם עַל־הָאָֽרֶץ. בָּרוּךְ מְרַחֵם עַל־הַבְּ֒רִיּוֹת. בָּרוּךְ מְשַׁלֵּם שָׂכָר טוֹב לִירֵאָיו. בָּרוּךְ חַי לָעַד וְקַיָּם לָנֶֽצַח. בָּרוּךְ פּוֹדֶה וּמַצִּיל. בָּרוּךְ שְׁמוֹ. בָּרוּךְ אַתָּה יְהֹוָה אֱלֹהֵֽינוּ מֶֽלֶךְ הָעוֹלָם הָאֵל הָאָב הָרַחֲמָן הַמְ֒הֻלָּל בְּפִי עַמּוֹ מְשֻׁבָּח וּמְפֹאָר בִּלְשׁוֹן חֲסִידָיו וַעֲבָדָיו וּבְשִׁירֵי דָוִד עַבְדֶּֽךָ. נְהַלֶּלְךָ יְהֹוָה אֱלֹהֵֽינוּ בִּשְׁבָחוֹת וּבִזְמִירוֹת נְגַדֶּלְךָ וּנְשַׁבֵּחֲךָ וּנְפָאֶרְךָ וְנַזְכִּיר שִׁמְךָ וְנַמְלִיכְ֒ךָ מַלְכֵּֽנוּ אֱלֹהֵֽינוּ. יָחִיד חֵי הָעוֹלָמִים. מֶֽלֶךְ מְשֻׁבָּח וּמְפֹאָר עֲדֵי־עַד שְׁמוֹ הַגָּדוֹל. בָּרוּךְ אַתָּה יְהֹוָה מֶֽלֶךְ מְהֻלָּל בַּתִּשְׁבָּחוֹת:",
+          "english": "Blessed is He Who spoke, and the world came into being, blessed is He; blessed is He Who maintains the creation; blessed is He Who says and does; blessed is He Who decrees and fulfills; blessed is He Who has compassion on the earth; blessed is He Who has compassion on the creatures; blessed is He Who rewards well those who fear Him, blessed is He Who lives forever and exists eternally; blessed is He Who redeems and saves blessed is His Name. Blessed are You, Adonoy, our God, King of the Universe, the Almighty, the merciful Father, Who is verbally extolled by His people, praised and glorified by the tongue of His pious ones, and His servants, and through the songs of David Your servant. We will extoll You, Adonoy our God, with praises and psalms; we will exalt, praise, and glorify You; we will mention Your Name, and proclaim You—our King, our God. Unique One, Life of the worlds, King, praised and glorified forever is His great Name. Blessed are You, Adonoy, King, Who is extolled with praises.",
           "commentary": "This opening of Pesukei Dezimra affirms God as the Creator who brings the world into being through speech. The kavannah is acknowledging divine creative power at the start of the morning praises and connecting the words to our own speech and actions throughout the day.",
           "kavannahPrompt": "As you begin Pesukei Dezimra, pause on the words 'who spoke and the world came into being.' What does it mean for you today that creation continues through divine speech?",
-          "source": "Siddur, Pesukei Dezimra",
+          "source": "Siddur Ashkenaz, Weekday, Shacharit, Pesukei Dezimra, Barukh She'amar",
           "reviewItems": [
-            { "type": "hebrew_recognition", "text": "בָּרוּךְ", "expected": "Baruch" },
-            { "type": "shoresh", "text": "אָמַר", "expected": "אמר" }
+            {
+              "type": "hebrew_recognition",
+              "text": "בָּרוּךְ",
+              "expected": "Baruch"
+            },
+            {
+              "type": "shoresh",
+              "text": "אָמַר",
+              "expected": "אמר"
+            }
           ],
+          "relatedInterests": [
+            "siddur",
+            "kavannah",
+            "prayerbook_hebrew"
+          ],
+          "provenance": {
+            "sefariaRef": "Siddur Ashkenaz, Weekday, Shacharit, Pesukei Dezimra, Barukh She'amar",
+            "sefariaUrl": "https://www.sefaria.org/Siddur_Ashkenaz,_Weekday,_Shacharit,_Pesukei_Dezimra,_Barukh_She%27amar",
+            "hebrew": {
+              "versionTitle": "The Metsudah siddur, 1981",
+              "license": "CC-BY"
+            },
+            "english": {
+              "versionTitle": "Translation based on the Metsudah linear siddur, by Avrohom Davis, 1981",
+              "license": "CC-BY"
+            },
+            "importedAt": "2026-11-21T13:56:25.836Z"
+          },
+          "verified": false,
+          "estimatedMinutes": 8
+        },
+        {
+          "id": "hodu",
+          "section": "Pesukei Dezimra",
+          "estimatedMinutes": 12,
+          "blessingOrLine": "Hodu",
+          "relatedInterests": [
+            "siddur",
+            "kavannah"
+          ],
+          "hebrew": "הוֹדוּ לַיהוָֹה קִרְאוּ בִשְׁמוֹ הוֹדִֽיעוּ בָעַמִּים עֲלִילֹתָיו: שִֽׁירוּ לוֹ זַמְּ֒רוּ־לוֹ שִֽׂיחוּ בְּכָל־נִפְלְ֒אוֹתָיו: הִתְהַלְּ֒לוּ בְּשֵׁם קָדְשׁוֹ יִשְׂמַח לֵב מְבַקְשֵׁי יְהֹוָה: דִּרְשׁוּ יְהֹוָה וְעֻזּוֹ בַּקְּ֒שׁוּ פָנָיו תָּמִיד: זִכְרוּ נִפְלְ֒אֹתָיו אֲשֶׁר עָשָׂה מֹפְ֒תָיו וּמִשְׁפְּ֒טֵי־פִֽיהוּ: זֶֽרַע יִשְׂרָאֵל עַבְדּוֹ בְּנֵי יַעֲקֹב בְּחִירָיו: הוּא יְהֹוָה אֱלֹהֵֽינוּ בְּכָל־הָאָֽרֶץ מִשְׁפָּטָיו: זִכְרוּ לְעוֹלָם בְּרִיתוֹ דָּבָר צִוָּה לְאֶֽלֶף דּוֹר: אֲשֶׁר כָּרַת אֶת־אַבְרָהָם וּשְׁבוּעָתוֹ לְיִצְחָק: וַיַּעֲמִידֶֽהָ לְיַעֲקֹב לְחֹק לְיִשְׂרָאֵל בְּרִית עוֹלָם: לֵאמֹר לְךָ אֶתֵּן אֶֽרֶץ־כְּנָעַן חֶֽבֶל נַחֲלַתְכֶם: בִּהְיוֹתְ֒כֶם מְתֵי מִסְפָּר כִּמְעַט וְגָרִים בָּהּ: וַיִּתְהַלְּ֒כוּ מִגּוֹי אֶל־גּוֹי וּמִמַּמְלָכָה אֶל־עַם אַחֵר: לֹא־הִנִּֽיחַ לְאִישׁ לְעָשְׁקָם וַיּֽוֹכַח עֲלֵיהֶם מְלָכִים: אַל־תִּגְּ֒עוּ בִּמְשִׁיחָי וּבִנְבִיאַי אַל־תָּרֵֽעוּ: שִֽׁירוּ לַיהוָֹה כָּל־הָאָֽרֶץ בַּשְּׂ֒רוּ מִיּוֹם־אֶל־יוֹם יְשׁוּעָתוֹ: סַפְּ֒רוּ בַגּוֹיִם אֶת־כְּבוֹדוֹ בְּכָל־הָעַמִּים נִפְלְאֹתָיו: כִּי גָדוֹל יְהֹוָה וּמְהֻלָּל מְאֹד וְנוֹרָא הוּא עַל־כָּל־אֱלֹהִים: כִּי כָּל־אֱלֹהֵי הָעַמִּים אֱלִילִים וַיהוָֹה שָׁמַֽיִם עָשָׂה: הוֹד וְהָדָר לְפָנָיו עֹז וְחֶדְוָה בִּמְקֹמוֹ: הָבוּ לַיהוָֹה מִשְׁפְּ֒חוֹת עַמִּים הָבוּ לַיהוָֹה כָּבוֹד וָעֹז: הָבוּ לַיהוָֹה כְּבוֹד שְׁמוֹ שְׂאוּ מִנְחָה וּבֹֽאוּ לְפָנָיו הִשְׁתַּחֲווּ לַיהוָֹה בְּהַדְרַת־קֹֽדֶשׁ: חִֽילוּ מִלְּ֒פָנָיו כָּל־הָאָֽרֶץ אַף־תִּכּוֹן תֵּבֵל בַּל־תִּמּוֹט: יִשְׂמְחוּ הַשָּׁמַֽיִם וְתָגֵל הָאָֽרֶץ וְיֹאמְ֒רוּ בַגּוֹיִם יְהֹוָה מָלָךְ: יִרְעַם הַיָּם וּמְלוֹאוֹ יַעֲלֹץ הַשָּׂדֶה וְכָל־אֲשֶׁר־בּוֹ: אָז יְרַנְּ֒נוּ עֲצֵי הַיָּעַר מִלִּפְנֵי יְהֹוָה כִּי־בָא לִשְׁפּוֹט אֶת־הָאָֽרֶץ: הוֹדוּ לַיהוָֹה כִּי טוֹב כִּי לְעוֹלָם חַסְדּוֹ: וְאִמְרוּ הוֹשִׁיעֵֽנוּ אֱלֹהֵי יִשְׁעֵֽנוּ וְקַבְּ֒צֵֽנוּ וְהַצִּילֵֽנוּ מִן־הַגּוֹיִם לְהוֹדוֹת לְשֵׁם קָדְשֶֽׁךָ לְהִשְׁתַּבֵּֽחַ בִּתְהִלָּתֶֽךָ: בָּרוּךְ יְהֹוָה אֱלֹהֵי יִשְׂרָאֵל מִן־הָעוֹלָם וְעַד הָעֹלָם וַיֹּאמְ֒רוּ כָל־הָעָם אָמֵן וְהַלֵּל לַיהוָֹה: רוֹמְ֒מוּ יְהֹוָה אֱלֹהֵֽינוּ וְהִשְׁתַּחֲווּ לַהֲדֹם רַגְלָיו קָדוֹשׁ הוּא: רוֹמְ֒מוּ יְהֹוָה אֱלֹהֵֽינוּ וְהִשְׁתַּחֲווּ לְהַר קָדְשׁוֹ כִּי קָדוֹשׁ יְהֹוָה אֱלֹהֵֽינוּ: וְהוּא רַחוּם יְכַפֵּר עָוֹן וְלֹא־יַשְׁחִית וְהִרְבָּה לְהָשִׁיב אַפּוֹ וְלֹא־יָעִיר כָּל־חֲמָתוֹ: אַתָּה יְהֹוָה לֹא־תִכְלָא רַחֲמֶֽיךָ מִמֶּֽנִּי חַסְדְּ֒ךָ וַאֲמִתְּ֒ךָ תָּמִיד יִצְּ֒רֽוּנִי: זְכֹר רַחֲמֶֽיךָ יְהֹוָה וַחֲסָדֶֽיךָ כִּי מֵעוֹלָם הֵֽמָּה: תְּנוּ עֹז לֵאלֹהִים עַל־יִשְׂרָאֵל גַּאֲוָתוֹ וְעֻזּוֹ בַּשְּׁ֒חָקִים: נוֹרָא אֱלֹהִים מִמִּקְדָּשֶֽׁיךָ אֵל יִשְׂרָאֵל הוּא נֹתֵן עֹז וְתַעֲצֻמוֹת לָעָם בָּרוּךְ אֱלֹהִים: אֵל־נְקָמוֹת יְהֹוָה אֵל נְקָמוֹת הוֹפִֽיעַ: הִנָּשֵׂא שֹׁפֵט הָאָֽרֶץ הָשֵׁב גְּמוּל עַל־גֵּאִים: לַיהוָֹה הַיְשׁוּעָה עַל־עַמְּ֒ךָ בִרְכָתֶֽךָ סֶּֽלָה: יְהֹוָה צְבָאוֹת עִמָּנוּ מִשְׂגָּב לָֽנוּ אֱלֹהֵי יַעֲקֹב סֶֽלָה: יְהֹוָה צְבָאוֹת אַשְׁרֵי אָדָם בֹּטֵֽחַ בָּךְ: יְהֹוָה הוֹשִֽׁיעָה הַמֶּֽלֶךְ יַעֲנֵֽנוּ בְיוֹם־קָרְאֵֽנוּ: הוֹשִֽׁיעָה אֶת־עַמֶּֽךָ וּבָרֵךְ אֶת־נַחֲלָתֶֽךָ וּרְעֵם וְנַשְּׂ֒אֵם עַד־הָעוֹלָם: נַפְשֵֽׁנוּ חִכְּ֒תָה לַיהוָֹה עֶזְרֵֽנוּ וּמָגִנֵּֽנוּ הוּא: כִּי־בוֹ יִשְׂמַח לִבֵּֽנוּ כִּי בְשֵׁם קָדְשׁוֹ בָטָֽחְנוּ: יְהִי־חַסְדְּ֒ךָ יְהֹוָה עָלֵֽינוּ כַּאֲשֶׁר יִחַֽלְנוּ לָךְ: הַרְאֵֽנוּ יְהֹוָה חַסְדֶּֽךָ וְיֶשְׁעֲךָ תִּֽתֶּן־לָֽנוּ: קֽוּמָה עֶזְרָֽתָה לָּנוּ וּפְדֵֽנוּ לְמַֽעַן חַסְדֶּֽךָ: אָנֹכִי יְהֹוָה אֱלֹהֶֽיךָ הַמַּעַלְךָ מֵאֶֽרֶץ מִצְרָֽיִם הַרְחֶב־פִּֽיךָ וַאֲמַלְאֵֽהוּ: אַשְׁרֵי הָעָם שֶׁכָּֽכָה לּוֹ אַשְׁרֵי הָעָם שֶׁיְהֹוָה אֱלֹהָיו: וַאֲנִי בְּחַסְדְּ֒ךָ בָטַֽחְתִּי יָגֵל לִבִּי בִּישׁוּעָתֶֽךָ אָשִֽׁירָה לַיהוָֹה כִּי גָמַל עָלָי:",
+          "english": "Give thanks to Adonoy, proclaim His Name; make His deeds known among the nations. Sing to Him, compose songs to Him, speak of all His wonders. Take pride in [uttering] His holy Name, let the heart rejoice of those who seek Adonoy. Search for Adonoy and His might, seek His presence continually. Remember the wonders He has performed, His miracles, and the laws from His mouth. [You,] the seed of Israel His servant, children of Jacob, His chosen ones. He is Adonoy our God; the entire earth is governed by His laws. Remember His covenant forever— the word He commanded to a thousand generations— which He made as a treaty with Abraham, and [which was] His oath to Isaac. He established it for Jacob as a statute, for Israel as an everlasting covenant. Saying, To you I will give the Land of Canaan, the portion of your inheritance. When you were only few in number— very few, and strangers in it. They wandered from nation to nation, and from one kingdom to another people. He permitted no one to oppress them, and admonished kings for their sakes. Do not touch My anointed ones, and do not harm My prophets.” Sing to Adonoy all the earth, proclaim His deliverance from day to day. Recount His glory among the nations, His wonders among all the peoples. For Adonoy is great and most extolled; Awesome is He above all gods. For all the gods of the peoples are idols, whereas Adonoy made the heavens. Beauty and splendor are before Him, strength and joy are in His presence. Give to Adonoy families of peoples— give to Adonoy glory and might. Give to Adonoy the glory due His Name, bring an offering and come before Him, prostrate yourselves before Adonoy in the splendor of holiness. Tremble before Him all [peoples of] the earth, for He established the inhabited world so that it cannot be moved. The heavens will rejoice, the earth will exult, and they will proclaim among the nations: Adonoy has begun His reign. The sea and its fullness will roar; the field and all that is in it will jubilate. Then the trees of the forest will sing with joy, [receding] before Adonoy when He comes to judge the earth. Give thanks to Adonoy, for He is good, for His kindness is everlasting. And say, “Deliver us, God of our deliverance; gather us and save us from the nations, to give thanks to Your holy Name, to be extolled in Your praise.” Blessed is Adonoy, the God of Israel for all eternity, and all the people said: “Amein” and [they] praised Adonoy.” Exalt Adonoy, our God, and prostrate yourselves at His footstool. Holy is He! Exalt Adonoy, our God, and prostrate yourselves at His holy mountain, for Adonoy our God is holy. And He, the Merciful One, atones iniquity and does not destroy; He frequently withdraws His anger and does not arouse all His rage. You, Adonoy, withhold not Your mercy from me; may Your kindness and Your truth always protect me. Remember Your mercies Adonoy and kindnesses, for they are from the beginning of the world. Give might to God, His pride (majesty) hovers over Israel, and His might is in the clouds. You are awesome, God, from Your Sanctuaries, Almighty of Israel—He grants might and power to the people; blessed is God. Almighty of vengeance, Adonoy, Almighty of vengeance, reveal Yourself. Arise, Judge of the earth! Repay the arrogant their just reward. Deliverance is Adonoy’s. Upon Your people is Your blessing. Selah. Adonoy of Hosts is with us, a stronghold for us is the God of Jacob. Selah. Adonoy of Hosts! Fortunate is the man who trusts in You. Adonoy, deliver [us]. The King will answer us on the day we call. Deliver Your people and bless Your inheritance, tend them and uplift them forever. Our soul yearned for Adonoy, our help and our shield is He. For in Him our hearts will rejoice, for in His holy Name we trusted. May Your kindness, Adonoy, be upon us, as we have waited for You. Show us Your kindness, Adonoy, and grant us Your deliverance. Arise—come to our aid, and redeem us for the sake of Your kindness. I am Adonoy, Your God, Who brought you up from the land of Egypt; open your mouth wide, and I will fill it. Fortunate is the people whose lot is thus, fortunate is the people for whom Adonoy is their God. In Your loving kindness I trust, My heart will exult in Your deliverance; I will sing to Adonoy, for He dealt kindly with me.",
+          "source": "Siddur Ashkenaz, Weekday, Shacharit, Pesukei Dezimra, Hodu",
+          "provenance": {
+            "sefariaRef": "Siddur Ashkenaz, Weekday, Shacharit, Pesukei Dezimra, Hodu",
+            "sefariaUrl": "https://www.sefaria.org/Siddur_Ashkenaz,_Weekday,_Shacharit,_Pesukei_Dezimra,_Hodu",
+            "hebrew": {
+              "versionTitle": "The Metsudah siddur, 1981",
+              "license": "CC-BY"
+            },
+            "english": {
+              "versionTitle": "Translation based on the Metsudah linear siddur, by Avrohom Davis, 1981",
+              "license": "CC-BY"
+            },
+            "importedAt": "2026-11-21T13:56:07.200Z"
+          },
+          "verified": false
+        },
+        {
+          "id": "mizmor_letodah",
+          "section": "Pesukei Dezimra",
           "estimatedMinutes": 5,
-          "relatedInterests": ["siddur", "kavannah", "prayerbook_hebrew"],
+          "blessingOrLine": "Mizmor Letodah (Psalm 100)",
+          "relatedInterests": [
+            "siddur",
+            "kavannah"
+          ],
+          "hebrew": "מִזְמוֹר לְתוֹדָה הָרִֽיעוּ לַיהוָֹה כָּל־הָאָֽרֶץ: עִבְדוּ אֶת יְהֹוָה בְּשִׂמְחָה בֹּֽאוּ לְפָנָיו בִּרְנָנָה: דְּעוּ כִּי־יְהֹוָה הוּא אֱלֹהִים הוּא עָשָֽׂנוּ וְלוֹ (וְלֹא) אֲנַֽחְנוּ עַמּוֹ וְצֹאן מַרְעִיתוֹ: בֹּֽאוּ שְׁעָרָיו בְּתוֹדָה חֲצֵרֹתָיו בִּתְהִלָּה הֽוֹדוּ לוֹ בָּרְ֒כוּ שְׁמוֹ: כִּי־טוֹב יְהֹוָה לְעוֹלָם חַסְדּוֹ וְעַד־דֹּר וָדֹר אֱמוּנָתוֹ:",
+          "english": "A psalm of thanksgiving: Shout for joy to Adonoy, everyone on earth. Serve Adonoy with joy, come before Him with exultation. Know that Adonoy is God, He has made us, and we are His, His people and the sheep of His pasturing. Enter His gates with thanksgiving, His courtyards with praise. Give thanks to Him, bless His Name for Adonoy is good, His loving kindness is eternal, and to every generation His faithfulness [extends.]",
+          "source": "Siddur Ashkenaz, Weekday, Shacharit, Pesukei Dezimra, Mizmor Letoda",
+          "provenance": {
+            "sefariaRef": "Siddur Ashkenaz, Weekday, Shacharit, Pesukei Dezimra, Mizmor Letoda",
+            "sefariaUrl": "https://www.sefaria.org/Siddur_Ashkenaz,_Weekday,_Shacharit,_Pesukei_Dezimra,_Mizmor_Letoda",
+            "hebrew": {
+              "versionTitle": "The Metsudah siddur, 1981",
+              "license": "CC-BY"
+            },
+            "english": {
+              "versionTitle": "Translation based on the Metsudah linear siddur, by Avrohom Davis, 1981",
+              "license": "CC-BY"
+            },
+            "importedAt": "2026-11-21T13:56:07.200Z"
+          },
+          "verified": false
+        },
+        {
+          "id": "yehi_chevod",
+          "section": "Pesukei Dezimra",
+          "estimatedMinutes": 10,
+          "blessingOrLine": "Yehi Chevod",
+          "relatedInterests": [
+            "siddur",
+            "kavannah"
+          ],
+          "hebrew": "יְהִי כְבוֹד יְהֹוָה לְעוֹלָם יִשְׂמַח יְהֹוָה בְּמַעֲשָׂיו: יְהִי שֵׁם יְהֹוָה מְבֹרָךְ מֵעַתָּה וְעַד־עוֹלָם: מִמִּזְרַח־שֶֽׁמֶשׁ עַד־מְבוֹאוֹ מְהֻלָּל שֵׁם יְהֹוָה: רָם עַל־כָּל־גּוֹיִם יְהֹוָה עַל הַשָּׁמַֽיִם כְּבוֹדוֹ: יְהֹוָה שִׁמְךָ לְעוֹלָם יְהֹוָה זִכְרְ֒ךָ לְדֹר־וָדֹר: יְהֹוָה בַּשָּׁמַֽיִם הֵכִין כִּסְאוֹ וּמַלְכוּתוֹ בַּכֹּל מָשָֽׁלָה: יִשְׂמְחוּ הַשָּׁמַֽיִם וְתָגֵל הָאָֽרֶץ וְיֹאמְ֒רוּ בַגּוֹיִם יְהֹוָה מָלָךְ: יְהֹוָה מֶֽלֶךְ יְהֹוָה מָלָךְ יְהֹוָה יִמְלֹךְ לְעֹלָם וָעֶד: יְהֹוָה מֶֽלֶךְ עוֹלָם וָעֶד אָבְ֒דוּ גוֹיִם מֵאַרְצוֹ: יְהֹוָה הֵפִיר עֲצַת־גּוֹיִם הֵנִיא מַחְשְׁבוֹת עַמִּים: רַבּוֹת מַחֲשָׁבוֹת בְּלֶב־אִישׁ וַעֲצַת יְהֹוָה הִיא תָקוּם: עֲצַת יְהֹוָה לְעוֹלָם תַּעֲמֹד מַחְשְׁבוֹת לִבּוֹ לְדֹר וָדֹר: כִּי הוּא אָמַר וַיֶּֽהִי הוּא־צִוָּה וַיַּעֲמֹד: כִּי בָחַר יְהֹוָה בְּצִיּוֹן אִוָּהּ לְמוֹשָׁב לוֹ: כִּי־יַעֲקֹב בָּחַר לוֹ יָהּ יִשְׂרָאֵל לִסְגֻלָּתוֹ: כִּי לֹא יִטּשׁ יְהֹוָה עַמּוֹ וְנַחֲלָתוֹ לֹא יַעֲזֹב: וְהוּא רַחוּם יְכַפֵּר עָוֹן וְלֹא־יַשְׁחִית וְהִרְבָּה לְהָשִׁיב אַפּוֹ וְלֹא־יָעִיר כָּל־חֲמָתוֹ: יְהֹוָה הוֹשִׁיעָה הַמֶּֽלֶךְ יַעֲנֵֽנוּ בְיוֹם־קָרְאֵֽנוּ:",
+          "english": "The glory of Adonoy will endure forever; Adonoy will rejoice in His works. The Name of Adonoy will be blessed from now forever. From the rising of the sun to its setting, praised is the Name of Adonoy. High above all nations is Adonoy, above the heavens is His glory. Adonoy, Your Name is forever, Adonoy, Your Mention is for generations. Adonoy has established His throne in heaven, [but] His dominion rules over all. The heavens will rejoice, the earth will exult, and they will proclaim among the nations: Adonoy has begun His reign. Adonoy is King, Adonoy was King; Adonoy will be King forever and ever.” Adonoy will reign for all eternity [when] nations have perished from His earth. Adonoy annuls the counsel of nations, He disrupts the intention of peoples. Many thoughts are in the heart of man, but [only] Adonoy’s counsel will endure. The counsel of Adonoy will stand forever, the thoughts of His heart throughout all generations. For He spoke and it came to be; He commanded and it stood. For Adonoy has chosen Zion; He desired it for His dwelling place. For God chose Jacob to be His, Israel for His treasure. For Adonoy will not cast off His people, and His inheritance, He will not abandon. And He, the Merciful One, atones iniquity; and does not destroy. He frequently withdraws His anger and does not arouse all His rage. Adonoy, deliver [us!] The King will answer us on the day we call.",
+          "source": "Siddur Ashkenaz, Weekday, Shacharit, Pesukei Dezimra, Yehi Chevod",
+          "provenance": {
+            "sefariaRef": "Siddur Ashkenaz, Weekday, Shacharit, Pesukei Dezimra, Yehi Chevod",
+            "sefariaUrl": "https://www.sefaria.org/Siddur_Ashkenaz,_Weekday,_Shacharit,_Pesukei_Dezimra,_Yehi_Chevod",
+            "hebrew": {
+              "versionTitle": "The Metsudah siddur, 1981",
+              "license": "CC-BY"
+            },
+            "english": {
+              "versionTitle": "Translation based on the Metsudah linear siddur, by Avrohom Davis, 1981",
+              "license": "CC-BY"
+            },
+            "importedAt": "2026-11-21T13:56:07.200Z"
+          },
           "verified": false
         },
         {
           "id": "ashrei_opening",
           "section": "Pesukei Dezimra",
           "blessingOrLine": "Ashrei – opening verse",
-          "hebrew": "אַשְׁרֵי יוֹשְׁבֵי בֵיתֶךָ, עוֹד יְהַלְלוּךָ סֶּלָה.",
-          "transliteration": "Ashrei yoshvei veitecha, od yehalelucha selah.",
-          "english": "Happy are those who dwell in Your house; they will yet praise You, selah.",
+          "hebrew": "אַשְׁרֵי יוֹשְׁ֒בֵי בֵיתֶֽךָ עוֹד יְהַלְלֽוּךָ סֶּֽלָה: אַשְׁרֵי הָעָם שֶׁכָּֽכָה לּוֹ אַשְׁרֵי הָעָם שֶׁיְהֹוָה אֱלֹהָיו: תְּהִלָּה לְדָוִד אֲרוֹמִמְךָ אֱלוֹהַי הַמֶּֽלֶךְ וַאֲבָרְ֒כָה שִׁמְךָ לְעוֹלָם וָעֶד: בְּכָל־יוֹם אֲבָרְ֒כֶֽךָּ וַאֲהַלְלָה שִׁמְךָ לְעוֹלָם וָעֶד: גָּדוֹל יְהֹוָה וּמְהֻלָּל מְאֹד וְלִגְדֻלָּתוֹ אֵין חֵֽקֶר: דּוֹר לְדוֹר יְשַׁבַּח מַעֲשֶׂיךָ וּגְבוּרֹתֶֽיךָ יַגִּֽידוּ: הֲדַר כְּבוֹד הוֹדֶֽךָ וְדִבְרֵי נִפְלְ֒אֹתֶֽיךָ אָשִֽׂיחָה: וֶעֱזוּז נוֹרְ֒אֹתֶֽיךָ יֹאמֵרוּ וּגְדֻלָּתְ֒ךָ אֲסַפְּ֒רֶֽנָּה: זֵֽכֶר רַב־טוּבְ֒ךָ יַבִּֽיעוּ וְצִדְקָתְ֒ךָ יְרַנֵּֽנוּ: חַנּוּן וְרַחוּם יְהֹוָה אֶֽרֶךְ אַפַּֽיִם וּגְדָל־חָֽסֶד: טוֹב־יְהֹוָה לַכֹּל וְרַחֲמָיו עַל־כָּל־מַעֲשָׂיו: יוֹדֽוּךָ יְהֹוָה כָּל־מַעֲשֶֽׂיךָ וַחֲסִידֶֽיךָ יְבָרְ֒כֽוּכָה: כְּבוֹד מַלְכוּתְ֒ךָ יֹאמֵרוּ וּגְבוּרָתְ֒ךָ יְדַבֵּֽרוּ: לְהוֹדִֽיעַ לִבְנֵי הָאָדָם גְּבוּרֹתָיו וּכְבוֹד הֲדַר מַלְכוּתוֹ: מַלְכוּתְ֒ךָ מַלְכוּת כָּל־עֹלָמִים וּמֶמְשַׁלְתְּ֒ךָ בְּכָל־דּוֹר וָדֹר: סוֹמֵךְ יְהֹוָה לְכָל־הַנֹּפְ֒לִים וְזוֹקֵף לְכָל־הַכְּ֒פוּפִים: עֵינֵי־כֹל אֵלֶֽיךָ יְשַׂבֵּֽרוּ וְאַתָּה נוֹתֵן־לָהֶם אֶת־אָכְלָם בְּעִתּוֹ: פּוֹתֵֽחַ אֶת־יָדֶֽךָ וּמַשְׂבִּֽיעַ לְכָל־חַי רָצוֹן: צַדִּיק יְהֹוָה בְּכָל־דְּרָכָיו וְחָסִיד בְּכָל־מַעֲשָׂיו: קָרוֹב יְהֹוָה לְכָל־קֹרְ֒אָיו לְכֹל אֲשֶׁר יִקְרָאֻֽהוּ בֶאֱמֶת: רְצוֹן־יְרֵאָיו יַעֲשֶׂה וְאֶת־שַׁוְעָתָם יִשְׁמַע וְיוֹשִׁיעֵם: שׁוֹמֵר יְהֹוָה אֶת־כָּל־אֹהֲבָיו וְאֵת כָּל־הָרְ֒שָׁעִים יַשְׁמִיד: תְּהִלַּת יְהֹוָה יְדַבֶּר פִּי וִיבָרֵךְ כָּל־בָּשָׂר שֵׁם קָדְשׁוֹ לְעוֹלָם וָעֶד: וַאֲנַֽחְנוּ נְבָרֵךְ יָהּ מֵעַתָּה וְעַד־עוֹלָם הַלְ֒לוּיָהּ:",
+          "english": "Fortunate are those who dwell in Your house; may they continue to praise You, Selah. Fortunate is the people whose lot is thus; fortunate is the people for whom Adonoy is their God. A praise by David! I will exalt You, my God, the King, and bless Your Name forever and ever. Every day I will bless You and extol Your Name forever and ever. Adonoy is great and highly extolled, and His greatness is unfathomable. One generation to another will praise Your works, and Your mighty acts they will declare. The splendor of Your glorious majesty, and the words of Your wonders I will speak. Of Your awesome might, they will speak, and Your greatness I will recount. Mention of Your bountifulness they will express, and in Your righteousness joyfully exult. Adonoy is gracious and merciful, slow to anger and great in kindliness. Adonoy is good to all, His mercy encompasses all His works. All Your works will thank You, Adonoy, and Your pious ones will bless You. Of the honor of Your kingship, they will speak, and Your might they will declare. To reveal to men His mighty acts, and the glorious splendor of His kingship. Your kingship is the kingship for all times, and Your dominion is in every generation. Adonoy supports all the fallen, and straightens all the bent. The eyes of all look expectantly to You, and You give them their food at its proper time. You open Your hand and satisfy the desire of every living being. Adonoy is just in all His ways and benevolent in all His deeds. Adonoy is near to all who call upon Him, to all who call upon Him in truth. The will of those who fear Him, He fulfills; He hears their cry and delivers them. Adonoy watches over all those who love Him, and will destroy all the wicked. Praise of Adonoy, my mouth will declare and all flesh will bless His holy Name forever and ever. And we will bless God from now forever. Praise God.",
           "commentary": "Ashrei opens with a verse from Psalm 84 before Psalm 145. The image is of dwelling in God's house: prayer as a place we return to and stay in, not only visit.",
           "kavannahPrompt": "Where do you feel 'at home' in your davening? Bring that sense of dwelling to Ashrei today.",
-          "source": "Tehillim 84:5",
+          "source": "Siddur Ashkenaz, Weekday, Shacharit, Pesukei Dezimra, Ashrei",
           "reviewItems": [
-            { "type": "hebrew_recognition", "text": "אַשְׁרֵי", "expected": "Ashrei" }
+            {
+              "type": "hebrew_recognition",
+              "text": "אַשְׁרֵי",
+              "expected": "Ashrei"
+            }
           ],
+          "relatedInterests": [
+            "siddur",
+            "kavannah",
+            "prayerbook_hebrew"
+          ],
+          "provenance": {
+            "sefariaRef": "Siddur Ashkenaz, Weekday, Shacharit, Pesukei Dezimra, Ashrei",
+            "sefariaUrl": "https://www.sefaria.org/Siddur_Ashkenaz,_Weekday,_Shacharit,_Pesukei_Dezimra,_Ashrei",
+            "hebrew": {
+              "versionTitle": "The Metsudah siddur, 1981",
+              "license": "CC-BY"
+            },
+            "english": {
+              "versionTitle": "Translation based on the Metsudah linear siddur, by Avrohom Davis, 1981",
+              "license": "CC-BY"
+            },
+            "importedAt": "2026-11-21T13:56:25.836Z"
+          },
+          "verified": false,
+          "estimatedMinutes": 12
+        },
+        {
+          "id": "psalm_146",
+          "section": "Pesukei Dezimra",
+          "estimatedMinutes": 7,
+          "blessingOrLine": "Psalm 146",
+          "relatedInterests": [
+            "siddur",
+            "kavannah"
+          ],
+          "hebrew": "הַלְ֒לוּיָהּ הַלְ֒לִי נַפְשִׁי אֶת־יְהֹוָה: אֲהַלְלָה יְהֹוָה בְּחַיָּי אֲזַמְּ֒רָה לֵאלֹהַי בְּעוֹדִי: אַל־תִּבְטְחוּ בִנְדִיבִים בְּבֶן־אָדָם שֶׁאֵין לוֹ תְשׁוּעָה: תֵּצֵא רוּחוֹ יָשֻׁב לְאַדְמָתוֹ בַּיּוֹם הַהוּא אָבְ֒דוּ עֶשְׁתֹּנֹתָיו: אַשְׁרֵי שֶׁאֵל יַעֲקֹב בְּעֶזְרוֹ, שִׂבְרוֹ עַל־יְהֹוָה אֱלֹהָיו: עֹשֶׂה שָׁמַֽיִם וָאָֽרֶץ אֶת־הַיָּם וְאֶת־כָּל־אֲשֶׁר־בָּם, הַשֹּׁמֵר אֱמֶת לְעוֹלָם: עֹשֶׂה מִשְׁפָּט לַעֲשׁוּקִים נֹתֵן לֶֽחֶם לָרְ֒עֵבִים יְהֹוָה מַתִּיר אֲסוּרִים: יְהֹוָה פֹּקֵֽחַ עִוְרִים יְהֹוָה זֹקֵף כְּפוּפִים יְהֹוָה אֹהֵב צַדִּיקִים: יְהֹוָה שֹׁמֵר אֶת־גֵּרִים יָתוֹם וְאַלְמָנָה יְעוֹדֵד וְדֶֽרֶךְ רְשָׁעִים יְעַוֵּת: יִמְלֹךְ יְהֹוָה לְעוֹלָם אֱלֹהַֽיִךְ צִיּוֹן לְדֹר וָדֹר הַלְ֒לוּיָהּ:",
+          "english": "Praise God! My soul, praise Adonoy. I will praise Adonoy with my life; I will sing to my God as long as I live. Do not place your trust [even] in noble men, in man who has no [power of] deliverance. [When] his spirit departs, he returns to his earth; on that day his plans come to naught. Fortunate [is he] when the Almighty of Jacob is his help, whose expectation is on Adonoy, his God. He makes heaven and earth, the sea and all that is in them; He keeps His promises faithfully forever. He performs justice for the oppressed; He gives bread to the hungry; Adonoy releases the imprisoned. Adonoy gives sight to the blind; Adonoy straightens the bent. Adonoy loves the righteous. Adonoy protects strangers; the orphan and widow He enables to stand firm; and the way of the wicked He thwarts. Adonoy will reign forever; your God, Zion, throughout all generations. Praise God.",
+          "source": "Siddur Ashkenaz, Weekday, Shacharit, Pesukei Dezimra, Psalm 146",
+          "provenance": {
+            "sefariaRef": "Siddur Ashkenaz, Weekday, Shacharit, Pesukei Dezimra, Psalm 146",
+            "sefariaUrl": "https://www.sefaria.org/Siddur_Ashkenaz,_Weekday,_Shacharit,_Pesukei_Dezimra,_Psalm_146",
+            "hebrew": {
+              "versionTitle": "The Metsudah siddur, 1981",
+              "license": "CC-BY"
+            },
+            "english": {
+              "versionTitle": "Translation based on the Metsudah linear siddur, by Avrohom Davis, 1981",
+              "license": "CC-BY"
+            },
+            "importedAt": "2026-11-21T13:56:07.200Z"
+          },
+          "verified": false
+        },
+        {
+          "id": "psalm_147",
+          "section": "Pesukei Dezimra",
+          "estimatedMinutes": 11,
+          "blessingOrLine": "Psalm 147",
+          "relatedInterests": [
+            "siddur",
+            "kavannah"
+          ],
+          "hebrew": "הַלְ֒לוּיָהּ כִּי־טוֹב זַמְּ֒רָה אֱלֹהֵֽינוּ, כִּי־נָעִים נָאוָה תְהִלָּה: בּוֹנֵה יְרוּשָׁלַֽםִ יְהֹוָה נִדְחֵי יִשְׂרָאֵל יְכַנֵּס: הָרוֹפֵא לִשְׁבֽוּרֵי לֵב וּמְחַבֵּשׁ לְעַצְּ֒בוֹתָם: מוֹנֶה מִסְפָּר לַכּוֹכָבִים לְכֻלָּם שֵׁמוֹת יִקְרָא: גָּדוֹל אֲדוֹנֵֽינוּ וְרַב־כֹּֽחַ לִתְבוּנָתוֹ אֵין מִסְפָּר: מְעוֹדֵד עֲנָוִים יְהֹוָה מַשְׁפִּיל רְשָׁעִים עֲדֵי־אָֽרֶץ: עֱנוּ לַיהוָֹה בְּתוֹדָה זַמְּ֒רוּ לֵאלֹהֵֽינוּ בְכִנּוֹר: הַמְכַסֶּה שָׁמַֽיִם בְּעָבִים הַמֵּכִין לָאָֽרֶץ מָטָר הַמַּצְמִֽיחַ הָרִים חָצִיר: נוֹתֵן לִבְהֵמָה לַחְמָהּ לִבְנֵי עֹרֵב אֲשֶׁר יִקְרָֽאוּ: לֹא בִגְבוּרַת הַסּוּס יֶחְפָּץ לֹא בְשׁוֹקֵי הָאִישׁ יִרְצֶה: רוֹצֶה יְהֹוָה אֶת־יְרֵאָיו אֶת־הַמְיַחֲלִים לְחַסְדּוֹ: שַׁבְּ֒חִי יְרוּשָׁלַֽםִ אֶת יְהֹוָה הַלְ֒לִי אֱלֹהַֽיִךְ צִיּוֹן: כִּי־חִזַּק בְּרִיחֵי שְׁעָרָֽיִךְ בֵּרַךְ בָּנַֽיִךְ בְּקִרְבֵּךְ: הַשָּׂם־גְּבוּלֵךְ שָׁלוֹם חֵֽלֶב חִטִּים יַשְׂבִּיעֵךְ: הַשֹּׁלֵֽחַ אִמְרָתוֹ אָֽרֶץ עַד־מְהֵרָה יָרוּץ דְּבָרוֹ: הַנֹּתֵן שֶֽׁלֶג כַּצָּֽמֶר כְּפוֹר כָּאֵֽפֶר יְפַזֵּר: מַשְׁלִיךְ קַרְחוֹ כְפִתִּים לִפְנֵי קָרָתוֹ מִי יַעֲמֹד: יִשְׁלַח דְּבָרוֹ וְיַמְסֵם יַשֵּׁב רוּחוֹ יִזְּ֒לוּ־מָֽיִם: מַגִּיד דְּבָרָיו לְיַעֲקֹב חֻקָּיו וּמִשְׁפָּטָיו לְיִשְׂרָאֵל: לֹא עָֽשָׂה כֵן לְכָל־גּוֹי וּמִשְׁפָּטִים בַּל־יְדָעוּם הַלְ֒לוּיָהּ:",
+          "english": "Praise God! for it is good to sing to our God; for [His] praise is pleasant, befitting. The builder of Jerusalem is Adonoy; the banished ones of Israel He will gather. [He is] the Healer of the broken-hearted and [also] binds up their wounds. He fixes the number of stars; He calls all of them by names. Great is our Master and abundant in power; His understanding is beyond reckoning. Adonoy causes the humble to stand firm; He casts down the wicked to the ground. Cry out to Adonoy in thanksgiving; sing to our God with the harp. [He] Who covers the heaven with clouds, Who prepares rain for the earth; Who causes grass to grow upon the hills. Who gives the animal its fodder; [also] to the young ravens which call. Not the power of the horse does He desire, nor the thighs of man does He want. Adonoy wants those who fear Him, those who hope for His kindliness. Jerusalem, praise Adonoy; Zion, extol your God. For He has fortified the bars of your gates; He has blessed your children in your midst. He established peace at your border; with prime wheat He satisfies you. He dispatches His command earthward; His word races swiftly. He provides snow like fleece, He scatters frost like ashes. He hurls His ice like crumbs; who can withstand His cold? He dispatches His word and melts them; He blows His wind, they flow as water. He declares His word to Jacob, His statutes and His laws to Israel. He did not do so to any [other] nation; and of His laws they were not informed. Praise God.",
+          "source": "Siddur Ashkenaz, Weekday, Shacharit, Pesukei Dezimra, Psalm 147",
+          "provenance": {
+            "sefariaRef": "Siddur Ashkenaz, Weekday, Shacharit, Pesukei Dezimra, Psalm 147",
+            "sefariaUrl": "https://www.sefaria.org/Siddur_Ashkenaz,_Weekday,_Shacharit,_Pesukei_Dezimra,_Psalm_147",
+            "hebrew": {
+              "versionTitle": "The Metsudah siddur, 1981",
+              "license": "CC-BY"
+            },
+            "english": {
+              "versionTitle": "Translation based on the Metsudah linear siddur, by Avrohom Davis, 1981",
+              "license": "CC-BY"
+            },
+            "importedAt": "2026-11-21T13:56:07.200Z"
+          },
+          "verified": false
+        },
+        {
+          "id": "psalm_148",
+          "section": "Pesukei Dezimra",
+          "estimatedMinutes": 8,
+          "blessingOrLine": "Psalm 148",
+          "relatedInterests": [
+            "siddur",
+            "kavannah"
+          ],
+          "hebrew": "הַלְ֒לוּיָהּ הַלְ֒לוּ אֶת־יְהֹוָה מִן הַשָּׁמַֽיִם הַלְ֒לֽוּהוּ בַּמְּ֒רוֹמִים: הַלְ֒לֽוּהוּ כָּל־מַלְאָכָיו הַלְ֒לֽוּהוּ כָּל־צְבָאָיו: הַלְ֒לֽוּהוּ שֶֽׁמֶשׁ וְיָרֵֽחַ הַלְ֒לֽוּהוּ כָּל־כּֽוֹכְ֒בֵי אוֹר: הַלְ֒לֽוּהוּ שְׁמֵי הַשָּׁמָֽיִם וְהַמַּֽיִם אֲשֶׁר מֵעַל הַשָּׁמָֽיִם: יְהַלְ֒לוּ אֶת־שֵׁם יְהֹוָה כִּי הוּא צִוָּה וְנִבְרָֽאוּ: וַיַּעֲמִידֵם לָעַד לְעוֹלָם חָק־נָתַן וְלֹא יַעֲבוֹר: הַלְ֒לוּ אֶת־יְהֹוָה מִן־הָאָֽרֶץ תַּנִּינִים וְכָל־תְּהֹמוֹת: אֵשׁ וּבָרָד שֶֽׁלֶג וְקִיטוֹר רֽוּחַ סְעָרָה עֹשָׂה דְבָרוֹ: הֶהָרִים וְכָל־גְּבָעוֹת עֵץ פְּרִי וְכָל־אֲרָזִים: הַחַיָּה וְכָל־בְּהֵמָה רֶֽמֶשׂ וְצִפּוֹר כָּנָף: מַלְכֵי־אֶֽרֶץ וְכָל־לְאֻמִּים שָׂרִים וְכָל־שֹׁפְטֵי אָֽרֶץ: בַּחוּרִים וְגַם־בְּתוּלוֹת זְקֵנִים עִם־נְעָרִים: יְהַלְ֒לוּ אֶת־שֵׁם יְהֹוָה כִּי־נִשְׂגָּב שְׁמוֹ לְבַדּוֹ הוֹדוֹ עַל־אֶֽרֶץ וְשָׁמָֽיִם: וַיָּֽרֶם קֶֽרֶן לְעַמּוֹ תְּהִלָּה לְכָל־חֲסִידָיו לִבְנֵי יִשְׂרָאֵל עַם קְרֹבוֹ הַלְ֒לוּיָהּ:",
+          "english": "Praise God. Praise Adonoy from the sky; Praise Him in the heights! Praise Him, all His angels; Praise Him, all His hosts! Praise Him, sun and moon; Praise Him, all the stars of light. Praise Him, skies of skies, and the waters that are above the skies. They will praise the Name of Adonoy, for He commanded it and they were created. He established them for all time, for as long as the world exists; He decreed it and it is unalterable. Praise Adonoy from the earth, sea-monsters and all [that dwell in] the depths. Fire and hail, snow and vapor, stormwind, [all] fulfilling His word. The mountains and all the hills, fruit trees and all cedars. Wild beasts and all animals, creeping things and winged fowl. Earthly kings and all peoples, ministers and all earthly judges. Young men and also maidens, elders together with lads. They will praise the Name of Adonoy, for His Name alone is exalted; His majesty is over the earth and the skies. He will raise the might of His people, [which is] praise for all His pious ones, for the Children of Israel, the people near to Him. Praise God.",
+          "source": "Siddur Ashkenaz, Weekday, Shacharit, Pesukei Dezimra, Psalm 148",
+          "provenance": {
+            "sefariaRef": "Siddur Ashkenaz, Weekday, Shacharit, Pesukei Dezimra, Psalm 148",
+            "sefariaUrl": "https://www.sefaria.org/Siddur_Ashkenaz,_Weekday,_Shacharit,_Pesukei_Dezimra,_Psalm_148",
+            "hebrew": {
+              "versionTitle": "The Metsudah siddur, 1981",
+              "license": "CC-BY"
+            },
+            "english": {
+              "versionTitle": "Translation based on the Metsudah linear siddur, by Avrohom Davis, 1981",
+              "license": "CC-BY"
+            },
+            "importedAt": "2026-11-21T13:56:07.200Z"
+          },
+          "verified": false
+        },
+        {
+          "id": "psalm_149",
+          "section": "Pesukei Dezimra",
+          "estimatedMinutes": 6,
+          "blessingOrLine": "Psalm 149",
+          "relatedInterests": [
+            "siddur",
+            "kavannah"
+          ],
+          "hebrew": "הַלְ֒לוּיָהּ שִֽׁירוּ לַיהוָֹה שִׁיר חָדָשׁ תְּהִלָּתוֹ בִּקְהַל חֲסִידִים: יִשְׂמַח יִשְׂרָאֵל בְּעֹשָׂיו בְּנֵי־צִיּוֹן יָגִֽילוּ בְמַלְכָּם: יְהַלְ֒לוּ שְׁמוֹ בְמָחוֹל בְּתֹף וְכִנּוֹר יְזַמְּ֒רוּ־לוֹ: כִּי־רוֹצֶה יְהֹוָה בְּעַמּוֹ יְפָאֵר עֲנָוִים בִּישׁוּעָה: יַעְלְזוּ חֲסִידִים בְּכָבוֹד יְרַנְּנוּ עַל־מִשְׁכְּבוֹתָם: רוֹמְ֒מוֹת אֵל בִּגְרוֹנָם וְחֶֽרֶב פִּיפִיּוֹת בְּיָדָם: לַעֲשׂוֹת נְקָמָה בַגּוֹיִם תּוֹכֵחוֹת בַּלְאֻמִּים: לֶאְסֹר מַלְכֵיהֶם בְּזִקִּים וְנִכְבְּדֵיהֶם בְּכַבְלֵי בַרְזֶל: לַעֲשׂוֹת בָּהֶם מִשְׁפָּט כָּתוּב הָדָר הוּא לְכָל־חֲסִידָיו הַלְ֒לוּיָהּ:",
+          "english": "Praise God. Sing a new song to Adonoy, His praise in the assembly of the pious. Israel will rejoice in its Maker; the children of Zion will exult in their King. They will praise His Name with dance; with drum and harp they will make music to Him. Because Adonoy desires His people; He will adorn the humble with deliverance. The pious will rejoice in honor; they will sing joyously upon their beds. High praises of the Almighty in their throats, and a double-edged sword in their hand. To perform vengeance upon the nations, chastisement upon the peoples. To bind their kings with chains, and their nobles with iron fetters. To execute upon them [the] written judgment; it is the splendor of all His pious ones. Praise God.",
+          "source": "Siddur Ashkenaz, Weekday, Shacharit, Pesukei Dezimra, Psalm 149",
+          "provenance": {
+            "sefariaRef": "Siddur Ashkenaz, Weekday, Shacharit, Pesukei Dezimra, Psalm 149",
+            "sefariaUrl": "https://www.sefaria.org/Siddur_Ashkenaz,_Weekday,_Shacharit,_Pesukei_Dezimra,_Psalm_149",
+            "hebrew": {
+              "versionTitle": "The Metsudah siddur, 1981",
+              "license": "CC-BY"
+            },
+            "english": {
+              "versionTitle": "Translation based on the Metsudah linear siddur, by Avrohom Davis, 1981",
+              "license": "CC-BY"
+            },
+            "importedAt": "2026-11-21T13:56:07.200Z"
+          },
+          "verified": false
+        },
+        {
+          "id": "psalm_150",
+          "section": "Pesukei Dezimra",
+          "estimatedMinutes": 5,
+          "blessingOrLine": "Psalm 150",
+          "relatedInterests": [
+            "siddur",
+            "kavannah"
+          ],
+          "hebrew": "הַלְ֒לוּיָהּ הַֽלְ֒לוּ־אֵל בְּקָדְשׁוֹ הַלְ֒לֽוּהוּ בִּרְקִֽיעַ עֻזּוֹ: הַלְ֒לֽוּהוּ בִּגְבוּרֹתָיו הַלְ֒לֽוּהוּ כְּרֹב גֻּדְלוֹ: הַלְ֒לֽוּהוּ בְּתֵֽקַע שׁוֹפָר הַלְ֒לֽוּהוּ בְּנֵֽבֶל וְכִנּוֹר: הַלְ֒לֽוּהוּ בְּתֹף וּמָחוֹל הַלְ֒לֽוּהוּ בְּמִנִּים וְעֻגָב: הַלְ֒לֽוּהוּ בְצִלְצְלֵי־שָֽׁמַע הַלְ֒לֽוּהוּ בְּצִלְצְלֵי תְרוּעָה: כֹּל הַנְּ֒שָׁמָה תְּהַלֵּל יָהּ הַלְ֒לוּיָהּ: כֹּל הַנְּ֒שָׁמָה תְּהַלֵּל יָהּ הַלְ֒לוּיָהּ:",
+          "english": "Praise God. Praise the Almighty in His Sanctuary Praise God in the firmament of His might Praise Him for His mighty deeds; Praise Him according to the abundance of His greatness. Praise Him with the blowing of the shofar; praise Him with lyre and harp. Praise Him with drum and dance. Praise Him with stringed instruments and flute. Praise Him with resounding cymbals. Praise Him with clanging cymbals. Let every soul praise God. Praise God. Let every soul praise God. Praise God.",
+          "source": "Siddur Ashkenaz, Weekday, Shacharit, Pesukei Dezimra, Psalm 150",
+          "provenance": {
+            "sefariaRef": "Siddur Ashkenaz, Weekday, Shacharit, Pesukei Dezimra, Psalm 150",
+            "sefariaUrl": "https://www.sefaria.org/Siddur_Ashkenaz,_Weekday,_Shacharit,_Pesukei_Dezimra,_Psalm_150",
+            "hebrew": {
+              "versionTitle": "The Metsudah siddur, 1981",
+              "license": "CC-BY"
+            },
+            "english": {
+              "versionTitle": "Translation based on the Metsudah linear siddur, by Avrohom Davis, 1981",
+              "license": "CC-BY"
+            },
+            "importedAt": "2026-11-21T13:56:07.200Z"
+          },
+          "verified": false
+        },
+        {
+          "id": "baruch_hashem_leolam",
+          "section": "Pesukei Dezimra",
           "estimatedMinutes": 4,
-          "relatedInterests": ["siddur", "kavannah", "prayerbook_hebrew"],
+          "blessingOrLine": "Closing verses (Baruch Hashem Le’olam)",
+          "relatedInterests": [
+            "siddur",
+            "kavannah"
+          ],
+          "hebrew": "בָּרוּךְ יְהֹוָה לְעוֹלָם אָמֵן וְאָמֵן: בָּרוּךְ יְהֹוָה מִצִּיּוֹן שֹׁכֵן יְרוּשָׁלָֽםִ הַלְ֒לוּיָהּ: בָּרוּךְ יְהֹוָה אֱלֹהִים אֱלֹהֵי יִשְׂרָאֵל עֹשֵׂה נִפְלָאוֹת לְבַדּוֹ: וּבָרוּךְ שֵׁם כְּבוֹדוֹ לְעוֹלָם וְיִמָּלֵא כְבוֹדוֹ אֶת־כָּל־הָאָֽרֶץ אָמֵן וְאָמֵן:",
+          "english": "Blessed is Adonoy forever, Amein and Amein! Blessed is Adonoy from Zion, Who dwells in Jerusalem. Praise God. Blessed is Adonoy, God, God of Israel Who alone performs wonders. And blessed is the Name of His glory forever, and may His glory fill the whole earth. Amein and Amein!",
+          "source": "Siddur Ashkenaz, Weekday, Shacharit, Pesukei Dezimra, Closing Verses",
+          "provenance": {
+            "sefariaRef": "Siddur Ashkenaz, Weekday, Shacharit, Pesukei Dezimra, Closing Verses",
+            "sefariaUrl": "https://www.sefaria.org/Siddur_Ashkenaz,_Weekday,_Shacharit,_Pesukei_Dezimra,_Closing_Verses",
+            "hebrew": {
+              "versionTitle": "The Metsudah siddur, 1981",
+              "license": "CC-BY"
+            },
+            "english": {
+              "versionTitle": "Translation based on the Metsudah linear siddur, by Avrohom Davis, 1981",
+              "license": "CC-BY"
+            },
+            "importedAt": "2026-11-21T13:56:07.200Z"
+          },
+          "verified": false
+        },
+        {
+          "id": "vayevarech_david",
+          "section": "Pesukei Dezimra",
+          "estimatedMinutes": 6,
+          "blessingOrLine": "Vayevarech David",
+          "relatedInterests": [
+            "siddur",
+            "kavannah"
+          ],
+          "hebrew": "וַיְבָֽרֶךְ דָּוִיד אֶת־יְהֹוָה לְעֵינֵי כָּל־הַקָּהָל וַיֹּֽאמֶר דָּוִיד בָּרוּךְ אַתָּה יְהֹוָה אֱלֹהֵי יִשְׂרָאֵל אָבִֽינוּ, מֵעוֹלָם וְעַד־עוֹלָם: לְךָ יְהֹוָה הַגְּ֒דֻלָּה וְהַגְּ֒בוּרָה וְהַתִּפְאֶֽרֶת וְהַנֵּֽצַח וְהַהוֹד כִּי־כֹל בַּשָּׁמַֽיִם וּבָאָֽרֶץ לְךָ יְהֹוָה הַמַּמְלָכָה וְהַמִּתְנַשֵּׂא לְכֹל לְרֹאשׁ: וְהָעֽשֶׁר וְהַכָּבוֹד מִלְּ֒פָנֶֽיךָ וְאַתָּה מוֹשֵׁל בַּכֹּל, וּבְיָדְ֒ךָ כֹּֽחַ וּגְבוּרָה, וּבְיָדְ֒ךָ לְגַדֵּל וּלְחַזֵּק לַכֹּל: וְעַתָּה אֱלֹהֵֽינוּ מוֹדִים אֲנַֽחְנוּ לָךְ וּמְהַלְלִים לְשֵׁם תִּפְאַרְתֶּֽךָ:",
+          "english": "And David blessed Adonoy in the presence of all the assembly; and David said, Blessed are You, Adonoy, God of Israel, our father, forever and ever. Yours, Adonoy, is the greatness, the might, the glory the victory and the beauty, for all that is in heaven and on earth [is Yours]; Yours, Adonoy, is the kingdom and You are uplifted, [supreme] over all rulers. The riches and the honor come from You, and You rule over all; in Your hand are power and might, and [it is] in Your hand to bestow greatness and strength upon all. And now, our God, we give thanks to You and praise Your glorious Name.",
+          "source": "Siddur Ashkenaz, Weekday, Shacharit, Pesukei Dezimra, Vayevarech David",
+          "provenance": {
+            "sefariaRef": "Siddur Ashkenaz, Weekday, Shacharit, Pesukei Dezimra, Vayevarech David",
+            "sefariaUrl": "https://www.sefaria.org/Siddur_Ashkenaz,_Weekday,_Shacharit,_Pesukei_Dezimra,_Vayevarech_David",
+            "hebrew": {
+              "versionTitle": "The Metsudah siddur, 1981",
+              "license": "CC-BY"
+            },
+            "english": {
+              "versionTitle": "Translation based on the Metsudah linear siddur, by Avrohom Davis, 1981",
+              "license": "CC-BY"
+            },
+            "importedAt": "2026-11-21T13:56:07.200Z"
+          },
+          "verified": false
+        },
+        {
+          "id": "atah_hu",
+          "section": "Pesukei Dezimra",
+          "estimatedMinutes": 9,
+          "blessingOrLine": "Atah Hu",
+          "relatedInterests": [
+            "siddur",
+            "kavannah"
+          ],
+          "hebrew": "אַתָּה־הוּא יְהֹוָה לְבַדֶּֽךָ, אַתָּה עָשִֽׂיתָ אֶת־הַשָּׁמַֽיִם שְׁמֵי הַשָּׁמַֽיִם וְכָל־צְבָאָם, הָאָֽרֶץ וְכָל־אֲשֶׁר עָלֶֽיהָ הַיַּמִּים וְכָל־אֲשֶׁר בָּהֶם, וְאַתָּה מְחַיֶּה אֶת־כֻּלָּם וּצְבָא הַשָּׁמַֽיִם לְךָ מִשְׁתַּחֲוִים: אַתָּה הוּא יְהֹוָה הָאֱלֹהִים אֲשֶׁר בָּחַֽרְתָּ בְּאַבְרָם וְהוֹצֵאתוֹ מֵאוּר כַּשְׂדִּים וְשַֽׂמְתָּ שְׁמוֹ אַבְרָהָם: וּמָצָֽאתָ אֶת־לְבָבוֹ נֶאֱמָן לְפָנֶֽיךָ וְכָרוֹת עִמּוֹ הַבְּ֒רִית לָתֵת אֶת־אֶרֶץ הַכְּ֒נַֽעֲנִי הַחִתִּי הָֽאֱמֹרִי וְהַפְּ֒רִזִּי וְהַיְבוּסִי וְהַגִּרְגָּשִׁי לָתֵת לְזַרְעוֹ. וַתָּקֶם אֶת־דְּבָרֶיךָ כִּי צַדִּיק אָֽתָּה. וַתֵּרֶא אֶת־עֳנִי אֲבֹתֵינוּ בְּמִצְרָיִם וְאֶת־זַֽעֲקָתָם שָׁמַעְתָּ עַל־יַם־סֽוּף. וַתִּתֵּן אֹתֹת וּמֹֽפְ֒תִים בְּפַרְעֹה וּבְכָל־עֲבָדָיו וּבְכָל־עַם אַרְצוֹ כִּי יָדַעְתָּ כִּי הֵזִידוּ עֲלֵיהֶם. וַתַּֽעַשׂ־לְךָ שֵׁם כְּהַיּוֹם הַזֶּֽה. וְהַיָּם בָּקַעְתָּ לִפְנֵיהֶם וַיַּֽעַבְרוּ בְתוֹךְ־הַיָּם בַּיַּבָּשָׁה. וְֽאֶת־רֹדְ֒פֵיהֶם הִשְׁלַכְתָּ בִמְצוֹלֹת כְּמוֹ־אֶבֶן בְּמַיִם עַזִּֽים.",
+          "english": "You alone are Adonoy; You have made the skies, the skies of skies and all their hosts, the earth and all that is upon it, the seas and all that is in them; and You give life to all of them, and the heavenly hosts bow before You. You are Adonoy, the God Who chose Avrom, and brought him out of Ur Kasdim and established his name (as) Avrohom. And You found his heart faithful before You, and You made the covenant with him to give the land of the Canaanites, the Hittites, the Amorites, the Perizites, the Jebusites, and the Girgashites, to give to his seed; and You kept Your word, for You are righteous. And You saw the affliction of our fathers in Egypt, and their cry You heard at the Sea of Reeds. And You imposed signs and wonders against Pharaoh and all his servants and all the people of his land, for You knew that they acted malevolently against them; and (thus) You have made a name for Yourself, like this day. And the sea, You split before them, and they went through the midst of the sea on the dry land; and their pursuers You hurled into the depths, like a stone into mighty waters.",
+          "source": "Siddur Ashkenaz, Weekday, Shacharit, Pesukei Dezimra, Ata Hu",
+          "provenance": {
+            "sefariaRef": "Siddur Ashkenaz, Weekday, Shacharit, Pesukei Dezimra, Ata Hu",
+            "sefariaUrl": "https://www.sefaria.org/Siddur_Ashkenaz,_Weekday,_Shacharit,_Pesukei_Dezimra,_Ata_Hu",
+            "hebrew": {
+              "versionTitle": "The Metsudah siddur, 1981",
+              "license": "CC-BY"
+            },
+            "english": {
+              "versionTitle": "Translation based on the Metsudah linear siddur, by Avrohom Davis, 1981",
+              "license": "CC-BY"
+            },
+            "importedAt": "2026-11-21T13:56:07.200Z"
+          },
+          "verified": false
+        },
+        {
+          "id": "az_yashir",
+          "section": "Pesukei Dezimra",
+          "estimatedMinutes": 12,
+          "blessingOrLine": "Az Yashir (Song at the Sea)",
+          "relatedInterests": [
+            "siddur",
+            "kavannah"
+          ],
+          "hebrew": "וַיּֽוֹשַׁע יְהֹוָה בַּיּוֹם הַהוּא אֶת־יִשְׂרָאֵל מִיַּד מִצְרָֽיִם וַיַּרְא יִשְׂרָאֵל אֶת־מִצְרַֽיִם מֵת עַל־שְׂפַת הַיָּם: וַיַּרְא יִשְׂרָאֵל אֶת־הַיָּד הַגְּ֒דֹלָה אֲשֶׁר עָשָׂה יְהֹוָה בְּמִצְרַֽיִם וַיִּירְ֒אוּ הָעָם אֶת יְהֹוָה וַיַּאֲמִֽינוּ בַּיהוָֹה וּבְמשֶׁה עַבְדּוֹ: אָז יָשִׁיר־משֶׁה וּבְנֵי יִשְׂרָאֵל אֶת־הַשִּׁירָה הַזֹּאת לַיהוָֹה וַיֹּאמְרוּ לֵאמֹר אָשִֽׁירָה לַיהוָֹה כִּי־גָאֹה גָּאָה סוּס וְרֹכְ֒בוֹ רָמָה בַיָּם: עָזִּי וְזִמְרָת יָהּ וַיְהִי־לִי לִישׁוּעָה זֶה אֵלִי וְאַנְוֵֽהוּ אֱלֹהֵי אָבִי וַאֲרֹמְ֒מֶֽנְהוּ: יְהֹוָה אִישׁ מִלְחָמָה יְהֹוָה שְׁמוֹ: מַרְכְּבֹת פַּרְעֹה וְחֵילוֹ יָרָה בַיָּם וּמִבְחַר שָׁלִשָׁיו טֻבְּ֒עוּ בְיַם־סוּף: תְּהֹמֹת יְכַסְיֻֽמוּ יָרְ֒דוּ בִמְצוֹלֹת כְּמוֹ־אָֽבֶן: יְמִינְ֒ךָ יְהֹוָה נֶאְדָּרִי בַּכֹּֽחַ יְמִֽינְ֒ךָ יְהֹוָה תִּרְעַץ אוֹיֵב: וּבְרֹב גְּאוֹנְ֒ךָ תַּהֲרֹס קָמֶֽיךָ תְּשַׁלַּח חֲרֹנְ֒ךָ יֹֽאכְ֒לֵמוֹ כַּקַּשׁ: וּבְרֽוּחַ אַפֶּֽיךָ נֶֽעֶרְמוּ מַֽיִם נִצְּ֒בוּ כְמוֹ־נֵד נֹזְ֒לִים קָפְ֒אוּ תְהֹמֹת בְּלֶב־יָם: אָמַר אוֹיֵב אֶרְדֹּף אַשִּׂיג אֲחַלֵּק שָׁלָל תִּמְלָאֵֽמוֹ נַפְשִׁי אָרִיק חַרְבִּי תּוֹרִישֵֽׁמוֹ יָדִי: נָשַֽׁפְתָּ בְרוּחֲךָ כִּסָּֽמוֹ יָם צָלֲלוּ כַּעוֹפֶֽרֶת בְּמַֽיִם אַדִּירִים: מִי־כָמֹֽכָה בָּאֵלִם יְהֹוָה מִי כָּמֹֽכָה נֶאְדָּר בַּקֹּֽדֶשׁ נוֹרָא תְהִלֹּת עֹֽשֵׂה־פֶֽלֶא: נָטִֽיתָ יְמִינְ֒ךָ תִּבְלָעֵֽמוֹ אָֽרֶץ: נָחִֽיתָ בְחַסְדְּ֒ךָ עַם־זוּ גָּאָֽלְתָּ נֵהַֽלְתָּ בְעָזְּ֒ךָ אֶל־נְוֵה קָדְשֶֽׁךָ: שָֽׁמְ֒עוּ עַמִּים יִרְגָּזוּן חִיל אָחַז ישְׁ֒בֵי פְּלָֽשֶׁת: אָז נִבְהֲלוּ אַלּוּפֵי אֱדוֹם אֵילֵי מוֹאָב יֹֽאחֲזֵֽמוֹ רָֽעַד נָמֹֽגוּ כֹּל ישְׁ֒בֵי כְנָֽעַן: תִּפֹּל עֲלֵיהֶם אֵימָֽתָה וָפַֽחַד בִּגְדֹל זְרוֹעֲךָ יִדְּ֒מוּ כָּאָֽבֶן עַד־יַֽעֲבֹר עַמְּ֒ךָ יְהֹוָה עַד־יַֽעֲבֹר עַם־זוּ קָנִֽיתָ: תְּבִאֵֽמוֹ וְתִטָּעֵֽמוֹ בְּהַר נַחֲלָתְ֒ךָ מָכוֹן לְשִׁבְתְּ֒ךָ פָּעַֽלְתָּ יְהֹוָה מִקְּ֒דָשׁ אֲדֹנָי כּוֹנְ֒נוּ יָדֶֽיךָ: יְהֹוָה יִמְלֹךְ לְעֹלָם וָעֶד: יְהֹוָה יִמְלֹךְ לְעֹלָם וָעֶד: יְהֹוָה מַלְכוּתֵהּ קָאֵים לְעָלַם וּלְעָלְ֒מֵי עָלְ֒מַיָּא: כִּי בָא סוּס פַּרְעֹה בְּרִכְבּוֹ וּבְפָרָשָׁיו בַּיָּם וַיָּֽשֶׁב יְהֹוָה עֲלֵהֶם אֶת־מֵי הַיָּם וּבְנֵי יִשְׂרָאֵל הָלְ֒כוּ בַיַּבָּשָׁה בְּתוֹךְ הַיָּֽם: כִּי לַיהוָֹה הַמְּ֒לוּכָה וּמשֵׁל בַּגּוֹיִם: וְעָלוּ מוֹשִׁעִים בְּהַר צִיּוֹן לִשְׁפֹּט אֶת־הַר עֵשָׂו, וְהָיְ֒תָה לַיהוָֹה הַמְּ֒לוּכָה: וְהָיָה יְהֹוָה לְמֶֽלֶךְ עַל־כָּל הָאָֽרֶץ בַּיּוֹם הַהוּא יִהְיֶה יְהֹוָה אֶחָד וּשְׁמוֹ אֶחָד:",
+          "english": "On that day, Adonoy delivered Israel from the hand of Egypt, and Israel saw the Egyptians dead on the seashore. And Israel saw the great hand which Adonoy wielded against Egypt, and the people feared Adonoy, and they believed in Adonoy, and that Moses was His servant. Then Moses and the Children of Israel sang this song to Adonoy, and they said: I will sing to Adonoy for He is most high; the horse with its rider, He threw into the sea. The strength and retribution of God was the cause of my deliverance; this is my Almighty and I will glorify Him, God of my father and I will exalt Him. Adonoy is master of war Adonoy is His Name. Pharaoh’s chariots and army, He hurled into the sea; and his elite officers were drowned in the Sea of Reeds. The deep waters covered them; they descended into the depths like stone. Your right hand Adonoy is adorned with power, Your right hand Adonoy crushes the enemy. And in Your great majesty, You destroyed Your opponents; You sent forth Your fury, it consumed them like straw. And with the wind from Your nostrils the waters were heaped up, flowing water stood erect like a wall; the deep waters congealed in the heart of the sea. The enemy (Pharaoh) said: I will pursue [them], I will overtake [them], I will divide the spoils; I will satisfy myself; I will unsheathe my sword, my hand will destroy them. You blew with Your wind, the sea covered them; they sank like lead in the mighty waters. Who is like You among the mighty, Adonoy! who is like You? [You are] adorned in holiness, awesome in praise, performing wonders. You stretched out Your right hand, the earth swallowed them. You led in Your kindliness, the people whom You redeemed; You guided them with Your might to Your holy dwelling place. The peoples heard and trembled, pangs of fear gripped the inhabitants of Philistia. Then the chieftains of Edom panicked, the mighty men of Moab were seized with trembling, all the inhabitants of Canaan melted away. Terror and dread fall upon them; at the greatness of Your arm they were still as stone; until Your people cross over, Adonoy, until [they] cross over, —the people You have acquired. You will bring them and plant them on the mountain of Your inheritance, the place for Your habitation which You, Adonoy, have made; the Sanctuary, my Master, [which] Your hands established. Adonoy will reign forever and ever. Adonoy will reign forever and ever. Adonoy! His sovereignty is established forever and to all eternity. When Pharaoh’s horses, with his chariots, and his horsemen, went into the sea, Adonoy turned back on them the waters of the sea; and the Children of Israel walked on dry land in the midst of the sea. For the kingship is Adonoy’s and He rules over nations. And deliverers will go up to Mount Zion to judge Mount Esau, and the kingdom will be Adonoy’s. And Adonoy will be King over the whole earth; on that day Adonoy will be One and His Name One.",
+          "source": "Siddur Ashkenaz, Weekday, Shacharit, Pesukei Dezimra, Az Yashir",
+          "provenance": {
+            "sefariaRef": "Siddur Ashkenaz, Weekday, Shacharit, Pesukei Dezimra, Az Yashir",
+            "sefariaUrl": "https://www.sefaria.org/Siddur_Ashkenaz,_Weekday,_Shacharit,_Pesukei_Dezimra,_Az_Yashir",
+            "hebrew": {
+              "versionTitle": "The Metsudah siddur, 1981",
+              "license": "CC-BY"
+            },
+            "english": {
+              "versionTitle": "Translation based on the Metsudah linear siddur, by Avrohom Davis, 1981",
+              "license": "CC-BY"
+            },
+            "importedAt": "2026-11-21T13:56:07.200Z"
+          },
           "verified": false
         },
         {
           "id": "yishtabach_opening",
           "section": "Pesukei Dezimra",
           "blessingOrLine": "Yishtabach – opening",
-          "hebrew": "יִשְׁתַּבַּח שִׁמְךָ לָעַד מַלְכֵּנוּ, הָאֵל הַמֶּלֶךְ הַגָּדוֹל וְהַקָּדוֹשׁ בַּשָּׁמַיִם וּבָאָרֶץ.",
-          "transliteration": "Yishtabach shimcha la’ad malkeinu, ha’El hamelech hagadol vehakadosh bashamayim uva’aretz.",
-          "english": "May Your name be praised forever, our King, the God, the great and holy King, in heaven and on earth.",
+          "hebrew": "יִשְׁתַּבַּח שִׁמְךָ לָעַד מַלְכֵּנוּ. הָאֵל הַמֶּֽלֶךְ הַגָּדוֹל וְהַקָּדוֹשׁ בַּשָּׁמַֽיִם וּבָאָֽרֶץ. כִּי לְךָ נָאֶה יְהֹוָה אֱלֹהֵֽינוּ וֵאלֹהֵי אֲבוֹתֵֽינוּ. שִׁיר וּשְׁבָחָה הַלֵּל וְזִמְרָה. עֹז וּמֶמְשָׁלָה. נֶֽצַח גְּדֻלָּה וּגְבוּרָה. תְּהִלָּה וְתִפְאֶֽרֶת. קְדֻשָּׁה וּמַלְכוּת. בְּרָכוֹת וְהוֹדָאוֹת מֵעַתָּה וְעַד־עוֹלָם. בָּרוּךְ אַתָּה יְהֹוָה אֵל מֶֽלֶךְ גָּדוֹל בַּתִּשְׁבָּחוֹת. אֵל הַהוֹדָאוֹת אֲדוֹן הַנִּפְלָאוֹת הַבּוֹחֵר בְּשִׁירֵי זִמְרָה. מֶֽלֶךְ אֵל חֵי הָעוֹלָמִים.",
+          "english": "Praised be Your Name forever, our King, Almighty the great and holy King in heaven and on earth. For to You it is fitting [to offer] Adonoy, our God, and God of our fathers, song and praise, glorification and hymns, [to proclaim Your] strength and dominion, victory, grandeur, and might, praise and glory, holiness and sovereignty, blessings and thanksgivings, from now and forever. Blessed are You, Adonoy, Almighty, King [Who is] great in [our] praise Almighty, of [to Whom we offer our] thanksgiving, Master of [Whom we praise for His] wonders, the Selector of song-hymns, You are the King, Almighty, Life of [all] the worlds.",
           "commentary": "Yishtabach closes Pesukei Dezimra, sealing the section that Baruch She'amar opened. The two blessings frame the psalms between them.",
           "kavannahPrompt": "As you reach Yishtabach, notice the transition: the praises are complete and you are preparing for Barchu and the Shema.",
-          "source": "Siddur, Pesukei Dezimra",
-          "estimatedMinutes": 4,
-          "relatedInterests": ["siddur", "kavannah", "prayerbook_hebrew"],
+          "source": "Siddur Ashkenaz, Weekday, Shacharit, Pesukei Dezimra, Yishtabach",
+          "relatedInterests": [
+            "siddur",
+            "kavannah",
+            "prayerbook_hebrew"
+          ],
+          "provenance": {
+            "sefariaRef": "Siddur Ashkenaz, Weekday, Shacharit, Pesukei Dezimra, Yishtabach",
+            "sefariaUrl": "https://www.sefaria.org/Siddur_Ashkenaz,_Weekday,_Shacharit,_Pesukei_Dezimra,_Yishtabach",
+            "hebrew": {
+              "versionTitle": "The Metsudah siddur, 1981",
+              "license": "CC-BY"
+            },
+            "english": {
+              "versionTitle": "Translation based on the Metsudah linear siddur, by Avrohom Davis, 1981",
+              "license": "CC-BY"
+            },
+            "importedAt": "2026-11-21T13:56:25.836Z"
+          },
+          "verified": false,
+          "estimatedMinutes": 5
+        },
+        {
+          "id": "psalm_130",
+          "section": "Pesukei Dezimra",
+          "estimatedMinutes": 5,
+          "blessingOrLine": "Psalm 130 (Ten Days of Repentance)",
+          "relatedInterests": [
+            "siddur",
+            "kavannah"
+          ],
+          "hebrew": "שִׁיר הַמַּעֲלוֹת מִמַּעֲמַקִּים קְרָאתִֽיךָ יְהֹוָה: אֲדֹנָי שִׁמְעָה בְקוֹלִי תִּהְיֶֽינָה אָזְנֶֽיךָ קַשֻּׁבוֹת לְקוֹל תַּחֲנוּנָי: אִם־עֲוֹנוֹת תִּשְׁמָר־יָהּ אֲדֹנָי מִי יַעֲמֹד: כִּי־עִמְּ֒ךָ הַסְּ֒לִיחָה לְמַֽעַן תִּוָּרֵא: קִוִּיתִי יְהֹוָה קִוְּתָה נַפְשִׁי וְלִדְבָרוֹ הוֹחָֽלְתִּי: נַפְשִׁי לַאדֹנָי מִשֹּׁמְ֒רִים לַבֹּֽקֶר שֹׁמְ֒רִים לַבֹּֽקֶר: יַחֵל יִשְׂרָאֵל אֶל־יְהֹוָה כִּי־עִם־יְהֹוָה הַחֶֽסֶד וְהַרְבֵּה עִמּוֹ פְדוּת: וְהוּא יִפְדֶּה אֶת־יִשְׂרָאֵל מִכֹּל עֲוֹנוֹתָיו:",
+          "english": "A Song of Ascents. Out of the depths I have called to You, Adonoy. My Master, hear my voice; let Your ears be attentive to the voice of my supplications. If You God should take account of iniquities, my Master, who could survive? For with You is forgiveness, in order that You be feared. I hope for Adonoy, my soul hopes; and for His word, I wait. My soul [waits] for my Master more than the watchman [waits] for the morning, [more than] the watchman [waits] for the morning. Wait, Israel, upon Adonoy, for with Adonoy there is loving-kindness, and with Him there is much redemption. And He will redeem Israel from all its iniquities.",
+          "source": "Siddur Ashkenaz, Weekday, Shacharit, Pesukei Dezimra, Psalm 130",
+          "provenance": {
+            "sefariaRef": "Siddur Ashkenaz, Weekday, Shacharit, Pesukei Dezimra, Psalm 130",
+            "sefariaUrl": "https://www.sefaria.org/Siddur_Ashkenaz,_Weekday,_Shacharit,_Pesukei_Dezimra,_Psalm_130",
+            "hebrew": {
+              "versionTitle": "The Metsudah siddur, 1981",
+              "license": "CC-BY"
+            },
+            "english": {
+              "versionTitle": "Translation based on the Metsudah linear siddur, by Avrohom Davis, 1981",
+              "license": "CC-BY"
+            },
+            "importedAt": "2026-11-21T13:56:07.200Z"
+          },
+          "verified": false
+        },
+        {
+          "id": "pd_half_kaddish",
+          "section": "Pesukei Dezimra",
+          "estimatedMinutes": 6,
+          "blessingOrLine": "Half Kaddish",
+          "relatedInterests": [
+            "siddur",
+            "kavannah"
+          ],
+          "hebrew": "יִתְגַּדַּל וְיִתְקַדַּשׁ שְׁמֵהּ רַבָּא (אָמֵן) בְּעָלְ֒מָֽא דִּי־בְרָא כִרְעוּתֵהּ וְיַמְלִיךְ מַלְכוּתֵהּ בְּחַיֵּיכוֹן וּבְיוֹמֵיכוֹן וּבְחַיֵּי דְכָל־בֵּית יִשְׂרָאֵל בַּעֲגָלָא וּבִזְמַן קָרִיב וְאִמְרוּ אָמֵן: יְהֵא שְׁמֵהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְ֒מֵי עָלְ֒מַיָּא יִתְבָּרַךְ וְיִשְׁתַּבַּח וְיִתְפָּאַר וְיִתְרוֹמַם וְיִתְנַשֵּׂא וְיִתְהַדָּר וְיִתְעַלֶּה וְיִתְהַלָּל שְׁמֵהּ דְקוּדְשָׁא בְּרִיךְ הוּא לְעֵֽלָּא מִן־כָּל־ (בעשי\"ת לְעֵֽלָּא לְעֵֽלָּא מִכָּל) בִּרְכָתָֽא וְשִׁירָתָֽא תֻּשְׁבְּ֒חָתָֽא וְנֶחָמָתָֽא דַּאֲמִירָן בְּעָלְ֒מָֽא וְאִמְרוּ אָמֵן:",
+          "english": "Exalted and sanctified be His great Name in the world which He created according to His will and may He rule His kingdom. In your lifetime and in your days, and in the lifetime of the entire House of Israel, speedily and in the near future— and say Amein. May His great Name be blessed forever and for all eternity. Blessed and praised, glorified, and exalted and uplifted, honored and elevated and extolled be the Name of the Holy One, blessed is He; above (Ten Days of Penitence: far above) all the blessings and hymns, praises and consolations which we utter in the world—and say Amein.",
+          "source": "Siddur Ashkenaz, Weekday, Shacharit, Pesukei Dezimra, Half Kaddish",
+          "provenance": {
+            "sefariaRef": "Siddur Ashkenaz, Weekday, Shacharit, Pesukei Dezimra, Half Kaddish",
+            "sefariaUrl": "https://www.sefaria.org/Siddur_Ashkenaz,_Weekday,_Shacharit,_Pesukei_Dezimra,_Half_Kaddish",
+            "hebrew": {
+              "versionTitle": "The Metsudah siddur, 1981",
+              "license": "CC-BY"
+            },
+            "english": {
+              "versionTitle": "Translation based on the Metsudah linear siddur, by Avrohom Davis, 1981",
+              "license": "CC-BY"
+            },
+            "importedAt": "2026-11-21T13:56:07.200Z"
+          },
           "verified": false
         }
       ]
     },
-    { "id": "shema", "name": "Shema and its Blessings", "order": 2, "units": [] },
-    { "id": "amidah", "name": "Amidah", "order": 3, "units": [] }
+    {
+      "id": "shema",
+      "name": "Shema and its Blessings",
+      "order": 2,
+      "units": [
+        {
+          "id": "barchu",
+          "section": "Shema and its Blessings",
+          "estimatedMinutes": 3,
+          "blessingOrLine": "Barchu",
+          "relatedInterests": [
+            "siddur",
+            "kavannah"
+          ],
+          "hebrew": "בָּרְ֒כוּ אֶת יְהֹוָה הַמְּ֒בֹרָךְ: בָּרוּךְ יְהֹוָה הַמְּ֒בֹרָךְ לְעוֹלָם וָעֶד:",
+          "english": "Bless Adonoy Who is blessed. Blessed is Adonoy, Who is blessed forever and ever.",
+          "source": "Siddur Ashkenaz, Weekday, Shacharit, Blessings of the Shema, Barchu",
+          "provenance": {
+            "sefariaRef": "Siddur Ashkenaz, Weekday, Shacharit, Blessings of the Shema, Barchu",
+            "sefariaUrl": "https://www.sefaria.org/Siddur_Ashkenaz,_Weekday,_Shacharit,_Blessings_of_the_Shema,_Barchu",
+            "hebrew": {
+              "versionTitle": "The Metsudah siddur, 1981",
+              "license": "CC-BY"
+            },
+            "english": {
+              "versionTitle": "Translation based on the Metsudah linear siddur, by Avrohom Davis, 1981",
+              "license": "CC-BY"
+            },
+            "importedAt": "2026-11-21T13:56:07.200Z"
+          },
+          "verified": false
+        },
+        {
+          "id": "yotzer_or",
+          "section": "Shema and its Blessings",
+          "estimatedMinutes": 12,
+          "blessingOrLine": "First blessing before the Shema (Yotzer Or)",
+          "relatedInterests": [
+            "siddur",
+            "kavannah"
+          ],
+          "hebrew": "בָּרוּךְ אַתָּה יְהֹוָה אֱלֹהֵֽינוּ מֶֽלֶךְ הָעוֹלָם יוֹצֵר אוֹר וּבוֹרֵא חֽשֶׁךְ עֹשֶׂה שָׁלוֹם וּבוֹרֵא אֶת־הַכֹּל: הַמֵּאִיר לָאָֽרֶץ וְלַדָּרִים עָלֶֽיהָ בְּרַחֲמִים וּבְטוּבוֹ מְחַדֵּשׁ בְּכָל־יוֹם תָּמִיד מַעֲשֵׂה בְרֵאשִׁית: מָה־רַבּוּ מַעֲשֶׂיךָ | יְהֹוָה כֻּלָּם בְּחָכְמָה עָשִׂיתָ מָלְ֒אָה הָאָרֶץ קִנְיָנֶֽךָ: הַמֶּֽלֶךְ הַמְ֒רוֹמָם לְבַדּוֹ מֵאָז. הַמְ֒שֻׁבָּח וְהַמְ֒פֹאָר וְהַמִּתְנַשֵּׂא מִימוֹת עוֹלָם: אֱלֹהֵי עוֹלָם בְּרַחֲמֶֽיךָ הָרַבִּים רַחֵם עָלֵֽינוּ אֲדוֹן עֻזֵּֽנוּ צוּר מִשְׂגַּבֵּֽנוּ מָגֵן יִשְׁעֵֽנוּ מִשְׂגָּב בַּעֲדֵֽנוּ: אֵל בָּרוּךְ גְּדוֹל דֵּעָה הֵכִין וּפָעַל זָהֳרֵי חַמָּה: טוֹב יָצַר כָּבוֹד לִשְׁמוֹ מְאוֹרוֹת נָתַן סְבִיבוֹת עֻזּוֹ: פִּנּוֹת צְבָאָיו קְדוֹשִׁים רוֹמְ֒מֵי שַׁדַּי תָּמִיד מְסַפְּרִים כְּבוֹד־אֵל וּקְדֻשָּׁתוֹ: תִּתְבָּרַךְ יְהֹוָה אֱלֹהֵֽינוּ עַל־שֶֽׁבַח מַעֲשֵׂה יָדֶֽיךָ וְעַל־מְאֽוֹרֵי אוֹר שֶׁעָשִֽׂיתָ יְפָאֲרֽוּךָ סֶּֽלָה: תִּתְבָּרַךְ צוּרֵֽנוּ מַלְכֵּֽנוּ וְגוֹאֲלֵֽנוּ בּוֹרֵא קְדוֹשִׁים. יִשְׁתַּבַּח שִׁמְךָ לָעַד מַלְכֵּֽנוּ יוֹצֵר מְשָׁרְ֒תִים. וַאֲשֶׁר מְשָׁרְ֒תָיו כֻּלָּם עוֹמְ֒דִים בְּרוּם עוֹלָם וּמַשְׁמִיעִים בְּיִרְאָה יַֽחַד בְּקוֹל דִּבְרֵי אֱלֹהִים חַיִּים וּמֶֽלֶךְ עוֹלָם. כֻּלָּם אֲהוּבִים. כֻּלָּם בְּרוּרִים. כֻּלָּם גִּבּוֹרִים. וְכֻלָּם עוֹשִׂים בְּאֵימָה וּבְיִרְאָה רְצוֹן קוֹנָם. וְכֻלָּם פּוֹתְ֒חִים אֶת־פִּיהֶם בִּקְדֻשָּׁה וּבְטָהֳרָה. בְּשִׁירָה וּבְזִמְרָה. וּמְבָרְ֒כִים וּמְשַׁבְּ֒חִים וּמְפָאֲרִים וּמַעֲרִיצִים וּמַקְדִּישִׁים וּמַמְלִיכִים: אֶת שֵׁם הָאֵל הַמֶּֽלֶךְ הַגָּדוֹל הַגִּבּוֹר וְהַנּוֹרָא קָדוֹשׁ הוּא. וְכֻלָּם מְקַבְּ֒לִים עֲלֵיהֶם עֹל מַלְכוּת שָׁמַֽיִם זֶה מִזֶּה. וְנוֹתְ֒נִים רְשׁוּת זֶה לָזֶה לְהַקְדִּישׁ לְיוֹצְ֒רָם בְּנַֽחַת רֽוּחַ. בְּשָׂפָה בְרוּרָה וּבִנְעִימָה. קְדֻשָּׁה כֻּלָּם כְּאֶחָד עוֹנִים וְאוֹמְ֒רִים בְּיִרְאָה: קָדוֹשׁ קָדוֹשׁ, קָדוֹשׁ יְהֹוָה צְבָאוֹת. מְלֹא כָל־הָאָֽרֶץ כְּבוֹדוֹ: וְהָאוֹפַנִּים וְחַיּוֹת הַקֹּֽדֶשׁ בְּרַֽעַשׁ גָּדוֹל מִתְנַשְּׂ֒אִים לְעֻמַּת שְׂרָפִים לְעֻמָּתָם מְשַׁבְּ֒חִים וְאוֹמְ֒רִים: בָּרוּךְ כְּבוֹד־יְהֹוָה מִמְּ֒קוֹמוֹ: לְאֵל בָּרוּךְ נְעִימוֹת יִתֵּֽנוּ. לְמֶֽלֶךְ אֵל חַי וְקַיָּם זְמִרוֹת יֹאמֵֽרוּ וְתִשְׁבָּחוֹת יַשְׁמִֽיעוּ. כִּי הוּא לְבַדּוֹ פּוֹעֵל גְּבוּרוֹת. עוֹשֶׂה חֲדָשׁוֹת. בַּֽעַל מִלְחָמוֹת. זוֹרֵֽעַ צְדָקוֹת. מַצְמִֽיחַ יְשׁוּעוֹת. בּוֹרֵא רְפוּאוֹת. נוֹרָא תְהִלּוֹת. אֲדוֹן הַנִּפְלָאוֹת: הַמְ֒חַדֵּשׁ בְּטוּבוֹ בְּכָל־יוֹם תָּמִיד מַעֲשֵׂה בְרֵאשִׁית: כָּאָמוּר לְעֹשֵׂה אוֹרִים גְּדֹלִים כִּי לְעוֹלָם חַסְדּֽוֹ: אוֹר חָדָשׁ עַל־צִיּוֹן תָּאִיר וְנִזְכֶּה כֻלָּֽנוּ מְהֵרָה לְאוֹרוֹ: בָּרוּךְ אַתָּה יְהֹוָה יוֹצֵר הַמְּ֒אוֹרוֹת:",
+          "english": "Blessed are You, Adonoy our God, King of the Universe, Former of light, Creator of darkness, Maker of peace, Creator of all things. He illuminates the earth [and provides light] for those who dwell on it, with compassion; and in His goodness renews every day, continually, the work of creation. How many are Your works, Adonoy; You made them all with wisdom, the earth is full of Your possessions. The King Who alone is exalted from then, Who is praised and glorified and uplifted, from the beginning of time. Eternal God, in Your abundant mercy, have compassion on us, Master, Who is our strength, Rock, Who is our stronghold Shield, of our deliverance, [Be] a stronghold for us. The blessed Almighty, great in knowledge, prepared and made the rays of the sun. [The] Good [One] created [everything] for the glory of His Name: the luminaries He set around His strength (His throne). The chiefs of His hosts are holy beings, the exalters of Shadai continually recount the glory of the Almighty and His holiness. Be Blessed, Adonoy, our God, for the excellent works of Your hands, and for the light-giving luminaries which You formed; they will glorify You forever. Be blessed our Former, our King, and our Redeemer—Creator of holy beings. Praised be Your Name forever, our King, Who forms ministering angels; and Whose ministering angels all stand at the height of the Universe, and proclaim with reverence, in unison aloud the words of the living God, King of the Universe. All of them are beloved, all of them are pure, all of them are mighty and all of them perform with awe and reverence the will of their Possessor. And they all open their mouths in holiness and purity, with song and music, and they bless, and praise, and glorify, and revere, and sanctify, and proclaim the sovereignty of— the Name of the Almighty, the King, the Great, the Mighty, the awesome One; holy is He. And they all take upon themselves the yoke of Divine sovereignty one from the other, and give leave to one another to sanctify their Former in a spirit of serenity with clear speech and pleasantness, all exclaim Kedushah in unison and reverently exclaim: Holy, holy, holy is Adonoy of Hosts, the fullness of all the earth is His glory. And the Ofanim and the holy Chayos, with a mighty sound rise toward the Serafim. Facing them, they offer praise and say, Blessed is the glory of Adonoy from His place. To the Blessed Almighty, they offer pleasant melodies; to the King, the Almighty, [Who is] living and enduring, they utter hymns and make praises heard. For He alone is the Performer of mighty deeds, Maker of new things; Master of battles, Sower of acts of righteousness, Causer of deliverance to sprout forth; Creator of cures. Awesome in praise, Master of wonders, He renews in His goodness, each day, continuously, the work of creation, as it is said: “[Give thanks to Him] Who makes the great luminaries,” for His kindness is everlasting.” Shine a new light upon Zion, and may we all soon be privileged to [enjoy] its brightness. Blessed are You, Adonoy, Former of the luminaries.",
+          "source": "Siddur Ashkenaz, Weekday, Shacharit, Blessings of the Shema, First Blessing before Shema",
+          "provenance": {
+            "sefariaRef": "Siddur Ashkenaz, Weekday, Shacharit, Blessings of the Shema, First Blessing before Shema",
+            "sefariaUrl": "https://www.sefaria.org/Siddur_Ashkenaz,_Weekday,_Shacharit,_Blessings_of_the_Shema,_First_Blessing_before_Shema",
+            "hebrew": {
+              "versionTitle": "The Metsudah siddur, 1981",
+              "license": "CC-BY"
+            },
+            "english": {
+              "versionTitle": "Translation based on the Metsudah linear siddur, by Avrohom Davis, 1981",
+              "license": "CC-BY"
+            },
+            "importedAt": "2026-11-21T13:56:07.200Z"
+          },
+          "verified": false
+        },
+        {
+          "id": "ahavah_rabbah",
+          "section": "Shema and its Blessings",
+          "estimatedMinutes": 9,
+          "blessingOrLine": "Second blessing before the Shema (Ahavah Rabbah)",
+          "relatedInterests": [
+            "siddur",
+            "kavannah"
+          ],
+          "hebrew": "אַהֲבָה רַבָּה אֲהַבְתָּֽנוּ יְהֹוָה אֱלֹהֵֽינוּ חֶמְלָה גְדוֹלָה וִיתֵרָה חָמַֽלְתָּ עָלֵֽינוּ: אָבִֽינוּ מַלְכֵּֽנוּ בַּעֲבוּר אֲבוֹתֵֽינוּ שֶׁבָּטְ֒חוּ בְךָ וַתְּ֒לַמְּ֒דֵם חֻקֵּי חַיִּים כֵּן תְּחָנֵּֽנוּ וּתְלַמְּ֒דֵֽנוּ: אָבִֽינוּ הָאָב הָרַחֲמָן הַמְ֒רַחֵם רַחֵם עָלֵֽינוּ וְתֵן בְּלִבֵּֽנוּ לְהָבִין וּלְהַשְׂכִּיל לִשְׁמֹֽעַ לִלְמֹד וּלְ֒לַמֵּד לִשְׁמֹר וְלַעֲשׂוֹת וּלְקַיֵּם אֶת־כָּל־דִּבְרֵי תַלְמוּד תּוֹרָתֶֽךָ בְּאַהֲבָה: וְהָאֵר עֵינֵֽינוּ בְּתוֹרָתֶֽךָ וְדַבֵּק לִבֵּֽנוּ בְּמִצְוֹתֶֽיךָ וְיַחֵד לְבָבֵֽנוּ לְאַהֲבָה וּלְיִרְאָה אֶת־שְׁמֶֽךָ: וְלֹא נֵבוֹשׁ לְעוֹלָם וָעֶד כִּי בְשֵׁם קָדְשְׁ֒ךָ הַגָּדוֹל וְהַנּוֹרָא בָּטָֽחְנוּ נָגִֽילָה וְנִשְׂמְ֒חָה בִּישׁוּעָתֶֽךָ: וַהֲבִיאֵֽנוּ לְשָׁלוֹם מֵאַרְבַּע כַּנְפוֹת הָאָֽרֶץ וְתוֹלִיכֵֽנוּ קוֹמְ֒מִיּוּת לְאַרְצֵֽנוּ: כִּי אֵל פּוֹעֵל יְשׁוּעוֹת אָֽתָּה וּבָֽנוּ בָחַֽרְתָּ מִכָּל־עַם וְלָשׁוֹן. וְקֵרַבְתָּֽנוּ לְשִׁמְךָ הַגָּדוֹל סֶֽלָה בֶּאֱמֶת לְהוֹדוֹת לְךָ וּלְיַחֶדְךָ בְּאַהֲבָה: בָּרוּךְ אַתָּה יְהֹוָה הַבּוֹחֵר בְּעַמּוֹ יִשְׂרָאֵל בְּאַהֲבָה:",
+          "english": "[With] unbounded love You have loved us Adonoy, our God; [With] great and abundant pity have You pitied us. Our Father, our King! for the sake of our forefathers who trusted in You, and whom You taught statutes of life, so too, be gracious to us and teach us. Our Father, merciful Father, Who acts with compassion have compassion on us and put into our hearts to comprehend, and to be intellectually creative, to listen, to learn, and to teach, to preserve, to practice, and to fulfill all the words of instruction in Your Torah with love. And enlighten our eyes in Your Torah, and cause our hearts to hold fast to Your commandments, and unify our hearts to love and fear Your Name; and may we never be put to shame, for in Your holy, great, and awesome Name— have we trusted; may we exult and rejoice in Your deliverance. And bring us to peace from the four corners of the earth and lead us upright to our land. Because, You are the Almighty, Who performs acts of deliverance, and You have chosen us from among all peoples and tongues, and You have brought us close to Your great Name, forever in truth; that we may give thanks to You, and proclaim Your Oneness, with love. Blessed are You, Adonoy, Who chooses His people Yisrael with love.",
+          "source": "Siddur Ashkenaz, Weekday, Shacharit, Blessings of the Shema, Second Blessing before Shema",
+          "provenance": {
+            "sefariaRef": "Siddur Ashkenaz, Weekday, Shacharit, Blessings of the Shema, Second Blessing before Shema",
+            "sefariaUrl": "https://www.sefaria.org/Siddur_Ashkenaz,_Weekday,_Shacharit,_Blessings_of_the_Shema,_Second_Blessing_before_Shema",
+            "hebrew": {
+              "versionTitle": "The Metsudah siddur, 1981",
+              "license": "CC-BY"
+            },
+            "english": {
+              "versionTitle": "Translation based on the Metsudah linear siddur, by Avrohom Davis, 1981",
+              "license": "CC-BY"
+            },
+            "importedAt": "2026-11-21T13:56:07.200Z"
+          },
+          "verified": false
+        },
+        {
+          "id": "shema",
+          "section": "Shema and its Blessings",
+          "estimatedMinutes": 12,
+          "blessingOrLine": "The Shema",
+          "relatedInterests": [
+            "siddur",
+            "kavannah"
+          ],
+          "hebrew": "אֵל מֶֽלֶךְ נֶאֱמָן: שְׁמַע יִשְׂרָאֵל יְהֹוָה אֱלֹהֵֽינוּ יְהֹוָה אֶחָד: וְאָהַבְתָּ אֵת יְהֹוָה אֱלֹהֶֽיךָ בְּכָל֯־לְ֯בָבְ֒ךָ וּבְכָל־נַפְשְׁ֒ךָ וּבְכָל־מְאֹדֶֽךָ: וְהָיוּ הַדְּ֒בָרִים הָאֵֽלֶּה אֲשֶׁר֯ אָ֯נֹכִי מְצַוְּ֒ךָ הַיּוֹם עַל֯־לְ֯בָבֶֽךָ: וְשִׁנַּנְתָּם לְבָנֶֽיךָ וְדִבַּרְתָּ בָּם בְּשִׁבְתְּ֒ךָ בְּבֵיתֶֽךָ וּבְלֶכְתְּ֒ךָ בַדֶּֽרֶךְ וּבְשָׁכְבְּ֒ךָ וּבְקוּמֶֽךָ: וּקְשַׁרְתָּם לְאוֹת עַל֯־יָ֯דֶֽךָ וְהָיוּ לְטֹטָפֹת בֵּין עֵינֶֽיךָ: וּכְתַבְתָּם עַל־מְזֻזוֹת בֵּיתֶֽךָ וּבִשְׁעָרֶֽיךָ: וְהָיָה אִם־שָׁמֹֽעַ תִּשְׁמְ֒עוּ אֶל־מִצְוֹתַי אֲשֶׁר֯ אָ֯נֹכִי מְצַוֶּה אֶתְכֶם הַיּוֹם לְאַהֲבָה אֶת־יְהֹוָה אֱלֹהֵיכֶם וּלְעָבְדוֹ בְּכָל֯־לְ֯בַבְכֶם וּבְכָל־נַפְשְׁ֒כֶם: וְנָתַתִּי מְטַר֯־אַ֯רְצְ֒כֶם בְּעִתּוֹ֯ י֯וֹרֶה וּמַלְקוֹשׁ וְאָסַפְתָּ דְגָנֶֽךָ וְתִירשְׁ֒ךָ וְיִצְהָרֶֽךָ: וְנָתַתִּי עֵֽשֶׂב֯ בְּ֯שָׂדְ֒ךָ לִבְהֶמְתֶּֽךָ וְאָכַלְתָּ וְשָׂבָֽעְתָּ: הִשָּׁמְ֒רוּ לָכֶם פֶּן֯־יִ֯פְתֶּה לְבַבְכֶם וְסַרְתֶּם וַעֲבַדְתֶּם אֱלֹהִים֯ אֲ֯חֵרִים וְהִשְׁתַּחֲוִיתֶם לָהֶם: וְחָרָה אַף־יְהֹוָה בָּכֶם וְעָצַר֯ אֶ֯ת־הַשָּׁמַֽיִם וְלֹא֯־יִ֯הְיֶה מָטָר וְהָאֲדָמָה לֹא תִתֵּן אֶת֯־יְ֯בוּלָהּ וַאֲבַדְתֶּם֯ מְ֯הֵרָה מֵעַל הָאָֽרֶץ הַטֹּבָה אֲשֶׁר֯ יְ֯הֹוָה נֹתֵן לָכֶם: וְשַׂמְתֶּם֯ אֶ֯ת־דְּבָרַי֯ אֵֽ֯לֶּה עַל֯־לְ֯בַבְכֶם וְעַל־נַפְשְׁ֒כֶם וּקְשַׁרְתֶּם֯ אֹ֯תָם לְאוֹת עַל֯־יֶ֯דְכֶם וְהָיוּ לְטוֹטָפֹת בֵּין עֵינֵיכֶם: וְלִמַּדְתֶּם֯ אֹ֯תָם אֶת־בְּנֵיכֶם לְדַבֵּר בָּם בְּשִׁבְתְּ֒ךָ בְּבֵיתֶֽךָ וּבְלֶכְתְּ֒ךָ בַדֶּֽרֶךְ וּבְשָׁכְבְּ֒ךָ וּבְקוּמֶֽךָ: וּכְתַבְתָּם עַל־מְזוּזוֹת בֵּיתֶֽךָ וּבִשְׁעָרֶֽיךָ: לְמַֽעַן֯ יִ֯רְבּוּ יְמֵיכֶם וִימֵי בְנֵיכֶם עַל הָאֲדָמָה אֲשֶׁר נִשְׁבַּע יְהֹוָה לַאֲבֹתֵיכֶם לָתֵת לָהֶם כִּימֵי הַשָּׁמַֽיִם עַל־הָאָֽרֶץ: וַֽיֹּאמֶר֯ יְ֯הֹוָה֯ אֶ֯ל־משֶׁה לֵּאמֹר: דַּבֵּר֯ אֶ֯ל־בְּנֵי יִשְׂרָאֵל וְאָמַרְתָּ אֲלֵהֶם וְעָשׂוּ לָהֶם צִיצִת עַל־כַּנְפֵי בִגְ֒דֵיהֶם לְדֹרֹתָם וְנָתְ֒נוּ עַל־צִיצִת הַכָּנָף֯ פְּ֯תִיל תְּכֵֽלֶת: וְהָיָה לָכֶם לְצִיצִת וּרְאִיתֶם֯ אֹ֯תוֹ וּזְכַרְתֶּם֯ אֶ֯ת־כָּל־מִצְוֹת֯ יְ֯הֹוָה וַעֲשִׂיתֶם֯ אֹ֯תָם וְלֹא תָתֽוּרוּ אַחֲרֵי לְבַבְכֶם וְאַחֲרֵי עֵינֵיכֶם אֲשֶׁר֯־אַ֯תֶּם זֹנִים֯ אַ֯חֲרֵיהֶם: לְמַֽעַן תִּזְכְּ֒רוּ וַעֲשִׂיתֶם֯ אֶ֯ת־כָּל־מִצְוֹתָי וִהְיִיתֶם קְדשִׁים לֵאלֹהֵיכֶם: אֲנִי יְהֹוָה אֱלֹהֵיכֶם֯ אֲ֯שֶׁר הוֹצֵֽאתִי אֶתְכֶם֯ מֵ֯אֶֽרֶץ מִצְרַֽיִם לִהְיוֹת לָכֶם לֵאלֹהִים֯ אֲ֯נִי יְהֹוָה אֱלֹהֵיכֶם֯: אֱ֯מֶת יְהֹוָה אֱלֹהֵיכֶם֯ אֱ֯מֶת:",
+          "english": "(Almighty, faithful King) Hear, Israel: Adonoy is our God, Adonoy is One. Blessed [is His] Name, Whose glorious kingdom is forever and ever. And you shall love Adonoy your God with all your heart and with all your soul and with all your possessions. And these words which I command you today, shall be upon your heart. And you shall teach them sharply to your children. And you shall discuss them when you sit in your house, and when you travel on the road, and when you lie down and when you rise. And you shall bind them for a sign upon your hand, and they shall be for totafos between your eyes. And you shall write them upon the doorposts of your house and upon your gateways. And it will be— if you vigilantly obey My commandments which I command you this day, to love Adonoy your God, and serve Him with your entire hearts and with your entire souls— that I will give rain for your land in its proper time, the early (autumn) rain and the late (spring) rain; and you will harvest your grain and your wine and your oil. And I will put grass in your fields for your cattle, and you will eat and be satisfied. Beware lest your hearts be swayed and you turn astray, and you worship alien gods and bow to them. And Adonoy’s fury will blaze among you, and He will close off the heavens and there will be no rain and the earth will not yield its produce; and you will perish swiftly from the good land which Adonoy gives you. Place these words of Mine upon your hearts and upon your souls,— and bind them for a sign upon your hands, and they shall be for totafos between your eyes. And you shall teach them to your sons, to speak them when you sit in your house, and when you travel on the road, and when you lie down and when you rise. And you shall write them upon the doorposts of your house and upon your gateways. In order that your days be prolonged, and the days of your children, upon the land which Adonoy swore to your fathers to give them [for as long] as the heavens are above the earth. And Adonoy spoke to Moses saying: Speak to the children of Israel, and tell them to make for themselves fringes on the corners of their garments throughout their generations; and they will place with the fringes of each corner a thread of blue. And it will be to you for fringes, and you will look upon it and you will remember all the commandments of Adonoy, and you will perform them; and you will not turn aside after your hearts and after your eyes which cause you to go astray. In order that you will remember and perform all My commandments; and you will be holy unto your God. I am Adonoy, your God, Who brought you out of the land of Egypt to be your God: I am Adonoy, your God— —is true— Adonoy, your God, is true.",
+          "source": "Siddur Ashkenaz, Weekday, Shacharit, Blessings of the Shema, Shema",
+          "provenance": {
+            "sefariaRef": "Siddur Ashkenaz, Weekday, Shacharit, Blessings of the Shema, Shema",
+            "sefariaUrl": "https://www.sefaria.org/Siddur_Ashkenaz,_Weekday,_Shacharit,_Blessings_of_the_Shema,_Shema",
+            "hebrew": {
+              "versionTitle": "The Metsudah siddur, 1981",
+              "license": "CC-BY"
+            },
+            "english": {
+              "versionTitle": "Translation based on the Metsudah linear siddur, by Avrohom Davis, 1981",
+              "license": "CC-BY"
+            },
+            "importedAt": "2026-11-21T13:56:07.200Z"
+          },
+          "verified": false
+        },
+        {
+          "id": "emet_veyatziv",
+          "section": "Shema and its Blessings",
+          "estimatedMinutes": 12,
+          "blessingOrLine": "Blessing after the Shema (Emet Veyatziv)",
+          "relatedInterests": [
+            "siddur",
+            "kavannah"
+          ],
+          "hebrew": "וְיַצִּיב וְנָכוֹן וְקַיָּם וְיָשָׁר וְנֶאֱמָן וְאָהוּב וְחָבִיב וְנֶחְמָד וְנָעִים וְנוֹרָא וְאַדִּיר וּמְתֻקָּן וּמְקֻבָּל וְטוֹב וְיָפֶה הַדָּבָר הַזֶּה עָלֵֽינוּ לְעוֹלָם וָעֶד: אֱמֶת אֱלֹהֵי עוֹלָם מַלְכֵּֽנוּ צוּר יַעֲקֹב מָגֵן יִשְׁעֵֽנוּ, לְדֹר וָדֹר הוּא קַיָּם וּשְׁמוֹ קַיָּם וְכִסְאוֹ נָכוֹן וּמַלְכוּתוֹ וֶאֱמוּנָתוֹ לָעַד קַיָּֽמֶת: וּדְבָרָיו חָיִים וְקַיָּמִים נֶאֱמָנִים וְנֶחֱמָדִים לָעַד וּלְעוֹלְ֒מֵי עוֹלָמִים, עַל אֲבוֹתֵֽינוּ וְעָלֵֽינוּ עַל בָּנֵֽינוּ וְעַל דּוֹרוֹתֵֽינוּ וְעַל כָּל דּוֹרוֹת זֶֽרַע יִשְׂרָאֵל עֲבָדֶֽיךָ: עַל־הָרִאשׁוֹנִים וְעַל־הָאַחֲרוֹנִים דָּבָר טוֹב וְקַיָּם לְעוֹלָם וָעֶד אֱמֶת וֶאֱמוּנָה חֹק וְלֹא יַעֲבֹר: אֱמֶת שָׁאַתָּה הוּא יְהֹוָה אֱלֹהֵֽינוּ וֵאלֹהֵי אֲבוֹתֵֽינוּ. מַלְכֵּֽנוּ מֶֽלֶךְ אֲבוֹתֵֽינוּ. גּוֹאֲלֵֽנוּ גּוֹאֵל אֲבוֹתֵֽינוּ. יוֹצְ֒רֵֽנוּ צוּר יְשׁוּעָתֵֽנוּ. פּוֹדֵֽנוּ וּמַצִּילֵֽנוּ מֵעוֹלָם שְׁמֶֽךָ. אֵין אֱלֹהִים זוּלָתֶֽךָ: עֶזְרַת אֲבוֹתֵֽינוּ אַתָּה הוּא מֵעוֹלָם מָגֵן וּמוֹשִֽׁיעַ לִבְנֵיהֶם אַחֲרֵיהֶם בְּכָל־דּוֹר וָדוֹר: בְּרוּם עוֹלָם מוֹשָׁבֶֽךָ וּמִשְׁפָּטֶֽיךָ וְצִדְקָתְ֒ךָ עַד־אַפְסֵי־אָֽרֶץ: אַשְׁרֵי אִישׁ שֶׁיִּשְׁמַע לְמִצְוֹתֶֽיךָ וְתוֹרָתְ֒ךָ וּדְבָרְ֒ךָ יָשִׂים עַל־לִבּוֹ: אֱמֶת אַתָּה הוּא אָדוֹן לְעַמֶּֽךָ וּמֶֽלֶךְ גִּבּוֹר לָרִיב רִיבָם: אֱמֶת אַתָּה הוּא רִאשׁוֹן וְאַתָּה הוּא אַחֲרוֹן וּמִבַּלְעָדֶֽיךָ אֵין לָֽנוּ מֶֽלֶךְ גּוֹאֵל וּמוֹשִֽׁיעַ: מִמִּצְרַֽיִם גְּאַלְתָּֽנוּ יְהֹוָה אֱלֹהֵֽינוּ וּמִבֵּית עֲבָדִים פְּדִיתָֽנוּ: כָּל־בְּכוֹרֵיהֶם הָרָֽגְתָּ וּבְכוֹרְ֒ךָ גָּאָֽלְתָּ וְיַם־סוּף בָּקַֽעְתָּ וְזֵדִים טִבַּֽעְתָּ וִידִידִים הֶעֱבַֽרְתָּ וַיְכַסּוּ־מַיִם צָרֵיהֶם אֶחָד מֵהֶם לֹא נוֹתָֽר: עַל־זֹאת שִׁבְּ֒חוּ אֲהוּבִים וְרוֹמְ֒מוּ אֵל וְנָתְ֒נוּ יְדִידִים זְמִירוֹת שִׁירוֹת וְתִשְׁבָּחוֹת בְּרָכוֹת וְהוֹדָאוֹת לְמֶֽלֶךְ אֵל חַי וְקַיָּם: רָם וְנִשָּׂא גָּדוֹל וְנוֹרָא מַשְׁפִּיל גֵּאִים וּמַגְבִּֽיהַּ שְׁפָלִים מוֹצִיא אֲסִירִים וּפוֹדֶה עֲנָוִים וְעוֹזֵר דַּלִּים וְעוֹנֶה לְעַמּוֹ בְּעֵת שַׁוְּ֒עָם אֵלָיו: תְּהִלּוֹת לְאֵל עֶלְיוֹן בָּרוּךְ הוּא וּמְבֹרָךְ. מֹשֶׁה וּבְנֵי יִשְׂרָאֵל לְךָ עָנוּ שִׁירָה בְּשִׂמְחָה רַבָּה וְאָמְ֒רוּ כֻלָּם: מִי כָמֹֽכָה בָּאֵלִם יְהֹוָה מִי כָּמֹֽכָה נֶאְדָּר בַּקֹּֽדֶשׁ נוֹרָא תְהִלֹּת עֹֽשֵׂה פֶֽלֶא: שִׁירָה חֲדָשָׁה שִׁבְּ֒חוּ גְאוּלִים לְשִׁמְךָ עַל־שְׂפַת הַיָּם יַֽחַד כֻּלָּם הוֹדוּ וְהִמְלִֽיכוּ וְאָמְ֒רוּ: יְהֹוָה יִמְלֹךְ לְעוֹלָם וָעֶד: צוּר יִשְׂרָאֵל קֽוּמָה בְּעֶזְרַת יִשְׂרָאֵל וּפְדֵה כִנְאֻמֶֽךָ יְהוּדָה וְיִשְׂרָאֵל, גֹּאֲלֵֽנוּ יְהֹוָה צְבָאוֹת שְׁמוֹ קְדוֹשׁ יִשְׂרָאֵל: בָּרוּךְ אַתָּה יְהֹוָה גָּאַל יִשְׂרָאֵל:",
+          "english": "—and firm, certain and enduring, upright and faithful, beloved and cherished, desired and pleasant, awesome and mighty, correct and acceptable, good and beautiful is this [affirmation] to us for all eternity. It is true, that the God of the Universe, is our King, the Stronghold of Jacob is the Shield of our deliverance. Throughout the generations He endures and His Name endures, and His throne is confirmed; and His sovereignty and His faithfulness endure forever. His words are alive and enduring, faithful and desirable forever and to all eternity; for our fathers and for us, for our children and for our generations, and for all generations of the seed of Israel, Your servants. Upon the first and upon the last, [generations] [it is] a matter that is good and everlasting. It is true and faithful, a Law that will never be abrogated. Truly you Adonoy, are our God, and the God of our fathers, our King, the King of our fathers, our Redeemer, Redeemer of our fathers, our Former, Rock of our deliverance; our Liberator and our Saver which is Your Name from old, and there is no God besides You. You have always been the Help of our fathers; a Shield and a Deliverer to their children after them in every generation. The heights of the universe is Your habitation, and Your judgments and Your righteousness [reach] to the ends of the earth. Fortunate is man who heeds Your commandments; and takes Your Torah and Your word to his heart. Truly, You are the Master of Your people and a mighty King to defend their cause. Truly, You are First and You are Last, and we have no king, redeemer, or deliverer besides You. You redeemed us from Egypt. Adonoy, our God, You liberated us from the house of bondage. You slew all their firstborn and You redeemed Your firstborn,. You split the Sea of Reeds, and You drowned the wicked. You caused the beloved ones to pass through, while the waters covered their enemies; not one of them remained. Because of this, the beloved ones praised and exalted the Almighty; and the beloved ones offered hymns, songs, and praises, blessings and thanksgiving to the King, the Almighty, [Who is] living and enduring. (He is) exalted and uplifted, great and awesome; He humbles the haughty and raises the lowly. He frees the captives and redeems the humble, helps the impoverished, and He answers His people when they cry out to Him. Praises to the most high Almighty, blessed is He, and He is blessed. Moses and the Children of Israel sang a song to You with great joy, and they all proclaimed: Who is like You among the mighty, Adonoy! Who is like You— [You are] adorned in holiness, awesome in praise, performing wonders! With a new song the redeemed people praised Your Name at the seashore! All of them gave thanks in unison and proclaimed Your sovereignty and said: Adonoy will reign forever and ever. Rock of Israel, arise to the aid of Israel, and liberate Judah and Israel as You promised. Our Redeemer— ‘Adonoy of hosts’ is His Name, the Holy One of Israel Blessed are You, Adonoy, Who redeemed Israel.",
+          "source": "Siddur Ashkenaz, Weekday, Shacharit, Blessings of the Shema, Blessing after Shema",
+          "provenance": {
+            "sefariaRef": "Siddur Ashkenaz, Weekday, Shacharit, Blessings of the Shema, Blessing after Shema",
+            "sefariaUrl": "https://www.sefaria.org/Siddur_Ashkenaz,_Weekday,_Shacharit,_Blessings_of_the_Shema,_Blessing_after_Shema",
+            "hebrew": {
+              "versionTitle": "The Metsudah siddur, 1981",
+              "license": "CC-BY"
+            },
+            "english": {
+              "versionTitle": "Translation based on the Metsudah linear siddur, by Avrohom Davis, 1981",
+              "license": "CC-BY"
+            },
+            "importedAt": "2026-11-21T13:56:07.200Z"
+          },
+          "verified": false
+        }
+      ]
+    },
+    {
+      "id": "amidah",
+      "name": "Amidah",
+      "order": 3,
+      "units": []
+    }
   ]
 }

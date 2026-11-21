@@ -122,19 +122,19 @@ Updated 2026-11-21: the owner has a server and will set it up from a computer. D
 
 **Tasks**
 - [x] ADR-010 / ADR-011 are written (done in this commit); keep them current if anything changes
-- [ ] **License policy:** allow `Public Domain`, `CC0`, `CC-BY`, `CC-BY-SA`; allow `CC-BY-NC` (fine for this personal, non-commercial app, but flag it in the content report); reject `unknown` and anything else. Every entry stores `license`, `versionTitle`, `sefariaRef`, `sefariaUrl`, `importedAt`
-- [ ] **Import script** `scripts/import-sefaria.ts`: a list of refs (in a checked-in manifest, e.g. `packages/content/sefaria-manifest.json`) → fetch → sanitize (strip HTML, normalize whitespace) → keep te'amim → write `packages/content/data/*.json`. Idempotent; reports what changed; never overwrites `verified: true` entries without a flag
+- [x] **License policy** (plus the ADR-012 personal-use exception): allow `Public Domain`, `CC0`, `CC-BY`, `CC-BY-SA`; allow `CC-BY-NC` (fine for this personal, non-commercial app, but flag it in the content report); reject `unknown` and anything else. Every entry stores `license`, `versionTitle`, `sefariaRef`, `sefariaUrl`, `importedAt`
+- [x] **Import script** `scripts/import-sefaria.ts`: a list of refs (in a checked-in manifest, e.g. `packages/content/sefaria-manifest.json`) → fetch → sanitize (strip HTML, normalize whitespace) → keep te'amim → write `packages/content/data/*.json`. Idempotent; reports what changed; never overwrites `verified: true` entries without a flag
 - [x] **Core (pure) text transforms** with tests: `stripCantillation(text)` (te'amim U+0591–U+05AF plus meteg/sof pasuq handling: decide and document; keep nikkud); `applyDivineName(text, mode)` covering all pointed/unpointed variants of the Tetragrammaton
 - [x] **Profile fields:** `showCantillation: boolean` (default false), `divineName: 'abbreviated' | 'full' | 'yud_yud'` (default 'abbreviated'). Enum arrays in `models.ts`; `parseUserProfile` defaults missing fields so saved v0.4 profiles keep working; option labels in `ui-strings.json` and `/v1/options`
 - [x] **Apply at render time** in the API (daily study and Siddur) next to the language mode, so clients stay dumb
 - [x] **Open questions to settle and record** (settled 2026-11-21, recorded in ADR-011: plan recommendation for (a), Tetragrammaton only for (b)): (a) transliteration and English when abbreviated, e.g. "Adonai" → "Hashem"? Recommendation: Hebrew follows the setting, transliteration uses "Adonai" for full/yud-yud and "Hashem" for abbreviated, English is left as the translation renders it; (b) other Divine Names (אֱלֹהִים etc.): out of scope unless the owner asks
-- [ ] **Siddur:** complete Pesukei Dezimra in Ashkenaz order (Hebrew: Metsudah or Daat; English: Metsudah, Singer or Community; choose and record), then Shema and its Blessings, then Amidah. Replace the hand-written seed units with imported ones (same ids where they exist, so progress keeps working)
+- [ ] **Siddur:** ✅ Pesukei Dezimra (19 units) and ✅ Shema and its Blessings (5 units), Metsudah he+en (ADR-012). ⏳ **Amidah: waiting on owner** (Metsudah is an Orthodox text: no Imahot option; Sim Shalom isn't on Sefaria). ✅ Seed units replaced, ids kept.
 - [ ] **Musar:** sequential Mesillat Yesharim path (chapter by chapter; check which versions are openly licensed) + Pirkei Avot
-- [ ] **Tanakh pool:** at least 60 units so rotation doesn't repeat for two months
+- [x] **Tanakh pool:** at least 60 units (70) so rotation doesn't repeat for two months
 - [ ] Resolve deferred D2: replace or verify the Mesillat Yesharim seed quote; cite Chagigah 12a / Bereishit Rabbah 3:6 for the hidden-light unit
 - [ ] Commentary and kavannah prompts on imported units stay **owner-reviewed**. An LLM may draft them, but they're marked `verified: false` until the owner approves
 - [ ] `npm run content:report`: counts by type, unverified entries, NC-licensed entries, missing fields
-- [ ] Content tests: required license/provenance fields; allowed licenses only; no HTML left in text; te'amim present only where the source has them
+- [x] Content tests: required license/provenance fields; allowed licenses only; no HTML left in text; te'amim present only where the source has them
 - [ ] Web: Settings gets the cantillation toggle and Divine Name selector (done); Hebrew font check with te'amim (Noto Serif Hebrew supports them; verify visually)
 - [ ] Attribution: a simple "Sources & licenses" screen or footer listing versions used (required by CC-BY/CC-BY-SA)
 

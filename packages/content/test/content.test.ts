@@ -13,10 +13,12 @@ import {
   LEARNING_LEVELS,
   generateDailyStudy,
   getSiddurSequence,
+  hasCantillation,
   isUnpointedHebrew,
   validateDailyStudy,
 } from '@torah/core';
 import { contentLibrary, siddurSections, studyUnits, uiStrings } from '../src';
+import { licenseStatus } from '../src/sefaria/license';
 
 const UNIT_TYPES = ['tanakh', 'midrash', 'musar', 'siddur', 'kabbalah', 'halachah', 'commentary'];
 
@@ -55,8 +57,11 @@ describe('siddur', () => {
   });
 
   it.each(sequence.map((u) => [u.id, u] as const))('%s is well-formed', (_id, u) => {
-    for (const field of ['hebrew', 'transliteration', 'english', 'commentary', 'kavannahPrompt'] as const) {
-      expect(u[field], field).toBeTruthy();
+    for (const field of ['hebrew', 'english'] as const) expect(u[field], field).toBeTruthy();
+    // Hand-written units carry commentary and kavannah. Imported units may not yet:
+    // those are drafted and owner-reviewed separately (plan v0.5.0).
+    if (!u.provenance) {
+      for (const field of ['transliteration', 'commentary', 'kavannahPrompt'] as const) expect(u[field], field).toBeTruthy();
     }
     expect(isUnpointedHebrew(u.hebrew)).toBe(false);
     expect(typeof u.verified).toBe('boolean');
@@ -101,5 +106,63 @@ describe('ui strings', () => {
     expect(Object.keys(uiStrings.options.languageModes).sort()).toEqual([...LANGUAGE_MODES].sort());
     expect(Object.keys(uiStrings.options.divineNames).sort()).toEqual([...DIVINE_NAME_MODES].sort());
     expect(Object.keys(uiStrings.options.unitTypes).sort()).toEqual([...UNIT_TYPES].sort());
+  });
+});
+
+describe('imported content provenance (ADR-010, ADR-012)', () => {
+  const all = [
+    ...studyUnits.map((u) => ({ id: u.id, hebrew: u.hebrew, english: u.english, provenance: u.provenance })),
+    ...siddurSections.flatMap((s) =>
+      s.units.map((u) => ({ id: u.id, hebrew: u.hebrew as string | undefined, english: u.english as string | undefined, provenance: u.provenance })),
+    ),
+  ];
+  const imported = all.filter((u) => u.provenance);
+
+  it('has imported entries', () => {
+    expect(imported.length).toBeGreaterThan(0);
+  });
+
+  it.each(imported.map((u) => [u.id, u] as const))('%s has complete provenance and an allowed license', (_id, u) => {
+    const p = u.provenance!;
+    expect(p.sefariaRef).toBeTruthy();
+    expect(p.sefariaUrl).toMatch(/^https:\/\/www\.sefaria\.org\//);
+    expect(Number.isNaN(Date.parse(p.importedAt))).toBe(false);
+    expect(p.hebrew || p.english).toBeTruthy();
+    for (const [lang, v] of [['hebrew', p.hebrew], ['english', p.english]] as const) {
+      if (!v) continue;
+      expect(v.versionTitle, lang).toBeTruthy();
+      const status = licenseStatus(v.license, { personalUseOnly: p.personalUseOnly });
+      expect(status, `${lang} license ${v.license}`).not.toBe('rejected');
+      if (status === 'personal_use_only') expect(p.personalUseOnly).toBe(true);
+    }
+    if (p.hebrew) expect(u.hebrew, 'hebrew text').toBeTruthy();
+    if (p.english) expect(u.english, 'english text').toBeTruthy();
+  });
+
+  it.each(all.map((u) => [u.id, u] as const))('%s has no HTML or entities left', (_id, u) => {
+    for (const text of [u.hebrew, u.english]) {
+      if (!text) continue;
+      expect(text).not.toMatch(/<\/?[a-z][^>]*>/i);
+      expect(text).not.toMatch(/&[a-z]+;|&#\d+;/i);
+      expect(text).not.toMatch(/\{[פס]\}/);
+      expect(text).toBe(text.trim());
+      expect(text).not.toMatch(/\s{2,}/);
+    }
+  });
+
+  it('te\'amim appear only in imported text (hand-written entries never add them)', () => {
+    for (const u of all.filter((x) => !x.provenance)) {
+      if (u.hebrew) expect(hasCantillation(u.hebrew), u.id).toBe(false);
+    }
+  });
+
+  it('Tanakh imports keep their te\'amim (the cantillation toggle has something to show)', () => {
+    const tanakh = studyUnits.filter((u) => u.type === 'tanakh' && u.provenance?.hebrew?.versionTitle === 'Miqra according to the Masorah');
+    expect(tanakh.length).toBeGreaterThan(0);
+    for (const u of tanakh) expect(hasCantillation(u.hebrew!), u.id).toBe(true);
+  });
+
+  it('the Tanakh pool is large enough for two months without repeats', () => {
+    expect(studyUnits.filter((u) => u.type === 'tanakh').length).toBeGreaterThanOrEqual(60);
   });
 });

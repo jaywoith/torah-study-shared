@@ -1,6 +1,11 @@
 import { describe, expect, it } from 'vitest';
 import request from 'supertest';
+import { getSiddurSequence } from '@torah/core';
+import { contentLibrary } from '@torah/content';
 import { testApp } from './helpers';
+
+// The Siddur path's first two units, from real content (not hard-coded ids).
+const [FIRST, SECOND] = getSiddurSequence(contentLibrary.siddur).map((u) => u.id);
 
 const profile = {
   framework: 'masorti_conservative',
@@ -33,19 +38,19 @@ describe('/v1/profile', () => {
 describe('/v1/progress', () => {
   it('records Siddur completion and /v1/siddur/next reads it from the database', async () => {
     const { app } = testApp();
-    expect((await request(app).get('/v1/siddur/next')).body.unit.id).toBe('baruch_sheamar');
-    const res = await request(app).post('/v1/progress/complete').send({ path: 'siddur', unitId: 'baruch_sheamar' });
+    expect((await request(app).get('/v1/siddur/next')).body.unit.id).toBe(FIRST);
+    const res = await request(app).post('/v1/progress/complete').send({ path: 'siddur', unitId: FIRST });
     expect(res.status).toBe(201);
     const next = await request(app).get('/v1/siddur/next');
-    expect(next.body.unit.id).toBe('ashrei_opening');
+    expect(next.body.unit.id).toBe(SECOND);
     expect(next.body.completedCount).toBe(1);
-    expect((await request(app).get('/v1/progress')).body.siddur.completed).toEqual(['baruch_sheamar']);
+    expect((await request(app).get('/v1/progress')).body.siddur.completed).toEqual([FIRST]);
   });
 
   it('an explicit completed= parameter still overrides the database', async () => {
     const { app } = testApp();
-    await request(app).post('/v1/progress/complete').send({ path: 'siddur', unitId: 'baruch_sheamar' });
-    expect((await request(app).get('/v1/siddur/next?completed=')).body.unit.id).toBe('baruch_sheamar');
+    await request(app).post('/v1/progress/complete').send({ path: 'siddur', unitId: FIRST });
+    expect((await request(app).get('/v1/siddur/next?completed=')).body.unit.id).toBe(FIRST);
   });
 
   it('records, lists by date range, and removes daily completions', async () => {
@@ -65,14 +70,14 @@ describe('/v1/progress', () => {
     const { app } = testApp();
     const res = await request(app)
       .post('/v1/progress/complete')
-      .send({ path: 'daily', unitId: 'baruch_sheamar', date: '2026-11-21' });
+      .send({ path: 'daily', unitId: FIRST, date: '2026-11-21' });
     expect(res.status).toBe(201);
   });
 
   it('validates path, unit id and date', async () => {
     const { app } = testApp();
     const bad = [
-      { path: 'other', unitId: 'baruch_sheamar' },
+      { path: 'other', unitId: FIRST },
       { path: 'siddur', unitId: 'not-a-unit' },
       { path: 'siddur', unitId: 'musar-avot-1-2' }, // exists, but not a Siddur unit
       { path: 'daily', unitId: 'musar-avot-1-2' }, // missing date
@@ -84,7 +89,7 @@ describe('/v1/progress', () => {
 
   it('resets the Siddur path', async () => {
     const { app } = testApp();
-    await request(app).post('/v1/progress/complete').send({ path: 'siddur', unitId: 'baruch_sheamar' });
+    await request(app).post('/v1/progress/complete').send({ path: 'siddur', unitId: FIRST });
     const res = await request(app).post('/v1/progress/reset').send({ path: 'siddur' });
     expect(res.body).toEqual({ ok: true, removed: 1 });
     expect((await request(app).get('/v1/siddur/next')).body.position).toBe(1);

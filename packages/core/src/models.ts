@@ -127,19 +127,40 @@ export interface DailyStudy {
   notes?: string;
 }
 
+/** One text version an entry was imported from (ADR-010). */
+export interface VersionInfo {
+  versionTitle: string;
+  license: string;
+}
+
+/** Where an imported entry came from. Required on every Sefaria-imported entry. */
+export interface Provenance {
+  sefariaRef: string;
+  sefariaUrl: string;
+  /** ISO timestamp of the import that last changed the text. */
+  importedAt: string;
+  hebrew?: VersionInfo;
+  english?: VersionInfo;
+  /** A version's license is not cleared for anything beyond personal use (ADR-012). */
+  personalUseOnly?: boolean;
+}
+
 export interface SiddurUnit {
   id: string;
   section: string; // e.g. "Pesukei Dezimra", "Shema"
   blessingOrLine: string;
   hebrew: string; // pointed
-  transliteration: string;
+  /** Hand-written; imported units have none until one is written and reviewed. */
+  transliteration?: string;
   english: string;
-  commentary: string;
-  kavannahPrompt: string;
+  /** Owner-reviewed. Imported units may lack these until drafted and approved. */
+  commentary?: string;
+  kavannahPrompt?: string;
   source?: string;
   reviewItems?: ReviewItem[];
   estimatedMinutes?: number;
   relatedInterests?: Interest[];
+  provenance?: Provenance;
   /** False until a human has checked text, translation and citation against a source. */
   verified: boolean;
   reviewNote?: string;
@@ -161,6 +182,7 @@ export interface ContentUnit extends Omit<StudyUnit, 'id' | 'contentId'> {
   frameworks?: FrameworkId[];
   /** Only meaningful for type "kabbalah". Defaults to "symbolic". */
   depth?: KabbalahDepth;
+  provenance?: Provenance;
   verified: boolean;
   reviewNote?: string;
 }

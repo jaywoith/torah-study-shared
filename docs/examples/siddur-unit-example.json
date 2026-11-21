@@ -1,30 +1,27 @@
 {
-  "id": "baruch_sheamar",
+  "id": "psalm_30",
   "section": "Pesukei Dezimra",
-  "blessingOrLine": "Baruch She’amar",
-  "hebrew": "בָּרוּךְ שֶׁאָמַר וְהָיָה הָעוֹלָם. בָּרוּךְ הוּא. בָּרוּךְ עוֹשֵׂה בְרֵאשִׁית. בָּרוּךְ אוֹמֵר וְעוֹשֶׂה. בָּרוּךְ גּוֹזֵר וּמְקַיֵּם. בָּרוּךְ מְרַחֵם עַל הָאָרֶץ. בָּרוּךְ מְרַחֵם עַל הַבְּרִיּוֹת. בָּרוּךְ מְשַׁלֵּם שָׂכָר טוֹב לִירֵאָיו. בָּרוּךְ חַי לָעַד וְקַיָּם לָנֶצַח. בָּרוּךְ פּוֹדֶה וּמַצִּיל. בָּרוּךְ שְׁמוֹ.",
-  "transliteration": "Baruch she’amar ve’hayah ha’olam. Baruch hu. Baruch oseh bereishit. Baruch omer ve’oseh. Baruch gozer umekayem. Baruch merachem al ha’aretz. Baruch merachem al habriyot. Baruch meshalem sachar tov liy’re’av. Baruch chai la’ad vekayam lanetzach. Baruch podeh umatzil. Baruch shemo.",
-  "english": "Blessed is He who spoke, and the world came into being. Blessed is He. Blessed is He who makes the beginning. Blessed is He who speaks and does. Blessed is He who decrees and fulfills. Blessed is He who has mercy on the earth. Blessed is He who has mercy on the creatures. Blessed is He who pays a good reward to those who fear Him. Blessed is He who lives forever and endures to eternity. Blessed is He who redeems and rescues. Blessed is His name.",
-  "commentary": "This opening of Pesukei Dezimra affirms God as the Creator who brings the world into being through speech. The kavannah is acknowledging divine creative power at the start of the morning praises and connecting the words to our own speech and actions throughout the day.",
-  "kavannahPrompt": "As you begin Pesukei Dezimra, pause on the words 'who spoke and the world came into being.' What does it mean for you today that creation continues through divine speech?",
-  "source": "Siddur, Pesukei Dezimra",
-  "reviewItems": [
-    {
-      "type": "hebrew_recognition",
-      "text": "בָּרוּךְ",
-      "expected": "Baruch"
-    },
-    {
-      "type": "shoresh",
-      "text": "אָמַר",
-      "expected": "אמר"
-    }
-  ],
-  "estimatedMinutes": 5,
+  "estimatedMinutes": 9,
+  "blessingOrLine": "Mizmor Shir (Psalm 30)",
   "relatedInterests": [
     "siddur",
-    "kavannah",
-    "prayerbook_hebrew"
+    "kavannah"
   ],
+  "hebrew": "מִזְמוֹר שִׁיר־חֲנֻכַּת הַבַּֽיִת לְדָוִד: אֲרוֹמִמְךָ יְהֹוָה כִּי דִלִּיתָֽנִי וְלֹא־שִׂמַּֽחְתָּ אֹיְ֒בַי לִי: יְהֹוָה אֱלֹהָי שִׁוַּעְתִּי אֵלֶֽיךָ וַתִּרְפָּאֵֽנִי: יְהֹוָה הֶעֱלִֽיתָ מִן־שְׁאוֹל נַפְשִׁי חִיִּיתַֽנִי מִיָּרְ֒דִי־בוֹר: זַמְּ֒רוּ לַיהוָֹה חֲסִידָיו וְהוֹדוּ לְזֵֽכֶר קָדְשׁוֹ: כִּי רֶֽגַע בְּאַפּוֹ חַיִּים בִּרְצוֹנוֹ בָּעֶֽרֶב יָלִין בֶּֽכִי וְלַבֹּֽקֶר רִנָּה: וַאֲנִי אָמַֽרְתִּי בְשַׁלְוִי בַּל־אֶמּוֹט לְעוֹלָם: יְהֹוָה בִּרְצוֹנְ֒ךָ הֶעֱמַֽדְתָּה לְהַרְרִי עֹז הִסְתַּֽרְתָּ פָנֶֽיךָ הָיִֽיתִי נִבְהָל: אֵלֶֽיךָ יְהֹוָה אֶקְרָא וְאֶל־אֲדֹנָי אֶתְחַנָּן: מַה־בֶּֽצַע בְּדָמִי בְּרִדְתִּי אֶל שָֽׁחַת הֲיוֹדְ֒ךָ עָפָר הֲיַגִּיד אֲמִתֶּֽךָ: שְׁמַע יְהֹוָה וְחָנֵּֽנִי יְהֹוָה הֱיֵה־עֹזֵר לִי: הָפַֽכְתָּ מִסְפְּדִי לְמָחוֹל לִי פִּתַּחְתָּ שַׂקִּי וַתְּ֒אַזְּ֒רֵֽנִי שִׂמְחָה: לְמַֽעַן יְזַמֶּרְךָ כָבוֹד וְלֹא יִדֹּם יְהֹוָה אֱלֹהַי לְעוֹלָם אוֹדֶֽךָּ:",
+  "english": "A Psalm, a song for the inauguration of the Temple, by David. I will exalt You, Adonoy, for You have upheld me, and not let my foes rejoice over me. Adonoy, my God, I cried out to You, and You healed me. Adonoy, You have raised my soul from the lower world. You have kept me alive, lest I descend to the Pit. Sing to Adonoy, [you,] His pious ones, and give thanks to His holy Name. For His anger lasts only a moment, but there is [long] life, in His conciliation. In the evening, one retires weeping, but in the morning there is [a cry of] joy! I said, in my serenity, I would never be moved. [But,] Adonoy, it was Your will [alone] that established my mountain as a stronghold. When You concealed Your Presence, I was terrified. To You, Adonoy, I called, and my Master I beseeched. What gain is there in [the shedding of] my blood? In my going down to destruction? Will the dust acknowledge You? Will it proclaim Your truth? Hear [me] Adonoy, and be gracious to me, Adonoy, be a help to me. You have turned my mourning into dancing, You have loosened my sackcloth and supported me with joy. In order that my soul might sing to You and not be stilled, Adonoy, my God, forever will I thank You.",
+  "source": "Siddur Ashkenaz, Weekday, Shacharit, Pesukei Dezimra, Introductory Psalm",
+  "provenance": {
+    "sefariaRef": "Siddur Ashkenaz, Weekday, Shacharit, Pesukei Dezimra, Introductory Psalm",
+    "sefariaUrl": "https://www.sefaria.org/Siddur_Ashkenaz,_Weekday,_Shacharit,_Pesukei_Dezimra,_Introductory_Psalm",
+    "hebrew": {
+      "versionTitle": "The Metsudah siddur, 1981",
+      "license": "CC-BY"
+    },
+    "english": {
+      "versionTitle": "Translation based on the Metsudah linear siddur, by Avrohom Davis, 1981",
+      "license": "CC-BY"
+    },
+    "importedAt": "2026-11-21T13:56:07.200Z"
+  },
   "verified": false
 }

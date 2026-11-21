@@ -100,3 +100,16 @@ Short records of decisions that are settled. Each one has the context, the decis
 - **Matching:** the Name is matched with any marks between letters and up to three one-letter prefixes (ו ב כ ל מ ש ה), which are kept (לַיהוָה → לַה׳ / לַיְיָ). A source that already writes יְיָ is abbreviated too.
 - **Elohim reading:** where the source points the Name to be read Elohim (hiriq, e.g. אֲדֹנָי יֱהֹוִה), `yud_yud` writes ה׳, because יְיָ would change the reading.
 - **Known limit:** in `abbreviated` mode every transliterated "Adonai" becomes "Hashem", including ones that render אֲדֹנָי (e.g. "Adonai sefatai"). The Hebrew אֲדֹנָי itself is unchanged. Te'amim on the Name are not carried onto the substitute.
+
+## ADR-012: Text versions for v0.5, and a personal-use exception to the license policy
+**Date:** 2026-11-21 · **Status:** Accepted (owner chose the versions)
+
+**Context.** ADR-010 picked Sefaria as the source. Each text needs a specific Hebrew and English version, and some versions the owner wants carry Sefaria license "unknown".
+
+**Decision.**
+- **Tanakh:** Hebrew *Miqra according to the Masorah* (CC-BY-SA, includes te'amim); English *Tanakh: The Holy Scriptures, published by JPS* (NJPS 1985, CC-BY-NC), the translation in Etz Hayim. Chosen over the 2023 gender-sensitive RJPS, JPS 1917 (public domain, archaic) and Koren.
+- **Siddur (Ashkenaz):** Hebrew *The Metsudah siddur, 1981* and English *Translation based on the Metsudah linear siddur* (both CC-BY). The owner also asked for **Siddur Sim Shalom**. On Sefaria, Sim Shalom is an English version with license "unknown" that holds a single segment (Asher Yatzar), so it can't supply Pesukei Dezimra, the Shema or the Amidah today. Revisit if a fuller source appears.
+- **License policy:** allowed = Public Domain, CC0, CC-BY, CC-BY-SA; CC-BY-NC allowed and flagged; anything else (including "unknown") is rejected **unless the manifest entry sets `personalUseOnly: true`**. Such entries get `provenance.personalUseOnly: true` and are listed by `npm run content:report`. Owner: "this is personal use and we'll review licensing before we go live."
+- **Pinned in** `packages/content/sefaria-manifest.json` (`versionSets`), so changing a version is a one-line edit plus a re-import.
+
+**Consequences.** Before the app is used beyond personal use: clear or replace every `personalUseOnly` entry, and every CC-BY-NC version (NJPS) if use becomes commercial. Metsudah's English writes the Name as "Adonoy"; under ADR-011, English is not rewritten, so it shows even when Hebrew shows ה׳ (open question for the owner).
