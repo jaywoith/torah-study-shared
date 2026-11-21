@@ -26,6 +26,7 @@
       "kavannahPrompt": "Add one personal request in your own words before you finish the blessing.",
       "source": "Siddur Ashkenaz, Weekday, Shacharit, Amidah, Response to Prayer",
       "estimatedMinutes": 4,
+      "verified": false,
       "contentId": "amidah_shomea_tefillah"
     },
     {
@@ -36,6 +37,20 @@
       "hebrew": "אַךְ אַחֲרֵי הֲכִינוֹ אֶת עַצְמוֹ בְּכָל הֲכָנוֹת אֵלֶּה, אִם יַרְבֶּה לִדָּבֵק בְּתֹקֶף הָאַהֲבָה וְעֹצֶם הַיִּרְאָה בְּהַשְׂכָּלַת גְּדֻלָּתוֹ יִתְבָּרַךְ וְעֹצֶם רוֹמְמוּתוֹ, יַפְרִיד עַצְמוֹ מֵעִנְיְנֵי הַחֹמֶר מְעַט מְעַט, וּבְכָל פְּעֻלּוֹתָיו וּבְכָל תְּנוּעוֹתָיו, יְכַוֵּן לְבָבוֹ אֶל מַצְפּוּנֵי הַהִתְדַּבְּקוּת הָאֲמִתִּי, עַד שֶׁיַּעֲרֶה עָלָיו רוּחַ מִמָּרוֹם וְיַשְׁכִּין הַבּוֹרֵא יִתְבָּרַךְ אֶת שְׁמוֹ עָלָיו כְּמוֹ שֶׁעוֹשֶׂה לְכָל קְדֹשָׁיו. וְאָז יִהְיֶה כְּמַלְאַךְ ה' מַמָּשׁ וְכָל מַעֲשָׂיו אֲפִלּוּ הַשְּׁפָלִים וְהַגַּשְׁמִיִּים כְּקָרְבְּנוֹת וַעֲבוֹדוֹת. וְהִנְּךָ רוֹאֶה שֶׁדֶּרֶךְ קְנִיַּת זֹאת הַמִּדָּה הוּא עַל יְדֵי רֹב הַפְּרִישָׁה, וְהָעִיּוּן הֶעָצוּם בְּסִתְרֵי הַהַשְׁגָּחָה הָעֶלְיוֹנָה וּמַצְפּוּנֵי הַבְּרִיאָה, וִידִיעַת רוֹמְמוּתוֹ יִתְבָּרַךְ וּתְהִלּוֹתָיו עַד שֶׁיִּתְדַּבֵּק בּוֹ דְּבֵקוּת גָּדוֹל וְיֵדַע לְכַוֵּן מַחְשַׁבְתּוֹ בִּהְיוֹתוֹ הוֹלֵךְ וּמִשְׁתַּמֵּשׁ בַּדְּרָכִים הָאַרְצִיִּים כְּמוֹ שֶׁהָיָה רָאוּי לַכֹּהֵן שֶׁיִּתְכַּוֵּן בְּעוֹדוֹ שׁוֹחֵט הַזֶּבַח אוֹ מְקַבֵּל דָּמוֹ אוֹ זוֹרְקוֹ עַד שֶׁיַּמְשִׁיךְ בָּזֶה הַבְּרָכָה מִמֶּנּוּ יִתְבָּרַךְ הַחַיִּים וְהַשָּׁלוֹם.",
       "english": "But if after he has prepared himself with all these preparations, he persistently clings with powerful love and intense fear in pondering G-d's greatness and infinite exaltedness, he will separate himself from physical matters little by little and will direct his heart in all his actions and movements to the true inner clinging, until, a spirit from on high will pour upon him and the Creator will cause His Name to rest upon him, as He does with all of His holy ones. He will then actually be like an angel of G-d, and all his actions, even the lowly and the physical ones, will be like Temple sacrifices and services. Behold, you can see that the way to acquire this trait is through much Separation, intense study of the secrets of divine providence, the hidden matters of the creation, and knowledge of His exaltedness, blessed be He, and His praises, until one clings greatly to Him, and knows how to have intent in his thoughts, as was proper for the Kohen to have intents while slaughtering the offering, receiving its blood, and sprinkling it, until he would draw down the blessing from G-d of life and peace.",
       "source": "Mesillat Yesharim 26:18-20",
+      "provenance": {
+        "sefariaRef": "Mesillat Yesharim 26:18-20",
+        "sefariaUrl": "https://www.sefaria.org/Mesillat_Yesharim.26.18-20",
+        "hebrew": {
+          "versionTitle": "Sefaria Vocalized Edition",
+          "license": "CC0"
+        },
+        "english": {
+          "versionTitle": "Path of the Just. Trans. Rabbi Yosef Sebag",
+          "license": "CC-BY"
+        },
+        "importedAt": "2026-11-21T14:09:23.236Z"
+      },
+      "verified": false,
       "contentId": "musar-mesillat-yesharim-26-18"
     },
     {
@@ -47,6 +62,7 @@
       "kavannahPrompt": "How can the idea of hidden light inspire one act of kindness today?",
       "source": "Chagigah 12a; Bereishit Rabbah 3:6",
       "estimatedMinutes": 4,
+      "verified": false,
       "contentId": "kabbalah-hidden-light"
     },
     {
@@ -57,8 +73,22 @@
       "hebrew": "וַיַּעַן וַיֹּאמֶר אֵלַי לֵאמֹר זֶה דְּבַר־ה׳ אֶל־זְרֻבָּבֶל לֵאמֹר לֹא בְחַיִל וְלֹא בְכֹחַ כִּי אִם־בְּרוּחִי אָמַר ה׳ צְבָאוֹת׃",
       "english": "Then he explained to me as follows: “This is the word of the LORD to Zerubbabel: Not by might, nor by power, but by My spirit—said the LORD of Hosts.",
       "source": "Zechariah 4:6",
+      "provenance": {
+        "sefariaRef": "Zechariah 4:6",
+        "sefariaUrl": "https://www.sefaria.org/Zechariah.4.6",
+        "hebrew": {
+          "versionTitle": "Miqra according to the Masorah",
+          "license": "CC-BY-SA"
+        },
+        "english": {
+          "versionTitle": "Tanakh: The Holy Scriptures, published by JPS",
+          "license": "CC-BY-NC"
+        },
+        "importedAt": "2026-11-21T13:56:07.200Z"
+      },
       "commentary": "'Not by might, nor by power, but by My spirit—said the LORD of Hosts.' This passage is part of the haftarah read on Shabbat Chanukah.",
       "kavannahPrompt": "Where are you relying on force or control when spirit, patience, or trust might do more?",
+      "verified": false,
       "contentId": "tanakh-zechariah-4-6"
     }
   ],

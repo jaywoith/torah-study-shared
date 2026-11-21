@@ -4,7 +4,9 @@ import {
   MusarNextResponse,
   applyLanguageMode,
   applyTextPreferences,
+  buildMusarOutline,
   getNextMusarUnit,
+  PathOutlineResponse,
   toStudyUnit,
 } from '@torah/core';
 import type { Repository } from '../db/repository';
@@ -32,6 +34,12 @@ export function createMusarRouter(library: ContentLibrary, repo: Repository) {
       total: next.total,
       completedCount: next.completedCount,
     };
+    return res.json(body);
+  });
+
+  /** GET /v1/musar/outline: every Musar unit by book and chapter, with saved completion. */
+  router.get('/outline', (_req: Request, res: Response) => {
+    const body: PathOutlineResponse = buildMusarOutline(library.studyUnits, repo.getPathCompleted('musar'));
     return res.json(body);
   });
 

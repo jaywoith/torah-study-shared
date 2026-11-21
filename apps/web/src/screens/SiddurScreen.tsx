@@ -14,11 +14,9 @@ export function SiddurScreen({ profile }: { profile: UserProfile }) {
       path="siddur"
       hasInterest={profile.interests.some((i) => SIDDUR_INTERESTS.includes(i))}
       fetchNext={fetchNext}
-      title={(next) => {
-        const u = next.unit as SiddurNextResponse['unit'];
-        return `${u.section} – ${u.blessingOrLine}`;
-      }}
-      labels={{ heading: strings.common.siddurPath, ...strings.siddur }}
+      title={(next) => (next.unit as SiddurNextResponse['unit']).blessingOrLine}
+      overline={(next) => `${strings.nav.siddur} · ${(next.unit as SiddurNextResponse['unit']).section}`}
+      labels={{ heading: strings.nav.siddur, ...strings.siddur }}
     />
   );
 }

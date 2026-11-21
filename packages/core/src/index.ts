@@ -11,6 +11,7 @@ export * from './license';
 export * from './content-report';
 export * from './siddur-path';
 export * from './musar-path';
+export * from './path-outline';
 export * from './paths';
 export * from './study-generator';
 export * from './validation';

@@ -13,7 +13,11 @@ export function MusarScreen({ profile }: { profile: UserProfile }) {
       hasInterest={profile.interests.includes('musar')}
       fetchNext={fetchNext}
       title={(next) => (next.unit as MusarNextResponse['unit']).title}
-      labels={{ heading: strings.common.musarPath, ...strings.musar }}
+      overline={(next, outline) => {
+        const section = outline?.sections.find((s) => s.units.some((u) => u.id === next.unit.id));
+        return section ? `${strings.nav.musar} · ${section.name}` : strings.nav.musar;
+      }}
+      labels={{ heading: strings.nav.musar, ...strings.musar }}
     />
   );
 }

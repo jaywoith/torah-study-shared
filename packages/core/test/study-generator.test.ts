@@ -79,13 +79,18 @@ describe('generateDailyStudy', () => {
     expect(siddur.source).toBe('Siddur, Pesukei Dezimra');
   });
 
-  it('does not leak content metadata to clients', () => {
+  it('does not leak selection metadata or review notes to clients', () => {
     const study = generateDailyStudy(modelUser, '2026-11-11', library);
     for (const u of study.units) {
-      expect(u).not.toHaveProperty('verified');
+      expect(u).not.toHaveProperty('reviewNote');
       expect(u).not.toHaveProperty('minLevel');
       expect(u).not.toHaveProperty('interests');
     }
+  });
+
+  it('tells clients whether each unit is verified (for the draft label)', () => {
+    const study = generateDailyStudy(modelUser, '2026-11-11', library);
+    for (const u of study.units) expect(typeof u.verified).toBe('boolean');
   });
 
   it('includes the language display contract', () => {

@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import type { SourcesResponse } from '@torah/core';
 import { api } from '../api';
 import { useText } from '../strings';
+import { Icon } from '../components/Icon';
 
 /** Attribution for every text version in use (required by CC-BY / CC-BY-SA). */
 export function SourcesScreen() {
@@ -19,9 +20,15 @@ export function SourcesScreen() {
 
   const [before, after] = t.intro.split('{provider}');
   return (
-    <section>
-      <h1>{t.title}</h1>
-      <p>
+    <section className="sources-page">
+      <a className="back-link" href="#/settings">
+        <Icon name="left" size={16} strokeWidth={2} />
+        {t.back}
+      </a>
+      <div className="screen-head">
+        <h1>{t.title}</h1>
+      </div>
+      <p className="lede">
         {before}
         <a href={data.provider.url} target="_blank" rel="noreferrer">
           {data.provider.name}
@@ -30,8 +37,8 @@ export function SourcesScreen() {
       </p>
       {(['hebrew', 'english'] as const).map((lang) => (
         <div key={lang}>
-          <h2>{t[lang]}</h2>
-          <ul className="sources">
+          <h2 className="section-label">{t[lang]}</h2>
+          <ul className="group sources">
             {data.versions
               .filter((v) => v.language === lang)
               .map((v) => (
@@ -45,7 +52,6 @@ export function SourcesScreen() {
           </ul>
         </div>
       ))}
-      <a href="#/settings">{t.back}</a>
     </section>
   );
 }

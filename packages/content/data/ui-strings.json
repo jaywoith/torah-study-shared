@@ -47,7 +47,32 @@
     "chooseDate": "Choose date",
     "markDone": "Mark done",
     "done": "Done",
-    "doneSummary": "{done} of {total} done"
+    "doneSummary": "{done} of {total} done",
+    "todaysLearning": "Today's learning",
+    "upNext": "Up next",
+    "continueReading": "Continue reading",
+    "plan": "Today's plan",
+    "reading": "Reading",
+    "notStarted": "Not started",
+    "pickDate": "Pick a date",
+    "close": "Close",
+    "dayComplete": "Today's learning is complete",
+    "dayCompleteSummary": "{n} units · {minutes} min",
+    "daysStudied": "{n} of the last 7 days",
+    "continueMusar": "Continue the Musar path",
+    "back": "Back",
+    "backToToday": "Back to Today",
+    "focus": "Focus",
+    "exitFocus": "Exit focus",
+    "textSize": "Text size",
+    "smaller": "Smaller text",
+    "larger": "Larger text",
+    "draft": "Draft · not verified",
+    "textUnverified": "Text not yet verified",
+    "importedVia": "via Sefaria",
+    "markDoneNext": "Mark done · next: {title}",
+    "ofToday": "{position} of {total} today",
+    "keyboardHint": "Keyboard: ← → change day · D mark done · F focus · Esc exit"
   },
   "coach": {
     "weeklyCheckIn": "Weekly Check-in",
@@ -66,7 +91,13 @@
     "complete": "You have completed every unit in the Siddur path so far. More units are coming.",
     "noInterest": "Add Siddur, Kavannah, or Prayerbook Hebrew to your interests to use the Siddur path.",
     "resetProgress": "Reset Siddur progress",
-    "resetConfirm": "Reset all Siddur progress?"
+    "resetConfirm": "Reset all Siddur progress?",
+    "continue": "Continue · Unit {position} of {total}",
+    "unitsDone": "{done} of {total} units",
+    "showAll": "Show all {n}",
+    "showFewer": "Show fewer",
+    "backToPath": "Back to overview",
+    "subtitle": "Weekday Shacharit · Ashkenaz"
   },
   "musar": {
     "position": "Unit {position} of {total}",
@@ -74,7 +105,13 @@
     "complete": "You have completed the Musar path: Mesillat Yesharim and Pirkei Avot.",
     "noInterest": "Add Musar to your interests to use the Musar path.",
     "resetProgress": "Reset Musar progress",
-    "resetConfirm": "Reset all Musar progress?"
+    "resetConfirm": "Reset all Musar progress?",
+    "continue": "Continue · Unit {position} of {total}",
+    "unitsDone": "{done} of {total} units",
+    "showAll": "Show all {n}",
+    "showFewer": "Show fewer",
+    "backToPath": "Back to overview",
+    "subtitle": "Mesillat Yesharim, then Pirkei Avot"
   },
   "settings": {
     "title": "Study profile",
@@ -86,7 +123,10 @@
     "divineName": "Divine Name",
     "divineNameHint": "Transliteration reads \"Hashem\" when abbreviated and \"Adonai\" otherwise. English translations are shown as written, except that a spelled-out \"Adonoy\" also reads \"Hashem\".",
     "unverifiedNote": "Texts are imported from Sefaria and not yet reviewed by the owner. Commentary and kavannah prompts are drafts.",
-    "sourcesLink": "Sources & licenses"
+    "sourcesLink": "Sources & licenses",
+    "preview": "Preview",
+    "previewHint": "The first text of today's study, in the selected language mode.",
+    "aboutTitle": "About the texts"
   },
   "options": {
     "interests": {

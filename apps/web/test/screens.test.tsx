@@ -56,6 +56,15 @@ describe('SettingsScreen', () => {
     expect(onSave.mock.calls[0][0]).toMatchObject({ showCantillation: true, divineName: 'yud_yud' });
   });
 
+  it('saves the language mode chosen from the radio cards', async () => {
+    const onSave = vi.fn().mockResolvedValue(undefined);
+    renderWithText(<SettingsScreen profile={DEFAULT_PROFILE} onSave={onSave} />);
+    fireEvent.click(screen.getByRole('radio', { name: 'English' }));
+    fireEvent.click(screen.getByRole('button', { name: uiStrings.common.save }));
+    await screen.findByRole('status');
+    expect(onSave.mock.calls[0][0].languageMode).toBe('english');
+  });
+
   it('shows an error when saving fails', async () => {
     renderWithText(<SettingsScreen profile={DEFAULT_PROFILE} onSave={vi.fn().mockRejectedValue(new Error('x'))} />);
     fireEvent.click(screen.getByRole('button', { name: uiStrings.common.save }));
@@ -123,20 +132,50 @@ describe('SiddurScreen (server-backed)', () => {
         completed.length = 0;
         return { body: { ok: true, removed: 1 } };
       }
+      if (url.pathname === '/v1/siddur/outline') {
+        const units = ['first', 'second'].map((id) => ({ id, title: id, estimatedMinutes: 3, completed: completed.includes(id) }));
+        const done = units.filter((u) => u.completed).length;
+        return {
+          body: {
+            sections: [{ name: 'Pesukei Dezimra', units, completedCount: done }],
+            total: 2,
+            completedCount: done,
+            nextUnitId: units.find((u) => !u.completed)?.id ?? null,
+          },
+        };
+      }
       const next = ['first', 'second'].find((id) => !completed.includes(id));
       return next ? { body: unitResponse(next, completed.length + 1) } : { status: 404, body: { error: 'done' } };
     });
   }
 
-  it('marks a unit complete on the server and shows the next one', async () => {
+  it('shows section progress, then marks a unit complete on the server and shows the next one', async () => {
     const spy = fakeServer();
     renderWithText(<SiddurScreen profile={DEFAULT_PROFILE} />);
+    await screen.findByText('Continue · Unit 1 of 2');
+    expect(await screen.findByText('0 of 2 units')).toBeTruthy();
+    expect(screen.getByRole('button', { name: /^Pesukei Dezimra/ }).getAttribute('aria-expanded')).toBe('true');
+
+    fireEvent.click(screen.getByRole('button', { name: /Continue · Unit 1 of 2/ }));
     await screen.findByText('Unit 1 of 2');
     fireEvent.click(screen.getByRole('button', { name: uiStrings.siddur.markComplete }));
     await screen.findByText('Unit 2 of 2');
     const post = spy.mock.calls.find(([u]) => String(u).includes('/v1/progress/complete'))!;
     expect(JSON.parse(String(post[1]!.body))).toEqual({ path: 'siddur', unitId: 'first' });
-    expect(String(spy.mock.calls[0][0])).not.toContain('completed='); // server owns completion state
+    const nextCall = spy.mock.calls.find(([u]) => String(u).includes('/v1/siddur/next'))!;
+    expect(String(nextCall[0])).not.toContain('completed='); // server owns completion state
+
+    fireEvent.click(screen.getByRole('button', { name: uiStrings.siddur.backToPath }));
+    expect(await screen.findByText('1 of 2 units')).toBeTruthy();
+  });
+
+  it('labels drafted commentary and unverified text in the reader', async () => {
+    fakeServer();
+    renderWithText(<SiddurScreen profile={DEFAULT_PROFILE} />);
+    fireEvent.click(await screen.findByRole('button', { name: /Continue · Unit 1 of 2/ }));
+    await screen.findByText('Unit 1 of 2');
+    expect(screen.getAllByText(uiStrings.study.draft)).toHaveLength(2); // commentary + kavannah
+    expect(screen.getByText(uiStrings.study.textUnverified)).toBeTruthy();
   });
 
   it('shows the completion message and can reset', async () => {
@@ -145,7 +184,7 @@ describe('SiddurScreen (server-backed)', () => {
     renderWithText(<SiddurScreen profile={DEFAULT_PROFILE} />);
     await waitFor(() => expect(screen.getByTestId('siddur-complete').textContent).toBe(uiStrings.siddur.complete));
     fireEvent.click(screen.getByRole('button', { name: uiStrings.siddur.resetProgress }));
-    await screen.findByText('Unit 1 of 2');
+    await screen.findByText('Continue · Unit 1 of 2');
   });
 
   it('explains how to enable the path when no Siddur interest is selected', () => {
@@ -185,6 +224,46 @@ describe('TodayScreen done toggles', () => {
     await screen.findByText('2 of 2 done');
     const post = spy.mock.calls.find(([u, i]) => String(u).includes('/v1/progress/complete') && i?.method === 'POST')!;
     expect(JSON.parse(String(post[1]!.body))).toMatchObject({ path: 'daily', unitId: 'musar-a' });
+    expect(screen.getByTestId('day-complete').textContent).toContain(uiStrings.study.dayComplete);
+  });
+
+  it('opens the reader from "Continue reading" and moves to the next unit on "Mark done · next"', async () => {
+    mockFetch((url) => {
+      if (url.pathname === '/v1/study/daily') return { body: study };
+      if (url.pathname === '/v1/progress') return { body: { siddur: { completed: [] }, daily: [] } };
+      return { status: 201, body: { ok: true } };
+    });
+    renderWithText(<TodayScreen profile={DEFAULT_PROFILE} />);
+    fireEvent.click(await screen.findByRole('button', { name: new RegExp(uiStrings.study.continueReading) }));
+    const reader = await screen.findByRole('article');
+    expect(reader.getAttribute('data-unit-id')).toBe('2026-11-21-musar-a');
+
+    fireEvent.click(screen.getByRole('button', { name: 'Mark done · next: Tanakh' }));
+    await waitFor(() => expect(screen.getByRole('article').getAttribute('data-unit-id')).toBe('2026-11-21-tanakh-b'));
+    expect(screen.getByTestId('done-summary').textContent).toBe('1 of 2 done');
+
+    fireEvent.click(screen.getByRole('button', { name: uiStrings.study.backToToday }));
+    expect(screen.queryByRole('article')).toBeNull();
+  });
+
+  it('marks days with completions in the week strip', async () => {
+    mockFetch((url) => {
+      if (url.pathname === '/v1/study/daily') return { body: study };
+      if (url.pathname === '/v1/progress') {
+        return { body: { siddur: { completed: [] }, daily: [{ date: '2026-11-20', unitId: 'x', completedAt: 'x' }] } };
+      }
+      return { status: 201, body: { ok: true } };
+    });
+    vi.useFakeTimers({ toFake: ['Date'] });
+    vi.setSystemTime(new Date(2026, 10, 21, 12));
+    renderWithText(<TodayScreen profile={DEFAULT_PROFILE} />);
+    vi.useRealTimers();
+    await screen.findByText('0 of 2 done');
+    const days = screen.getAllByRole('button').filter((b) => b.classList.contains('day'));
+    expect(days).toHaveLength(7);
+    const friday = days.find((d) => d.querySelector('.dom')!.textContent === '20')!;
+    expect(friday.querySelector('.dot.on')).not.toBeNull();
+    expect(days.find((d) => d.getAttribute('aria-current') === 'date')!.textContent).toContain('21');
   });
 });
 
@@ -226,6 +305,7 @@ describe('MusarScreen', () => {
         completed.push(JSON.parse(String(init.body)).unitId);
         return { status: 201, body: { ok: true } };
       }
+      if (url.pathname === '/v1/musar/outline') return { status: 500, body: { error: 'x' } }; // optional
       expect(url.pathname).toBe('/v1/musar/next');
       const id = completed.length ? 'my-2' : 'my-1';
       return {
@@ -240,7 +320,8 @@ describe('MusarScreen', () => {
     });
     renderWithText(<MusarScreen profile={DEFAULT_PROFILE} />);
     expect(await screen.findByText('Mesillat Yesharim my-1')).toBeTruthy();
-    fireEvent.click(screen.getByRole('button', { name: uiStrings.musar.markComplete }));
+    fireEvent.click(screen.getByRole('button', { name: /Continue · Unit 1 of 2/ }));
+    fireEvent.click(await screen.findByRole('button', { name: uiStrings.musar.markComplete }));
     await screen.findByText('Unit 2 of 2');
     const post = spy.mock.calls.find(([u]) => String(u).includes('/v1/progress/complete'))!;
     expect(JSON.parse(String(post[1]!.body))).toEqual({ path: 'musar', unitId: 'my-1' });

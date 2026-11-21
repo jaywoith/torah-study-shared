@@ -4,7 +4,9 @@ import {
   SiddurNextResponse,
   applyLanguageMode,
   applyTextPreferences,
+  buildSiddurOutline,
   getNextSiddurUnit,
+  PathOutlineResponse,
 } from '@torah/core';
 import type { Repository } from '../db/repository';
 import { csv, parseDisplayParams } from './display-params';
@@ -34,6 +36,12 @@ export function createSiddurRouter(library: ContentLibrary, repo: Repository) {
       total: next.total,
       completedCount: next.completedCount,
     };
+    return res.json(body);
+  });
+
+  /** GET /v1/siddur/outline: every Siddur unit by section, with saved completion. */
+  router.get('/outline', (_req: Request, res: Response) => {
+    const body: PathOutlineResponse = buildSiddurOutline(library.siddur, repo.getPathCompleted('siddur'));
     return res.json(body);
   });
 

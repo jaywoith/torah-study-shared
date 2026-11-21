@@ -40,3 +40,12 @@ describe('fmt', () => {
     expect(fmt('{missing}', {})).toBe('{missing}');
   });
 });
+
+describe('isolateHebrew (bug: "Abbreviated (ה׳)" rendered with the geresh on the wrong side in <option>)', () => {
+  it('wraps Hebrew runs in first-strong isolates and leaves Latin text alone', async () => {
+    const { isolateHebrew } = await import('../src/strings');
+    expect(isolateHebrew('Abbreviated (ה׳)')).toBe('Abbreviated (⁨ה׳⁩)');
+    expect(isolateHebrew('Yud-yud (יְיָ)')).toBe('Yud-yud (⁨יְיָ⁩)');
+    expect(isolateHebrew('Full, as in the source')).toBe('Full, as in the source');
+  });
+});

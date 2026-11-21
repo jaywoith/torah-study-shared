@@ -15,6 +15,7 @@ import type {
   ProgressPath,
   ProgressResponse,
   MusarNextResponse,
+  PathOutlineResponse,
   SiddurNextResponse,
   SourcesResponse,
   UserProfile,
@@ -89,6 +90,8 @@ export const api = {
   /** Same contract as siddurNext, for the Musar path (Mesillat Yesharim, then Pirkei Avot). */
   musarNext: (profile: UserProfile) => pathNext<MusarNextResponse>('musar', profile),
 
+  /** Every unit of a path, by section, with completion (for section progress). */
+  outline: (path: 'siddur' | 'musar') => request<PathOutlineResponse>(`/v1/${path}/outline`),
 
   progress: (from?: string, to?: string) => {
     const params = new URLSearchParams({ ...(from ? { from } : {}), ...(to ? { to } : {}) });

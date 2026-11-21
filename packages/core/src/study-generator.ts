@@ -109,7 +109,8 @@ function candidatesFor(type: UnitType, profile: UserProfile, library: ContentLib
 
 /** Client shape of a content unit; `id` is `${date}-${contentId}`, or the content id when no date is given. */
 export function toStudyUnit(unit: ContentUnit, date?: string): StudyUnit {
-  const { interests, minLevel, frameworks, depth, verified, reviewNote, provenance, ...rest } = unit;
+  // Selection metadata and internal review notes stay server-side; verified + provenance are shown to the user.
+  const { interests, minLevel, frameworks, depth, reviewNote, ...rest } = unit;
   return { ...rest, id: date ? `${date}-${unit.id}` : unit.id, contentId: unit.id };
 }
 

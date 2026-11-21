@@ -16,10 +16,14 @@ test('sign in, study, progress persists on the server, sign out', async ({ page 
   await page.getByLabel('Passphrase').fill(E2E_PASSPHRASE);
   await page.getByRole('button', { name: 'Sign in' }).click();
 
-  // Today: units render, with Hebrew marked RTL.
+  // Today: units render, with Hebrew marked RTL; the reader opens and closes.
   const cards = page.getByTestId('unit-card');
   await expect(cards.first()).toBeVisible();
   await expect(page.locator('.hebrew[dir="rtl"][lang="he"]').first()).toBeVisible();
+  await page.getByRole('button', { name: 'Continue reading' }).click();
+  await expect(page.locator('.reader')).toBeVisible();
+  await page.getByRole('button', { name: 'Back to Today' }).click();
+  await expect(page.locator('.reader')).toHaveCount(0);
 
   // Mark the first unit done; it survives a reload (stored on the server).
   await expect(page.getByTestId('done-summary')).toHaveText(/^0 of \d+ done$/);
@@ -34,26 +38,31 @@ test('sign in, study, progress persists on the server, sign out', async ({ page 
   await expect.poll(() => unitIds(page)).not.toEqual(todayIds);
   await expect(page.getByTestId('done-summary')).toHaveText(/^0 of \d+ done$/);
 
-  // Siddur: complete the first unit; it survives a reload.
-  await page.getByRole('link', { name: 'Siddur' }).click();
+  // Siddur: overview shows where you are; continue, complete the unit, it survives a reload.
   // (Counts come from content, so match the number rather than hard-coding it.)
+  await page.getByRole('link', { name: 'Siddur' }).click();
+  await expect(page.getByTestId('siddur-position')).toHaveText(/^Continue · Unit 1 of \d+$/);
+  await page.getByTestId('siddur-position').click();
   await expect(page.getByTestId('siddur-position')).toHaveText(/^Unit 1 of \d+$/);
   await page.getByRole('button', { name: 'Mark complete' }).click();
   await expect(page.getByTestId('siddur-position')).toHaveText(/^Unit 2 of \d+$/);
   await page.reload();
-  await expect(page.getByTestId('siddur-position')).toHaveText(/^Unit 2 of \d+$/);
+  await expect(page.getByTestId('siddur-position')).toHaveText(/^Continue · Unit 2 of \d+$/);
+  await expect(page.getByText(/^1 of \d+ units$/)).toBeVisible();
 
   // Musar path: separate progress from the Siddur path.
   await page.getByRole('link', { name: 'Musar' }).click();
-  await expect(page.getByTestId('musar-position')).toHaveText(/^Unit 1 of \d+$/);
+  await expect(page.getByTestId('musar-position')).toHaveText(/^Continue · Unit 1 of \d+$/);
+  await page.getByTestId('musar-position').click();
   await page.getByRole('button', { name: 'Mark complete' }).click();
   await expect(page.getByTestId('musar-position')).toHaveText(/^Unit 2 of \d+$/);
+  await page.getByRole('button', { name: 'Back to overview' }).click();
   await page.reload();
-  await expect(page.getByTestId('musar-position')).toHaveText(/^Unit 2 of \d+$/);
+  await expect(page.getByTestId('musar-position')).toHaveText(/^Continue · Unit 2 of \d+$/);
 
   // Settings saved on the server: English mode removes Hebrew, also after reload.
   await page.getByRole('link', { name: 'Settings' }).click();
-  await page.getByLabel('Language Mode').selectOption('english');
+  await page.getByRole('radio', { name: 'English', exact: true }).check();
   await page.getByRole('button', { name: 'Save' }).click();
   await expect(page.getByRole('status')).toHaveText('Saved');
   await page.getByRole('link', { name: 'Today' }).click();

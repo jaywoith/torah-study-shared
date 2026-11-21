@@ -20,6 +20,7 @@ import type {
 } from './models';
 import type { ValidationResult } from './validation';
 import type { SourceVersion } from './content-report';
+import type { PathOutline } from './path-outline';
 
 export interface ApiError {
   error: string;
@@ -47,6 +48,9 @@ export interface MusarNextResponse {
   total: number;
   completedCount: number;
 }
+
+/** GET /v1/siddur/outline and GET /v1/musar/outline: every unit of the path, grouped, with completion. */
+export type PathOutlineResponse = PathOutline;
 
 export interface Option<T extends string> {
   id: T;

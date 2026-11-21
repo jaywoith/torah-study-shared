@@ -16,10 +16,18 @@ export function UnitText({ unit, display }: { unit: TextFields; display: Languag
   const english = unit.english ? <p className="english">{unit.english}</p> : null;
 
   if (display.layout === 'side-by-side' && unit.hebrew && unit.english) {
+    // Row by row when the sentences line up, otherwise two whole columns.
+    const rows = interleave({ hebrew: unit.hebrew, english: unit.english });
     return (
       <div className="text side-by-side" data-layout="side-by-side">
-        {english}
-        {hebrew}
+        {(rows ?? [{ hebrew: unit.hebrew, english: unit.english }]).map((row, i) => (
+          <div className="sbs-row" key={i}>
+            <p className="english">{row.english}</p>
+            <p className="hebrew" lang="he" dir="rtl">
+              {row.hebrew}
+            </p>
+          </div>
+        ))}
       </div>
     );
   }

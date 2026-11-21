@@ -150,3 +150,27 @@ describe('Musar path', () => {
     expect((await request(app).get('/v1/musar/next?divineName=nope')).status).toBe(400);
   });
 });
+
+describe('Path outlines', () => {
+  it('GET /v1/siddur/outline lists every unit by section with saved completion', async () => {
+    const { app } = testApp();
+    await request(app).post('/v1/progress/complete').send({ path: 'siddur', unitId: FIRST });
+    const res = await request(app).get('/v1/siddur/outline');
+    expect(res.status).toBe(200);
+    expect(res.body.total).toBe(getSiddurSequence(contentLibrary.siddur).length);
+    expect(res.body.completedCount).toBe(1);
+    expect(res.body.nextUnitId).toBe(SECOND);
+    expect(res.body.sections[0].units[0]).toMatchObject({ id: FIRST, completed: true });
+  });
+
+  it('GET /v1/musar/outline groups Musar units and follows Musar progress only', async () => {
+    const { app } = testApp();
+    await request(app).post('/v1/progress/complete').send({ path: 'siddur', unitId: FIRST });
+    const res = await request(app).get('/v1/musar/outline');
+    expect(res.status).toBe(200);
+    expect(res.body.total).toBe(getMusarSequence(contentLibrary.studyUnits).length);
+    expect(res.body.completedCount).toBe(0);
+    expect(res.body.nextUnitId).toBe(MUSAR_1);
+    expect(res.body.sections.length).toBeGreaterThan(1);
+  });
+});

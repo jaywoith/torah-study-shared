@@ -115,7 +115,7 @@ Short records of decisions that are settled. Each one has the context, the decis
 **Consequences.** Before the app is used beyond personal use: clear or replace every `personalUseOnly` entry, and every CC-BY-NC version (NJPS) if use becomes commercial. Metsudah's English writes the Name as "Adonoy"; per the owner it reads "Hashem" when the setting is abbreviated (ADR-011).
 
 ## ADR-013: "Sefer" design direction for the web app
-**Date:** 2026-11-21 · **Status:** Proposed (accepted when the owner approves the P0 mockups)
+**Date:** 2026-11-21 · **Status:** Accepted (owner approved the mockups, 2026-11-21)
 
 **Context.** The owner asked for a world-class UI/UX update and pointed to Aceternity UI, React Bits, benji.org/stageshow and heydamir/unslop as optional inspiration. The audience is confirmed as the owner alone (single user, ADR-009 unchanged). The current UI works but reads as generic: system font, a solid header that turns bright in dark mode, native date controls above the text, text-only tabs, no reading mode or sense of progress.
 
@@ -127,5 +127,12 @@ Short records of decisions that are settled. Each one has the context, the decis
 - **Honesty is part of the design:** drafted commentary and kavannah carry a visible "Draft · not verified" label; each text shows its source and license.
 - **Roadmap:** the refresh is v0.6.0; AI Study Coach, Review & Check-ins and PWA & Deploy move to v0.7.0, v0.8.0 and v0.9.0 (owner decision). Earlier ADRs that cite the old numbers (ADR-002: PWA in v0.8.0) are historical; the plan is authoritative.
 
-**Consequences.** Web-only work; the architecture rules are unchanged (clients call the API, types-only imports, shared copy in `ui-strings.json`). Two new font packages. Screenshot tests across the four language modes and both themes become part of the web test suite.
+**Implementation details (2026-11-21).**
+- Breakpoints: 900px switches bottom tabs to a sidebar; 1100px puts Today's plan and the reader side by side. Phones open the reader as its own view and hide the tab bar while reading.
+- Draft labelling needs data the client didn't have, so daily units now carry `verified` and `provenance` (additive API change). `reviewNote` stays server-side. Section progress uses new `GET /v1/{siddur,musar}/outline`; outline grouping is pure core logic.
+- Split mode aligns Hebrew and English row by row when their sentences line up; otherwise two columns, stacked on phones.
+- Text size is a per-device preference in browser storage, not part of the server profile.
+- Rendering guardrails are structural Playwright checks plus attached screenshots, not pixel snapshots: font rasterization differs across machines and would make CI flaky.
+
+**Consequences.** Mostly web work; the architecture rules are unchanged (clients call the API, types-only imports, shared copy in `ui-strings.json`). Two new font packages. Screenshot tests across the four language modes and both themes become part of the web test suite.
 

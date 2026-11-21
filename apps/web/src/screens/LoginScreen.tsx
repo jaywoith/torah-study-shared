@@ -28,8 +28,9 @@ export function LoginScreen({ onLogin }: { onLogin: () => void }) {
         }
       }}
     >
+      <span className="brand">{strings.common.appName}</span>
       <h1>{strings.auth.title}</h1>
-      <label className="field">
+      <label className="stack-field">
         <span>{strings.auth.passphrase}</span>
         <input
           type="password"
@@ -45,7 +46,7 @@ export function LoginScreen({ onLogin }: { onLogin: () => void }) {
           {error}
         </p>
       )}
-      <button type="submit" className="primary" disabled={busy}>
+      <button type="submit" className="btn primary block" disabled={busy}>
         {strings.auth.submit}
       </button>
     </form>

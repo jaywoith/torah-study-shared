@@ -29,6 +29,7 @@ Pure TypeScript. No I/O, network, randomness or clock access.
 | `learning-levels.ts` | Per-level config (scaffolding, Hebrew density, Kabbalah depth cap). |
 | `language.ts` | The four language-mode display contracts; `applyLanguageMode`; Hebrew helpers (shoresh/POS lookups). |
 | `siddur-path.ts` | Flattens Siddur sections into a sequence; `getNextSiddurUnit` (first not-completed unit). |
+| `path-outline.ts` | `buildSiddurOutline`, `buildMusarOutline`: every path unit by section with completion (Musar sections = book + chapter from the citation). |
 | `study-generator.ts` | `generateDailyStudy(profile, date, library)`: the selection algorithm (see the file header). |
 | `validation.ts` | `validateDailyStudy`: structural and heuristic checks run before every response. |
 | `profile.ts` | `parseUserProfile`: validation of untrusted input. |
@@ -50,21 +51,24 @@ Express, run with `tsx` (no build step).
 | `src/config.ts` | Env-based paths and settings (`DATABASE_PATH`, `WEB_DIST`, `TRUST_PROXY`). |
 | `src/auth.ts` | Passphrase login, HMAC-signed session cookie, rate limit, `requireAuth`. |
 | `src/db/` | `openDatabase` (better-sqlite3, WAL) + `migrate`; `migrations.ts` (append-only); `repository.ts` (all SQL). |
-| `src/routes/` | `study`, `siddur`, `profile`, `progress`, `options`, `ui`, `coach`. |
+| `src/routes/` | `study`, `siddur`, `musar` (each with `/next` and `/outline`), `profile`, `progress`, `options`, `ui`, `sources`, `coach`. |
 | `scripts/backup.ts` | `npm run db:backup`. |
 
 ### `apps/web` (`@torah/web`)
-React + Vite + TypeScript, phone-first. Becomes an installable PWA in v0.9.0.
+React + Vite + TypeScript, phone and desktop (one responsive app, ADR-013). Becomes an installable PWA in v0.9.0.
 
 | File | Responsibility |
 |---|---|
 | `src/api.ts` | Typed fetch client for `/v1/*` (relative URLs; Vite proxies to the API in dev/preview). |
-| `src/strings.tsx` | Context providing `/v1/ui-strings` and `/v1/options`; `fmt()` for `{placeholder}` strings. |
+| `src/strings.tsx` | Context providing `/v1/ui-strings` and `/v1/options`; `fmt()` for `{placeholder}` strings; `isolateHebrew()` for Hebrew inside `<option>`. |
+| `src/prefs.ts` | Per-device preferences (reading text size) and `useMediaQuery` / `WIDE_QUERY` (two-pane breakpoint). |
+| `src/focus.tsx` | Focus-mode context (hides navigation and the plan pane). |
+| `src/styles.css` | Design tokens (light/dark), shell, screens. Breakpoints 900px (sidebar) and 1100px (two-pane). |
 | `src/storage.ts` | Reads v0.3 browser data once for import; default profile = model user. |
-| `src/text.ts` | Sentence segmentation and interleaving for the Mixed layout. |
+| `src/text.ts` | Sentence segmentation and interleaving for the Mixed and Split layouts. |
 | `src/dates.ts` | Local-calendar ISO dates. The web always sends an explicit date; the API's default is UTC. |
-| `src/components/` | `UnitText` (language layouts), `UnitCard` (one study/Siddur unit). |
-| `src/screens/` | `LoginScreen`, `TodayScreen`, `SiddurScreen`, `SettingsScreen`. Routing is a hash (`#/today`, `#/siddur`, `#/settings`) with no router library. |
+| `src/components/` | `UnitText` (language layouts), `Reader` (one unit: text, commentary/kavannah with draft labels, attribution, actions, text size, focus), `ProgressRing`, `Icon` (inline SVG). |
+| `src/screens/` | `LoginScreen`, `TodayScreen` (plan + reader, week strip, keyboard shortcuts), `PathScreen` (overview with section progress, then reader) used by `SiddurScreen` and `MusarScreen`, `SettingsScreen` (live preview), `SourcesScreen`. Routing is a hash (`#/today`, `#/siddur`, `#/musar`, `#/settings`, `#/sources`) with no router library. |
 
 The web imports **types only** from `@torah/core` (including the HTTP contract in `api-types.ts`) and `@torah/content`. No shared runtime code is bundled into the client.
 

@@ -66,6 +66,7 @@ Generates, validates and returns the daily study.
 
 Key `DailyStudy` fields:
 - `units[]`: `id` (`<date>-<contentId>`, unique within the study), `contentId` (stable, used for progress); text fields present depend on the language mode
+- `units[].verified` (since 0.6): `false` until the owner has checked the entry; clients label the text "not yet verified" and commentary/kavannah "Draft". `units[].provenance` (since 0.6, imported entries): `sefariaRef`, `sefariaUrl`, per-language `versionTitle` + `license`, for the attribution line. Internal `reviewNote`s are never sent.
 - `display`: `{ mode, showHebrew, showTransliteration, showEnglish, layout: "stacked" | "side-by-side" | "interleaved" }`. Clients lay out units using this.
 - `profile`: echoes `framework`, `level`, `studyLength`, `languageMode`, `showCantillation`, `divineName`
 - `totalEstimatedMinutes`, `budgetMinutes` (short 10 / medium 20 / long 35)
@@ -100,6 +101,20 @@ The sequential Musar path: Mesillat Yesharim in reading order, then Pirkei Avot.
 **200** `{ "unit": StudyUnit, "display": LanguageDisplay, "position": 1, "total": 394, "completedCount": 0 }`. `unit.id` equals `unit.contentId`. Type: `MusarNextResponse`.
 
 The daily study's Musar slot still rotates by date; the path is the place to read straight through.
+
+## `GET /v1/siddur/outline` and `GET /v1/musar/outline`
+
+Every unit of the path, grouped into sections, with completion from the database. Clients use it for section progress and the unit list. Siddur sections are the Siddur's sections; Musar sections are book and chapter, taken from the citation without its verse range (e.g. "Mesillat Yesharim 4", "Pirkei Avot 6"). No query params; no interest check (the client decides whether to show the path).
+
+**200** (type `PathOutlineResponse`)
+```json
+{
+  "sections": [{ "name": "Pesukei Dezimra", "completedCount": 1,
+                 "units": [{ "id": "psalm_30", "title": "Mizmor Shir (Psalm 30)", "estimatedMinutes": 9, "completed": true }] }],
+  "total": 56, "completedCount": 1, "nextUnitId": "mourners_kaddish"
+}
+```
+`nextUnitId` is the first unit in path order not completed (the one `/next` returns), or `null` when the path is finished.
 
 ## `GET /v1/ui-strings`
 

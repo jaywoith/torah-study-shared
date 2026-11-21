@@ -103,6 +103,10 @@ export interface StudyUnit extends TextFields {
   source?: string;
   reviewItems?: ReviewItem[];
   estimatedMinutes?: number;
+  /** False until a human has checked the entry; clients label unverified text and drafts. */
+  verified?: boolean;
+  /** Where the text was imported from (versions and licenses), for the attribution line. */
+  provenance?: Provenance;
 }
 
 export interface LanguageDisplay {

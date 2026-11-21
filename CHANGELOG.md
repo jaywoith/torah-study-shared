@@ -4,11 +4,29 @@ All notable changes. Format: [Keep a Changelog](https://keepachangelog.com); ver
 
 ## [Unreleased]
 
+### Added
+- **Redesigned web app ("Sefer", ADR-013), phone and desktop.** Parchment-and-ink light theme and a warm low-glare dark theme; Source Serif 4 and Inter alongside Noto Serif Hebrew (all self-hosted); larger Hebrew with room for nikkud and te'amim.
+  - Shell: bottom icon tabs on phones, a sidebar from 900px; the solid header bar is gone.
+  - Today: date header, week strip with a dot for each day studied, progress ring, "Up next" card, plan list, date picker in a sheet, day-complete state. From 1100px the plan and the reader sit side by side.
+  - Reader: the unit in the profile's language layout, commentary and kavannah as collapsible panels, source and license line, text-size control (per device), "Mark done · next" on phones. Focus mode (`F`/`Esc`) centers the text; keyboard shortcuts on desktop (← → change day, `D` mark done).
+  - Honesty: unverified entries show "Draft · not verified" on commentary and kavannah and "Text not yet verified" under the text.
+  - Siddur and Musar: overview with overall and per-section progress and a "Continue" card, then the reader.
+  - Settings: grouped sections, language-mode cards with a live preview from the API, segmented study length, interest chips.
+  - Split mode lines Hebrew and English up row by row when their sentences align.
+- API: `GET /v1/siddur/outline` and `GET /v1/musar/outline` (every path unit by section, with completion). Core: `buildSiddurOutline`, `buildMusarOutline`, `musarSectionName`; type `PathOutlineResponse`.
+- API: daily study units now include `verified` and `provenance` (additive; `reviewNote` is still never sent). `docs/examples` regenerated.
+- Tests: path outlines (core and API), reader draft labels, Today reader flow and week strip, Settings radio cards; Playwright `rendering.spec.ts` (RTL/lang, Hebrew font loaded, layout, no overflow, screenshot per case) and a desktop keyboard/focus test.
+
+### Fixed
+- Hebrew inside dropdown options ("Abbreviated (ה׳)") rendered with the geresh on the wrong side; Hebrew runs are now wrapped in Unicode isolates.
+
+
 ### Changed
+- Playwright runs with one worker (specs share one API server and change the saved profile).
 - **Roadmap:** new v0.6.0 Design Refresh; AI Study Coach, Review & Check-ins and PWA & Deploy move to v0.7.0, v0.8.0 and v0.9.0. Version references in the docs updated.
 
 ### Docs
-- ADR-013 (Proposed): "Sefer" design direction for the web app. P0 mockups (phone and desktop) published for owner review.
+- ADR-013 (Accepted): "Sefer" design direction for the web app. Mockups (phone and desktop) approved by the owner.
 
 ## [0.5.0-rc.1] – 2026-11-21 — Real Content
 
