@@ -4,6 +4,9 @@ All notable changes. Format: [Keep a Changelog](https://keepachangelog.com); ver
 
 ## [Unreleased]
 
+### Changed
+- Plan: hosting (deploy + minimal auth) pulled forward ahead of the 0.3.0 release, because the owner is phone-only. See DEVELOPMENT_PLAN.md.
+
 ## [0.3.0-rc.1] – 2026-11-21
 
 ### Added

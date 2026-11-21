@@ -1,7 +1,7 @@
 # Development Plan
 
 **Current version:** 0.3.0-rc.1
-**Current milestone:** v0.3.0, Web App Shell
+**Current milestone:** v0.3.0, Web App Shell → **next work: hosting (pulled forward, see below)**
 **Last updated:** 2026-11-21
 
 This is the master plan. Every milestone is a minor version (pre-1.0). Tick the boxes as work lands; an agent picking up the project starts at the first unchecked task in the current milestone. Release gates (G1–G3) are defined in [TESTING.md](TESTING.md#release-gates).
@@ -66,7 +66,21 @@ This is the master plan. Every milestone is a minor version (pre-1.0). Tick the 
 - [x] Playwright smoke test against a production build: daily study → next day differs → Siddur advances and persists across reload → English mode removes Hebrew
 - [x] CI runs web tests + Playwright smoke (separate `e2e` job)
 - [x] Accessibility: `lang="he"` / `dir="rtl"` on Hebrew, labelled controls, visible focus rings, keyboard navigable
-- [ ] **Owner:** run the G2 manual checklist (docs/TESTING.md) on a phone via `npm run dev:lan`, then release 0.3.0
+- [ ] **Owner:** run the G2 manual checklist (docs/TESTING.md) on a phone, then release 0.3.0. **Blocked on hosting:** the owner is working from a phone only, so the check will happen on the hosted app.
+
+### Pulled forward: Hosting (do this next, before releasing 0.3.0)
+
+Decided 2026-11-21 by the owner. The owner works from a phone only right now, so the app needs a stable HTTPS URL before 0.3.0 can be checked. This pulls the deploy parts of v0.8.0 and the minimal auth from v0.4.0 forward. PWA/offline stays in v0.8.0.
+
+- [ ] Hosting ADR. The owner has no always-on home machine in this workflow, so a small cloud host (Fly.io, Render, Railway or similar) is the likely choice. Compare cost, free tier, sleep/cold-start behavior, and how deploys are triggered from GitHub
+- [ ] API serves the built web app (`apps/web/dist`) as static files from the same origin, so there's one service, one URL and no CORS
+- [ ] Minimal single-user auth: passphrase from an env var, a login screen, and a signed httpOnly session cookie. Required, because the URL will be public
+- [ ] Production start command and health check (`/health`); `Dockerfile` or platform config checked in
+- [ ] Deploy on merge to `main` after CI passes (GitHub Actions or platform integration). Secrets live in the platform, never in the repo
+- [ ] Docs: `docs/DEPLOYMENT.md` (how to deploy, rotate the passphrase, roll back, view logs); README link
+- [ ] Tests: auth middleware (API tests), login flow (Playwright smoke)
+- [ ] Owner opens the URL on the phone → G2 checklist → release 0.3.0
+- [ ] Push the pending git tags (`v0.2.0`, and later `v0.3.0`). Tag pushes were refused by the earlier cloud session's git proxy (HTTP 403); the tags exist only in that session
 
 **Done when:** gate G2 passes and the owner can use it for a morning session on a phone browser.
 
