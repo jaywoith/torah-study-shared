@@ -3,7 +3,7 @@
  * Differences are configuration, not hard-coded branches in generation logic.
  */
 
-import { FrameworkId } from './models';
+import { FrameworkId, KabbalahDepth } from './models';
 
 export interface FrameworkConfig {
   id: FrameworkId;
@@ -12,9 +12,15 @@ export interface FrameworkConfig {
   allowedSourceTypes: string[];
   defaultCommentaryStyle: string;
   halachahStance: string;
-  kabbalahDepth: 'symbolic' | 'intermediate' | 'advanced';
+  /** Deepest Kabbalah this framework presents (further capped by learning level). */
+  kabbalahDepth: KabbalahDepth;
   musarEmphasis: 'high' | 'medium' | 'low';
   aiPersonaNotes: string;
+  /**
+   * Whether progressive / historical-critical readings may be presented as the default.
+   * False for traditional frameworks; validation enforces it.
+   */
+  progressiveDefaultAllowed: boolean;
 }
 
 export const frameworks: Record<FrameworkId, FrameworkConfig> = {
@@ -28,6 +34,7 @@ export const frameworks: Record<FrameworkId, FrameworkConfig> = {
     kabbalahDepth: 'advanced',
     musarEmphasis: 'medium',
     aiPersonaNotes: 'Draws on Hasidic masters; warm, encouraging, mystical.',
+    progressiveDefaultAllowed: false,
   },
   orthodox: {
     id: 'orthodox',
@@ -39,6 +46,7 @@ export const frameworks: Record<FrameworkId, FrameworkConfig> = {
     kabbalahDepth: 'symbolic',
     musarEmphasis: 'high',
     aiPersonaNotes: 'Conservative in interpretation; cites classic sources carefully.',
+    progressiveDefaultAllowed: false,
   },
   modern_orthodox: {
     id: 'modern_orthodox',
@@ -50,6 +58,7 @@ export const frameworks: Record<FrameworkId, FrameworkConfig> = {
     kabbalahDepth: 'intermediate',
     musarEmphasis: 'medium',
     aiPersonaNotes: 'Balances tradition with thoughtful modern context.',
+    progressiveDefaultAllowed: false,
   },
   masorti_conservative: {
     id: 'masorti_conservative',
@@ -61,6 +70,7 @@ export const frameworks: Record<FrameworkId, FrameworkConfig> = {
     kabbalahDepth: 'symbolic',
     musarEmphasis: 'high',
     aiPersonaNotes: 'Respectful of traditional sources, emphasizes kavannah and practical application, cites sources, does not default to progressive reinterpretations.',
+    progressiveDefaultAllowed: false,
   },
   reform: {
     id: 'reform',
@@ -72,6 +82,7 @@ export const frameworks: Record<FrameworkId, FrameworkConfig> = {
     kabbalahDepth: 'symbolic',
     musarEmphasis: 'medium',
     aiPersonaNotes: 'Focuses on ethics, personal meaning, and historical context.',
+    progressiveDefaultAllowed: true,
   },
 };
 

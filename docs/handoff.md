@@ -1,3 +1,5 @@
+> **Historical (v0.1.0).** Superseded by [DEVELOPMENT_PLAN.md](DEVELOPMENT_PLAN.md) and [AGENTS.md](../AGENTS.md). Paths below are pre-monorepo. Scheduled for removal (deferred issue D5).
+
 # Handoff: Torah Study App – Shared Packages Implemented
 
 ## What was completed in this chat

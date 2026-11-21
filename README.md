@@ -1,67 +1,63 @@
-# Torah Independent Study App – Shared Packages
+# Torah Study
 
-Multi-platform (iOS, Android, web) Torah study application with a shared backend.
+A personal Torah study app: a personalized daily study (Chok LeYisrael style), a step-by-step Siddur path, specialized paths (Musar, Kabbalah, Halachah), and an AI study coach.
 
-## Core Principles
+**Status:** v0.2.0, Foundation. The API, shared logic and seed content work and are tested. The web app has not been built yet; it's next (v0.3.0). See [docs/DEVELOPMENT_PLAN.md](docs/DEVELOPMENT_PLAN.md).
 
-- **Backend is the single source of truth** for all rules, study generation, and AI behavior.
-- Shared packages (`torah-core` and `torah-ai-rules`) prevent drift across clients.
-- Shared UI strings (`ui-strings.json`) keep labels consistent across platforms.
-- Clients never hard-code framework logic or shared labels. All generation and AI calls go through the backend.
+**Scope:** personal use (one user). It is built cleanly enough to grow, but there are no multi-tenant, scaling or app-store requirements.
 
-## Five Theological Frameworks
+## Start here
 
-1. Hasidic
-2. Orthodox
-3. Modern Orthodox
-4. Masorti / Conservative
-5. Reform
+| If you want to… | Read |
+|---|---|
+| Understand what's built and what's next | [docs/DEVELOPMENT_PLAN.md](docs/DEVELOPMENT_PLAN.md) |
+| Understand how the code is structured | [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) |
+| Work on this as an AI agent / new developer | [AGENTS.md](AGENTS.md) |
+| Release a version | [docs/VERSIONING.md](docs/VERSIONING.md) |
+| Know what tests exist and what each release requires | [docs/TESTING.md](docs/TESTING.md) |
+| Add or edit study content | [docs/CONTENT.md](docs/CONTENT.md) |
+| Call the API | [docs/api.md](docs/api.md) |
+| See why things are the way they are | [docs/DECISIONS.md](docs/DECISIONS.md) |
+| See what changed | [CHANGELOG.md](CHANGELOG.md) |
 
-## Learning Levels (independent of framework)
+## Quick start
 
-- Beginner
-- Intermediate
-- Advanced
-- Scholar
+Requires Node 20+ (22 recommended, see `.nvmrc`).
 
-## Language Modes
+```bash
+npm install
+npm run check        # typecheck + all tests — must pass before any commit
+npm run dev          # API on http://localhost:3000 (hot reload)
+```
 
-- English
-- Hebrew
-- Split
-- Mixed (English + transliteration + pointed key Hebrew words)
+```bash
+curl localhost:3000/health
+curl -X POST localhost:3000/v1/study/daily -H 'Content-Type: application/json' \
+  -d '{"profile":{"framework":"masorti_conservative","level":"intermediate","interests":["siddur","musar","kabbalah"],"studyLength":"medium","languageMode":"mixed"}}'
+```
 
-## Primary Modules
-
-- Personalized daily study (Chok LeYisrael style)
-- Siddur path
-- Specialized paths (Musar, Kabbalah, Halachah)
-- AI Rabbi Coach
-
-## Model User (initial implementation)
-
-Conservative framework, Intermediate level, interests in Siddur/davening/kavannah, Musar, and Kabbalah, medium study length, mixed language mode. Attends Shacharit minyan.
-
-## Related Repositories
-
-| Repo | Purpose |
-|------|---------|
-| [torah-study-backend](https://github.com/jaywoith/torah-study-backend) | Backend service (loads these packages and serves UI strings) |
-| [torah-study-web](https://github.com/jaywoith/torah-study-web) | Web client |
-| [torah-study-ios](https://github.com/jaywoith/torah-study-ios) | iOS client |
-| [torah-study-android](https://github.com/jaywoith/torah-study-android) | Android client |
-
-See [docs/multi-repo-architecture.md](docs/multi-repo-architecture.md) and [docs/shared-vs-local.md](docs/shared-vs-local.md) for how drift is prevented and best-practice split.
-
-## Repository Layout (this repo)
+## Layout
 
 ```
+apps/
+  api/                 Express API — the only runtime that loads the shared packages
+  web/                 Web client (v0.3.0, not yet scaffolded)
 packages/
-  torah-core/          # Shared models, generators, validation (pure functions)
-  torah-ai-rules/      # Personas, system prompts, constraints
-docs/
-examples/              # Sample daily study and Siddur units
-ui-strings.json        # Shared labels served by the backend
+  core/                Pure logic: models, generator, Siddur path, language modes, validation
+  ai-rules/            AI coach personas, system prompts, constraints
+  content/             Study content + UI strings as JSON data
+docs/                  Plan, architecture, versioning, testing, content, decisions, API
+scripts/               Version bump, example regeneration
+.github/workflows/     CI (typecheck + tests on every push/PR)
 ```
 
-See `docs/architecture.md` and `docs/user-personas.md` for details.
+## Frameworks, levels, modes
+
+- **Frameworks:** Hasidic, Orthodox, Modern Orthodox, Masorti/Conservative, Reform. Masorti/Conservative is fully specified; the others are stubs.
+- **Levels:** Beginner, Intermediate, Advanced, Scholar.
+- **Language modes:** English, Hebrew, Split (side-by-side), Mixed (Hebrew + transliteration + English).
+- **Model user:** Conservative, Intermediate, interested in Siddur/kavannah, Musar and Kabbalah, medium length, mixed language. See [docs/user-personas.md](docs/user-personas.md).
+
+## History
+
+This repo was originally `torah-study-shared`, one of five repos. In v0.2.0 the backend was merged in at `apps/api` with its git history kept, and the empty web/iOS/Android repos were retired. See [docs/DECISIONS.md](docs/DECISIONS.md) (ADR-001).

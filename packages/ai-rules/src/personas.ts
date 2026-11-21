@@ -1,14 +1,11 @@
 /**
  * Rabbi persona definitions per framework.
- * Loaded by the backend before every AI call. Clients never see or modify these.
+ * Loaded by the API before every AI call. Clients never see or modify these.
  */
 
-export type FrameworkId =
-  | 'hasidic'
-  | 'orthodox'
-  | 'modern_orthodox'
-  | 'masorti_conservative'
-  | 'reform';
+import type { FrameworkId } from '@torah/core';
+
+export type { FrameworkId };
 
 export interface Persona {
   framework: FrameworkId;

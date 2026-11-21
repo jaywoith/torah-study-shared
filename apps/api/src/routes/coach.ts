@@ -1,6 +1,7 @@
 import { Router, Request, Response } from 'express';
 import { personas, getConstraintsForFramework } from '@torah/ai-rules';
-import type { FrameworkId } from '@torah/ai-rules';
+import { FRAMEWORK_IDS } from '@torah/core';
+import type { FrameworkId } from '@torah/core';
 
 const router = Router();
 
@@ -12,7 +13,7 @@ const router = Router();
  */
 router.post('/message', (req: Request, res: Response) => {
   try {
-    const { framework = 'masorti_conservative', message } = req.body as {
+    const { framework = 'masorti_conservative', message } = (req.body ?? {}) as {
       framework?: FrameworkId;
       message?: string;
     };
@@ -21,11 +22,11 @@ router.post('/message', (req: Request, res: Response) => {
       return res.status(400).json({ error: 'Missing or invalid message' });
     }
 
-    const persona = personas[framework];
-    if (!persona) {
+    if (!(FRAMEWORK_IDS as readonly string[]).includes(framework)) {
       return res.status(400).json({ error: `Unknown framework: ${framework}` });
     }
 
+    const persona = personas[framework];
     const constraints = getConstraintsForFramework(framework);
 
     // Stub response – in production this would call an LLM with the system prompt

@@ -1,6 +1,5 @@
 /**
- * Public API of torah-core.
- * Clients and backend import from here.
+ * Public API of @torah/core. Only the API app (and other shared packages) import this.
  */
 
 export * from './models';
@@ -11,3 +10,4 @@ export * from './siddur-path';
 export * from './paths';
 export * from './study-generator';
 export * from './validation';
+export * from './profile';

@@ -1,30 +1,44 @@
 /**
  * Core data models for the Torah Study App.
- * All clients and backend share these types via the torah-core package.
- * Backend is the single source of truth; clients never hard-code framework logic.
+ * The API is the single runtime that uses these; clients only see the JSON shapes.
+ *
+ * The id lists below are the single source of truth for every enum. Types are
+ * derived from them so runtime validation (profile.ts) and types never drift.
  */
 
-export type FrameworkId =
-  | 'hasidic'
-  | 'orthodox'
-  | 'modern_orthodox'
-  | 'masorti_conservative'
-  | 'reform';
+export const FRAMEWORK_IDS = [
+  'hasidic',
+  'orthodox',
+  'modern_orthodox',
+  'masorti_conservative',
+  'reform',
+] as const;
+export type FrameworkId = (typeof FRAMEWORK_IDS)[number];
 
-export type LearningLevel = 'beginner' | 'intermediate' | 'advanced' | 'scholar';
+/** Ordered from least to most advanced. Order matters (used for comparisons). */
+export const LEARNING_LEVELS = ['beginner', 'intermediate', 'advanced', 'scholar'] as const;
+export type LearningLevel = (typeof LEARNING_LEVELS)[number];
 
-export type LanguageMode = 'english' | 'hebrew' | 'split' | 'mixed';
+export const LANGUAGE_MODES = ['english', 'hebrew', 'split', 'mixed'] as const;
+export type LanguageMode = (typeof LANGUAGE_MODES)[number];
 
-export type StudyLength = 'short' | 'medium' | 'long';
+export const STUDY_LENGTHS = ['short', 'medium', 'long'] as const;
+export type StudyLength = (typeof STUDY_LENGTHS)[number];
 
-export type Interest =
-  | 'siddur'
-  | 'musar'
-  | 'kabbalah'
-  | 'halachah'
-  | 'tanakh'
-  | 'prayerbook_hebrew'
-  | 'kavannah';
+export const INTERESTS = [
+  'siddur',
+  'musar',
+  'kabbalah',
+  'halachah',
+  'tanakh',
+  'prayerbook_hebrew',
+  'kavannah',
+] as const;
+export type Interest = (typeof INTERESTS)[number];
+
+/** Ordered from shallowest to deepest. Order matters (used for comparisons). */
+export const KABBALAH_DEPTHS = ['symbolic', 'intermediate', 'advanced'] as const;
+export type KabbalahDepth = (typeof KABBALAH_DEPTHS)[number];
 
 export interface UserProfile {
   framework: FrameworkId;
@@ -50,13 +64,18 @@ export interface ReviewItem {
   expected?: string;
 }
 
-export interface StudyUnit {
+/** The three text fields that language modes show or hide. */
+export interface TextFields {
+  hebrew?: string; // pointed (with nikkud) whenever present
+  transliteration?: string;
+  english?: string;
+}
+
+/** A unit as returned to clients inside a DailyStudy. */
+export interface StudyUnit extends TextFields {
   id: string;
   type: UnitType;
   title?: string;
-  hebrew?: string; // pointed where present
-  transliteration?: string;
-  english: string;
   commentary?: string; // framework-appropriate
   kavannahPrompt?: string;
   source?: string;
@@ -64,11 +83,22 @@ export interface StudyUnit {
   estimatedMinutes?: number;
 }
 
+export interface LanguageDisplay {
+  mode: LanguageMode;
+  showHebrew: boolean;
+  showTransliteration: boolean;
+  showEnglish: boolean;
+  /** How clients should lay out the text fields that are present. */
+  layout: 'stacked' | 'side-by-side' | 'interleaved';
+}
+
 export interface DailyStudy {
-  date: string; // ISO date
+  date: string; // ISO date YYYY-MM-DD
   profile: Pick<UserProfile, 'framework' | 'level' | 'studyLength' | 'languageMode'>;
+  display: LanguageDisplay;
   units: StudyUnit[];
   totalEstimatedMinutes: number;
+  budgetMinutes: number;
   notes?: string;
 }
 
@@ -81,7 +111,39 @@ export interface SiddurUnit {
   english: string;
   commentary: string;
   kavannahPrompt: string;
+  source?: string;
+  reviewItems?: ReviewItem[];
+  estimatedMinutes?: number;
   relatedInterests?: Interest[];
+  /** False until a human has checked text, translation and citation against a source. */
+  verified: boolean;
+  reviewNote?: string;
+}
+
+export interface SiddurSection {
+  id: string;
+  name: string;
+  order: number;
+  units: SiddurUnit[];
+}
+
+/** A non-Siddur unit in the content library, with the metadata used to select it. */
+export interface ContentUnit extends Omit<StudyUnit, 'id'> {
+  id: string; // stable content id, e.g. "tanakh-tehillim-145-9"
+  interests: Interest[];
+  minLevel: LearningLevel;
+  /** Omit to allow every framework. */
+  frameworks?: FrameworkId[];
+  /** Only meaningful for type "kabbalah". Defaults to "symbolic". */
+  depth?: KabbalahDepth;
+  verified: boolean;
+  reviewNote?: string;
+}
+
+/** Everything the generator selects from. Supplied by @torah/content (or test fixtures). */
+export interface ContentLibrary {
+  studyUnits: ContentUnit[];
+  siddur: SiddurSection[];
 }
 
 export interface Progress {

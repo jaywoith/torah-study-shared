@@ -1,7 +1,7 @@
 {
   "meta": {
-    "version": "0.1.0",
-    "description": "Shared UI strings that must stay consistent across web, iOS, and Android. Backend should expose these (or clients may fetch this file). Local platform chrome remains in each client."
+    "version": "0.2.0",
+    "description": "Shared UI strings that must stay consistent across clients. Served by the API at GET /v1/ui-strings. Platform-specific chrome stays in each client."
   },
   "common": {
     "appName": "Torah Study",

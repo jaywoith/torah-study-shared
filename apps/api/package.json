@@ -1,26 +1,25 @@
 {
-  "name": "torah-study-backend",
-  "version": "0.1.0",
-  "description": "Backend service for the multi-platform Torah independent study app. Single source of truth for study generation, AI behavior, and shared UI strings.",
-  "main": "dist/index.js",
+  "name": "@torah/api",
+  "version": "0.2.0",
+  "private": true,
+  "description": "HTTP API. The only runtime that loads the shared packages; owns generation, validation, UI strings and (later) AI calls.",
+  "main": "src/index.ts",
   "scripts": {
     "dev": "tsx watch src/index.ts",
-    "build": "tsc",
-    "start": "node dist/index.js",
-    "typecheck": "tsc --noEmit"
+    "start": "tsx src/index.ts",
+    "typecheck": "tsc -p ."
   },
   "dependencies": {
-    "express": "^4.21.0",
-    "cors": "^2.8.5"
+    "@torah/ai-rules": "*",
+    "@torah/content": "*",
+    "@torah/core": "*",
+    "cors": "^2.8.5",
+    "express": "^4.21.0"
   },
   "devDependencies": {
     "@types/cors": "^2.8.17",
     "@types/express": "^4.17.21",
-    "@types/node": "^20.14.0",
-    "tsx": "^4.19.0",
-    "typescript": "^5.5.0"
-  },
-  "engines": {
-    "node": ">=18"
+    "@types/supertest": "^6.0.2",
+    "supertest": "^7.0.0"
   }
 }

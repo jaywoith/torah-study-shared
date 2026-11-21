@@ -1,7 +1,14 @@
 {
   "name": "@torah/ai-rules",
-  "version": "0.1.0",
-  "description": "Prompts, personas, and constraints for AI Rabbi. Versioned independently.",
+  "version": "0.2.0",
+  "private": true,
+  "description": "AI study-coach personas, system prompts and constraints. Changes here are reviewed like code.",
   "main": "src/index.ts",
-  "types": "src/index.ts"
+  "types": "src/index.ts",
+  "scripts": {
+    "typecheck": "tsc -p ."
+  },
+  "dependencies": {
+    "@torah/core": "*"
+  }
 }

@@ -1,0 +1,14 @@
+{
+  "name": "@torah/content",
+  "version": "0.2.0",
+  "private": true,
+  "description": "Study content and shared UI strings as data (JSON). Typed against @torah/core models.",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "scripts": {
+    "typecheck": "tsc -p ."
+  },
+  "dependencies": {
+    "@torah/core": "*"
+  }
+}

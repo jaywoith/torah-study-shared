@@ -2,7 +2,7 @@
  * Learning levels. Independent of framework.
  */
 
-import { LearningLevel } from './models';
+import { KabbalahDepth, LEARNING_LEVELS, LearningLevel } from './models';
 
 export interface LevelConfig {
   id: LearningLevel;
@@ -11,12 +11,15 @@ export interface LevelConfig {
   hebrewDensity: 'low' | 'medium' | 'high';
   commentaryComplexity: 'simple' | 'moderate' | 'detailed' | 'scholarly';
   unitLengthPreference: 'short' | 'medium' | 'long';
+  /** Deepest Kabbalah appropriate at this level (further capped by framework). */
+  maxKabbalahDepth: KabbalahDepth;
   notes: string;
 }
 
 export const learningLevels: Record<LearningLevel, LevelConfig> = {
   beginner: {
     id: 'beginner',
+    maxKabbalahDepth: 'symbolic',
     name: 'Beginner',
     scaffolding: 'heavy',
     hebrewDensity: 'low',
@@ -26,15 +29,17 @@ export const learningLevels: Record<LearningLevel, LevelConfig> = {
   },
   intermediate: {
     id: 'intermediate',
+    maxKabbalahDepth: 'intermediate',
     name: 'Intermediate',
     scaffolding: 'moderate',
     hebrewDensity: 'medium',
     commentaryComplexity: 'moderate',
     unitLengthPreference: 'medium',
-    notes: 'Shores, POS, pointed Hebrew for key terms, moderate commentary. Past pure beginner but not continuous advanced Talmud.',
+    notes: 'Shoresh, POS, pointed Hebrew for key terms, moderate commentary. Past pure beginner but not continuous advanced Talmud.',
   },
   advanced: {
     id: 'advanced',
+    maxKabbalahDepth: 'advanced',
     name: 'Advanced',
     scaffolding: 'light',
     hebrewDensity: 'high',
@@ -44,6 +49,7 @@ export const learningLevels: Record<LearningLevel, LevelConfig> = {
   },
   scholar: {
     id: 'scholar',
+    maxKabbalahDepth: 'advanced',
     name: 'Scholar',
     scaffolding: 'minimal',
     hebrewDensity: 'high',
@@ -55,4 +61,9 @@ export const learningLevels: Record<LearningLevel, LevelConfig> = {
 
 export function getLevel(id: LearningLevel): LevelConfig {
   return learningLevels[id];
+}
+
+/** Numeric rank of a level (beginner = 0). */
+export function levelRank(level: LearningLevel): number {
+  return LEARNING_LEVELS.indexOf(level);
 }

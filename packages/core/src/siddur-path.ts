@@ -1,57 +1,44 @@
 /**
- * Siddur path sequencing and unit structure.
- * For Conservative Intermediate: begins with Shacharit / Pesukei Dezimra.
+ * Siddur path: an ordered sequence of units (section order, then unit order).
+ * Content lives in @torah/content (data/siddur.json); these functions are pure.
  */
 
-import { SiddurUnit, Interest } from './models';
+import { Interest, SiddurSection, SiddurUnit } from './models';
 
-export interface SiddurSection {
-  id: string;
-  name: string;
-  order: number;
-  units: SiddurUnit[];
+/** Interests that opt a user into the Siddur path. */
+export const SIDDUR_INTERESTS: Interest[] = ['siddur', 'kavannah', 'prayerbook_hebrew'];
+
+/** Flattens sections into the study order. Empty sections are skipped naturally. */
+export function getSiddurSequence(sections: SiddurSection[]): SiddurUnit[] {
+  return [...sections].sort((a, b) => a.order - b.order).flatMap((s) => s.units);
 }
 
-export const siddurPathConservativeIntermediate: SiddurSection[] = [
-  {
-    id: 'pesukei_dezimra',
-    name: 'Pesukei Dezimra',
-    order: 1,
-    units: [
-      // Example unit will be expanded in examples/
-    ],
-  },
-  {
-    id: 'shema',
-    name: 'Shema and its Blessings',
-    order: 2,
-    units: [],
-  },
-  {
-    id: 'amidah',
-    name: 'Amidah',
-    order: 3,
-    units: [],
-  },
-];
+export interface SiddurProgress {
+  unit: SiddurUnit;
+  /** 1-based position of this unit in the full sequence. */
+  position: number;
+  total: number;
+  completedCount: number;
+}
 
+/**
+ * The first unit in sequence order that has not been completed.
+ * Returns null if the user has no Siddur-related interest or has finished the path.
+ */
 export function getNextSiddurUnit(
+  sections: SiddurSection[],
   completedIds: string[],
   interests: Interest[]
-): SiddurUnit | null {
-  // Stub: prioritize Pesukei Dezimra for users interested in Siddur
-  if (interests.includes('siddur')) {
-    return {
-      id: 'baruch_sheamar',
-      section: 'Pesukei Dezimra',
-      blessingOrLine: 'Baruch She’amar',
-      hebrew: 'בָּרוּךְ שֶׁאָמַר וְהָיָה הָעוֹלָם',
-      transliteration: 'Baruch she’amar ve’hayah ha’olam',
-      english: 'Blessed is He who spoke, and the world came into being.',
-      commentary: 'Traditional Conservative commentary emphasizes the creative power of divine speech and the kavannah of acknowledging God as Creator at the start of the morning praises.',
-      kavannahPrompt: 'As you recite these words, pause and consider: what does it mean that the world exists because God spoke?',
-      relatedInterests: ['siddur', 'kavannah'],
-    };
-  }
-  return null;
+): SiddurProgress | null {
+  if (!interests.some((i) => SIDDUR_INTERESTS.includes(i))) return null;
+  const sequence = getSiddurSequence(sections);
+  const completed = new Set(completedIds);
+  const index = sequence.findIndex((u) => !completed.has(u.id));
+  if (index === -1) return null;
+  return {
+    unit: sequence[index],
+    position: index + 1,
+    total: sequence.length,
+    completedCount: sequence.filter((u) => completed.has(u.id)).length,
+  };
 }

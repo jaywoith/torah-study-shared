@@ -1,51 +1,38 @@
 import { Router, Request, Response } from 'express';
-import { generateDailyStudy, validateDailyStudy, UserProfile } from '@torah/core';
+import { ContentLibrary, generateDailyStudy, parseUserProfile, validateDailyStudy } from '@torah/core';
 
-const router = Router();
+const ISO_DATE = /^\d{4}-\d{2}-\d{2}$/;
 
 /**
  * POST /v1/study/daily
- * Body: { profile: UserProfile, date?: string }
- * Returns generated DailyStudy after validation.
+ * Body: { profile: UserProfile, date?: "YYYY-MM-DD" }
+ * Generates, validates, and returns a DailyStudy. 422 if validation fails.
  */
-router.post('/daily', (req: Request, res: Response) => {
-  try {
-    const { profile, date } = req.body as { profile?: UserProfile; date?: string };
+export function createStudyRouter(library: ContentLibrary) {
+  const router = Router();
 
-    if (!profile) {
-      return res.status(400).json({ error: 'Missing profile' });
+  router.post('/daily', (req: Request, res: Response) => {
+    const { profile, date } = (req.body ?? {}) as { profile?: unknown; date?: unknown };
+
+    const parsed = parseUserProfile(profile);
+    if (!parsed.ok) {
+      return res.status(400).json({ error: 'Invalid profile', issues: parsed.errors });
     }
 
-    // Basic validation against shared model shape
-    const required = ['framework', 'level', 'interests', 'studyLength', 'languageMode'] as const;
-    for (const field of required) {
-      if (!(field in profile)) {
-        return res.status(400).json({ error: `Missing profile.${field}` });
-      }
+    if (date !== undefined && (typeof date !== 'string' || !ISO_DATE.test(date) || Number.isNaN(Date.parse(date)))) {
+      return res.status(400).json({ error: 'date must be YYYY-MM-DD' });
     }
 
-    if (!Array.isArray(profile.interests)) {
-      return res.status(400).json({ error: 'profile.interests must be an array' });
-    }
-
-    const studyDate = date || new Date().toISOString().slice(0, 10);
-
-    const study = generateDailyStudy(profile, studyDate);
+    const studyDate = (date as string | undefined) ?? new Date().toISOString().slice(0, 10);
+    const study = generateDailyStudy(parsed.profile, studyDate, library);
     const validation = validateDailyStudy(study);
 
     if (!validation.valid) {
-      return res.status(422).json({
-        error: 'Generated study failed framework validation',
-        issues: validation.issues,
-        study,
-      });
+      return res.status(422).json({ error: 'Generated study failed validation', issues: validation.issues, study });
     }
 
     return res.json({ study, validation });
-  } catch (err) {
-    console.error(err);
-    return res.status(500).json({ error: 'Failed to generate daily study' });
-  }
-});
+  });
 
-export default router;
+  return router;
+}

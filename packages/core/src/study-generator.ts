@@ -1,86 +1,167 @@
 /**
- * Study generator.
- * Pure function: takes UserProfile + date/context and returns structured DailyStudy.
- * All generation rules live here (and in frameworks/levels); backend calls this.
+ * Daily study generator.
+ *
+ * Pure function: (profile, date, content library) -> DailyStudy.
+ * Same inputs always give the same output; a different date rotates the content.
+ *
+ * Algorithm
+ * 1. Filter the library to units eligible for this profile:
+ *    framework allowed, unit.minLevel <= user level, and for Kabbalah,
+ *    unit depth <= min(framework.kabbalahDepth, level.maxKabbalahDepth).
+ * 2. Build categories from the user's interests (Siddur, Musar, Kabbalah, Halachah).
+ *    Tanakh is always included as the anchor unit.
+ * 3. Within each category, rotate by day number so each date gets a different unit.
+ * 4. Fill to the study-length minute budget: Tanakh first (guaranteed), then one
+ *    unit per category in interest order; if room remains (long sessions), take
+ *    further rounds of the next units in rotation.
+ * 5. Apply the language mode to every unit.
  */
 
-import { UserProfile, DailyStudy, StudyUnit } from './models';
+import {
+  ContentLibrary,
+  ContentUnit,
+  DailyStudy,
+  Interest,
+  KABBALAH_DEPTHS,
+  KabbalahDepth,
+  StudyLength,
+  StudyUnit,
+  UnitType,
+  UserProfile,
+} from './models';
 import { getFramework } from './frameworks';
-import { getLevel } from './learning-levels';
-import { getLanguageOptions } from './language';
+import { getLevel, levelRank } from './learning-levels';
+import { applyLanguageMode, getLanguageDisplay } from './language';
+import { SIDDUR_INTERESTS, getSiddurSequence } from './siddur-path';
 
-export function generateDailyStudy(profile: UserProfile, date: string): DailyStudy {
+/** Target minutes per study length. */
+export const STUDY_LENGTH_MINUTES: Record<StudyLength, number> = {
+  short: 10,
+  medium: 20,
+  long: 35,
+};
+
+const DEFAULT_UNIT_MINUTES = 5;
+
+/** Category order for interest-driven units. Tanakh is handled separately as the anchor. */
+const CATEGORY_ORDER: { type: UnitType; interests: Interest[] }[] = [
+  { type: 'siddur', interests: SIDDUR_INTERESTS },
+  { type: 'musar', interests: ['musar'] },
+  { type: 'kabbalah', interests: ['kabbalah'] },
+  { type: 'halachah', interests: ['halachah'] },
+];
+
+/** Days since 1970-01-01 for an ISO date (YYYY-MM-DD). Throws on invalid input. */
+export function dayNumber(isoDate: string): number {
+  const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(isoDate);
+  if (!match) throw new Error(`Invalid ISO date: ${isoDate}`);
+  const ms = Date.UTC(Number(match[1]), Number(match[2]) - 1, Number(match[3]));
+  const day = Math.floor(ms / 86_400_000);
+  if (Number.isNaN(day)) throw new Error(`Invalid ISO date: ${isoDate}`);
+  return day;
+}
+
+function minDepth(a: KabbalahDepth, b: KabbalahDepth): KabbalahDepth {
+  return KABBALAH_DEPTHS.indexOf(a) <= KABBALAH_DEPTHS.indexOf(b) ? a : b;
+}
+
+/** The deepest Kabbalah this profile may receive. */
+export function effectiveKabbalahDepth(profile: Pick<UserProfile, 'framework' | 'level'>): KabbalahDepth {
+  return minDepth(getFramework(profile.framework).kabbalahDepth, getLevel(profile.level).maxKabbalahDepth);
+}
+
+/** Candidate pool for a category, in stable library order. */
+function candidatesFor(type: UnitType, profile: UserProfile, library: ContentLibrary): ContentUnit[] {
+  if (type === 'siddur') {
+    // Siddur units come from the Siddur path so content is defined once.
+    return getSiddurSequence(library.siddur).map((u) => ({
+      id: u.id,
+      type: 'siddur' as const,
+      title: `${u.section} – ${u.blessingOrLine}`,
+      hebrew: u.hebrew,
+      transliteration: u.transliteration,
+      english: u.english,
+      commentary: u.commentary,
+      kavannahPrompt: u.kavannahPrompt,
+      source: u.source ?? `Siddur, ${u.section}`,
+      reviewItems: u.reviewItems,
+      estimatedMinutes: u.estimatedMinutes,
+      interests: u.relatedInterests ?? ['siddur'],
+      minLevel: 'beginner' as const,
+      verified: u.verified,
+    }));
+  }
+
+  const maxDepth = effectiveKabbalahDepth(profile);
+  return library.studyUnits.filter((u) => {
+    if (u.type !== type) return false;
+    if (u.frameworks && !u.frameworks.includes(profile.framework)) return false;
+    if (levelRank(u.minLevel) > levelRank(profile.level)) return false;
+    if (u.type === 'kabbalah' && KABBALAH_DEPTHS.indexOf(u.depth ?? 'symbolic') > KABBALAH_DEPTHS.indexOf(maxDepth)) {
+      return false;
+    }
+    return true;
+  });
+}
+
+function toStudyUnit(unit: ContentUnit, date: string): StudyUnit {
+  const { interests, minLevel, frameworks, depth, verified, reviewNote, ...rest } = unit;
+  return { ...rest, id: `${date}-${unit.id}` };
+}
+
+const minutesOf = (u: ContentUnit) => u.estimatedMinutes ?? DEFAULT_UNIT_MINUTES;
+
+export function generateDailyStudy(profile: UserProfile, date: string, library: ContentLibrary): DailyStudy {
   const framework = getFramework(profile.framework);
   const level = getLevel(profile.level);
-  const lang = getLanguageOptions(profile.languageMode);
+  const display = getLanguageDisplay(profile.languageMode);
+  const budget = STUDY_LENGTH_MINUTES[profile.studyLength];
+  const day = dayNumber(date);
 
-  // For Conservative Intermediate medium: prioritize Siddur, Musar, light Kabbalah, Tanakh
-  const units: StudyUnit[] = [];
+  const categories = CATEGORY_ORDER.filter((c) => c.interests.some((i) => profile.interests.includes(i)))
+    .map((c) => ({ type: c.type, pool: candidatesFor(c.type, profile, library) }))
+    .filter((c) => c.pool.length > 0);
+  const tanakhPool = candidatesFor('tanakh', profile, library);
 
-  if (profile.interests.includes('siddur') || profile.interests.includes('kavannah')) {
-    units.push({
-      id: `${date}-siddur-1`,
-      type: 'siddur',
-      title: 'Pesukei Dezimra – Baruch She’amar',
-      hebrew: 'בָּרוּךְ שֶׁאָמַר וְהָיָה הָעוֹלָם',
-      transliteration: lang.includeTransliteration ? 'Baruch she’amar ve’hayah ha’olam' : undefined,
-      english: 'Blessed is He who spoke, and the world came into being.',
-      commentary: 'In the Conservative tradition this opening of the morning praises focuses on God as Creator through speech. Kavannah is directed toward recognizing the ongoing creative power of the Divine Word.',
-      kavannahPrompt: 'Before continuing, take a moment to feel gratitude that the world exists because God spoke.',
-      source: 'Siddur, Pesukei Dezimra',
-      reviewItems: [
-        { type: 'hebrew_recognition', text: 'בָּרוּךְ', expected: 'Baruch' },
-        { type: 'shoresh', text: 'אָמַר', expected: 'אמר' },
-      ],
-      estimatedMinutes: 5,
-    });
+  const chosen = new Set<string>();
+  const picked: ContentUnit[] = [];
+  let anchor: ContentUnit | undefined;
+  let used = 0;
+
+  // Rotation: the pool index advances one per day; round r takes the r-th next unit.
+  const pickFrom = (pool: ContentUnit[], round: number): ContentUnit | undefined => {
+    if (round >= pool.length) return undefined;
+    const unit = pool[(day + round) % pool.length];
+    return chosen.has(unit.id) ? undefined : unit;
+  };
+
+  if (tanakhPool.length > 0) {
+    anchor = pickFrom(tanakhPool, 0)!;
+    chosen.add(anchor.id);
+    used += minutesOf(anchor);
   }
 
-  if (profile.interests.includes('musar')) {
-    units.push({
-      id: `${date}-musar-1`,
-      type: 'musar',
-      title: 'From Mesillat Yesharim – on Kavannah',
-      english: 'The beginning of all avodah is the intention of the heart. Without kavannah, the external act remains incomplete.',
-      commentary: 'Classic Musar teaching appropriate for intermediate Conservative study: practical focus on directing the heart during prayer and daily life.',
-      kavannahPrompt: 'Where in your davening today can you strengthen your kavannah?',
-      source: 'Mesillat Yesharim (selected)',
-      estimatedMinutes: 4,
-    });
+  const maxRounds = Math.max(0, ...categories.map((c) => c.pool.length));
+  for (let round = 0; round < maxRounds; round++) {
+    let addedThisRound = false;
+    for (const category of categories) {
+      const unit = pickFrom(category.pool, round);
+      if (!unit) continue;
+      if (used + minutesOf(unit) > budget && (picked.length > 0 || anchor)) continue;
+      picked.push(unit);
+      chosen.add(unit.id);
+      used += minutesOf(unit);
+      addedThisRound = true;
+    }
+    if (!addedThisRound) break;
   }
 
-  if (profile.interests.includes('kabbalah') && framework.kabbalahDepth !== 'advanced') {
-    units.push({
-      id: `${date}-kabbalah-1`,
-      type: 'kabbalah',
-      title: 'Symbolic Light – a Conservative framing',
-      english: 'The light of the first day is understood in many traditional sources as a spiritual light hidden for the righteous. For intermediate study we focus on its ethical and symbolic meaning: clarity and kindness in our actions.',
-      commentary: 'Presented within Conservative bounds – symbolic and ethical emphasis, not deep theosophy.',
-      kavannahPrompt: 'How can the idea of hidden light inspire one act of kindness today?',
-      source: 'Midrashic / Kabbalistic framing (introductory)',
-      estimatedMinutes: 4,
-    });
-  }
+  // Group by category order so a long session reads Siddur, Siddur, Musar, ... then Tanakh.
+  const order = CATEGORY_ORDER.map((c) => c.type);
+  picked.sort((a, b) => order.indexOf(a.type) - order.indexOf(b.type));
+  const selected = anchor ? [...picked, anchor] : picked;
 
-  // Always include a short Tanakh unit for medium length
-  units.push({
-    id: `${date}-tanakh-1`,
-    type: 'tanakh',
-    title: 'Psalm 145 (Ashrei) – selected verse',
-    hebrew: 'טוֹב־יְהוָה לַכֹּל וְרַחֲמָיו עַל־כָּל־מַעֲשָׂיו',
-    transliteration: lang.includeTransliteration ? 'Tov Adonai lakol verachamav al kol ma’asav' : undefined,
-    english: 'The Lord is good to all, and His mercy is upon all His works.',
-    commentary: 'Traditional Conservative reading emphasizes universal divine compassion and the call to emulate it in our own conduct.',
-    kavannahPrompt: 'As you recite Ashrei this morning, which of God’s works around you invites your gratitude?',
-    source: 'Tehillim 145:9',
-    reviewItems: [
-      { type: 'hebrew_recognition', text: 'טוֹב', expected: 'tov' },
-      { type: 'kavannah', text: 'Divine compassion' },
-    ],
-    estimatedMinutes: 6,
-  });
-
-  const total = units.reduce((sum, u) => sum + (u.estimatedMinutes || 5), 0);
+  const units = selected.map((u) => applyLanguageMode(toStudyUnit(u, date), display));
 
   return {
     date,
@@ -90,8 +171,10 @@ export function generateDailyStudy(profile: UserProfile, date: string): DailyStu
       studyLength: profile.studyLength,
       languageMode: profile.languageMode,
     },
+    display,
     units,
-    totalEstimatedMinutes: total,
-    notes: `Generated for ${framework.name} – ${level.name}. Focus on kavannah and traditional sources.`,
+    totalEstimatedMinutes: units.reduce((sum, u) => sum + (u.estimatedMinutes ?? DEFAULT_UNIT_MINUTES), 0),
+    budgetMinutes: budget,
+    notes: `Generated for ${framework.name} – ${level.name}, ${profile.studyLength} session (${budget} min target).`,
   };
 }

@@ -1,0 +1,115 @@
+{
+  "units": [
+    {
+      "id": "tanakh-tehillim-145-9",
+      "type": "tanakh",
+      "title": "Psalm 145 (Ashrei) – verse 9",
+      "hebrew": "טוֹב־יְהוָה לַכֹּל וְרַחֲמָיו עַל־כָּל־מַעֲשָׂיו",
+      "transliteration": "Tov Adonai lakol verachamav al kol ma’asav",
+      "english": "The Lord is good to all, and His mercy is upon all His works.",
+      "commentary": "The verse emphasizes universal divine compassion and the call to emulate it in our own conduct.",
+      "kavannahPrompt": "As you recite Ashrei this morning, which of God’s works around you invites your gratitude?",
+      "source": "Tehillim 145:9",
+      "reviewItems": [
+        { "type": "hebrew_recognition", "text": "טוֹב", "expected": "tov" },
+        { "type": "kavannah", "text": "Divine compassion" }
+      ],
+      "estimatedMinutes": 6,
+      "interests": ["tanakh", "siddur"],
+      "minLevel": "beginner",
+      "verified": false
+    },
+    {
+      "id": "tanakh-tehillim-145-18",
+      "type": "tanakh",
+      "title": "Psalm 145 (Ashrei) – verse 18",
+      "hebrew": "קָרוֹב יְהוָה לְכָל־קֹרְאָיו לְכֹל אֲשֶׁר יִקְרָאֻהוּ בֶאֱמֶת",
+      "transliteration": "Karov Adonai lechol kor’av, lechol asher yikra’uhu ve’emet",
+      "english": "The Lord is near to all who call upon Him, to all who call upon Him in truth.",
+      "commentary": "Nearness is tied to calling 'in truth': sincerity is the condition the verse names, not eloquence.",
+      "kavannahPrompt": "What would it mean to call out 'in truth' in one line of today's davening?",
+      "source": "Tehillim 145:18",
+      "reviewItems": [
+        { "type": "hebrew_recognition", "text": "קָרוֹב", "expected": "karov" }
+      ],
+      "estimatedMinutes": 5,
+      "interests": ["tanakh", "siddur"],
+      "minLevel": "beginner",
+      "verified": false
+    },
+    {
+      "id": "tanakh-micah-6-8",
+      "type": "tanakh",
+      "title": "Micah 6:8 – what God asks",
+      "hebrew": "הִגִּיד לְךָ אָדָם מַה־טּוֹב וּמָה־יְהוָה דּוֹרֵשׁ מִמְּךָ כִּי אִם־עֲשׂוֹת מִשְׁפָּט וְאַהֲבַת חֶסֶד וְהַצְנֵעַ לֶכֶת עִם־אֱלֹהֶיךָ",
+      "transliteration": "Higid lecha adam mah tov u’mah Adonai doresh mimcha ki im asot mishpat ve’ahavat chesed vehatznea lechet im Elohecha",
+      "english": "He has told you, O man, what is good, and what the Lord requires of you: only to do justice, to love kindness, and to walk humbly with your God.",
+      "commentary": "Three demands in one verse: act justly, love chesed (not merely do it), and walk humbly. The Talmud (Makkot 24a) cites this verse as one of the summaries of the mitzvot.",
+      "kavannahPrompt": "Which of the three — justice, chesed, humility — needs your attention most today?",
+      "source": "Micah 6:8",
+      "estimatedMinutes": 5,
+      "interests": ["tanakh", "musar"],
+      "minLevel": "beginner",
+      "verified": false
+    },
+    {
+      "id": "musar-mesillat-yesharim-kavannah",
+      "type": "musar",
+      "title": "From Mesillat Yesharim – on Kavannah",
+      "english": "The beginning of all avodah is the intention of the heart. Without kavannah, the external act remains incomplete.",
+      "commentary": "Practical focus on directing the heart during prayer and daily life.",
+      "kavannahPrompt": "Where in your davening today can you strengthen your kavannah?",
+      "source": "Mesillat Yesharim (selected)",
+      "estimatedMinutes": 4,
+      "interests": ["musar", "kavannah"],
+      "minLevel": "beginner",
+      "verified": false,
+      "reviewNote": "Quotation not verified against the text and may be a paraphrase. Needs an exact chapter citation or replacement (see docs/DEVELOPMENT_PLAN.md, deferred issues)."
+    },
+    {
+      "id": "musar-avot-1-2",
+      "type": "musar",
+      "title": "Pirkei Avot 1:2 – three pillars",
+      "hebrew": "עַל שְׁלֹשָׁה דְבָרִים הָעוֹלָם עוֹמֵד, עַל הַתּוֹרָה וְעַל הָעֲבוֹדָה וְעַל גְּמִילוּת חֲסָדִים.",
+      "transliteration": "Al shloshah devarim ha’olam omed: al haTorah, ve’al ha’avodah, ve’al gemilut chasadim.",
+      "english": "The world stands on three things: on Torah, on avodah (service/prayer), and on acts of lovingkindness.",
+      "commentary": "Taught by Shimon HaTzaddik. A daily practice can be checked against all three: did I learn, did I daven, did I do chesed?",
+      "kavannahPrompt": "Of the three pillars, which one is weakest in your week right now? Name one concrete step.",
+      "source": "Pirkei Avot 1:2",
+      "estimatedMinutes": 4,
+      "interests": ["musar"],
+      "minLevel": "beginner",
+      "verified": false
+    },
+    {
+      "id": "musar-avot-1-14",
+      "type": "musar",
+      "title": "Pirkei Avot 1:14 – Hillel’s three questions",
+      "hebrew": "אִם אֵין אֲנִי לִי, מִי לִי. וּכְשֶׁאֲנִי לְעַצְמִי, מָה אֲנִי. וְאִם לֹא עַכְשָׁיו, אֵימָתָי.",
+      "transliteration": "Im ein ani li, mi li? Ukhshe’ani le’atzmi, mah ani? Ve’im lo achshav, eimatai?",
+      "english": "If I am not for myself, who will be for me? And when I am for myself alone, what am I? And if not now, when?",
+      "commentary": "Hillel balances personal responsibility against self-absorption, then removes the excuse of delay.",
+      "kavannahPrompt": "What is one thing you have been postponing that 'if not now, when?' applies to?",
+      "source": "Pirkei Avot 1:14",
+      "estimatedMinutes": 4,
+      "interests": ["musar"],
+      "minLevel": "beginner",
+      "verified": false
+    },
+    {
+      "id": "kabbalah-hidden-light",
+      "type": "kabbalah",
+      "title": "Symbolic Light – the hidden light of the first day",
+      "english": "The light of the first day is understood in many traditional sources as a spiritual light hidden for the righteous. Here we focus on its ethical and symbolic meaning: clarity and kindness in our actions.",
+      "commentary": "Symbolic and ethical emphasis, not theosophy.",
+      "kavannahPrompt": "How can the idea of hidden light inspire one act of kindness today?",
+      "source": "Midrashic / Kabbalistic framing (introductory)",
+      "estimatedMinutes": 4,
+      "interests": ["kabbalah"],
+      "minLevel": "beginner",
+      "depth": "symbolic",
+      "verified": false,
+      "reviewNote": "Citation should name the primary source (e.g. Chagigah 12a / Bereishit Rabbah 3:6)."
+    }
+  ]
+}
