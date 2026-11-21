@@ -149,10 +149,11 @@ Updated 2026-11-21: the owner has a server and will set it up from a computer. D
 **P0: direction (no app code)**
 - [x] Review the current UI (phone screenshots, light and dark)
 - [x] ADR-013 drafted (status Proposed until the owner approves the mockups)
-- [x] Mockups: Today, focus reader (Split, Mixed), Siddur path, Settings with live preview, day complete; light and dark. Canvas: https://claude.ai/artifact/7pH98DogMEPwDwf4k7o2mU (private to the owner)
+- [x] Mockups: Today, focus reader (Split, Mixed), Siddur path, Settings with live preview, day complete; light and dark. Desktop (added at the owner's request 2026-11-21): Today + reader two-pane, focus reader, Siddur path. Canvas: https://claude.ai/artifact/7pH98DogMEPwDwf4k7o2mU (private to the owner)
 - [ ] **Owner approves the mockups** (or asks for changes); ADR-013 moves to Accepted
 
 **P1: foundation (every screen)**
+- [ ] Responsive shell: bottom tab bar below ~900px, left sidebar at desktop widths (one component tree, CSS breakpoints)
 - [ ] Design tokens in CSS custom properties (color, type scale, spacing, radius), light and dark from one set
 - [ ] Self-host Source Serif 4 and Inter via `@fontsource` (Noto Serif Hebrew already is); Hebrew size and line height tuned for nikkud + te'amim
 - [ ] Icon tab bar (inline SVG components, no icon dependency unless justified), safe areas, 44px targets
@@ -164,16 +165,17 @@ Updated 2026-11-21: the owner has a server and will set it up from a computer. D
 - [ ] Focus reader: full-screen unit view, text-size control (stored per device), "Mark done · next" flow, source and license line
 - [ ] Commentary and kavannah as collapsible panels with a visible "Draft · not verified" label when `verified` is false or a `reviewNote` marks a draft
 - [ ] Day-complete state
+- [ ] Desktop: Today and the reader side by side (plan list + reader pane); focus mode (`F` / `Esc`) with a centered reading column; keyboard shortcuts (← → change day, `D` mark done)
 
 **P3: other screens**
-- [ ] Siddur and Musar paths: overall progress, section progress, "Continue" card
+- [ ] Siddur and Musar paths: overall progress, section progress, "Continue" card; sections as columns on desktop
 - [ ] Settings: grouped lists, segmented controls, live language-mode preview
 - [ ] Login and Sources & licenses restyled
 
 **P4: polish and guardrails**
 - [ ] Motion: small CSS transitions (card enter, completion check, view transitions); none under `prefers-reduced-motion`
 - [ ] Accessibility pass: contrast AA in both themes, focus states, screen-reader labels
-- [ ] Playwright screenshot tests: Today and reader in all 4 language modes × light/dark, so a Hebrew rendering regression fails CI
+- [ ] Playwright screenshot tests: Today and reader in all 4 language modes × light/dark, at phone and desktop widths, so a Hebrew rendering regression fails CI
 - [ ] Any new copy added to `ui-strings.json`; `docs/ARCHITECTURE.md` web section updated
 
 **Open option (needs owner say-so):** Hebrew date on Today. It needs calendar logic in `@torah/core` (e.g. `@hebcal/core`), so it is listed under Calendar awareness in the backlog rather than here.
