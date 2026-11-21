@@ -32,4 +32,24 @@ export const MIGRATIONS: Migration[] = [
       CREATE INDEX completed_units_daily ON completed_units (path, study_date);
     `,
   },
+  {
+    id: 2,
+    name: '002_musar_path',
+    sql: `
+      -- Allow path 'musar' (sequential Musar path; study_date is ''). SQLite cannot
+      -- alter a CHECK constraint, so rebuild the table and copy the rows.
+      CREATE TABLE completed_units_new (
+        path TEXT NOT NULL CHECK (path IN ('siddur', 'musar', 'daily')),
+        unit_id TEXT NOT NULL,
+        study_date TEXT NOT NULL DEFAULT '',
+        completed_at TEXT NOT NULL,
+        PRIMARY KEY (path, unit_id, study_date)
+      );
+      INSERT INTO completed_units_new (path, unit_id, study_date, completed_at)
+        SELECT path, unit_id, study_date, completed_at FROM completed_units;
+      DROP TABLE completed_units;
+      ALTER TABLE completed_units_new RENAME TO completed_units;
+      CREATE INDEX completed_units_daily ON completed_units (path, study_date);
+    `,
+  },
 ];

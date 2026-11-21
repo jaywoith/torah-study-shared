@@ -14,6 +14,7 @@ import type {
   ProfileResponse,
   ProgressPath,
   ProgressResponse,
+  MusarNextResponse,
   SiddurNextResponse,
   SourcesResponse,
   UserProfile,
@@ -51,6 +52,22 @@ async function request<T>(path: string, init?: RequestInit): Promise<T> {
 
 const json = (method: string, body: unknown): RequestInit => ({ method, body: JSON.stringify(body) });
 
+/** GET /v1/{path}/next with the profile's interests and display settings; null on 404 (finished or no interest). */
+async function pathNext<T>(path: 'siddur' | 'musar', profile: UserProfile): Promise<T | null> {
+  const params = new URLSearchParams({
+    interests: profile.interests.join(','),
+    languageMode: profile.languageMode,
+    showCantillation: String(profile.showCantillation ?? false),
+    divineName: profile.divineName ?? 'abbreviated',
+  });
+  try {
+    return await request<T>(`/v1/${path}/next?${params}`);
+  } catch (err) {
+    if (err instanceof ApiRequestError && err.status === 404) return null;
+    throw err;
+  }
+}
+
 export const api = {
   session: () => request<AuthSessionResponse>('/v1/auth/session'),
   login: (passphrase: string) => request<{ ok: true }>('/v1/auth/login', json('POST', { passphrase })),
@@ -67,20 +84,11 @@ export const api = {
     request<DailyStudyResponse>('/v1/study/daily', json('POST', { profile, date })),
 
   /** Completed units come from the server. Resolves to null when the path is complete or there is no Siddur interest (404). */
-  siddurNext: async (profile: UserProfile): Promise<SiddurNextResponse | null> => {
-    const params = new URLSearchParams({
-      interests: profile.interests.join(','),
-      languageMode: profile.languageMode,
-      showCantillation: String(profile.showCantillation ?? false),
-      divineName: profile.divineName ?? 'abbreviated',
-    });
-    try {
-      return await request<SiddurNextResponse>(`/v1/siddur/next?${params}`);
-    } catch (err) {
-      if (err instanceof ApiRequestError && err.status === 404) return null;
-      throw err;
-    }
-  },
+  siddurNext: (profile: UserProfile) => pathNext<SiddurNextResponse>('siddur', profile),
+
+  /** Same contract as siddurNext, for the Musar path (Mesillat Yesharim, then Pirkei Avot). */
+  musarNext: (profile: UserProfile) => pathNext<MusarNextResponse>('musar', profile),
+
 
   progress: (from?: string, to?: string) => {
     const params = new URLSearchParams({ ...(from ? { from } : {}), ...(to ? { to } : {}) });

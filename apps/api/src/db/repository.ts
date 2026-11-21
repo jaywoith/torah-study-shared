@@ -20,8 +20,8 @@ export function createRepository(db: Db, now: () => Date = () => new Date()) {
     ),
     uncomplete: db.prepare('DELETE FROM completed_units WHERE path = @path AND unit_id = @unitId AND study_date = @date'),
     reset: db.prepare('DELETE FROM completed_units WHERE path = ?'),
-    siddurCompleted: db.prepare(
-      "SELECT unit_id FROM completed_units WHERE path = 'siddur' ORDER BY completed_at, unit_id"
+    pathCompleted: db.prepare(
+      "SELECT unit_id FROM completed_units WHERE path = ? AND study_date = '' ORDER BY completed_at, unit_id"
     ),
     dailyRange: db.prepare(
       `SELECT study_date AS date, unit_id AS unitId, completed_at AS completedAt FROM completed_units
@@ -56,8 +56,13 @@ export function createRepository(db: Db, now: () => Date = () => new Date()) {
       return stmts.reset.run(path).changes;
     },
 
+    /** Completed unit ids on a sequential path (siddur, musar), in completion order. */
+    getPathCompleted(path: 'siddur' | 'musar'): string[] {
+      return (stmts.pathCompleted.all(path) as { unit_id: string }[]).map((r) => r.unit_id);
+    },
+
     getSiddurCompleted(): string[] {
-      return (stmts.siddurCompleted.all() as { unit_id: string }[]).map((r) => r.unit_id);
+      return (stmts.pathCompleted.all('siddur') as { unit_id: string }[]).map((r) => r.unit_id);
     },
 
     getDailyCompleted(from = '0000-00-00', to = '9999-99-99'): DailyCompletion[] {

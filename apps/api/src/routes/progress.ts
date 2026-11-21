@@ -7,6 +7,7 @@ import {
   PROGRESS_PATHS,
   ProgressPath,
   ProgressResponse,
+  getMusarSequence,
   getSiddurSequence,
   parseUserProfile,
 } from '@torah/core';
@@ -17,7 +18,7 @@ const isPath = (p: unknown): p is ProgressPath => (PROGRESS_PATHS as readonly un
 
 /**
  * GET    /v1/progress?from&to       -> ProgressResponse
- * POST   /v1/progress/complete      body: CompleteRequest
+ * POST   /v1/progress/complete      body: CompleteRequest (path siddur | musar | daily)
  * DELETE /v1/progress/complete      body: CompleteRequest
  * POST   /v1/progress/reset         body: { path }
  * POST   /v1/progress/import        body: ImportRequest (one-time browser → server move)
@@ -25,6 +26,7 @@ const isPath = (p: unknown): p is ProgressPath => (PROGRESS_PATHS as readonly un
 export function createProgressRouter(repo: Repository, library: ContentLibrary) {
   const router = Router();
   const siddurIds = new Set(getSiddurSequence(library.siddur).map((u) => u.id));
+  const musarIds = new Set(getMusarSequence(library.studyUnits).map((u) => u.id));
   const dailyIds = new Set([...library.studyUnits.map((u) => u.id), ...siddurIds]);
 
   /** Validates a CompleteRequest. Returns an error message or the normalized values. */
@@ -34,6 +36,10 @@ export function createProgressRouter(repo: Repository, library: ContentLibrary) 
     if (typeof unitId !== 'string') return { error: 'unitId is required' };
     if (path === 'siddur') {
       if (!siddurIds.has(unitId)) return { error: `Unknown Siddur unit: ${unitId}` };
+      return { path, unitId, date: '' };
+    }
+    if (path === 'musar') {
+      if (!musarIds.has(unitId)) return { error: `Unknown Musar unit: ${unitId}` };
       return { path, unitId, date: '' };
     }
     if (typeof date !== 'string' || !ISO_DATE.test(date)) return { error: 'date (YYYY-MM-DD) is required for daily' };
@@ -49,7 +55,8 @@ export function createProgressRouter(repo: Repository, library: ContentLibrary) 
       }
     }
     const body: ProgressResponse = {
-      siddur: { completed: repo.getSiddurCompleted() },
+      siddur: { completed: repo.getPathCompleted('siddur') },
+      musar: { completed: repo.getPathCompleted('musar') },
       daily: repo.getDailyCompleted(from as string | undefined, to as string | undefined),
     };
     return res.json(body);

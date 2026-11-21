@@ -11,6 +11,8 @@ All notable changes. Format: [Keep a Changelog](https://keepachangelog.com); ver
 - Web Settings: "Text display" group with the cantillation toggle and Divine Name selector.
 - **Sefaria import (ADR-010, ADR-012):** `npm run content:import` (`scripts/import-sefaria.ts`) reads `packages/content/sefaria-manifest.json`, fetches pinned versions, strips HTML/footnotes/parasha markers, keeps te'amim, enforces the license policy and merges into the content JSON. Idempotent, `--dry-run`, `--only=<prefix>`, `--force` (verified entries), `--refresh` (bypass the gitignored `.cache/sefaria`). Throttled with 429 retry. Fetch source is pluggable (`SEFARIA_BASE_URL` or a `TextSource`) for the planned mirror.
 - `Provenance` on content entries: `sefariaRef`, `sefariaUrl`, `importedAt`, per-language `versionTitle` + `license`, optional `personalUseOnly`.
+- **Musar path:** `GET /v1/musar/next`, progress path `musar`, and a Musar tab in the web app. Reads Mesillat Yesharim then Pirkei Avot in order, tracked by completion, so a missed day never skips text. Migration 002 widens the `completed_units.path` check (rows are copied; v0.4 data kept). The Siddur and Musar screens share one `PathScreen` component; the API shares one display-params parser.
+- **Amidah** (weekday, Metsudah) in the Siddur path, one unit per blessing; Modim is split into Modim and the two Al Hanisim insertions.
 - `npm run content:report` (`--json` too): counts by kind, verified vs unverified, versions and licenses, CC-BY-NC and uncleared-license entries, missing transliteration/commentary/kavannah.
 - **Sources & licenses:** public `GET /v1/sources` and a web screen linked from Settings, listing every version with its license (attribution for CC-BY / CC-BY-SA).
 - Core: `summarizeSources`, `buildContentReport`; the license policy moved to `@torah/core` (`licenseStatus`, `normalizeLicense`, `requiresAttribution`).
@@ -25,6 +27,9 @@ All notable changes. Format: [Keep a Changelog](https://keepachangelog.com); ver
 - All imported entries are `verified: false`.
 
 ### Changed
+- Long Siddur prayers split at Sefaria segment boundaries (Hodu, Yotzer Or, the Shema by paragraph, Emet Veyatziv): parts get ids `<id>_2`, `<id>_3`; the existing id keeps the first part so progress stays valid. Single-segment texts (Ashrei, Psalm 147, Az Yashir, Ahavah Rabbah) stay whole, because splitting them would misalign the Hebrew and English.
+- In abbreviated mode, Metsudah's spelled-out "Adonoy" reads "Hashem" in English (owner decision, ADR-011 amended). Other English is unchanged.
+- `ProgressResponse` gains `musar` (additive).
 - Profiles saved by v0.4 (or sent without the new fields) get the defaults; `GET /v1/profile` always returns both fields. Non-breaking.
 - `SiddurUnit.transliteration`, `commentary` and `kavannahPrompt` are optional (imported units may lack them). Additive for clients; the web already handled missing values.
 - Settings note now says texts are imported and not yet owner-reviewed.

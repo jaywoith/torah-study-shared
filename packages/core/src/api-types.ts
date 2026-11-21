@@ -14,6 +14,7 @@ import type {
   LearningLevel,
   ProgressPath,
   SiddurUnit,
+  StudyUnit,
   StudyLength,
   UserProfile,
 } from './models';
@@ -32,6 +33,15 @@ export interface DailyStudyResponse {
 
 export interface SiddurNextResponse {
   unit: Rendered<SiddurUnit>;
+  display: LanguageDisplay;
+  position: number;
+  total: number;
+  completedCount: number;
+}
+
+/** GET /v1/musar/next. `unit.id` equals `unit.contentId`. */
+export interface MusarNextResponse {
+  unit: Rendered<StudyUnit>;
   display: LanguageDisplay;
   position: number;
   total: number;
@@ -82,6 +92,7 @@ export interface DailyCompletion {
 /** GET /v1/progress?from=YYYY-MM-DD&to=YYYY-MM-DD */
 export interface ProgressResponse {
   siddur: { completed: string[] };
+  musar: { completed: string[] };
   daily: DailyCompletion[];
 }
 

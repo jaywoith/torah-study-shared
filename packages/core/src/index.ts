@@ -10,6 +10,7 @@ export * from './text-display';
 export * from './license';
 export * from './content-report';
 export * from './siddur-path';
+export * from './musar-path';
 export * from './paths';
 export * from './study-generator';
 export * from './validation';

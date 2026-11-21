@@ -1,4 +1,5 @@
 import { describe, expect, it } from 'vitest';
+import Database from 'better-sqlite3';
 import { migrate, openDatabase } from '../src/db';
 import { createRepository } from '../src/db/repository';
 import { MIGRATIONS } from '../src/db/migrations';
@@ -18,6 +19,25 @@ describe('migrations', () => {
     const db = openDatabase(':memory:');
     const rows = db.prepare('SELECT id, name FROM schema_migrations ORDER BY id').all();
     expect(rows).toEqual(MIGRATIONS.map(({ id, name }) => ({ id, name })));
+  });
+
+  it('002 keeps v0.4 progress rows and allows the musar path', () => {
+    // A database as v0.4 left it: only migration 1 applied, with progress rows.
+    const db = new Database(':memory:');
+    db.exec('CREATE TABLE schema_migrations (id INTEGER PRIMARY KEY, name TEXT NOT NULL, applied_at TEXT NOT NULL)');
+    db.exec(MIGRATIONS[0].sql);
+    db.prepare('INSERT INTO schema_migrations VALUES (1, ?, ?)').run(MIGRATIONS[0].name, '2026-11-01');
+    db.prepare("INSERT INTO completed_units VALUES ('siddur', 'baruch_sheamar', '', '2026-11-02')").run();
+    db.prepare("INSERT INTO completed_units VALUES ('daily', 'musar-avot-1-2', '2026-11-02', '2026-11-02')").run();
+    expect(() => db.prepare("INSERT INTO completed_units VALUES ('musar', 'x', '', 'now')").run()).toThrow();
+
+    expect(migrate(db)).toEqual(['002_musar_path']);
+    expect(db.prepare('SELECT path, unit_id FROM completed_units ORDER BY path').all()).toEqual([
+      { path: 'daily', unit_id: 'musar-avot-1-2' },
+      { path: 'siddur', unit_id: 'baruch_sheamar' },
+    ]);
+    db.prepare("INSERT INTO completed_units VALUES ('musar', 'x', '', 'now')").run();
+    expect(() => db.prepare("INSERT INTO completed_units VALUES ('bogus', 'x', '', 'now')").run()).toThrow();
   });
 
   it('are idempotent', () => {

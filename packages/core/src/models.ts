@@ -51,8 +51,8 @@ export type DivineNameMode = (typeof DIVINE_NAME_MODES)[number];
 export const DEFAULT_SHOW_CANTILLATION = false;
 export const DEFAULT_DIVINE_NAME: DivineNameMode = 'abbreviated';
 
-/** Progress tracks: the sequential Siddur path, and units completed within a day's study. */
-export const PROGRESS_PATHS = ['siddur', 'daily'] as const;
+/** Progress tracks: the sequential Siddur and Musar paths, and units completed within a day's study. */
+export const PROGRESS_PATHS = ['siddur', 'musar', 'daily'] as const;
 export type ProgressPath = (typeof PROGRESS_PATHS)[number];
 
 export interface UserProfile {

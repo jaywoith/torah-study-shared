@@ -32,8 +32,8 @@ The response types are defined in `packages/core/src/models.ts` and `packages/co
 
 | Route | Body / query | Response |
 |---|---|---|
-| `GET /v1/progress` | `?from=YYYY-MM-DD&to=YYYY-MM-DD` (both optional) | `{ siddur: { completed: string[] }, daily: [{ date, unitId, completedAt }] }` |
-| `POST /v1/progress/complete` | `{ path: "siddur", unitId }` or `{ path: "daily", unitId, date }` | 201 `{ ok: true }` (idempotent) |
+| `GET /v1/progress` | `?from=YYYY-MM-DD&to=YYYY-MM-DD` (both optional) | `{ siddur: { completed: string[] }, musar: { completed: string[] }, daily: [{ date, unitId, completedAt }] }` |
+| `POST /v1/progress/complete` | `{ path: "siddur" \| "musar", unitId }` or `{ path: "daily", unitId, date }` | 201 `{ ok: true }` (idempotent) |
 | `DELETE /v1/progress/complete` | same as POST | `{ ok: true }` |
 | `POST /v1/progress/reset` | `{ path }` | `{ ok: true, removed }` |
 | `POST /v1/progress/import` | `{ profile?, siddurCompleted? }` | `{ importedProfile, importedSiddur }`: one-time import of v0.3 browser data. The profile is imported only if none is saved; only known Siddur ids, no duplicates. |
@@ -92,6 +92,14 @@ Key `DailyStudy` fields:
 ```
 Returns the earliest unit, in path order, that isn't in `completed`.
 **400**: unknown interest, language mode, `showCantillation` or `divineName`. **404**: path complete, or no Siddur-related interest.
+
+## `GET /v1/musar/next`
+
+The sequential Musar path: Mesillat Yesharim in reading order, then Pirkei Avot. Same query params and errors as `/v1/siddur/next` (default `interests` is `musar`; needs `musar`). Completion comes from the database (`path: "musar"`) unless `completed` is passed.
+
+**200** `{ "unit": StudyUnit, "display": LanguageDisplay, "position": 1, "total": 394, "completedCount": 0 }`. `unit.id` equals `unit.contentId`. Type: `MusarNextResponse`.
+
+The daily study's Musar slot still rotates by date; the path is the place to read straight through.
 
 ## `GET /v1/ui-strings`
 

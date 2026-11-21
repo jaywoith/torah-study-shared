@@ -5,6 +5,7 @@ import { uiStrings } from '@torah/content';
 import { LoginScreen } from '../src/screens/LoginScreen';
 import { SettingsScreen } from '../src/screens/SettingsScreen';
 import { SiddurScreen } from '../src/screens/SiddurScreen';
+import { MusarScreen } from '../src/screens/MusarScreen';
 import { SourcesScreen } from '../src/screens/SourcesScreen';
 import { TodayScreen } from '../src/screens/TodayScreen';
 import { DEFAULT_PROFILE, LEGACY_KEYS, readLegacyData } from '../src/storage';
@@ -214,5 +215,39 @@ describe('SourcesScreen', () => {
     expect(screen.getByRole('link', { name: 'Sefaria' }).getAttribute('href')).toBe('https://www.sefaria.org');
     expect(screen.getByText(uiStrings.sources.nonCommercial)).toBeTruthy();
     expect(screen.getAllByText(uiStrings.sources.attribution)).toHaveLength(2);
+  });
+});
+
+describe('MusarScreen', () => {
+  it('shows the next Musar unit and marks it complete on the Musar path', async () => {
+    const completed: string[] = [];
+    const spy = mockFetch((url, init) => {
+      if (url.pathname === '/v1/progress/complete') {
+        completed.push(JSON.parse(String(init.body)).unitId);
+        return { status: 201, body: { ok: true } };
+      }
+      expect(url.pathname).toBe('/v1/musar/next');
+      const id = completed.length ? 'my-2' : 'my-1';
+      return {
+        body: {
+          unit: { id, contentId: id, type: 'musar', title: `Mesillat Yesharim ${id}`, hebrew: 'אָמַר', english: 'said' },
+          display: { mode: 'split', showHebrew: true, showTransliteration: false, showEnglish: true, layout: 'side-by-side' },
+          position: completed.length + 1,
+          total: 2,
+          completedCount: completed.length,
+        },
+      };
+    });
+    renderWithText(<MusarScreen profile={DEFAULT_PROFILE} />);
+    expect(await screen.findByText('Mesillat Yesharim my-1')).toBeTruthy();
+    fireEvent.click(screen.getByRole('button', { name: uiStrings.musar.markComplete }));
+    await screen.findByText('Unit 2 of 2');
+    const post = spy.mock.calls.find(([u]) => String(u).includes('/v1/progress/complete'))!;
+    expect(JSON.parse(String(post[1]!.body))).toEqual({ path: 'musar', unitId: 'my-1' });
+  });
+
+  it('explains how to enable the path without a Musar interest', () => {
+    renderWithText(<MusarScreen profile={{ ...DEFAULT_PROFILE, interests: ['siddur'] }} />);
+    expect(screen.getByText(uiStrings.musar.noInterest)).toBeTruthy();
   });
 });

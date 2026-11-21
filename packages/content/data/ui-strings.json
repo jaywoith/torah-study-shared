@@ -57,6 +57,7 @@
   "nav": {
     "today": "Today",
     "siddur": "Siddur",
+    "musar": "Musar",
     "settings": "Settings"
   },
   "siddur": {
@@ -66,6 +67,14 @@
     "noInterest": "Add Siddur, Kavannah, or Prayerbook Hebrew to your interests to use the Siddur path.",
     "resetProgress": "Reset Siddur progress",
     "resetConfirm": "Reset all Siddur progress?"
+  },
+  "musar": {
+    "position": "Unit {position} of {total}",
+    "markComplete": "Mark complete",
+    "complete": "You have completed the Musar path: Mesillat Yesharim and Pirkei Avot.",
+    "noInterest": "Add Musar to your interests to use the Musar path.",
+    "resetProgress": "Reset Musar progress",
+    "resetConfirm": "Reset all Musar progress?"
   },
   "settings": {
     "title": "Study profile",

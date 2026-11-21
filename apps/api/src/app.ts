@@ -8,6 +8,7 @@ import type { Db } from './db';
 import { createRepository } from './db/repository';
 import { createStudyRouter } from './routes/study';
 import { createSiddurRouter } from './routes/siddur';
+import { createMusarRouter } from './routes/musar';
 import { createProfileRouter } from './routes/profile';
 import { createProgressRouter } from './routes/progress';
 import coachRouter from './routes/coach';
@@ -50,6 +51,7 @@ export function createApp(options: AppOptions) {
   app.use('/v1', requireAuth(auth));
   app.use('/v1/study', createStudyRouter(library));
   app.use('/v1/siddur', createSiddurRouter(library, repo));
+  app.use('/v1/musar', createMusarRouter(library, repo));
   app.use('/v1/profile', createProfileRouter(repo));
   app.use('/v1/progress', createProgressRouter(repo, library));
   app.use('/v1/coach', coachRouter);

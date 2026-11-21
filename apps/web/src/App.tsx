@@ -8,11 +8,12 @@ import { TodayScreen } from './screens/TodayScreen';
 import { SiddurScreen } from './screens/SiddurScreen';
 import { SettingsScreen } from './screens/SettingsScreen';
 import { SourcesScreen } from './screens/SourcesScreen';
+import { MusarScreen } from './screens/MusarScreen';
 
-type Route = 'today' | 'siddur' | 'settings' | 'sources';
+type Route = 'today' | 'siddur' | 'musar' | 'settings' | 'sources';
 /** Routes shown as tabs. "sources" is reached from Settings. */
 type TabRoute = Exclude<Route, 'sources'>;
-const TABS: TabRoute[] = ['today', 'siddur', 'settings'];
+const TABS: TabRoute[] = ['today', 'siddur', 'musar', 'settings'];
 const ROUTES: Route[] = [...TABS, 'sources'];
 
 function routeFromHash(): Route {
@@ -118,6 +119,7 @@ export function App() {
   const labels: Record<TabRoute, string> = {
     today: text.strings.nav.today,
     siddur: text.strings.nav.siddur,
+    musar: text.strings.nav.musar,
     settings: text.strings.nav.settings,
   };
 
@@ -127,6 +129,7 @@ export function App() {
       <main className="container">
         {route === 'today' && <TodayScreen profile={profile} />}
         {route === 'siddur' && <SiddurScreen profile={profile} />}
+        {route === 'musar' && <MusarScreen profile={profile} />}
         {route === 'sources' && <SourcesScreen />}
         {route === 'settings' && (
           <SettingsScreen profile={profile} onSave={saveProfile} onLogout={auth.required ? logout : undefined} />

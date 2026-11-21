@@ -107,9 +107,10 @@ function candidatesFor(type: UnitType, profile: UserProfile, library: ContentLib
   });
 }
 
-function toStudyUnit(unit: ContentUnit, date: string): StudyUnit {
+/** Client shape of a content unit; `id` is `${date}-${contentId}`, or the content id when no date is given. */
+export function toStudyUnit(unit: ContentUnit, date?: string): StudyUnit {
   const { interests, minLevel, frameworks, depth, verified, reviewNote, provenance, ...rest } = unit;
-  return { ...rest, id: `${date}-${unit.id}`, contentId: unit.id };
+  return { ...rest, id: date ? `${date}-${unit.id}` : unit.id, contentId: unit.id };
 }
 
 const minutesOf = (u: ContentUnit) => u.estimatedMinutes ?? DEFAULT_UNIT_MINUTES;
