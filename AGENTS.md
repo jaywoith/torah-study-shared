@@ -4,6 +4,7 @@ Read this file first. It is the operating manual for working in this repo with a
 
 ## 1. Orient (2 minutes)
 
+0. `docs/NEXT_SESSION.md` if it exists: the latest handoff.
 1. `docs/DEVELOPMENT_PLAN.md`: find the **current milestone** and its unchecked tasks. That is the work.
 2. `docs/ARCHITECTURE.md`: the rules for where code goes.
 3. `CHANGELOG.md`, under `[Unreleased]`: what has changed since the last release.

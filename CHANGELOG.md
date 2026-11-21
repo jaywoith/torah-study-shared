@@ -4,6 +4,9 @@ All notable changes. Format: [Keep a Changelog](https://keepachangelog.com); ver
 
 ## [Unreleased]
 
+### Changed
+- Plan: v0.5.0 detailed with owner decisions: Sefaria build-time import (ADR-010); cantillation toggle and Divine Name setting, default ה׳ (ADR-011); full Sefaria mirror with monthly sync and a cantillation track added to the backlog. Deferred issue D3 decided.
+
 ## [0.4.0-rc.1] – 2026-11-21 — Persistence & Progress
 
 ### Added

@@ -76,3 +76,19 @@ Short records of decisions that are settled. Each one has the context, the decis
 **Decision.** `APP_PASSPHRASE` and `SESSION_SECRET` env vars. Login compares SHA-256 digests in constant time and sets `ts_session=<expiry>.<HMAC>`: httpOnly, SameSite=Lax, Secure in production, 30 days. There is no session table. 5 failures per 15 minutes per IP returns 429. Public routes are limited to health, auth, UI strings and options. Auth is disabled when no passphrase is set, but production refuses to start without one.
 
 **Consequences.** No user accounts, no password storage, no dependencies. Rotating the secret signs out every device. If the app ever has multiple users, replace this with real accounts.
+
+## ADR-010: Sefaria as the text source; build-time import now, full mirror later
+**Date:** 2026-11-21 · **Status:** Accepted
+
+**Context.** We need trustworthy Hebrew texts and translations with clear licensing.
+
+**Decision.** Sefaria is the source. An import script fetches selected refs and versions and writes curated JSON into `packages/content/data/`, committed to git and reviewed (`verified`). **The app never calls Sefaria at runtime.** Every entry records its license and provenance. Later, the owner's server will hold a full Sefaria mirror synced monthly, and the import script will read from it. The script's fetch layer must be pluggable for that. The AI coach (v0.6) may do server-side, cached lookups.
+
+**Consequences.** No runtime dependency on Sefaria (uptime, rate limits, offline). Content stays deterministic and testable. Texts change only when re-imported on purpose. CC-BY and CC-BY-SA require attribution in the app. CC-BY-NC versions are acceptable only while the app is personal and non-commercial.
+
+## ADR-011: Cantillation and Divine Name are user display settings, applied at render time
+**Date:** 2026-11-21 · **Status:** Accepted
+
+**Decision.** Content keeps the source text, including te'amim and the Name as written. Two profile settings control rendering in the API, alongside the language mode: `showCantillation` (default **off**) and `divineName`: `abbreviated` ה׳ (**default**), `full`, or `yud_yud` יְיָ. The transforms are pure functions in `@torah/core`.
+
+**Consequences.** One stored text serves every preference. Changing a setting needs no re-import. A future cantillation-reading track can use the same data.

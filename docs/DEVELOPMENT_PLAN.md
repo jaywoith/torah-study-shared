@@ -1,7 +1,7 @@
 # Development Plan
 
 **Current version:** 0.4.0-rc.1
-**Current milestone:** v0.4.0, Persistence & Progress (rc.1 cut; waiting on owner phone check) → next: v0.5.0 Real Content. Hosting on the owner's server whenever the owner is at a computer (see "Hosting" under v0.3.0).
+**Current milestone:** v0.4.0, Persistence & Progress (rc.1 cut; waiting on owner phone check) → **next: v0.5.0 Real Content. A new session starts at the v0.5.0 section.** Hosting on the owner's server whenever the owner is at a computer (see "Hosting" under v0.3.0).
 **Last updated:** 2026-11-21
 
 This is the master plan. Every milestone is a minor version (pre-1.0). Tick the boxes as work lands; an agent picking up the project starts at the first unchecked task in the current milestone. Release gates (G1–G3) are defined in [TESTING.md](TESTING.md#release-gates).
@@ -103,18 +103,40 @@ Updated 2026-11-21: the owner has a server and will set it up from a computer. D
 
 **Done when:** gate G2 passes on the hosted app.
 
-## v0.5.0: Real Content
+## v0.5.0: Real Content (next, start here)
 
-**Goal:** content you can trust, at enough volume for months of daily use.
+**Goal:** content you can trust, at enough volume for months of daily use, imported from Sefaria, with display preferences for cantillation and the Divine Name.
 
-- [ ] Decide the text source and record an ADR (likely the Sefaria API/exports; check the license of each text and translation, prefer CC-BY/CC0 or public domain, and avoid copyrighted translations such as modern JPS unless licensed)
-- [ ] Import script `scripts/import-*.ts` → writes JSON into `packages/content/data/` with source + license per entry
-- [ ] Siddur: complete Pesukei Dezimra in order (Ashkenaz / Sim Shalom order, which is the right fit for a Conservative user), then Shema and its Blessings, then Amidah
-- [ ] Musar: sequential Mesillat Yesharim path (chapter by chapter) + Pirkei Avot
-- [ ] Tanakh pool: at least 60 units so rotation doesn't repeat for 2 months
-- [ ] Content review workflow: `verified: true` only after human check; an `npm run content:report` lists unverified entries
-- [ ] Resolve deferred issues D2 (source accuracy) and D3 (Divine Name policy), below
-- [ ] Content tests extended: license field required; no duplicate texts
+**Decisions already made (2026-11-21, owner), see ADR-010 and ADR-011:**
+- **Source:** Sefaria. Import at **build time** into committed JSON. The app never calls Sefaria at runtime.
+- **Later:** a full mirror of Sefaria on the owner's server with a monthly sync (backlog). The v0.5 import script should be written so it can later read from that mirror instead of the public API (a pluggable fetch source).
+- **Cantillation (te'amim):** keep them in imported content. A **settings toggle** shows or hides them (default: hidden). A cantillation-reading learning track comes later, not now.
+- **Divine Name:** a **settings option** with three choices: abbreviated ה׳ (**default**), full as in the source, or יְיָ. Content stores the source form; the transformation happens at render time.
+- **Sefaria access:** approved. Environment "Torah Study" allows `sefaria.org` / `www.sefaria.org` (verified working).
+
+**What we know about Sefaria (checked 2026-11-21):**
+- `GET https://www.sefaria.org/api/v3/texts/{ref}?version=hebrew&version=english` returns `versions[]`, each with `language`, `versionTitle`, `license` and `text`. Per-book version list: `GET /api/texts/versions/{Book_Title}`.
+- Tanakh Hebrew "Miqra according to the Masorah": **CC-BY-SA**. Includes te'amim, meteg, qamats qatan (U+05C7), and writes the Name with vowels (e.g. `יְהֹוָ֥ה`, so match every pointed variant, not one spelling).
+- Default English Tanakh "THE JPS TANAKH: Gender-Sensitive Edition": **CC-BY-NC**, with HTML markup (`<span>`, `<b>`, `<small>`) that must be stripped.
+- Siddur Ashkenaz versions: Metsudah (he + en) **CC-BY**; "Daat Siddur Ashkenaz" (he) **Public Domain**; Singer 1915 (en) **Public Domain**; Sefaria Community Translation (en) **CC0**. Siddur Sim Shalom and several others are "unknown" → **excluded**.
+
+**Tasks**
+- [ ] ADR-010 / ADR-011 are written (done in this commit); keep them current if anything changes
+- [ ] **License policy:** allow `Public Domain`, `CC0`, `CC-BY`, `CC-BY-SA`; allow `CC-BY-NC` (fine for this personal, non-commercial app, but flag it in the content report); reject `unknown` and anything else. Every entry stores `license`, `versionTitle`, `sefariaRef`, `sefariaUrl`, `importedAt`
+- [ ] **Import script** `scripts/import-sefaria.ts`: a list of refs (in a checked-in manifest, e.g. `packages/content/sefaria-manifest.json`) → fetch → sanitize (strip HTML, normalize whitespace) → keep te'amim → write `packages/content/data/*.json`. Idempotent; reports what changed; never overwrites `verified: true` entries without a flag
+- [ ] **Core (pure) text transforms** with tests: `stripCantillation(text)` (te'amim U+0591–U+05AF plus meteg/sof pasuq handling: decide and document; keep nikkud); `applyDivineName(text, mode)` covering all pointed/unpointed variants of the Tetragrammaton
+- [ ] **Profile fields:** `showCantillation: boolean` (default false), `divineName: 'abbreviated' | 'full' | 'yud_yud'` (default 'abbreviated'). Enum arrays in `models.ts`; `parseUserProfile` defaults missing fields so saved v0.4 profiles keep working; option labels in `ui-strings.json` and `/v1/options`
+- [ ] **Apply at render time** in the API (daily study and Siddur) next to the language mode, so clients stay dumb
+- [ ] **Open questions to settle and record:** (a) transliteration and English when abbreviated, e.g. "Adonai" → "Hashem"? Recommendation: Hebrew follows the setting, transliteration uses "Adonai" for full/yud-yud and "Hashem" for abbreviated, English is left as the translation renders it; (b) other Divine Names (אֱלֹהִים etc.): out of scope unless the owner asks
+- [ ] **Siddur:** complete Pesukei Dezimra in Ashkenaz order (Hebrew: Metsudah or Daat; English: Metsudah, Singer or Community; choose and record), then Shema and its Blessings, then Amidah. Replace the hand-written seed units with imported ones (same ids where they exist, so progress keeps working)
+- [ ] **Musar:** sequential Mesillat Yesharim path (chapter by chapter; check which versions are openly licensed) + Pirkei Avot
+- [ ] **Tanakh pool:** at least 60 units so rotation doesn't repeat for two months
+- [ ] Resolve deferred D2: replace or verify the Mesillat Yesharim seed quote; cite Chagigah 12a / Bereishit Rabbah 3:6 for the hidden-light unit
+- [ ] Commentary and kavannah prompts on imported units stay **owner-reviewed**. An LLM may draft them, but they're marked `verified: false` until the owner approves
+- [ ] `npm run content:report`: counts by type, unverified entries, NC-licensed entries, missing fields
+- [ ] Content tests: required license/provenance fields; allowed licenses only; no HTML left in text; te'amim present only where the source has them
+- [ ] Web: Settings gets the cantillation toggle and Divine Name selector; Hebrew font check with te'amim (Noto Serif Hebrew supports them; verify visually)
+- [ ] Attribution: a simple "Sources & licenses" screen or footer listing versions used (required by CC-BY/CC-BY-SA)
 
 ## v0.6.0: AI Study Coach
 
@@ -157,6 +179,8 @@ Updated 2026-11-21: the owner has a server and will set it up from a computer. D
 - Flesh out Hasidic, Orthodox, Modern Orthodox and Reform configs, personas and content
 - Kabbalah path and Halachah path as sequential tracks (definitions exist in `packages/core/src/paths.ts`)
 - Real Hebrew morphological analysis for shoresh/POS (replace lookup tables)
+- **Full Sefaria mirror on the owner's server with a monthly sync** (owner decision 2026-11-21; ADR-010). The import script then reads from the mirror
+- **Cantillation reading track:** learn the te'amim and trope (owner decision 2026-11-21; not yet scheduled)
 - Audio: recorded or TTS pronunciation of Hebrew lines
 - Calendar awareness: parashah of the week, holidays, Hebrew date (e.g. `@hebcal/core`)
 - Native iOS app, **only** if a PWA limitation actually blocks use
@@ -171,7 +195,7 @@ These were flagged and intentionally deferred. Each has a target milestone.
 |---|---|---|
 | D1 | `docs/user-personas.md` contains the owner's name and personal observance details. Low risk once repos are private; genericize before ever making the repo public. | before any public release |
 | D2 | **Source accuracy.** The Mesillat Yesharim quote in `study-units.json` is unverified and may be a paraphrase; the hidden-light unit should cite Chagigah 12a / Bereishit Rabbah 3:6. All seed content is `verified: false`. | v0.5.0 |
-| D3 | **Divine Name display.** Content currently shows the Tetragrammaton fully pointed (e.g. Tehillim 145:9). Decide a policy (e.g. render as ה׳ or יְיָ, perhaps per framework) and enforce it in content tests. | v0.5.0 |
+| D3 | **Divine Name display.** ✅ Decided 2026-11-21: a user setting with abbreviated ה׳ (default), full, or יְיָ (ADR-011). Implementation in v0.5.0. | v0.5.0 |
 | D4 | **"AI Rabbi" framing.** An AI giving practical halachic rulings under the title "Rabbi" carries trust and accuracy risk. Rename to a study companion, state plainly that it is not a posek, and send practical psak questions to the user's own rabbi. | v0.6.0 (before the coach ships) |
 | D5 | `docs/handoff.md` is a stale chat-handoff note (marked historical). Delete or fold into history. | v0.5.0 |
 
@@ -179,6 +203,6 @@ These were flagged and intentionally deferred. Each has a target milestone.
 
 | Topic | Options | Decide by |
 |---|---|---|
-| Text source & licensing | Sefaria (per-text licenses) vs. manual entry | v0.5.0 |
+| Text source & licensing | ✅ Sefaria, build-time import; license policy in v0.5.0 tasks (ADR-010) | decided |
 | Hosting | Owner's own server (decided). Remaining details: OS, process manager, reverse proxy, domain | when the owner is at a computer |
 | Repo name | Rename `torah-study-shared` → `torah-study` (GitHub Settings → General → Repository name; redirects are automatic) | any time |

@@ -12,7 +12,7 @@ A personal Torah study app: a personalized daily study (Chok LeYisrael style), a
 |---|---|
 | Understand what's built and what's next | [docs/DEVELOPMENT_PLAN.md](docs/DEVELOPMENT_PLAN.md) |
 | Understand how the code is structured | [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) |
-| Work on this as an AI agent / new developer | [AGENTS.md](AGENTS.md) |
+| Work on this as an AI agent / new developer | [AGENTS.md](AGENTS.md), then [docs/NEXT_SESSION.md](docs/NEXT_SESSION.md) |
 | Release a version | [docs/VERSIONING.md](docs/VERSIONING.md) |
 | Know what tests exist and what each release requires | [docs/TESTING.md](docs/TESTING.md) |
 | Add or edit study content | [docs/CONTENT.md](docs/CONTENT.md) |
