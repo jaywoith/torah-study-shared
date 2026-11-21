@@ -4,8 +4,25 @@ All notable changes. Format: [Keep a Changelog](https://keepachangelog.com); ver
 
 ## [Unreleased]
 
+## [0.4.0-rc.1] – 2026-11-21 — Persistence & Progress
+
+### Added
+- **Server-side persistence (SQLite):** profile and progress survive across devices and browsers. Migrations run automatically on start (ADR-008).
+- **Sign-in:** single-user passphrase (`APP_PASSPHRASE`), signed httpOnly session cookie, login rate limit, sign-out (ADR-009). Production refuses to start without secrets.
+- **Daily study "Mark done"** per unit, with "n of m done". Works for any date.
+- Endpoints: `/v1/auth/{session,login,logout}`, `GET/PUT /v1/profile`, `GET /v1/progress`, `POST/DELETE /v1/progress/complete`, `POST /v1/progress/reset`, `POST /v1/progress/import`.
+- `StudyUnit.contentId` (stable content id for progress).
+- One-time import of v0.3 browser-stored profile/Siddur progress to the server.
+- `npm run db:backup` (online-safe backup with retention), `npm run start:prod` (API serves the built web app), `.env.example`.
+- Tests: migrations, repository, auth, progress/profile endpoints, web login/done/Siddur screens; e2e covers sign-in and persistence across reloads. 141 unit/integration tests + 1 e2e.
+
 ### Changed
-- Plan: hosting (deploy + minimal auth) pulled forward ahead of the 0.3.0 release, because the owner is phone-only. See DEVELOPMENT_PLAN.md.
+- `/v1/siddur/next` uses saved progress when `completed` is not passed.
+- The web Siddur path and profile are now server-backed (no longer `localStorage`).
+- Malformed JSON bodies return 400 instead of 500.
+- Removed the `cors` dependency: the web app is same-origin (dev proxy, or served by the API).
+- Node 22+ required (`process.loadEnvFile`).
+- Plan: hosting will be on the owner's own server, set up with the owner. 0.3.0 was not tagged; its phone check is folded into 0.4.0.
 
 ## [0.3.0-rc.1] – 2026-11-21
 

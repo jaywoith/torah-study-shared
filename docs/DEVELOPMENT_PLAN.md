@@ -1,7 +1,7 @@
 # Development Plan
 
-**Current version:** 0.3.0-rc.1
-**Current milestone:** v0.3.0, Web App Shell → **next work: hosting (pulled forward, see below)**
+**Current version:** 0.4.0-rc.1
+**Current milestone:** v0.4.0, Persistence & Progress (rc.1 cut; waiting on owner phone check) → next: v0.5.0 Real Content. Hosting on the owner's server whenever the owner is at a computer (see "Hosting" under v0.3.0).
 **Last updated:** 2026-11-21
 
 This is the master plan. Every milestone is a minor version (pre-1.0). Tick the boxes as work lands; an agent picking up the project starts at the first unchecked task in the current milestone. Release gates (G1–G3) are defined in [TESTING.md](TESTING.md#release-gates).
@@ -20,8 +20,8 @@ This is the master plan. Every milestone is a minor version (pre-1.0). Tick the 
 |---|---|---|---|
 | 0.1.0 | Prototype | Five-repo skeleton, Conservative seed content | — |
 | **0.2.0** | **Foundation** ✅ | Monorepo, bugs fixed, content as data, 87 tests, CI, docs | G1 |
-| 0.3.0 | Web App Shell 🟡 rc.1 | Usable daily study + Siddur path in a browser | G2 |
-| 0.4.0 | Persistence & Progress | Profile and progress saved server-side; Siddur path remembers place | G2 |
+| 0.3.0 | Web App Shell ✅ (superseded by 0.4.0-rc.1) | Usable daily study + Siddur path in a browser | G2 |
+| 0.4.0 | Persistence & Progress 🟡 rc.1 | Profile and progress saved server-side; sign-in; backups | G2 |
 | 0.5.0 | Real Content | Verified texts from a licensed source; full Pesukei Dezimra; Musar sequence | G2 |
 | 0.6.0 | AI Study Coach | Real LLM coach bound by shared personas and constraints, with an eval suite | G3 |
 | 0.7.0 | Review & Check-ins | Spaced-repetition review from reviewItems; weekly check-in | G2 |
@@ -66,36 +66,42 @@ This is the master plan. Every milestone is a minor version (pre-1.0). Tick the 
 - [x] Playwright smoke test against a production build: daily study → next day differs → Siddur advances and persists across reload → English mode removes Hebrew
 - [x] CI runs web tests + Playwright smoke (separate `e2e` job)
 - [x] Accessibility: `lang="he"` / `dir="rtl"` on Hebrew, labelled controls, visible focus rings, keyboard navigable
-- [ ] **Owner:** run the G2 manual checklist (docs/TESTING.md) on a phone, then release 0.3.0. **Blocked on hosting:** the owner is working from a phone only, so the check will happen on the hosted app.
+- [x] ~~Owner phone check, then release 0.3.0~~. Folded into the 0.4.0 release: 0.3.0 was never tagged, and its G2 check happens on 0.4.0.
 
-### Pulled forward: Hosting (do this next, before releasing 0.3.0)
+### Hosting (on the owner's own server, done with the owner at a computer)
 
-Decided 2026-11-21 by the owner. The owner works from a phone only right now, so the app needs a stable HTTPS URL before 0.3.0 can be checked. This pulls the deploy parts of v0.8.0 and the minimal auth from v0.4.0 forward. PWA/offline stays in v0.8.0.
+Updated 2026-11-21: the owner has a server and will set it up from a computer. Do this **with** the owner, since server details (OS, reverse proxy, domain) are needed. PWA/offline stays in v0.8.0.
 
-- [ ] Hosting ADR. The owner has no always-on home machine in this workflow, so a small cloud host (Fly.io, Render, Railway or similar) is the likely choice. Compare cost, free tier, sleep/cold-start behavior, and how deploys are triggered from GitHub
-- [ ] API serves the built web app (`apps/web/dist`) as static files from the same origin, so there's one service, one URL and no CORS
-- [ ] Minimal single-user auth: passphrase from an env var, a login screen, and a signed httpOnly session cookie. Required, because the URL will be public
-- [ ] Production start command and health check (`/health`); `Dockerfile` or platform config checked in
-- [ ] Deploy on merge to `main` after CI passes (GitHub Actions or platform integration). Secrets live in the platform, never in the repo
-- [ ] Docs: `docs/DEPLOYMENT.md` (how to deploy, rotate the passphrase, roll back, view logs); README link
-- [ ] Tests: auth middleware (API tests), login flow (Playwright smoke)
-- [ ] Owner opens the URL on the phone → G2 checklist → release 0.3.0
-- [ ] Push the pending git tags (`v0.2.0`, and later `v0.3.0`). Tag pushes were refused by the earlier cloud session's git proxy (HTTP 403); the tags exist only in that session
+- [x] API serves the built web app (`apps/web/dist`) from the same origin: one service, one URL, no CORS (`npm run start:prod`)
+- [x] Single-user auth: passphrase env var, login screen, signed httpOnly session cookie, login rate limit (done in v0.4.0)
+- [x] Health check `/health`; `.env.example` lists every variable; production refuses to start without secrets
+- [ ] With the owner: record the server details (OS, Node availability, reverse proxy such as Caddy or nginx, domain/HTTPS) in an ADR
+- [ ] Process manager (systemd unit or Docker Compose, whichever fits the server), checked in under `deploy/`
+- [ ] HTTPS via the reverse proxy; set `TRUST_PROXY`
+- [ ] Scheduled `npm run db:backup` (cron or systemd timer), with copies kept off the server
+- [ ] Deploy procedure: a pull-and-restart script to start with; optionally a GitHub Actions deploy on merge to `main` after CI
+- [ ] `docs/DEPLOYMENT.md`: deploy, rotate passphrase/secret, roll back, restore a backup, view logs
+- [ ] Owner opens the URL on the phone → G2 checklist → release 0.4.0
+- [ ] Push the pending git tags (`v0.2.0`, then `v0.4.0`). Tag pushes were refused by the earlier cloud session's git proxy (HTTP 403); push from the owner's computer or a session that allows it
 
 **Done when:** gate G2 passes and the owner can use it for a morning session on a phone browser.
 
-## v0.4.0: Persistence & Progress
+## v0.4.0: Persistence & Progress (current, 0.4.0-rc.1 cut)
 
 **Goal:** the app remembers who you are and where you are.
 
-- [ ] SQLite via a light library (better-sqlite3 or Drizzle + SQLite); migrations checked into repo
-- [ ] Tables: `profile`, `completed_units` (unit id, date, path), `review_results`
-- [ ] Single-user auth: passphrase → signed session cookie (enough for a private deployment; see ADR-006 when written)
-- [ ] Endpoints: `GET/PUT /v1/profile`, `POST /v1/progress/complete`, `GET /v1/progress`; `/v1/siddur/next` reads completed units from DB
-- [ ] Web: replace `localStorage` profile/progress with API; one-time import of existing local data
-- [ ] Daily study history: revisit past days; mark units done
-- [ ] Backup: `npm run db:backup` (copy of the SQLite file with a timestamp)
-- [ ] Tests: repository layer against a temp SQLite file; API tests for new endpoints
+- [x] SQLite via better-sqlite3; append-only migrations in `apps/api/src/db/migrations.ts`, applied on start (ADR-008)
+- [x] Tables: `profile` (single row, JSON), `completed_units` (path, unit id, study date). `review_results` deferred to v0.7.0, when its shape is known
+- [x] Single-user auth: `APP_PASSPHRASE` → signed httpOnly session cookie (30 days), login rate limit, sign-out. Off when unset in development; required in production (ADR-009)
+- [x] Endpoints: `GET/PUT /v1/profile`; `GET /v1/progress`; `POST/DELETE /v1/progress/complete`; `POST /v1/progress/reset`; `POST /v1/progress/import`; `/v1/siddur/next` reads completed units from the DB
+- [x] `StudyUnit.contentId` added, so progress is recorded against stable content ids
+- [x] Web: login screen; profile and progress via API; one-time import of v0.3 browser data, then the browser copy is cleared
+- [x] Daily study: "Mark done" per unit, "n of m done", works for past days via date navigation
+- [x] Backup: `npm run db:backup` (online-safe SQLite backup, keeps newest 30, `BACKUP_DIR` for off-machine targets)
+- [x] Tests: migrations and repository (in-memory SQLite), auth (tokens, rate limit, forged cookies, production config), progress/profile endpoints, web screens, and e2e sign-in → progress persists across reload → sign-out
+- [ ] **Owner:** G2 phone check once hosted (see Hosting under v0.3.0), then release 0.4.0
+
+**Done when:** gate G2 passes on the hosted app.
 
 ## v0.5.0: Real Content
 
@@ -167,12 +173,12 @@ These were flagged and intentionally deferred. Each has a target milestone.
 | D2 | **Source accuracy.** The Mesillat Yesharim quote in `study-units.json` is unverified and may be a paraphrase; the hidden-light unit should cite Chagigah 12a / Bereishit Rabbah 3:6. All seed content is `verified: false`. | v0.5.0 |
 | D3 | **Divine Name display.** Content currently shows the Tetragrammaton fully pointed (e.g. Tehillim 145:9). Decide a policy (e.g. render as ה׳ or יְיָ, perhaps per framework) and enforce it in content tests. | v0.5.0 |
 | D4 | **"AI Rabbi" framing.** An AI giving practical halachic rulings under the title "Rabbi" carries trust and accuracy risk. Rename to a study companion, state plainly that it is not a posek, and send practical psak questions to the user's own rabbi. | v0.6.0 (before the coach ships) |
-| D5 | `docs/handoff.md` is a stale chat-handoff note (marked historical). Delete or fold into history. | v0.3.0 |
+| D5 | `docs/handoff.md` is a stale chat-handoff note (marked historical). Delete or fold into history. | v0.5.0 |
 
 ## Open decisions
 
 | Topic | Options | Decide by |
 |---|---|---|
 | Text source & licensing | Sefaria (per-text licenses) vs. manual entry | v0.5.0 |
-| Hosting | Tailscale home server vs. small cloud host | v0.8.0 |
+| Hosting | Owner's own server (decided). Remaining details: OS, process manager, reverse proxy, domain | when the owner is at a computer |
 | Repo name | Rename `torah-study-shared` → `torah-study` (GitHub Settings → General → Repository name; redirects are automatic) | any time |

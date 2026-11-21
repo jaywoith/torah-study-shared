@@ -1,11 +1,19 @@
 /**
  * Typed client for the API. Relative URLs: Vite proxies /v1 to the API in dev/preview.
  * Types are imported type-only from shared packages (erased at build time).
+ * The session cookie is httpOnly and sent automatically (same origin).
  */
 import type {
   ApiError,
+  AuthSessionResponse,
+  CompleteRequest,
   DailyStudyResponse,
+  ImportRequest,
+  ImportResponse,
   OptionsResponse,
+  ProfileResponse,
+  ProgressPath,
+  ProgressResponse,
   SiddurNextResponse,
   UserProfile,
 } from '@torah/core';
@@ -20,28 +28,45 @@ export class ApiRequestError extends Error {
   }
 }
 
+let onUnauthorized: () => void = () => {};
+/** Called whenever a request returns 401 (e.g. the session expired); App shows the login screen. */
+export function setUnauthorizedHandler(fn: () => void) {
+  onUnauthorized = fn;
+}
+
 async function request<T>(path: string, init?: RequestInit): Promise<T> {
   const res = await fetch(path, {
+    credentials: 'same-origin',
     ...init,
     headers: { 'Content-Type': 'application/json', ...(init?.headers ?? {}) },
   });
   const body = await res.json().catch(() => ({ error: `HTTP ${res.status}` }));
-  if (!res.ok) throw new ApiRequestError(res.status, body as ApiError);
+  if (!res.ok) {
+    if (res.status === 401 && !path.startsWith('/v1/auth/')) onUnauthorized();
+    throw new ApiRequestError(res.status, body as ApiError);
+  }
   return body as T;
 }
 
+const json = (method: string, body: unknown): RequestInit => ({ method, body: JSON.stringify(body) });
+
 export const api = {
+  session: () => request<AuthSessionResponse>('/v1/auth/session'),
+  login: (passphrase: string) => request<{ ok: true }>('/v1/auth/login', json('POST', { passphrase })),
+  logout: () => request<{ ok: true }>('/v1/auth/logout', json('POST', {})),
+
   uiStrings: () => request<UiStrings>('/v1/ui-strings'),
   options: () => request<OptionsResponse>('/v1/options'),
+
+  getProfile: () => request<ProfileResponse>('/v1/profile'),
+  saveProfile: (profile: UserProfile) => request<ProfileResponse>('/v1/profile', json('PUT', profile)),
+
   dailyStudy: (profile: UserProfile, date: string) =>
-    request<DailyStudyResponse>('/v1/study/daily', { method: 'POST', body: JSON.stringify({ profile, date }) }),
-  /** Resolves to null when the path is complete or the user has no Siddur interest (404). */
-  siddurNext: async (profile: UserProfile, completed: string[]): Promise<SiddurNextResponse | null> => {
-    const params = new URLSearchParams({
-      completed: completed.join(','),
-      interests: profile.interests.join(','),
-      languageMode: profile.languageMode,
-    });
+    request<DailyStudyResponse>('/v1/study/daily', json('POST', { profile, date })),
+
+  /** Completed units come from the server. Resolves to null when the path is complete or there is no Siddur interest (404). */
+  siddurNext: async (profile: UserProfile): Promise<SiddurNextResponse | null> => {
+    const params = new URLSearchParams({ interests: profile.interests.join(','), languageMode: profile.languageMode });
     try {
       return await request<SiddurNextResponse>(`/v1/siddur/next?${params}`);
     } catch (err) {
@@ -49,4 +74,13 @@ export const api = {
       throw err;
     }
   },
+
+  progress: (from?: string, to?: string) => {
+    const params = new URLSearchParams({ ...(from ? { from } : {}), ...(to ? { to } : {}) });
+    return request<ProgressResponse>(`/v1/progress?${params}`);
+  },
+  complete: (body: CompleteRequest) => request<{ ok: true }>('/v1/progress/complete', json('POST', body)),
+  uncomplete: (body: CompleteRequest) => request<{ ok: true }>('/v1/progress/complete', json('DELETE', body)),
+  resetPath: (path: ProgressPath) => request<{ ok: true; removed: number }>('/v1/progress/reset', json('POST', { path })),
+  importLocal: (body: ImportRequest) => request<ImportResponse>('/v1/progress/import', json('POST', body)),
 };

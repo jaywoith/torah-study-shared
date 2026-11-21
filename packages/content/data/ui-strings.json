@@ -1,6 +1,6 @@
 {
   "meta": {
-    "version": "0.3.0-rc.1",
+    "version": "0.4.0-rc.1",
     "description": "Shared UI strings that must stay consistent across clients. Served by the API at GET /v1/ui-strings. Platform-specific chrome stays in each client."
   },
   "common": {
@@ -44,7 +44,10 @@
     "minutes": "{n} min",
     "sessionSummary": "{n} of {budget} min",
     "reviewPrompt": "Review",
-    "chooseDate": "Choose date"
+    "chooseDate": "Choose date",
+    "markDone": "Mark done",
+    "done": "Done",
+    "doneSummary": "{done} of {total} done"
   },
   "coach": {
     "weeklyCheckIn": "Weekly Check-in",
@@ -101,5 +104,13 @@
       "halachah": "Halachah",
       "commentary": "Commentary"
     }
+  },
+  "auth": {
+    "title": "Sign in",
+    "passphrase": "Passphrase",
+    "submit": "Sign in",
+    "invalid": "Incorrect passphrase.",
+    "tooMany": "Too many attempts. Try again in a few minutes.",
+    "logout": "Sign out"
   }
 }

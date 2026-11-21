@@ -41,7 +41,17 @@ Data, not code. `data/study-units.json` (non-Siddur units with selection metadat
 Personas per framework, system prompts (`src/system-prompts/*.md`), and `getConstraintsForFramework`. Prompt changes are reviewed like code and noted in the CHANGELOG.
 
 ### `apps/api` (`@torah/api`)
-Express. `src/app.ts` exports `createApp({ library? })` (tests inject fixture content). `src/index.ts` only listens. Routes are in `src/routes/`. It runs with `tsx` (no build step); that's fine for personal use, and a bundling step can be added if deployment needs it.
+Express, run with `tsx` (no build step).
+
+| File | Responsibility |
+|---|---|
+| `src/app.ts` | `createApp({ db, library?, auth?, trustProxy?, webDist? })`. Tests pass an in-memory db and fixture config. Public routes: `/health`, `/v1/auth/*`, `/v1/ui-strings`, `/v1/options`. Everything else under `/v1` passes `requireAuth`. Serves `apps/web/dist` at `/` if built. |
+| `src/index.ts` | Loads `.env`, config, opens the DB, listens. |
+| `src/config.ts` | Env-based paths and settings (`DATABASE_PATH`, `WEB_DIST`, `TRUST_PROXY`). |
+| `src/auth.ts` | Passphrase login, HMAC-signed session cookie, rate limit, `requireAuth`. |
+| `src/db/` | `openDatabase` (better-sqlite3, WAL) + `migrate`; `migrations.ts` (append-only); `repository.ts` (all SQL). |
+| `src/routes/` | `study`, `siddur`, `profile`, `progress`, `options`, `ui`, `coach`. |
+| `scripts/backup.ts` | `npm run db:backup`. |
 
 ### `apps/web` (`@torah/web`)
 React + Vite + TypeScript, phone-first. Becomes an installable PWA in v0.8.0.
@@ -50,11 +60,11 @@ React + Vite + TypeScript, phone-first. Becomes an installable PWA in v0.8.0.
 |---|---|
 | `src/api.ts` | Typed fetch client for `/v1/*` (relative URLs; Vite proxies to the API in dev/preview). |
 | `src/strings.tsx` | Context providing `/v1/ui-strings` and `/v1/options`; `fmt()` for `{placeholder}` strings. |
-| `src/storage.ts` | Safe `localStorage` wrappers; profile + Siddur progress until v0.4.0; default = model user. |
+| `src/storage.ts` | Reads v0.3 browser data once for import; default profile = model user. |
 | `src/text.ts` | Sentence segmentation and interleaving for the Mixed layout. |
 | `src/dates.ts` | Local-calendar ISO dates. The web always sends an explicit date; the API's default is UTC. |
 | `src/components/` | `UnitText` (language layouts), `UnitCard` (one study/Siddur unit). |
-| `src/screens/` | `TodayScreen`, `SiddurScreen`, `SettingsScreen`. Routing is a hash (`#/today`, `#/siddur`, `#/settings`) with no router library. |
+| `src/screens/` | `LoginScreen`, `TodayScreen`, `SiddurScreen`, `SettingsScreen`. Routing is a hash (`#/today`, `#/siddur`, `#/settings`) with no router library. |
 
 The web imports **types only** from `@torah/core` (including the HTTP contract in `api-types.ts`) and `@torah/content`. No shared runtime code is bundled into the client.
 
@@ -74,6 +84,13 @@ The web imports **types only** from `@torah/core` (including the HTTP contract i
 
 Clients cache `/v1/ui-strings` and may bundle a fallback copy for offline use. They never hard-code shared labels.
 
-## Data that doesn't exist yet
+## Data and state
 
-User profile and progress are currently supplied by the client on each request. Server-side persistence (SQLite) arrives in v0.4.0. Until then the API is stateless.
+- **Server (SQLite, one file, default `data/torah-study.db`):** the profile (single row) and completed units (`siddur` path, plus `daily` units per date). The schema is in `apps/api/src/db/migrations.ts`. Back it up with `npm run db:backup`.
+- **Content:** git (JSON). Never in the database.
+- **Browser:** only the httpOnly session cookie. The v0.3 `localStorage` profile/progress is imported to the server once and then removed.
+- **Stateless pieces:** `POST /v1/study/daily` still takes the profile in the body (the web sends the saved one), which keeps generation pure and testable.
+
+## Security model
+
+Single user. When `APP_PASSPHRASE` is set, every non-public route needs a valid session cookie: `<expiry>.<HMAC-SHA256>` signed with `SESSION_SECRET`, httpOnly, SameSite=Lax, and Secure in production. Failed logins are limited to 5 per 15 minutes per IP (set `TRUST_PROXY` behind a reverse proxy so the real IP is seen). Changing `SESSION_SECRET` signs everyone out. HTTPS is the reverse proxy's job.

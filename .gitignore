@@ -3,7 +3,10 @@ dist/
 coverage/
 .env
 .env.*
+!.env.example
 *.log
 .DS_Store
 test-results/
 playwright-report/
+data/
+backups/

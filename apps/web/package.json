@@ -1,6 +1,6 @@
 {
   "name": "@torah/web",
-  "version": "0.3.0-rc.1",
+  "version": "0.4.0-rc.1",
   "private": true,
   "description": "Web client (React + Vite). Talks only to the API; imports types only from shared packages.",
   "type": "module",

@@ -2,10 +2,20 @@ import { useState } from 'react';
 import type { Interest, UserProfile } from '@torah/core';
 import { useText } from '../strings';
 
-export function SettingsScreen({ profile, onSave }: { profile: UserProfile; onSave: (p: UserProfile) => void }) {
+export function SettingsScreen({
+  profile,
+  onSave,
+  onLogout,
+}: {
+  profile: UserProfile;
+  onSave: (p: UserProfile) => Promise<void> | void;
+  /** Shown only when the server requires sign-in. */
+  onLogout?: () => void;
+}) {
   const { strings, options } = useText();
   const [draft, setDraft] = useState<UserProfile>(profile);
   const [saved, setSaved] = useState(false);
+  const [error, setError] = useState(false);
 
   const set = <K extends keyof UserProfile>(key: K, value: UserProfile[K]) => {
     setSaved(false);
@@ -34,10 +44,15 @@ export function SettingsScreen({ profile, onSave }: { profile: UserProfile; onSa
 
   return (
     <form
-      onSubmit={(e) => {
+      onSubmit={async (e) => {
         e.preventDefault();
-        onSave(draft);
-        setSaved(true);
+        setError(false);
+        try {
+          await onSave(draft);
+          setSaved(true);
+        } catch {
+          setError(true);
+        }
       }}
     >
       <h1>{strings.settings.title}</h1>
@@ -79,8 +94,18 @@ export function SettingsScreen({ profile, onSave }: { profile: UserProfile; onSa
             {strings.settings.saved}
           </span>
         )}
+        {error && (
+          <span className="error" role="alert">
+            {strings.common.errorGeneric}
+          </span>
+        )}
       </div>
       <p className="muted small">{strings.settings.unverifiedNote}</p>
+      {onLogout && (
+        <button type="button" className="link" onClick={onLogout}>
+          {strings.auth.logout}
+        </button>
+      )}
     </form>
   );
 }

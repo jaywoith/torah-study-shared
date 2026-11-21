@@ -1,7 +1,6 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import type { SiddurNextResponse, UserProfile } from '@torah/core';
 import { api } from '../api';
-import { KEYS, readJson, writeJson } from '../storage';
 import { fmt, useText } from '../strings';
 import { UnitCard } from '../components/UnitCard';
 
@@ -9,30 +8,38 @@ const SIDDUR_INTERESTS = ['siddur', 'kavannah', 'prayerbook_hebrew'];
 
 export function SiddurScreen({ profile }: { profile: UserProfile }) {
   const { strings } = useText();
-  const [completed, setCompleted] = useState<string[]>(() => readJson<string[]>(KEYS.siddurCompleted, []));
   const [next, setNext] = useState<SiddurNextResponse | null | undefined>(undefined);
   const [error, setError] = useState<string | null>(null);
+  const [busy, setBusy] = useState(false);
   const hasInterest = profile.interests.some((i) => SIDDUR_INTERESTS.includes(i));
 
-  useEffect(() => {
-    if (!hasInterest) return;
-    let cancelled = false;
+  const load = useCallback(() => {
     setError(null);
-    api
-      .siddurNext(profile, completed)
-      .then((n) => !cancelled && setNext(n))
-      .catch(() => !cancelled && setError(strings.common.errorGeneric));
-    return () => {
-      cancelled = true;
-    };
-  }, [profile, completed, hasInterest, strings]);
+    return api
+      .siddurNext(profile)
+      .then(setNext)
+      .catch(() => setError(strings.common.errorGeneric));
+  }, [profile, strings]);
 
-  const update = (ids: string[]) => {
-    writeJson(KEYS.siddurCompleted, ids);
-    setCompleted(ids);
+  useEffect(() => {
+    if (hasInterest) load();
+  }, [hasInterest, load]);
+
+  const act = async (fn: () => Promise<unknown>) => {
+    setBusy(true);
+    try {
+      await fn();
+      await load();
+    } catch {
+      setError(strings.common.errorGeneric);
+    } finally {
+      setBusy(false);
+    }
   };
 
   if (!hasInterest) return <p className="muted">{strings.siddur.noInterest}</p>;
+
+  const anyCompleted = next === null || (next?.completedCount ?? 0) > 0;
 
   return (
     <section aria-labelledby="siddur-heading">
@@ -50,17 +57,23 @@ export function SiddurScreen({ profile }: { profile: UserProfile }) {
             unit={{ ...next.unit, title: `${next.unit.section} – ${next.unit.blessingOrLine}` }}
             display={next.display}
           >
-            <button type="button" className="primary" onClick={() => update([...completed, next.unit.id])}>
+            <button
+              type="button"
+              className="primary"
+              disabled={busy}
+              onClick={() => act(() => api.complete({ path: 'siddur', unitId: next.unit.id }))}
+            >
               {strings.siddur.markComplete}
             </button>
           </UnitCard>
         </>
       )}
-      {completed.length > 0 && (
+      {anyCompleted && (
         <button
           type="button"
           className="link danger"
-          onClick={() => window.confirm(strings.siddur.resetConfirm) && update([])}
+          disabled={busy}
+          onClick={() => window.confirm(strings.siddur.resetConfirm) && act(() => api.resetPath('siddur'))}
         >
           {strings.siddur.resetProgress}
         </button>

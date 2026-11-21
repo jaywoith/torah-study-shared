@@ -10,19 +10,21 @@ import {
   getLanguageDisplay,
   getNextSiddurUnit,
 } from '@torah/core';
+import type { Repository } from '../db/repository';
 
 const csv = (value: unknown) =>
   typeof value === 'string' ? value.split(',').map((s) => s.trim()).filter(Boolean) : [];
 
 /**
- * GET /v1/siddur/next?completed=a,b&interests=siddur,kavannah&languageMode=mixed
- * Returns the first Siddur unit (in path order) not in `completed`, plus its position.
+ * GET /v1/siddur/next?interests=siddur,kavannah&languageMode=mixed[&completed=a,b]
+ * Returns the first Siddur unit (in path order) not yet completed, plus its position.
+ * Completed units come from the database unless `completed` is passed explicitly.
  */
-export function createSiddurRouter(library: ContentLibrary) {
+export function createSiddurRouter(library: ContentLibrary, repo: Repository) {
   const router = Router();
 
   router.get('/next', (req: Request, res: Response) => {
-    const completedIds = csv(req.query.completed);
+    const completedIds = req.query.completed === undefined ? repo.getSiddurCompleted() : csv(req.query.completed);
     const interestsRaw = req.query.interests === undefined ? ['siddur', 'kavannah'] : csv(req.query.interests);
     const invalid = interestsRaw.filter((i) => !(INTERESTS as readonly string[]).includes(i));
     if (invalid.length > 0) {

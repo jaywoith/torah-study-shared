@@ -1,11 +1,11 @@
 /**
- * localStorage helpers. Every access is wrapped: storage can be unavailable
- * (private mode, blocked site data) and the app must still work.
- * Profile and Siddur progress live here until server persistence in v0.4.0.
+ * Browser storage. Since v0.4.0 the profile and progress live on the server;
+ * these keys are read only once, to import data saved by v0.3 (see App.tsx).
+ * Every access is wrapped: storage can be unavailable (private mode, blocked site data).
  */
 import type { UserProfile } from '@torah/core';
 
-export const KEYS = {
+export const LEGACY_KEYS = {
   profile: 'torah-study:profile:v1',
   siddurCompleted: 'torah-study:siddur-completed:v1',
 } as const;
@@ -19,15 +19,23 @@ export function readJson<T>(key: string, fallback: T): T {
   }
 }
 
-export function writeJson(key: string, value: unknown): void {
+export function removeKeys(keys: string[]): void {
   try {
-    window.localStorage.setItem(key, JSON.stringify(value));
+    keys.forEach((k) => window.localStorage.removeItem(k));
   } catch {
-    /* storage unavailable: keep working in memory */
+    /* storage unavailable */
   }
 }
 
-/** The model user from docs/user-personas.md. Used until the owner saves a profile. */
+/** v0.3 data still in this browser, or null if there is nothing to import. */
+export function readLegacyData(): { profile?: UserProfile; siddurCompleted?: string[] } | null {
+  const profile = readJson<UserProfile | null>(LEGACY_KEYS.profile, null);
+  const siddurCompleted = readJson<string[]>(LEGACY_KEYS.siddurCompleted, []);
+  if (!profile && siddurCompleted.length === 0) return null;
+  return { ...(profile ? { profile } : {}), ...(siddurCompleted.length ? { siddurCompleted } : {}) };
+}
+
+/** The model user from docs/user-personas.md. Used until a profile is saved. */
 export const DEFAULT_PROFILE: UserProfile = {
   framework: 'masorti_conservative',
   level: 'intermediate',

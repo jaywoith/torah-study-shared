@@ -11,8 +11,10 @@ import type {
   LanguageDisplay,
   LanguageMode,
   LearningLevel,
+  ProgressPath,
   SiddurUnit,
   StudyLength,
+  UserProfile,
 } from './models';
 import type { ValidationResult } from './validation';
 
@@ -47,4 +49,46 @@ export interface OptionsResponse {
   interests: Option<Interest>[];
   studyLengths: (Option<StudyLength> & { minutes: number })[];
   languageModes: Option<LanguageMode>[];
+}
+
+/** GET /v1/auth/session */
+export interface AuthSessionResponse {
+  /** False when the server runs without APP_PASSPHRASE (local development). */
+  authRequired: boolean;
+  authenticated: boolean;
+}
+
+/** GET /v1/profile and PUT /v1/profile response. `null` until a profile is saved. */
+export interface ProfileResponse {
+  profile: UserProfile | null;
+}
+
+/** Body for POST and DELETE /v1/progress/complete. `date` (YYYY-MM-DD) is required for path "daily". */
+export interface CompleteRequest {
+  path: ProgressPath;
+  unitId: string;
+  date?: string;
+}
+
+export interface DailyCompletion {
+  date: string;
+  unitId: string;
+  completedAt: string;
+}
+
+/** GET /v1/progress?from=YYYY-MM-DD&to=YYYY-MM-DD */
+export interface ProgressResponse {
+  siddur: { completed: string[] };
+  daily: DailyCompletion[];
+}
+
+/** POST /v1/progress/import: one-time move of browser-stored data to the server. */
+export interface ImportRequest {
+  profile?: unknown;
+  siddurCompleted?: string[];
+}
+
+export interface ImportResponse {
+  importedProfile: boolean;
+  importedSiddur: number;
 }

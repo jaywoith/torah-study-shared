@@ -13,10 +13,20 @@ export interface CardUnit extends TextFields {
   reviewItems?: ReviewItem[];
 }
 
-export function UnitCard({ unit, display, children }: { unit: CardUnit; display: LanguageDisplay; children?: React.ReactNode }) {
+export function UnitCard({
+  unit,
+  display,
+  done,
+  children,
+}: {
+  unit: CardUnit;
+  display: LanguageDisplay;
+  done?: boolean;
+  children?: React.ReactNode;
+}) {
   const { strings } = useText();
   return (
-    <article className="card" data-testid="unit-card" data-unit-id={unit.id}>
+    <article className={done ? 'card done' : 'card'} data-testid="unit-card" data-unit-id={unit.id} data-done={done ? 'true' : undefined}>
       <header className="card-head">
         {unit.typeLabel && <span className="badge">{unit.typeLabel}</span>}
         {unit.estimatedMinutes !== undefined && (

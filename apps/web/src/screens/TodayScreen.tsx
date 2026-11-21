@@ -11,13 +11,17 @@ export function TodayScreen({ profile }: { profile: UserProfile }) {
   const [date, setDate] = useState(today);
   const [data, setData] = useState<DailyStudyResponse | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [done, setDone] = useState<Set<string>>(new Set());
 
   useEffect(() => {
     let cancelled = false;
     setError(null);
-    api
-      .dailyStudy(profile, date)
-      .then((d) => !cancelled && setData(d))
+    Promise.all([api.dailyStudy(profile, date), api.progress(date, date)])
+      .then(([d, p]) => {
+        if (cancelled) return;
+        setData(d);
+        setDone(new Set(p.daily.map((c) => c.unitId)));
+      })
       .catch(() => !cancelled && setError(strings.common.errorGeneric));
     return () => {
       cancelled = true;
@@ -25,6 +29,24 @@ export function TodayScreen({ profile }: { profile: UserProfile }) {
   }, [profile, date, strings]);
 
   const study = data?.study;
+
+  const toggleDone = async (contentId: string) => {
+    const wasDone = done.has(contentId);
+    const flip = (s: Set<string>) => {
+      const n = new Set(s);
+      if (n.has(contentId)) n.delete(contentId);
+      else n.add(contentId);
+      return n;
+    };
+    setDone(flip); // optimistic
+    try {
+      const body = { path: 'daily' as const, unitId: contentId, date };
+      await (wasDone ? api.uncomplete(body) : api.complete(body));
+    } catch {
+      setDone(flip); // revert
+      setError(strings.common.errorGeneric);
+    }
+  };
 
   return (
     <section aria-labelledby="today-heading">
@@ -62,14 +84,34 @@ export function TodayScreen({ profile }: { profile: UserProfile }) {
         <>
           <p className="muted summary">
             {fmt(strings.study.sessionSummary, { n: study.totalEstimatedMinutes, budget: study.budgetMinutes })}
+            {' · '}
+            <span data-testid="done-summary">
+              {fmt(strings.study.doneSummary, {
+                done: study.units.filter((u) => done.has(u.contentId)).length,
+                total: study.units.length,
+              })}
+            </span>
           </p>
-          {study.units.map((u) => (
-            <UnitCard
-              key={u.id}
-              unit={{ ...u, typeLabel: strings.options.unitTypes[u.type] }}
-              display={study.display}
-            />
-          ))}
+          {study.units.map((u) => {
+            const isDone = done.has(u.contentId);
+            return (
+              <UnitCard
+                key={u.id}
+                unit={{ ...u, typeLabel: strings.options.unitTypes[u.type] }}
+                display={study.display}
+                done={isDone}
+              >
+                <button
+                  type="button"
+                  className={isDone ? 'done-toggle is-done' : 'done-toggle'}
+                  aria-pressed={isDone}
+                  onClick={() => toggleDone(u.contentId)}
+                >
+                  {isDone ? `✓ ${strings.study.done}` : strings.study.markDone}
+                </button>
+              </UnitCard>
+            );
+          })}
         </>
       )}
     </section>

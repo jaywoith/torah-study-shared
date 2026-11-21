@@ -127,3 +127,19 @@ progress { width: 100%; height: 8px; margin-bottom: 12px; accent-color: var(--ac
 a:focus-visible, button:focus-visible, select:focus-visible, input:focus-visible {
   outline: 3px solid var(--accent); outline-offset: 2px;
 }
+
+/* Done state (daily units) */
+.done-toggle {
+  margin-top: 14px; width: 100%; padding: 10px 16px; border-radius: 8px; font-weight: 600;
+  border: 1px solid var(--accent); background: transparent; color: var(--accent);
+}
+.done-toggle.is-done { background: var(--accent-soft); border-color: transparent; }
+.card.done { opacity: 0.8; }
+.card.done .card-title::after { content: ' ✓'; color: var(--accent); }
+
+/* Login */
+.login { max-width: 360px; margin: 32px auto; }
+.login input[type='password'] {
+  width: 100%; padding: 10px; border-radius: 8px; border: 1px solid var(--border); background: var(--surface);
+}
+.login .primary { width: 100%; margin-top: 8px; }

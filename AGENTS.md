@@ -19,6 +19,8 @@ npm run test:watch   # tests in watch mode
 npm run dev          # API (:3000) + web (:5173) with hot reload
 npm run dev:lan      # same, web reachable from a phone on the LAN
 npm run test:e2e     # Playwright smoke test (builds the web app)
+npm run db:backup    # back up the SQLite database
+npm run start:prod   # build web + run API in production mode (serves the web app)
 npx tsx scripts/generate-examples.ts   # after changing generator output or content
 npm run version:bump -- <patch|minor|major>   # releases only, see docs/VERSIONING.md
 ```
@@ -32,7 +34,8 @@ npm run version:bump -- <patch|minor|major>   # releases only, see docs/VERSIONI
 5. **Never fabricate sources or quotations.** Every content entry has `verified: false` until a human checks it against a real text. If you are not certain of a quote, citation or nikkud, don't add it. Leave a `reviewNote` or a TODO in the plan.
 6. **Every bug fix gets a regression test**, named after the bug where practical.
 7. **Don't change public API response shapes without** updating `docs/api.md`, adding a CHANGELOG entry, and (if breaking) following the API versioning rules in `docs/VERSIONING.md`.
-8. **Secrets never go in the repo** (API keys go in `.env`, which is gitignored).
+8. **Secrets never go in the repo** (`.env` is gitignored; `.env.example` documents every variable).
+9. **Migrations are append-only.** Never edit a migration that has shipped; add a new one. Never put content in the database.
 
 ## 4. Definition of done (every change)
 

@@ -1,6 +1,8 @@
 # API Reference (v1)
 
-Base URL in development: `http://localhost:3000`. All responses are JSON. Errors are `{ "error": string, "issues"?: string[] }`, and internal error details are never returned.
+Base URL in development: `http://localhost:3000` (the web dev server proxies `/v1`). All responses are JSON. Errors are `{ "error": string, "issues"?: string[] }`, and internal error details are never returned.
+
+**Authentication.** When the server has `APP_PASSPHRASE` set, every route except `/health`, `/v1/auth/*`, `/v1/ui-strings` and `/v1/options` returns **401** without a valid `ts_session` cookie. Without `APP_PASSPHRASE` (development) everything is open.
 
 The response types are defined in `packages/core/src/models.ts` and `packages/core/src/api-types.ts` (`DailyStudyResponse`, `SiddurNextResponse`, `OptionsResponse`, `ApiError`).
 
@@ -11,6 +13,31 @@ The response types are defined in `packages/core/src/models.ts` and `packages/co
 ```json
 { "status": "ok", "service": "torah-study-api", "version": "0.2.0" }
 ```
+
+## Auth
+
+| Route | Body | Response |
+|---|---|---|
+| `GET /v1/auth/session` | none | `{ authRequired, authenticated }` |
+| `POST /v1/auth/login` | `{ passphrase }` | 200 `{ ok: true }` + `Set-Cookie: ts_session=…; HttpOnly; SameSite=Lax` · 401 wrong passphrase · 429 too many failures (`Retry-After`) |
+| `POST /v1/auth/logout` | none | `{ ok: true }`, clears the cookie |
+
+## `GET /v1/profile` · `PUT /v1/profile`
+
+`GET` → `{ profile: UserProfile | null }` (`null` until saved; the web then uses the model-user default).
+`PUT` with a `UserProfile` body → `{ profile }`. 400 with `issues` if invalid.
+
+## Progress
+
+| Route | Body / query | Response |
+|---|---|---|
+| `GET /v1/progress` | `?from=YYYY-MM-DD&to=YYYY-MM-DD` (both optional) | `{ siddur: { completed: string[] }, daily: [{ date, unitId, completedAt }] }` |
+| `POST /v1/progress/complete` | `{ path: "siddur", unitId }` or `{ path: "daily", unitId, date }` | 201 `{ ok: true }` (idempotent) |
+| `DELETE /v1/progress/complete` | same as POST | `{ ok: true }` |
+| `POST /v1/progress/reset` | `{ path }` | `{ ok: true, removed }` |
+| `POST /v1/progress/import` | `{ profile?, siddurCompleted? }` | `{ importedProfile, importedSiddur }`: one-time import of v0.3 browser data. The profile is imported only if none is saved; only known Siddur ids, no duplicates. |
+
+`unitId` is a content id (`StudyUnit.contentId`, or a Siddur unit id). Unknown ids, a missing daily date, or a non-Siddur id on the Siddur path return 400.
 
 ## `POST /v1/study/daily`
 
@@ -35,7 +62,7 @@ Generates, validates and returns the daily study.
 **200**: `{ "study": DailyStudy, "validation": { "valid": true, "issues": [] } }`. A full example is in [examples/conservative-intermediate-daily.json](examples/conservative-intermediate-daily.json) (kept in sync by a test).
 
 Key `DailyStudy` fields:
-- `units[]`: text fields present depend on the language mode
+- `units[]`: `id` (`<date>-<contentId>`, unique within the study), `contentId` (stable, used for progress); text fields present depend on the language mode
 - `display`: `{ mode, showHebrew, showTransliteration, showEnglish, layout: "stacked" | "side-by-side" | "interleaved" }`. Clients lay out units using this.
 - `totalEstimatedMinutes`, `budgetMinutes` (short 10 / medium 20 / long 35)
 
@@ -45,7 +72,7 @@ Key `DailyStudy` fields:
 
 | Query | Default | Meaning |
 |---|---|---|
-| `completed` | none | comma-separated Siddur unit ids already completed |
+| `completed` | from the database | comma-separated Siddur unit ids; overrides the saved progress when given (even empty) |
 | `interests` | `siddur,kavannah` | comma-separated; needs one of `siddur`, `kavannah`, `prayerbook_hebrew` |
 | `languageMode` | `mixed` | `english` \| `hebrew` \| `split` \| `mixed` |
 
@@ -87,6 +114,5 @@ Type: `OptionsResponse` in `packages/core/src/api-types.ts`.
 
 | Endpoint | Milestone |
 |---|---|
-| `GET/PUT /v1/profile`, `POST /v1/progress/complete`, `GET /v1/progress` | v0.4.0 |
 | Real streaming coach replies; conversation history | v0.6.0 |
 | Review queue / quiz endpoints; weekly check-in | v0.7.0 |

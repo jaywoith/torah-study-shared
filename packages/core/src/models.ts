@@ -40,6 +40,10 @@ export type Interest = (typeof INTERESTS)[number];
 export const KABBALAH_DEPTHS = ['symbolic', 'intermediate', 'advanced'] as const;
 export type KabbalahDepth = (typeof KABBALAH_DEPTHS)[number];
 
+/** Progress tracks: the sequential Siddur path, and units completed within a day's study. */
+export const PROGRESS_PATHS = ['siddur', 'daily'] as const;
+export type ProgressPath = (typeof PROGRESS_PATHS)[number];
+
 export interface UserProfile {
   framework: FrameworkId;
   level: LearningLevel;
@@ -73,7 +77,10 @@ export interface TextFields {
 
 /** A unit as returned to clients inside a DailyStudy. */
 export interface StudyUnit extends TextFields {
+  /** Unique within a study: `${date}-${contentId}`. */
   id: string;
+  /** Stable content-library id (what progress is recorded against). */
+  contentId: string;
   type: UnitType;
   title?: string;
   commentary?: string; // framework-appropriate
@@ -128,7 +135,7 @@ export interface SiddurSection {
 }
 
 /** A non-Siddur unit in the content library, with the metadata used to select it. */
-export interface ContentUnit extends Omit<StudyUnit, 'id'> {
+export interface ContentUnit extends Omit<StudyUnit, 'id' | 'contentId'> {
   id: string; // stable content id, e.g. "tanakh-tehillim-145-9"
   interests: Interest[];
   minLevel: LearningLevel;

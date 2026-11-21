@@ -1,6 +1,6 @@
 {
   "name": "@torah/content",
-  "version": "0.3.0-rc.1",
+  "version": "0.4.0-rc.1",
   "private": true,
   "description": "Study content and shared UI strings as data (JSON). Typed against @torah/core models.",
   "main": "src/index.ts",

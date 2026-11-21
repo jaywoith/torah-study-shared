@@ -1,6 +1,6 @@
 {
   "name": "@torah/core",
-  "version": "0.3.0-rc.1",
+  "version": "0.4.0-rc.1",
   "private": true,
   "description": "Pure models, generation, Siddur path, language handling and validation. No I/O, no AI, no UI.",
   "main": "src/index.ts",

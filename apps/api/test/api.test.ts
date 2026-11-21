@@ -1,9 +1,9 @@
 import { describe, expect, it } from 'vitest';
 import request from 'supertest';
-import { createApp } from '../src/app';
+import { testApp } from './helpers';
 import pkg from '../package.json';
 
-const app = createApp();
+const { app } = testApp();
 
 const profile = {
   framework: 'masorti_conservative',
@@ -131,5 +131,23 @@ describe('GET /v1/options', () => {
     for (const group of Object.values(res.body) as { name: string }[][]) {
       for (const option of group) expect(option.name).toBeTruthy();
     }
+  });
+});
+
+describe('serving the built web app', () => {
+  it('serves index.html at / when webDist exists, and API routes still work', async () => {
+    const { mkdtempSync, writeFileSync } = await import('node:fs');
+    const { tmpdir } = await import('node:os');
+    const { join } = await import('node:path');
+    const { createApp } = await import('../src/app');
+    const { openDatabase } = await import('../src/db');
+    const { authConfig } = await import('./helpers');
+    const dir = mkdtempSync(join(tmpdir(), 'web-dist-'));
+    writeFileSync(join(dir, 'index.html'), '<!doctype html><title>Torah Study</title>');
+    const served = createApp({ db: openDatabase(':memory:'), auth: authConfig(), webDist: dir });
+    const res = await request(served).get('/');
+    expect(res.status).toBe(200);
+    expect(res.text).toContain('Torah Study');
+    expect((await request(served).get('/health')).body.status).toBe('ok');
   });
 });

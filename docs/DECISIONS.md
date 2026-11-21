@@ -60,3 +60,19 @@ Short records of decisions that are settled. Each one has the context, the decis
 **Decision.** React 19 + Vite 8 + TypeScript. Three screens behind hash routes (`#/today`, `#/siddur`, `#/settings`) with no router library. Profile and Siddur progress live in `localStorage` until server persistence (v0.4.0). Profile option names come from a new `GET /v1/options` endpoint, so the client hard-codes no framework, level or label text. The Hebrew font (Noto Serif Hebrew) is self-hosted via `@fontsource` so it will work offline in the PWA. Vitest upgraded 2 → 5 to share Vite 8 with the web app.
 
 **Consequences.** Few dependencies. Moving to a router later is easy if screens multiply. Until v0.4 progress is per-browser, so clearing site data resets it.
+
+## ADR-008: SQLite via better-sqlite3, hand-written append-only migrations
+**Date:** 2026-11-21 · **Status:** Accepted
+
+**Context.** One user, small data (a profile and completion records), self-hosted on the owner's server.
+
+**Decision.** A single SQLite file through better-sqlite3 (synchronous, mature, prebuilt binaries for common Linux/macOS targets). No ORM. Migrations are plain SQL in `apps/api/src/db/migrations.ts`, applied in order on start and recorded in `schema_migrations`. All SQL lives in `repository.ts`. Content stays in git, never in the DB. Node's built-in `node:sqlite` was considered and rejected: still experimental, with warnings on every start.
+
+**Consequences.** No database server to run, and backup is a file copy (`npm run db:backup` uses SQLite's online backup). better-sqlite3 is a native module, so `npm ci` must run on the target platform. Moving to Postgres later would mean porting `repository.ts`.
+
+## ADR-009: Single-user passphrase auth with an HMAC-signed cookie
+**Date:** 2026-11-21 · **Status:** Accepted
+
+**Decision.** `APP_PASSPHRASE` and `SESSION_SECRET` env vars. Login compares SHA-256 digests in constant time and sets `ts_session=<expiry>.<HMAC>`: httpOnly, SameSite=Lax, Secure in production, 30 days. There is no session table. 5 failures per 15 minutes per IP returns 429. Public routes are limited to health, auth, UI strings and options. Auth is disabled when no passphrase is set, but production refuses to start without one.
+
+**Consequences.** No user accounts, no password storage, no dependencies. Rotating the secret signs out every device. If the app ever has multiple users, replace this with real accounts.

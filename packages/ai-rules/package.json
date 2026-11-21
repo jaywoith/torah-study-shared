@@ -1,6 +1,6 @@
 {
   "name": "@torah/ai-rules",
-  "version": "0.3.0-rc.1",
+  "version": "0.4.0-rc.1",
   "private": true,
   "description": "AI study-coach personas, system prompts and constraints. Changes here are reviewed like code.",
   "main": "src/index.ts",

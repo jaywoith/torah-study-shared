@@ -6,6 +6,7 @@ import { defineConfig, devices } from '@playwright/test';
  */
 const API_PORT = 3100;
 const WEB_PORT = 4174;
+export const E2E_PASSPHRASE = 'e2e-passphrase';
 
 export default defineConfig({
   testDir: './e2e',
@@ -22,7 +23,8 @@ export default defineConfig({
       command: `npm run start -w @torah/api`,
       cwd: '../..',
       url: `http://localhost:${API_PORT}/health`,
-      env: { PORT: String(API_PORT) },
+      // Fresh in-memory database and auth ON for every run.
+      env: { PORT: String(API_PORT), DATABASE_PATH: ':memory:', APP_PASSPHRASE: E2E_PASSPHRASE },
       reuseExistingServer: false,
     },
     {
