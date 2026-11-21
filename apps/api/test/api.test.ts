@@ -120,3 +120,16 @@ describe('errors', () => {
     expect(JSON.stringify(res.body)).not.toMatch(/Unexpected token|JSON at position/);
   });
 });
+
+describe('GET /v1/options', () => {
+  it('lists every profile option with a display name', async () => {
+    const res = await request(app).get('/v1/options');
+    expect(res.status).toBe(200);
+    expect(res.body.frameworks).toHaveLength(5);
+    expect(res.body.levels.map((l: { id: string }) => l.id)).toEqual(['beginner', 'intermediate', 'advanced', 'scholar']);
+    expect(res.body.studyLengths).toContainEqual({ id: 'medium', name: 'Medium', minutes: 20 });
+    for (const group of Object.values(res.body) as { name: string }[][]) {
+      for (const option of group) expect(option.name).toBeTruthy();
+    }
+  });
+});

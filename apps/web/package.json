@@ -1,0 +1,31 @@
+{
+  "name": "@torah/web",
+  "version": "0.3.0-rc.1",
+  "private": true,
+  "description": "Web client (React + Vite). Talks only to the API; imports types only from shared packages.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc -p .",
+    "test:e2e": "playwright test --trace off",
+    "dev:lan": "vite --host"
+  },
+  "dependencies": {
+    "@fontsource/noto-serif-hebrew": "^5.3.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.63.0",
+    "@testing-library/react": "^16.3.3",
+    "@torah/content": "*",
+    "@torah/core": "*",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^6.0.0",
+    "jsdom": "^26.0.0",
+    "vite": "^8.0.0"
+  }
+}

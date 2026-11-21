@@ -1,7 +1,11 @@
-# apps/web (planned for v0.3.0)
+# apps/web (`@torah/web`)
 
-The web client: React + Vite + TypeScript, installable as a PWA in v0.8.0.
+The phone-first web client. React + Vite + TypeScript. Becomes an installable PWA in v0.8.0.
 
-Not scaffolded yet. The task list is in [docs/DEVELOPMENT_PLAN.md](../../docs/DEVELOPMENT_PLAN.md#v030-web-app-shell-current).
+```bash
+npm run dev        # from repo root: API + web at http://localhost:5173
+npm run dev:lan    # reachable from a phone on the same Wi-Fi
+npm run test:e2e   # Playwright smoke test against a production build
+```
 
-Rules: it talks only to the API (`/v1/*`), uses `/v1/ui-strings` for shared labels, may import **types only** from `@torah/core`, and contains no content or framework logic.
+Rules: it talks only to the API (`/v1/*`, proxied by Vite), uses `/v1/ui-strings` and `/v1/options` for all shared labels, may import **types only** from `@torah/core` / `@torah/content`, and contains no content or framework logic. The file map is in [docs/ARCHITECTURE.md](../../docs/ARCHITECTURE.md#appsweb-torahweb).

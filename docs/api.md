@@ -2,7 +2,7 @@
 
 Base URL in development: `http://localhost:3000`. All responses are JSON. Errors are `{ "error": string, "issues"?: string[] }`, and internal error details are never returned.
 
-The response types are defined in `packages/core/src/models.ts`.
+The response types are defined in `packages/core/src/models.ts` and `packages/core/src/api-types.ts` (`DailyStudyResponse`, `SiddurNextResponse`, `OptionsResponse`, `ApiError`).
 
 ---
 
@@ -59,6 +59,21 @@ Returns the earliest unit, in path order, that isn't in `completed`.
 ## `GET /v1/ui-strings`
 
 Returns `packages/content/data/ui-strings.json`. Clients must use these labels for shared copy.
+
+## `GET /v1/options`
+
+Ids and display names for every profile field, so clients never hard-code them. Framework and level names come from core config; the other labels come from `ui-strings.json` (`options`).
+
+```json
+{
+  "frameworks":    [{ "id": "masorti_conservative", "name": "Masorti / Conservative", "description": "…" }],
+  "levels":        [{ "id": "intermediate", "name": "Intermediate", "description": "…" }],
+  "interests":     [{ "id": "siddur", "name": "Siddur" }],
+  "studyLengths":  [{ "id": "medium", "name": "Medium", "minutes": 20 }],
+  "languageModes": [{ "id": "mixed", "name": "Mixed (Hebrew + transliteration + English)" }]
+}
+```
+Type: `OptionsResponse` in `packages/core/src/api-types.ts`.
 
 ## `POST /v1/coach/message` (stub)
 

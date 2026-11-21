@@ -1,6 +1,6 @@
 {
   "meta": {
-    "version": "0.2.0",
+    "version": "0.3.0-rc.1",
     "description": "Shared UI strings that must stay consistent across clients. Served by the API at GET /v1/ui-strings. Platform-specific chrome stays in each client."
   },
   "common": {
@@ -37,11 +37,69 @@
     "hebrew": "Hebrew",
     "transliteration": "Transliteration",
     "english": "English",
-    "estimatedTime": "Estimated time"
+    "estimatedTime": "Estimated time",
+    "previousDay": "Previous day",
+    "nextDay": "Next day",
+    "today": "Today",
+    "minutes": "{n} min",
+    "sessionSummary": "{n} of {budget} min",
+    "reviewPrompt": "Review",
+    "chooseDate": "Choose date"
   },
   "coach": {
     "weeklyCheckIn": "Weekly Check-in",
     "sendMessage": "Send",
     "typeMessage": "Ask a question…"
+  },
+  "nav": {
+    "today": "Today",
+    "siddur": "Siddur",
+    "settings": "Settings"
+  },
+  "siddur": {
+    "position": "Unit {position} of {total}",
+    "markComplete": "Mark complete",
+    "complete": "You have completed every unit in the Siddur path so far. More units are coming.",
+    "noInterest": "Add Siddur, Kavannah, or Prayerbook Hebrew to your interests to use the Siddur path.",
+    "resetProgress": "Reset Siddur progress",
+    "resetConfirm": "Reset all Siddur progress?"
+  },
+  "settings": {
+    "title": "Study profile",
+    "saved": "Saved",
+    "practiceContext": "Practice context (optional)",
+    "practiceContextHint": "e.g. Attends Shacharit minyan",
+    "unverifiedNote": "Seed content is not yet verified against primary sources."
+  },
+  "options": {
+    "interests": {
+      "siddur": "Siddur",
+      "musar": "Musar",
+      "kabbalah": "Kabbalah",
+      "halachah": "Halachah",
+      "tanakh": "Tanakh",
+      "prayerbook_hebrew": "Prayerbook Hebrew",
+      "kavannah": "Kavannah"
+    },
+    "studyLengths": {
+      "short": "Short",
+      "medium": "Medium",
+      "long": "Long"
+    },
+    "languageModes": {
+      "english": "English",
+      "hebrew": "Hebrew",
+      "split": "Split (side by side)",
+      "mixed": "Mixed (Hebrew + transliteration + English)"
+    },
+    "unitTypes": {
+      "tanakh": "Tanakh",
+      "midrash": "Midrash",
+      "musar": "Musar",
+      "siddur": "Siddur",
+      "kabbalah": "Kabbalah",
+      "halachah": "Halachah",
+      "commentary": "Commentary"
+    }
   }
 }

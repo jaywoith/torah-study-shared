@@ -16,14 +16,16 @@ npm install          # once
 npm run check        # typecheck + tests; must pass before every commit
 npm test             # tests only
 npm run test:watch   # tests in watch mode
-npm run dev          # API with hot reload on :3000
+npm run dev          # API (:3000) + web (:5173) with hot reload
+npm run dev:lan      # same, web reachable from a phone on the LAN
+npm run test:e2e     # Playwright smoke test (builds the web app)
 npx tsx scripts/generate-examples.ts   # after changing generator output or content
 npm run version:bump -- <patch|minor|major>   # releases only, see docs/VERSIONING.md
 ```
 
 ## 3. Rules that must not be broken
 
-1. **Logic lives in `packages/core`, content lives in `packages/content/data/*.json`, AI rules live in `packages/ai-rules`.** The API wires them together. Clients (web) only call the API.
+1. **Logic lives in `packages/core`, content lives in `packages/content/data/*.json`, AI rules live in `packages/ai-rules`.** The API wires them together. Clients (web) only call the API, and may import **types only** from `@torah/core` / `@torah/content`.
 2. **`packages/core` is pure.** No I/O, no network, no randomness, no `Date.now()`. Functions take what they need, including the content library, as arguments. Same input means same output.
 3. **Enums have one source:** the `*_IDS` / `LEARNING_LEVELS` / etc. arrays in `packages/core/src/models.ts`. Never redeclare a union type elsewhere.
 4. **Hebrew is always pointed (nikkud)** when present. Tests enforce this.

@@ -1,28 +1,34 @@
 {
   "name": "torah-study",
-  "version": "0.2.0",
+  "version": "0.3.0-rc.1",
   "private": true,
   "description": "Personal Torah study app: daily study, Siddur path, specialized paths, AI study coach. npm-workspaces monorepo.",
   "workspaces": [
     "packages/core",
     "packages/ai-rules",
     "packages/content",
-    "apps/api"
+    "apps/api",
+    "apps/web"
   ],
   "scripts": {
-    "dev": "npm run dev -w @torah/api",
+    "dev": "concurrently -k -n api,web -c blue,green \"npm run dev -w @torah/api\" \"npm run dev -w @torah/web\"",
     "start": "npm run start -w @torah/api",
     "test": "vitest run",
     "test:watch": "vitest",
     "typecheck": "npm run typecheck --workspaces --if-present",
     "check": "npm run typecheck && npm run test",
-    "version:bump": "node scripts/bump-version.mjs"
+    "version:bump": "node scripts/bump-version.mjs",
+    "dev:api": "npm run dev -w @torah/api",
+    "build": "npm run build -w @torah/web",
+    "test:e2e": "npm run test:e2e -w @torah/web",
+    "dev:lan": "concurrently -k -n api,web -c blue,green \"npm run dev -w @torah/api\" \"npm run dev:lan -w @torah/web\""
   },
   "devDependencies": {
     "@types/node": "^22.10.0",
     "tsx": "^4.19.0",
     "typescript": "^5.6.0",
-    "vitest": "^2.1.0"
+    "vitest": "^5.1.0",
+    "concurrently": "^10.0.0"
   },
   "engines": {
     "node": ">=20"

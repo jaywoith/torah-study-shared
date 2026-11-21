@@ -6,6 +6,7 @@ import { createStudyRouter } from './routes/study';
 import { createSiddurRouter } from './routes/siddur';
 import coachRouter from './routes/coach';
 import uiRouter from './routes/ui';
+import optionsRouter from './routes/options';
 import pkg from '../package.json';
 
 export interface AppOptions {
@@ -28,6 +29,7 @@ export function createApp(options: AppOptions = {}) {
   app.use('/v1/siddur', createSiddurRouter(library));
   app.use('/v1/coach', coachRouter);
   app.use('/v1/ui-strings', uiRouter);
+  app.use('/v1/options', optionsRouter);
 
   app.use((_req, res) => {
     res.status(404).json({ error: 'Not found' });

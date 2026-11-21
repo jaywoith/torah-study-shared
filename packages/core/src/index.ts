@@ -11,3 +11,4 @@ export * from './paths';
 export * from './study-generator';
 export * from './validation';
 export * from './profile';
+export * from './api-types';

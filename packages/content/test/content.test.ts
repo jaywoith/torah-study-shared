@@ -7,6 +7,8 @@ import {
   FRAMEWORK_IDS,
   INTERESTS,
   KABBALAH_DEPTHS,
+  LANGUAGE_MODES,
+  STUDY_LENGTHS,
   LEARNING_LEVELS,
   generateDailyStudy,
   getSiddurSequence,
@@ -81,9 +83,18 @@ describe('generated studies from real content', () => {
 
 describe('ui strings', () => {
   it('has a version and no empty labels', () => {
-    expect(uiStrings.meta.version).toMatch(/^\d+\.\d+\.\d+$/);
-    for (const group of [uiStrings.common, uiStrings.study, uiStrings.coach]) {
-      for (const value of Object.values(group)) expect(value.trim()).not.toBe('');
-    }
+    expect(uiStrings.meta.version).toMatch(/^\d+\.\d+\.\d+/);
+    const check = (node: unknown): void => {
+      if (typeof node === 'string') expect(node.trim()).not.toBe('');
+      else if (node && typeof node === 'object') Object.values(node).forEach(check);
+    };
+    check(uiStrings);
+  });
+
+  it('labels every interest, study length, language mode and unit type', () => {
+    expect(Object.keys(uiStrings.options.interests).sort()).toEqual([...INTERESTS].sort());
+    expect(Object.keys(uiStrings.options.studyLengths).sort()).toEqual([...STUDY_LENGTHS].sort());
+    expect(Object.keys(uiStrings.options.languageModes).sort()).toEqual([...LANGUAGE_MODES].sort());
+    expect(Object.keys(uiStrings.options.unitTypes).sort()).toEqual([...UNIT_TYPES].sort());
   });
 });

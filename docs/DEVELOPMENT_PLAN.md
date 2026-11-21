@@ -1,6 +1,6 @@
 # Development Plan
 
-**Current version:** 0.2.0
+**Current version:** 0.3.0-rc.1
 **Current milestone:** v0.3.0, Web App Shell
 **Last updated:** 2026-11-21
 
@@ -20,7 +20,7 @@ This is the master plan. Every milestone is a minor version (pre-1.0). Tick the 
 |---|---|---|---|
 | 0.1.0 | Prototype | Five-repo skeleton, Conservative seed content | — |
 | **0.2.0** | **Foundation** ✅ | Monorepo, bugs fixed, content as data, 87 tests, CI, docs | G1 |
-| 0.3.0 | Web App Shell | Usable daily study + Siddur path in a browser | G2 |
+| 0.3.0 | Web App Shell 🟡 rc.1 | Usable daily study + Siddur path in a browser | G2 |
 | 0.4.0 | Persistence & Progress | Profile and progress saved server-side; Siddur path remembers place | G2 |
 | 0.5.0 | Real Content | Verified texts from a licensed source; full Pesukei Dezimra; Musar sequence | G2 |
 | 0.6.0 | AI Study Coach | Real LLM coach bound by shared personas and constraints, with an eval suite | G3 |
@@ -48,24 +48,25 @@ This is the master plan. Every milestone is a minor version (pre-1.0). Tick the 
 - [x] Unit, content-integrity and API tests (vitest + supertest); CI on GitHub Actions
 - [x] Versioning, testing, content, architecture, decisions docs; AGENTS.md
 
-## v0.3.0: Web App Shell (current)
+## v0.3.0: Web App Shell (current, 0.3.0-rc.1 cut)
 
 **Goal:** open a browser, see today's study and the next Siddur unit, rendered correctly in all four language modes.
 
-- [ ] Scaffold `apps/web` (Vite + React + TypeScript), add it to the root `workspaces`
-- [ ] Dev proxy `/v1` → API; `npm run dev` starts both API and web
-- [ ] Typed API client (`apps/web/src/api.ts`), with response types imported from `@torah/core` as **types only**
-- [ ] Load and cache `/v1/ui-strings`; no hard-coded shared labels
-- [ ] Profile settings screen (framework, level, interests, length, language mode), stored in `localStorage` until v0.4
-- [ ] Daily study screen: unit cards with Hebrew (RTL, Hebrew font with nikkud support), transliteration, English, commentary, kavannah prompt, source
-- [ ] Language layouts: stacked / side-by-side / interleaved per `study.display.layout`
-- [ ] Siddur path screen: next unit, position "n of N", mark complete (completed ids in `localStorage`)
-- [ ] Date picker to view other days (verifies rotation)
-- [ ] Mobile-first layout (phone width is the primary target)
-- [ ] Component tests (vitest + Testing Library) for unit rendering per language mode
-- [ ] Playwright smoke test: load app → daily study renders → mark Siddur unit complete → next unit shown
-- [ ] CI runs web tests + Playwright smoke
-- [ ] Accessibility: correct `lang="he"` / `dir="rtl"` on Hebrew, sufficient contrast, keyboard navigable
+- [x] Scaffold `apps/web` (Vite + React + TypeScript), add it to the root `workspaces`
+- [x] Dev proxy `/v1` → API; `npm run dev` starts both API and web (`npm run dev:lan` exposes it to a phone on the same Wi-Fi)
+- [x] Typed API client (`apps/web/src/api.ts`); contract types in `packages/core/src/api-types.ts`, imported **type-only**
+- [x] Load `/v1/ui-strings` and `/v1/options` (new endpoint); no hard-coded shared labels or option names
+- [x] Profile settings screen (framework, level, interests, length, language mode, practice context), stored in `localStorage` until v0.4
+- [x] Daily study screen: unit cards with Hebrew (RTL, Noto Serif Hebrew, self-hosted), transliteration, English, commentary, kavannah prompt, review items, source
+- [x] Language layouts: stacked / side-by-side / interleaved (sentence-aligned, falls back to stacked) per `display.layout`
+- [x] Siddur path screen: next unit, "Unit n of N", progress bar, mark complete, reset (completed ids in `localStorage`)
+- [x] Previous/next day buttons and date picker (local calendar date, not UTC)
+- [x] Mobile-first layout with bottom tabs, safe-area insets, dark mode
+- [x] Component tests (Vitest + Testing Library, jsdom) for language layouts, Settings and Siddur screens
+- [x] Playwright smoke test against a production build: daily study → next day differs → Siddur advances and persists across reload → English mode removes Hebrew
+- [x] CI runs web tests + Playwright smoke (separate `e2e` job)
+- [x] Accessibility: `lang="he"` / `dir="rtl"` on Hebrew, labelled controls, visible focus rings, keyboard navigable
+- [ ] **Owner:** run the G2 manual checklist (docs/TESTING.md) on a phone via `npm run dev:lan`, then release 0.3.0
 
 **Done when:** gate G2 passes and the owner can use it for a morning session on a phone browser.
 

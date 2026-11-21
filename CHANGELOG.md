@@ -4,6 +4,26 @@ All notable changes. Format: [Keep a Changelog](https://keepachangelog.com); ver
 
 ## [Unreleased]
 
+## [0.3.0-rc.1] – 2026-11-21
+
+### Added
+- **Web app (`apps/web`)**: React + Vite, phone-first, with three screens:
+  - **Today:** the daily study for any date, with previous/next day and a date picker.
+  - **Siddur:** the next unit, "Unit n of N", mark complete, reset.
+  - **Settings:** the study profile.
+  Hebrew is rendered RTL in self-hosted Noto Serif Hebrew. All four language layouts are supported; Mixed interleaves Hebrew, transliteration and English sentence by sentence. Dark mode included.
+- `GET /v1/options`: ids and display names for every profile field.
+- HTTP contract types in `packages/core/src/api-types.ts` (`DailyStudyResponse`, `SiddurNextResponse`, `OptionsResponse`, `ApiError`), used by both API and web.
+- UI strings: `nav`, `siddur`, `settings` and `options` groups, plus new `study` labels. A content test requires a label for every interest, length, mode and unit type.
+- Tests: web component tests (jsdom) and a Playwright smoke test against a production build. CI gains an `e2e` job.
+- Scripts: `npm run dev` (API + web), `npm run dev:lan` (phone on same Wi-Fi), `npm run build`, `npm run test:e2e`.
+
+### Changed
+- Vitest 2 → 5 (shares Vite 8 with the web app); config renamed to `vitest.config.mts`.
+
+### Fixed
+- Mixed layout crashed when given a full unit (non-text fields such as `reviewItems` were passed to sentence splitting). Caught by the e2e test before release; regression test added.
+
 ## [0.2.0] – 2026-11-21 — Foundation
 
 ### Changed

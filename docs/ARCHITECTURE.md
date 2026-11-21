@@ -43,8 +43,20 @@ Personas per framework, system prompts (`src/system-prompts/*.md`), and `getCons
 ### `apps/api` (`@torah/api`)
 Express. `src/app.ts` exports `createApp({ library? })` (tests inject fixture content). `src/index.ts` only listens. Routes are in `src/routes/`. It runs with `tsx` (no build step); that's fine for personal use, and a bundling step can be added if deployment needs it.
 
-### `apps/web` (planned v0.3.0)
-React + Vite + TypeScript, installable as a PWA. See DEVELOPMENT_PLAN.md.
+### `apps/web` (`@torah/web`)
+React + Vite + TypeScript, phone-first. Becomes an installable PWA in v0.8.0.
+
+| File | Responsibility |
+|---|---|
+| `src/api.ts` | Typed fetch client for `/v1/*` (relative URLs; Vite proxies to the API in dev/preview). |
+| `src/strings.tsx` | Context providing `/v1/ui-strings` and `/v1/options`; `fmt()` for `{placeholder}` strings. |
+| `src/storage.ts` | Safe `localStorage` wrappers; profile + Siddur progress until v0.4.0; default = model user. |
+| `src/text.ts` | Sentence segmentation and interleaving for the Mixed layout. |
+| `src/dates.ts` | Local-calendar ISO dates. The web always sends an explicit date; the API's default is UTC. |
+| `src/components/` | `UnitText` (language layouts), `UnitCard` (one study/Siddur unit). |
+| `src/screens/` | `TodayScreen`, `SiddurScreen`, `SettingsScreen`. Routing is a hash (`#/today`, `#/siddur`, `#/settings`) with no router library. |
+
+The web imports **types only** from `@torah/core` (including the HTTP contract in `api-types.ts`) and `@torah/content`. No shared runtime code is bundled into the client.
 
 ## Daily study generation (summary)
 

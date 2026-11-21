@@ -1,5 +1,11 @@
 import { Router, Request, Response } from 'express';
-import { ContentLibrary, generateDailyStudy, parseUserProfile, validateDailyStudy } from '@torah/core';
+import {
+  ContentLibrary,
+  DailyStudyResponse,
+  generateDailyStudy,
+  parseUserProfile,
+  validateDailyStudy,
+} from '@torah/core';
 
 const ISO_DATE = /^\d{4}-\d{2}-\d{2}$/;
 
@@ -31,7 +37,8 @@ export function createStudyRouter(library: ContentLibrary) {
       return res.status(422).json({ error: 'Generated study failed validation', issues: validation.issues, study });
     }
 
-    return res.json({ study, validation });
+    const body: DailyStudyResponse = { study, validation };
+    return res.json(body);
   });
 
   return router;

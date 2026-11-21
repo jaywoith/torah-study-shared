@@ -5,6 +5,7 @@ import {
   Interest,
   LANGUAGE_MODES,
   LanguageMode,
+  SiddurNextResponse,
   applyLanguageMode,
   getLanguageDisplay,
   getNextSiddurUnit,
@@ -39,13 +40,14 @@ export function createSiddurRouter(library: ContentLibrary) {
       return res.status(404).json({ error: 'No next Siddur unit (path complete or no Siddur interest)' });
     }
 
-    return res.json({
+    const body: SiddurNextResponse = {
       unit: applyLanguageMode(next.unit, display),
       display,
       position: next.position,
       total: next.total,
       completedCount: next.completedCount,
-    });
+    };
+    return res.json(body);
   });
 
   return router;

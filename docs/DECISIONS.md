@@ -53,3 +53,10 @@ Short records of decisions that are settled. Each one has the context, the decis
 **Decision.** Each content unit has `verified: boolean` (and an optional `reviewNote`). Only a human check sets it to `true`. LLM-written content is never marked verified.
 
 **Consequences.** Unverified content is visible and countable. A future UI can mark unverified units, and 1.0 requires the deferred accuracy issues to be closed.
+
+## ADR-007: Web stack: React + Vite, no router, localStorage until v0.4
+**Date:** 2026-11-21 · **Status:** Accepted
+
+**Decision.** React 19 + Vite 8 + TypeScript. Three screens behind hash routes (`#/today`, `#/siddur`, `#/settings`) with no router library. Profile and Siddur progress live in `localStorage` until server persistence (v0.4.0). Profile option names come from a new `GET /v1/options` endpoint, so the client hard-codes no framework, level or label text. The Hebrew font (Noto Serif Hebrew) is self-hosted via `@fontsource` so it will work offline in the PWA. Vitest upgraded 2 → 5 to share Vite 8 with the web app.
+
+**Consequences.** Few dependencies. Moving to a router later is easy if screens multiply. Until v0.4 progress is per-browser, so clearing site data resets it.
