@@ -1,6 +1,6 @@
 # Next session: start here
 
-**Written:** 2026-11-21 · **Version:** 0.5.0-rc.1 on branch `claude/festive-curie-ueom6q` (not yet merged to `main`; tag not pushed) · `npm run check` (1,778 tests) and `npm run test:e2e` pass
+**Written:** 2026-11-21 · **Version:** 0.5.0-rc.1 merged to `main` (tag `v0.5.0-rc.1` not pushed: cloud tag pushes fail) · `npm run check` (1,778 tests) and `npm run test:e2e` pass
 
 1. Read `AGENTS.md`.
 2. `docs/DEVELOPMENT_PLAN.md`: v0.5.0 is rc.1. What remains is the owner's (below). The next milestone to build is **v0.6.0 AI Study Coach**.
@@ -16,7 +16,7 @@
 **Waiting on the owner**
 - Review texts and drafts. **Never mark anything `verified: true` without the owner's say-so**; a test blocks it for drafted entries.
 - G2 phone checklist (docs/TESTING.md), which needs hosting, then finalize 0.5.0 (`npm run version:bump -- patch`) and 0.4.0.
-- Merge this branch to `main` (PR) and push tags; cloud sessions got HTTP 403 on tag pushes before.
+- Push tags `v0.2.0`, `v0.4.0`, `v0.5.0-rc.1` from a computer (cloud sessions cannot push tags).
 - Licensing review before any use beyond personal: NJPS is CC-BY-NC (`npm run content:report`).
 
 **Known limits / candidates for later**
