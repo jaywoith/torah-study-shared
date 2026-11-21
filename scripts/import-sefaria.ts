@@ -21,7 +21,7 @@ import { createHash } from 'node:crypto';
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import type { ContentUnit, SiddurSection, SiddurUnit } from '@torah/core';
-import { licenseStatus, normalizeLicense } from '../packages/content/src/sefaria/license';
+import { licenseStatus, normalizeLicense } from '@torah/core';
 import { ImportedText, MergeResult, estimateMinutes, mergeImported, sefariaUrl } from '../packages/content/src/sefaria/merge';
 import { sanitizeText } from '../packages/content/src/sefaria/sanitize';
 

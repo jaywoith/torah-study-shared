@@ -7,9 +7,13 @@ import { LoginScreen } from './screens/LoginScreen';
 import { TodayScreen } from './screens/TodayScreen';
 import { SiddurScreen } from './screens/SiddurScreen';
 import { SettingsScreen } from './screens/SettingsScreen';
+import { SourcesScreen } from './screens/SourcesScreen';
 
-type Route = 'today' | 'siddur' | 'settings';
-const ROUTES: Route[] = ['today', 'siddur', 'settings'];
+type Route = 'today' | 'siddur' | 'settings' | 'sources';
+/** Routes shown as tabs. "sources" is reached from Settings. */
+type TabRoute = Exclude<Route, 'sources'>;
+const TABS: TabRoute[] = ['today', 'siddur', 'settings'];
+const ROUTES: Route[] = [...TABS, 'sources'];
 
 function routeFromHash(): Route {
   const r = window.location.hash.replace(/^#\/?/, '') as Route;
@@ -111,7 +115,7 @@ export function App() {
     setAuth({ ...auth, authenticated: false });
   };
 
-  const labels: Record<Route, string> = {
+  const labels: Record<TabRoute, string> = {
     today: text.strings.nav.today,
     siddur: text.strings.nav.siddur,
     settings: text.strings.nav.settings,
@@ -123,13 +127,14 @@ export function App() {
       <main className="container">
         {route === 'today' && <TodayScreen profile={profile} />}
         {route === 'siddur' && <SiddurScreen profile={profile} />}
+        {route === 'sources' && <SourcesScreen />}
         {route === 'settings' && (
           <SettingsScreen profile={profile} onSave={saveProfile} onLogout={auth.required ? logout : undefined} />
         )}
       </main>
       <nav className="tabs" aria-label="Main">
-        {ROUTES.map((r) => (
-          <a key={r} href={`#/${r}`} aria-current={route === r ? 'page' : undefined}>
+        {TABS.map((r) => (
+          <a key={r} href={`#/${r}`} aria-current={route === r || (r === 'settings' && route === 'sources') ? 'page' : undefined}>
             {labels[r]}
           </a>
         ))}

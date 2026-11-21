@@ -7,6 +7,8 @@ export * from './frameworks';
 export * from './learning-levels';
 export * from './language';
 export * from './text-display';
+export * from './license';
+export * from './content-report';
 export * from './siddur-path';
 export * from './paths';
 export * from './study-generator';

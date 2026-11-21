@@ -1,21 +1,22 @@
 # Next session: start here
 
-**Written:** 2026-11-21 · **Repo state:** `main` = v0.4.0-rc.1 (all tests green)
+**Written:** 2026-11-21 · **Branch:** `claude/festive-curie-ueom6q` (not yet merged to `main`) · all tests green (`npm run check`, 1,668 tests)
 
-1. Read `AGENTS.md` (rules, commands, definition of done).
-2. Open `docs/DEVELOPMENT_PLAN.md` and go to **"v0.5.0: Real Content (next, start here)"**. The owner's decisions, the Sefaria facts already checked, and the task list are all there.
-3. Read ADR-010 (Sefaria import) and ADR-011 (cantillation and Divine Name settings) in `docs/DECISIONS.md`.
+1. Read `AGENTS.md`.
+2. `docs/DEVELOPMENT_PLAN.md` → **v0.5.0: Real Content**. Most tasks are done; open items and **owner decisions pending** are at the top of the task list.
+3. ADR-010 (Sefaria import), ADR-011 (display settings, plus details settled this session), ADR-012 (versions chosen, personal-use license rule).
 
-**Environment:** use the cloud environment **"Torah Study"**. It allows `sefaria.org` and `www.sefaria.org`, and its setup script runs `npm ci` in `torah-study-shared` (not yet proven in a fresh session; if it fails, run `npm ci` by hand).
+**Done this session**
+- Cantillation toggle and Divine Name setting (core transforms, profile fields, API, Settings UI).
+- `npm run content:import` (Sefaria, build time, pinned versions in `packages/content/sefaria-manifest.json`, cache in `.cache/sefaria`), `npm run content:report`, `GET /v1/sources` and a Sources & licenses screen.
+- Content: 70 Tanakh units (MAM + NJPS 1985), Pesukei Dezimra (19) and Shema with its Blessings (5) from Metsudah, Mesillat Yesharim (286) and Pirkei Avot (108). D2 resolved.
+- **Nothing is `verified: true`.** The owner must approve before anything is marked verified.
 
-**Suggested order for v0.5.0:**
-1. Core transforms (`stripCantillation`, `applyDivineName`) + profile fields + API rendering + Settings UI, all with tests. Small and self-contained.
-2. Import script + manifest + license policy + content tests, proven on a handful of Tanakh refs.
-3. Siddur (Pesukei Dezimra) import, keeping existing unit ids.
-4. Tanakh pool, Musar path, `content:report`, attribution screen.
-5. Owner review of commentary and kavannah text before anything is marked `verified: true`.
+**Waiting on the owner**
+- Amidah source (Metsudah is Orthodox; Sim Shalom isn't on Sefaria in usable form).
+- "Adonoy" in Metsudah's English when the Name setting is abbreviated.
+- Session length vs. long imported units; whether to build a progress-tracked Musar path.
+- Commentary/kavannah drafts for imported units, then review.
+- Licensing review before any use beyond personal: NJPS is CC-BY-NC (see `npm run content:report`).
 
-**Still pending, outside v0.5.0:**
-- Hosting on the owner's server: do it with the owner at a computer (plan, "Hosting" under v0.3.0).
-- Git tags `v0.2.0` / `v0.4.0` could not be pushed from cloud sessions (HTTP 403).
-- The owner was asked to make the repos private and archive the four retired repos (GitHub Settings).
+**Still pending, outside v0.5.0:** hosting with the owner; git tags `v0.2.0`/`v0.4.0` (403 from cloud); repo privacy/archiving (owner, GitHub Settings).

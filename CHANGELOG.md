@@ -11,6 +11,9 @@ All notable changes. Format: [Keep a Changelog](https://keepachangelog.com); ver
 - Web Settings: "Text display" group with the cantillation toggle and Divine Name selector.
 - **Sefaria import (ADR-010, ADR-012):** `npm run content:import` (`scripts/import-sefaria.ts`) reads `packages/content/sefaria-manifest.json`, fetches pinned versions, strips HTML/footnotes/parasha markers, keeps te'amim, enforces the license policy and merges into the content JSON. Idempotent, `--dry-run`, `--only=<prefix>`, `--force` (verified entries), `--refresh` (bypass the gitignored `.cache/sefaria`). Throttled with 429 retry. Fetch source is pluggable (`SEFARIA_BASE_URL` or a `TextSource`) for the planned mirror.
 - `Provenance` on content entries: `sefariaRef`, `sefariaUrl`, `importedAt`, per-language `versionTitle` + `license`, optional `personalUseOnly`.
+- `npm run content:report` (`--json` too): counts by kind, verified vs unverified, versions and licenses, CC-BY-NC and uncleared-license entries, missing transliteration/commentary/kavannah.
+- **Sources & licenses:** public `GET /v1/sources` and a web screen linked from Settings, listing every version with its license (attribution for CC-BY / CC-BY-SA).
+- Core: `summarizeSources`, `buildContentReport`; the license policy moved to `@torah/core` (`licenseStatus`, `normalizeLicense`, `requiresAttribution`).
 - The import keeps study units in manifest order, which is the daily rotation order within each type (so Musar reads sequentially).
 - Tests: sanitizer, license policy, merge rules, and content checks for provenance, allowed licenses, no leftover HTML, te'amim, and a Tanakh pool of 60+.
 
@@ -24,6 +27,8 @@ All notable changes. Format: [Keep a Changelog](https://keepachangelog.com); ver
 ### Changed
 - Profiles saved by v0.4 (or sent without the new fields) get the defaults; `GET /v1/profile` always returns both fields. Non-breaking.
 - `SiddurUnit.transliteration`, `commentary` and `kavannahPrompt` are optional (imported units may lack them). Additive for clients; the web already handled missing values.
+- Settings note now says texts are imported and not yet owner-reviewed.
+- Verified visually: Noto Serif Hebrew renders te'amim correctly (390px phone viewport).
 - `/v1/siddur/next` now starts at `psalm_30` (the path begins with the introductory psalm). API tests derive Siddur ids from content instead of hard-coding them.
 - With the default setting, Tanakh Hebrew now shows ה׳ and transliteration "Hashem" where they previously showed the Name and "Adonai".
 - Plan: v0.5.0 detailed with owner decisions: Sefaria build-time import (ADR-010); cantillation toggle and Divine Name setting, default ה׳ (ADR-011); full Sefaria mirror with monthly sync and a cantillation track added to the backlog. Deferred issue D3 decided.

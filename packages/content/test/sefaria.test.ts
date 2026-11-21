@@ -3,7 +3,7 @@
  * HTML inputs reproduce the markup patterns seen in real Sefaria responses.
  */
 import { describe, expect, it } from 'vitest';
-import { licenseStatus, normalizeLicense, requiresAttribution } from '../src/sefaria/license';
+import { licenseStatus, normalizeLicense, requiresAttribution } from '@torah/core';
 import { estimateMinutes, mergeImported, sefariaUrl } from '../src/sefaria/merge';
 import { isEditorialNote, sanitizeSegment, sanitizeText } from '../src/sefaria/sanitize';
 

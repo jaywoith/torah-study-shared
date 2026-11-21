@@ -18,6 +18,7 @@ import type {
   UserProfile,
 } from './models';
 import type { ValidationResult } from './validation';
+import type { SourceVersion } from './content-report';
 
 export interface ApiError {
   error: string;
@@ -93,4 +94,10 @@ export interface ImportRequest {
 export interface ImportResponse {
   importedProfile: boolean;
   importedSiddur: number;
+}
+
+/** GET /v1/sources: text versions the content uses, for the "Sources & licenses" screen. */
+export interface SourcesResponse {
+  provider: { name: string; url: string };
+  versions: SourceVersion[];
 }

@@ -13,6 +13,7 @@ import { createProgressRouter } from './routes/progress';
 import coachRouter from './routes/coach';
 import uiRouter from './routes/ui';
 import optionsRouter from './routes/options';
+import { createSourcesRouter } from './routes/sources';
 import pkg from '../package.json';
 
 export interface AppOptions {
@@ -43,6 +44,7 @@ export function createApp(options: AppOptions) {
   app.use('/v1/auth', createAuthRouter(auth));
   app.use('/v1/ui-strings', uiRouter);
   app.use('/v1/options', optionsRouter);
+  app.use('/v1/sources', createSourcesRouter(library));
 
   // Everything else requires a session when APP_PASSPHRASE is set.
   app.use('/v1', requireAuth(auth));

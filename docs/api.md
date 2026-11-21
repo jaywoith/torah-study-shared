@@ -113,6 +113,21 @@ Ids and display names for every profile field, so clients never hard-code them. 
 ```
 Type: `OptionsResponse` in `packages/core/src/api-types.ts`.
 
+## `GET /v1/sources`
+
+Public (no sign-in needed, so attribution is always reachable). The text versions the content uses, for the "Sources & licenses" screen.
+
+```json
+{
+  "provider": { "name": "Sefaria", "url": "https://www.sefaria.org" },
+  "versions": [
+    { "language": "hebrew", "versionTitle": "Miqra according to the Masorah", "license": "CC-BY-SA", "units": 70,
+      "requiresAttribution": true, "nonCommercial": false, "personalUseOnly": false }
+  ]
+}
+```
+Type: `SourcesResponse` in `packages/core/src/api-types.ts`.
+
 ## `POST /v1/coach/message` (stub)
 
 **Body:** `{ "framework"?: FrameworkId (default "masorti_conservative"), "message": string }`

@@ -76,7 +76,8 @@
     "showCantillation": "Show cantillation marks (te'amim)",
     "divineName": "Divine Name",
     "divineNameHint": "Transliteration reads \"Hashem\" when abbreviated and \"Adonai\" otherwise. English translations are shown as written.",
-    "unverifiedNote": "Seed content is not yet verified against primary sources."
+    "unverifiedNote": "Texts are imported from Sefaria and not yet reviewed by the owner. Commentary and kavannah prompts are drafts.",
+    "sourcesLink": "Sources & licenses"
   },
   "options": {
     "interests": {
@@ -113,6 +114,17 @@
       "halachah": "Halachah",
       "commentary": "Commentary"
     }
+  },
+  "sources": {
+    "title": "Sources & licenses",
+    "intro": "Texts come from {provider}, imported into the app ahead of time. Each version is listed with its license.",
+    "hebrew": "Hebrew",
+    "english": "English",
+    "entries": "{n} entries",
+    "attribution": "Used under its license, with attribution.",
+    "nonCommercial": "Non-commercial license: personal use only.",
+    "personalUseOnly": "License not yet cleared: personal use only.",
+    "back": "Back to settings"
   },
   "auth": {
     "title": "Sign in",

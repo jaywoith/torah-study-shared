@@ -184,6 +184,17 @@ describe('GET /v1/options', () => {
   });
 });
 
+describe('GET /v1/sources', () => {
+  it('lists every text version with its license, publicly', async () => {
+    const res = await request(testApp({ passphrase: 'secret' }).app).get('/v1/sources');
+    expect(res.status).toBe(200);
+    expect(res.body.provider).toEqual({ name: 'Sefaria', url: 'https://www.sefaria.org' });
+    const titles = res.body.versions.map((v: { versionTitle: string }) => v.versionTitle);
+    expect(titles).toContain('Miqra according to the Masorah');
+    for (const v of res.body.versions) expect(v.units).toBeGreaterThan(0);
+  });
+});
+
 describe('serving the built web app', () => {
   it('serves index.html at / when webDist exists, and API routes still work', async () => {
     const { mkdtempSync, writeFileSync } = await import('node:fs');

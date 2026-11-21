@@ -15,6 +15,7 @@ import type {
   ProgressPath,
   ProgressResponse,
   SiddurNextResponse,
+  SourcesResponse,
   UserProfile,
 } from '@torah/core';
 import type { UiStrings } from '@torah/content';
@@ -57,6 +58,7 @@ export const api = {
 
   uiStrings: () => request<UiStrings>('/v1/ui-strings'),
   options: () => request<OptionsResponse>('/v1/options'),
+  sources: () => request<SourcesResponse>('/v1/sources'),
 
   getProfile: () => request<ProfileResponse>('/v1/profile'),
   saveProfile: (profile: UserProfile) => request<ProfileResponse>('/v1/profile', json('PUT', profile)),

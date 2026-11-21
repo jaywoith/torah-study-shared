@@ -5,6 +5,7 @@ import { uiStrings } from '@torah/content';
 import { LoginScreen } from '../src/screens/LoginScreen';
 import { SettingsScreen } from '../src/screens/SettingsScreen';
 import { SiddurScreen } from '../src/screens/SiddurScreen';
+import { SourcesScreen } from '../src/screens/SourcesScreen';
 import { TodayScreen } from '../src/screens/TodayScreen';
 import { DEFAULT_PROFILE, LEGACY_KEYS, readLegacyData } from '../src/storage';
 import { renderWithText } from './helpers';
@@ -194,5 +195,24 @@ describe('legacy browser data (v0.3 → server import)', () => {
     localStorage.setItem(LEGACY_KEYS.profile, JSON.stringify(DEFAULT_PROFILE));
     localStorage.setItem(LEGACY_KEYS.siddurCompleted, JSON.stringify(['baruch_sheamar']));
     expect(readLegacyData()).toEqual({ profile: DEFAULT_PROFILE, siddurCompleted: ['baruch_sheamar'] });
+  });
+});
+
+describe('SourcesScreen', () => {
+  it('lists versions with their licenses and flags', async () => {
+    mockFetch(() => ({
+      body: {
+        provider: { name: 'Sefaria', url: 'https://www.sefaria.org' },
+        versions: [
+          { language: 'hebrew', versionTitle: 'Miqra according to the Masorah', license: 'CC-BY-SA', units: 70, requiresAttribution: true, nonCommercial: false, personalUseOnly: false },
+          { language: 'english', versionTitle: 'NJPS', license: 'CC-BY-NC', units: 70, requiresAttribution: true, nonCommercial: true, personalUseOnly: false },
+        ],
+      },
+    }));
+    renderWithText(<SourcesScreen />);
+    expect(await screen.findByText('Miqra according to the Masorah')).toBeTruthy();
+    expect(screen.getByRole('link', { name: 'Sefaria' }).getAttribute('href')).toBe('https://www.sefaria.org');
+    expect(screen.getByText(uiStrings.sources.nonCommercial)).toBeTruthy();
+    expect(screen.getAllByText(uiStrings.sources.attribution)).toHaveLength(2);
   });
 });

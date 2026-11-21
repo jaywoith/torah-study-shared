@@ -115,6 +115,9 @@ export function SettingsScreen({
         )}
       </div>
       <p className="muted small">{strings.settings.unverifiedNote}</p>
+      <p className="small">
+        <a href="#/sources">{strings.settings.sourcesLink}</a>
+      </p>
       {onLogout && (
         <button type="button" className="link" onClick={onLogout}>
           {strings.auth.logout}

@@ -121,6 +121,7 @@ Updated 2026-11-21: the owner has a server and will set it up from a computer. D
 - Siddur Ashkenaz versions: Metsudah (he + en) **CC-BY**; "Daat Siddur Ashkenaz" (he) **Public Domain**; Singer 1915 (en) **Public Domain**; Sefaria Community Translation (en) **CC0**. Siddur Sim Shalom and several others are "unknown" → **excluded**.
 
 **Tasks**
+- [ ] **Owner decisions pending (asked 2026-11-21):** (1) Amidah source: Metsudah (Orthodox, no Imahot) or wait for a Conservative text; (2) Metsudah English writes the Name as "Adonoy": leave it (ADR-011), or render "Hashem" in English when abbreviated; (3) sessions now fit fewer, longer units (e.g. Siddur units up to 12 min): split long Siddur units, or tune the generator; (4) progress-tracked Musar path
 - [x] ADR-010 / ADR-011 are written (done in this commit); keep them current if anything changes
 - [x] **License policy** (plus the ADR-012 personal-use exception): allow `Public Domain`, `CC0`, `CC-BY`, `CC-BY-SA`; allow `CC-BY-NC` (fine for this personal, non-commercial app, but flag it in the content report); reject `unknown` and anything else. Every entry stores `license`, `versionTitle`, `sefariaRef`, `sefariaUrl`, `importedAt`
 - [x] **Import script** `scripts/import-sefaria.ts`: a list of refs (in a checked-in manifest, e.g. `packages/content/sefaria-manifest.json`) → fetch → sanitize (strip HTML, normalize whitespace) → keep te'amim → write `packages/content/data/*.json`. Idempotent; reports what changed; never overwrites `verified: true` entries without a flag
@@ -132,11 +133,11 @@ Updated 2026-11-21: the owner has a server and will set it up from a computer. D
 - [x] **Musar:** Mesillat Yesharim (CC0 + CC-BY) in reading order, then Pirkei Avot (PD + CC-BY): 394 units. The daily rotation steps through them in order by date. Follow-up (not started): a progress-tracked Musar path like the Siddur path (`PROGRESS_PATHS` + `/v1/musar/next`), so missed days don't skip text
 - [x] **Tanakh pool:** at least 60 units (70) so rotation doesn't repeat for two months
 - [x] Resolve deferred D2: replace or verify the Mesillat Yesharim seed quote; cite Chagigah 12a / Bereishit Rabbah 3:6 for the hidden-light unit
-- [ ] Commentary and kavannah prompts on imported units stay **owner-reviewed**. An LLM may draft them, but they're marked `verified: false` until the owner approves
-- [ ] `npm run content:report`: counts by type, unverified entries, NC-licensed entries, missing fields
+- [ ] **Owner:** decide whether to draft commentary/kavannah for the 480 imported units that lack them (LLM drafts, all `verified: false` until approved), and review what exists. Commentary and kavannah prompts on imported units stay **owner-reviewed**. An LLM may draft them, but they're marked `verified: false` until the owner approves
+- [x] `npm run content:report`: counts by type, unverified entries, NC-licensed entries, missing fields
 - [x] Content tests: required license/provenance fields; allowed licenses only; no HTML left in text; te'amim present only where the source has them
-- [ ] Web: Settings gets the cantillation toggle and Divine Name selector (done); Hebrew font check with te'amim (Noto Serif Hebrew supports them; verify visually)
-- [ ] Attribution: a simple "Sources & licenses" screen or footer listing versions used (required by CC-BY/CC-BY-SA)
+- [x] Web: Settings gets the cantillation toggle and Divine Name selector; Hebrew font check (verified 2026-11-21) with te'amim (Noto Serif Hebrew supports them; verify visually)
+- [x] Attribution (`GET /v1/sources` + Sources & licenses screen): a simple "Sources & licenses" screen or footer listing versions used (required by CC-BY/CC-BY-SA)
 
 ## v0.6.0: AI Study Coach
 

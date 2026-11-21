@@ -18,7 +18,7 @@ import {
   validateDailyStudy,
 } from '@torah/core';
 import { contentLibrary, siddurSections, studyUnits, uiStrings } from '../src';
-import { licenseStatus } from '../src/sefaria/license';
+import { licenseStatus } from '@torah/core';
 
 const UNIT_TYPES = ['tanakh', 'midrash', 'musar', 'siddur', 'kabbalah', 'halachah', 'commentary'];
 
