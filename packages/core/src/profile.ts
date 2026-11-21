@@ -3,6 +3,9 @@
  */
 
 import {
+  DEFAULT_DIVINE_NAME,
+  DEFAULT_SHOW_CANTILLATION,
+  DIVINE_NAME_MODES,
   FRAMEWORK_IDS,
   INTERESTS,
   LANGUAGE_MODES,
@@ -35,6 +38,19 @@ export function parseUserProfile(input: unknown): ParseResult {
     errors.push('profile.practiceContext must be a string');
   }
 
+  if (p.showCantillation !== undefined && typeof p.showCantillation !== 'boolean') {
+    errors.push('profile.showCantillation must be a boolean');
+  }
+  if (p.divineName !== undefined && !oneOf(DIVINE_NAME_MODES, p.divineName)) {
+    errors.push(`profile.divineName must be one of: ${DIVINE_NAME_MODES.join(', ')}`);
+  }
+
   if (errors.length > 0) return { ok: false, errors };
-  return { ok: true, profile: p as unknown as UserProfile };
+  // Fields added in v0.5 are optional on input so profiles saved by v0.4 keep working.
+  const profile = {
+    ...p,
+    showCantillation: p.showCantillation ?? DEFAULT_SHOW_CANTILLATION,
+    divineName: p.divineName ?? DEFAULT_DIVINE_NAME,
+  } as unknown as UserProfile;
+  return { ok: true, profile };
 }

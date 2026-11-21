@@ -25,7 +25,7 @@ export function SettingsScreen({
   const toggleInterest = (id: Interest) =>
     set('interests', draft.interests.includes(id) ? draft.interests.filter((i) => i !== id) : [...draft.interests, id]);
 
-  const select = <K extends 'framework' | 'level' | 'studyLength' | 'languageMode'>(
+  const select = <K extends 'framework' | 'level' | 'studyLength' | 'languageMode' | 'divineName'>(
     key: K,
     label: string,
     list: { id: string; name: string }[]
@@ -73,6 +73,20 @@ export function SettingsScreen({
             {o.name}
           </label>
         ))}
+      </fieldset>
+
+      <fieldset className="field">
+        <legend>{strings.settings.displayTitle}</legend>
+        <label className="check">
+          <input
+            type="checkbox"
+            checked={draft.showCantillation ?? false}
+            onChange={(e) => set('showCantillation', e.target.checked)}
+          />
+          {strings.settings.showCantillation}
+        </label>
+        {select('divineName', strings.settings.divineName, options.divineNames)}
+        <p className="muted small">{strings.settings.divineNameHint}</p>
       </fieldset>
 
       <label className="field">

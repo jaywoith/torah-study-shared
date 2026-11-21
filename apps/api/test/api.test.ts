@@ -53,6 +53,50 @@ describe('POST /v1/study/daily', () => {
   });
 });
 
+describe('display settings (ADR-011)', () => {
+  const lettersOnly = (t: string) => t.replace(/[\u0591-\u05C7]/g, '');
+  const hebrewOf = async (extra: Record<string, unknown>, date: string) => {
+    const res = await request(app).post('/v1/study/daily').send({ profile: { ...profile, interests: ['tanakh'], ...extra }, date });
+    expect(res.status).toBe(200);
+    return res.body.study.units as { hebrew?: string; transliteration?: string }[];
+  };
+  const dates = ['2026-11-01', '2026-11-02', '2026-11-03', '2026-11-04', '2026-11-05', '2026-11-06'];
+
+  it('abbreviates the Divine Name and hides cantillation by default', async () => {
+    for (const date of dates) {
+      for (const u of await hebrewOf({}, date)) {
+        if (u.hebrew) expect(lettersOnly(u.hebrew)).not.toMatch(/יהוה/);
+        if (u.hebrew) expect(u.hebrew).not.toMatch(/[\u0591-\u05AF]/);
+        if (u.transliteration) expect(u.transliteration).not.toMatch(/\bAdonai\b/);
+      }
+    }
+  });
+
+  it('shows the Name as in the source when divineName is full', async () => {
+    const all = (await Promise.all(dates.map((d) => hebrewOf({ divineName: 'full' }, d)))).flat();
+    expect(all.some((u) => u.hebrew && lettersOnly(u.hebrew).includes('יהוה'))).toBe(true);
+  });
+
+  it('echoes the settings in study.profile', async () => {
+    const res = await request(app)
+      .post('/v1/study/daily')
+      .send({ profile: { ...profile, divineName: 'yud_yud', showCantillation: true }, date: '2026-11-11' });
+    expect(res.body.study.profile).toMatchObject({ divineName: 'yud_yud', showCantillation: true });
+  });
+
+  it('rejects invalid settings', async () => {
+    const res = await request(app).post('/v1/study/daily').send({ profile: { ...profile, divineName: 'hashem' } });
+    expect(res.status).toBe(400);
+    expect((await request(app).get('/v1/siddur/next?divineName=hashem')).status).toBe(400);
+    expect((await request(app).get('/v1/siddur/next?showCantillation=yes')).status).toBe(400);
+  });
+
+  it('accepts the settings on /v1/siddur/next', async () => {
+    const res = await request(app).get('/v1/siddur/next?showCantillation=true&divineName=full');
+    expect(res.status).toBe(200);
+  });
+});
+
 describe('GET /v1/siddur/next', () => {
   it('starts at the first unit', async () => {
     const res = await request(app).get('/v1/siddur/next');
@@ -128,6 +172,7 @@ describe('GET /v1/options', () => {
     expect(res.body.frameworks).toHaveLength(5);
     expect(res.body.levels.map((l: { id: string }) => l.id)).toEqual(['beginner', 'intermediate', 'advanced', 'scholar']);
     expect(res.body.studyLengths).toContainEqual({ id: 'medium', name: 'Medium', minutes: 20 });
+    expect(res.body.divineNames.map((o: { id: string }) => o.id)).toEqual(['abbreviated', 'full', 'yud_yud']);
     for (const group of Object.values(res.body) as { name: string }[][]) {
       for (const option of group) expect(option.name).toBeTruthy();
     }

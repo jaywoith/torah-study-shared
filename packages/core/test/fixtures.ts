@@ -6,6 +6,8 @@ export const modelUser: UserProfile = {
   interests: ['siddur', 'musar', 'kabbalah', 'kavannah'],
   studyLength: 'medium',
   languageMode: 'mixed',
+  showCantillation: false,
+  divineName: 'abbreviated',
   practiceContext: 'Attends Shacharit minyan',
 };
 

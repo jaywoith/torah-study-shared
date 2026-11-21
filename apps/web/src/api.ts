@@ -66,7 +66,12 @@ export const api = {
 
   /** Completed units come from the server. Resolves to null when the path is complete or there is no Siddur interest (404). */
   siddurNext: async (profile: UserProfile): Promise<SiddurNextResponse | null> => {
-    const params = new URLSearchParams({ interests: profile.interests.join(','), languageMode: profile.languageMode });
+    const params = new URLSearchParams({
+      interests: profile.interests.join(','),
+      languageMode: profile.languageMode,
+      showCantillation: String(profile.showCantillation ?? false),
+      divineName: profile.divineName ?? 'abbreviated',
+    });
     try {
       return await request<SiddurNextResponse>(`/v1/siddur/next?${params}`);
     } catch (err) {

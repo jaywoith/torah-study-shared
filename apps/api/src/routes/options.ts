@@ -1,5 +1,6 @@
 import { Router, Request, Response } from 'express';
 import {
+  DIVINE_NAME_MODES,
   FRAMEWORK_IDS,
   INTERESTS,
   LANGUAGE_MODES,
@@ -25,6 +26,7 @@ export function buildOptions(): OptionsResponse {
     interests: INTERESTS.map((id) => ({ id, name: labels.interests[id] })),
     studyLengths: STUDY_LENGTHS.map((id) => ({ id, name: labels.studyLengths[id], minutes: STUDY_LENGTH_MINUTES[id] })),
     languageModes: LANGUAGE_MODES.map((id) => ({ id, name: labels.languageModes[id] })),
+    divineNames: DIVINE_NAME_MODES.map((id) => ({ id, name: labels.divineNames[id] })),
   };
 }
 

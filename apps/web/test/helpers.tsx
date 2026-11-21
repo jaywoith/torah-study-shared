@@ -9,6 +9,11 @@ export const options: OptionsResponse = {
   interests: [{ id: 'siddur', name: 'Siddur' }, { id: 'musar', name: 'Musar' }],
   studyLengths: [{ id: 'medium', name: 'Medium', minutes: 20 }],
   languageModes: [{ id: 'mixed', name: 'Mixed' }, { id: 'english', name: 'English' }],
+  divineNames: [
+    { id: 'abbreviated', name: 'Abbreviated' },
+    { id: 'full', name: 'Full' },
+    { id: 'yud_yud', name: 'Yud-yud' },
+  ],
 };
 
 export function renderWithText(ui: React.ReactElement) {

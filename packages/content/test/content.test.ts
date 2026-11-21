@@ -4,6 +4,7 @@
  */
 import { describe, expect, it } from 'vitest';
 import {
+  DIVINE_NAME_MODES,
   FRAMEWORK_IDS,
   INTERESTS,
   KABBALAH_DEPTHS,
@@ -65,19 +66,22 @@ describe('siddur', () => {
 });
 
 describe('generated studies from real content', () => {
-  it('validate for every framework × level × length × language mode', () => {
+  it('validate for every framework × level × length × language mode × display setting', () => {
     for (const framework of FRAMEWORK_IDS)
       for (const level of LEARNING_LEVELS)
         for (const studyLength of ['short', 'medium', 'long'] as const)
-          for (const languageMode of ['english', 'hebrew', 'split', 'mixed'] as const) {
-            const study = generateDailyStudy(
-              { framework, level, studyLength, languageMode, interests: [...INTERESTS] },
-              '2026-11-11',
-              contentLibrary
-            );
-            const result = validateDailyStudy(study);
-            expect(result.issues, `${framework}/${level}/${studyLength}/${languageMode}`).toEqual([]);
-          }
+          for (const languageMode of ['english', 'hebrew', 'split', 'mixed'] as const)
+            for (const divineName of DIVINE_NAME_MODES)
+              for (const showCantillation of [false, true]) {
+                const study = generateDailyStudy(
+                  { framework, level, studyLength, languageMode, divineName, showCantillation, interests: [...INTERESTS] },
+                  '2026-11-11',
+                  contentLibrary
+                );
+                const result = validateDailyStudy(study);
+                const label = `${framework}/${level}/${studyLength}/${languageMode}/${divineName}/${showCantillation}`;
+                expect(result.issues, label).toEqual([]);
+              }
   });
 });
 
@@ -95,6 +99,7 @@ describe('ui strings', () => {
     expect(Object.keys(uiStrings.options.interests).sort()).toEqual([...INTERESTS].sort());
     expect(Object.keys(uiStrings.options.studyLengths).sort()).toEqual([...STUDY_LENGTHS].sort());
     expect(Object.keys(uiStrings.options.languageModes).sort()).toEqual([...LANGUAGE_MODES].sort());
+    expect(Object.keys(uiStrings.options.divineNames).sort()).toEqual([...DIVINE_NAME_MODES].sort());
     expect(Object.keys(uiStrings.options.unitTypes).sort()).toEqual([...UNIT_TYPES].sort());
   });
 });

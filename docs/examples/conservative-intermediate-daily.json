@@ -4,7 +4,9 @@
     "framework": "masorti_conservative",
     "level": "intermediate",
     "studyLength": "medium",
-    "languageMode": "mixed"
+    "languageMode": "mixed",
+    "showCantillation": false,
+    "divineName": "abbreviated"
   },
   "display": {
     "mode": "mixed",
@@ -55,8 +57,8 @@
       "id": "2026-11-11-tanakh-micah-6-8",
       "type": "tanakh",
       "title": "Micah 6:8 – what God asks",
-      "hebrew": "הִגִּיד לְךָ אָדָם מַה־טּוֹב וּמָה־יְהוָה דּוֹרֵשׁ מִמְּךָ כִּי אִם־עֲשׂוֹת מִשְׁפָּט וְאַהֲבַת חֶסֶד וְהַצְנֵעַ לֶכֶת עִם־אֱלֹהֶיךָ",
-      "transliteration": "Higid lecha adam mah tov u’mah Adonai doresh mimcha ki im asot mishpat ve’ahavat chesed vehatznea lechet im Elohecha",
+      "hebrew": "הִגִּיד לְךָ אָדָם מַה־טּוֹב וּמָה־ה׳ דּוֹרֵשׁ מִמְּךָ כִּי אִם־עֲשׂוֹת מִשְׁפָּט וְאַהֲבַת חֶסֶד וְהַצְנֵעַ לֶכֶת עִם־אֱלֹהֶיךָ",
+      "transliteration": "Higid lecha adam mah tov u’mah Hashem doresh mimcha ki im asot mishpat ve’ahavat chesed vehatznea lechet im Elohecha",
       "english": "He has told you, O man, what is good, and what the Lord requires of you: only to do justice, to love kindness, and to walk humbly with your God.",
       "commentary": "Three demands in one verse: act justly, love chesed (not merely do it), and walk humbly. The Talmud (Makkot 24a) cites this verse as one of the summaries of the mitzvot.",
       "kavannahPrompt": "Which of the three — justice, chesed, humility — needs your attention most today?",

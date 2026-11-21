@@ -40,6 +40,17 @@ export type Interest = (typeof INTERESTS)[number];
 export const KABBALAH_DEPTHS = ['symbolic', 'intermediate', 'advanced'] as const;
 export type KabbalahDepth = (typeof KABBALAH_DEPTHS)[number];
 
+/**
+ * How the Tetragrammaton is displayed (ADR-011). Content stores the source form.
+ * abbreviated: ה׳ (default) · full: as in the source · yud_yud: יְיָ
+ */
+export const DIVINE_NAME_MODES = ['abbreviated', 'full', 'yud_yud'] as const;
+export type DivineNameMode = (typeof DIVINE_NAME_MODES)[number];
+
+/** Defaults for display settings added after v0.4; applied when a saved profile lacks them. */
+export const DEFAULT_SHOW_CANTILLATION = false;
+export const DEFAULT_DIVINE_NAME: DivineNameMode = 'abbreviated';
+
 /** Progress tracks: the sequential Siddur path, and units completed within a day's study. */
 export const PROGRESS_PATHS = ['siddur', 'daily'] as const;
 export type ProgressPath = (typeof PROGRESS_PATHS)[number];
@@ -50,6 +61,10 @@ export interface UserProfile {
   interests: Interest[];
   studyLength: StudyLength;
   languageMode: LanguageMode;
+  /** Show te'amim (cantillation marks). Default false. */
+  showCantillation: boolean;
+  /** How the Divine Name is written. Default 'abbreviated'. */
+  divineName: DivineNameMode;
   practiceContext?: string; // e.g. "Attends Shacharit minyan"
 }
 
@@ -101,7 +116,10 @@ export interface LanguageDisplay {
 
 export interface DailyStudy {
   date: string; // ISO date YYYY-MM-DD
-  profile: Pick<UserProfile, 'framework' | 'level' | 'studyLength' | 'languageMode'>;
+  profile: Pick<
+    UserProfile,
+    'framework' | 'level' | 'studyLength' | 'languageMode' | 'showCantillation' | 'divineName'
+  >;
   display: LanguageDisplay;
   units: StudyUnit[];
   totalEstimatedMinutes: number;

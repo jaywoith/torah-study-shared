@@ -21,6 +21,8 @@ import {
   ContentLibrary,
   ContentUnit,
   DailyStudy,
+  DEFAULT_DIVINE_NAME,
+  DEFAULT_SHOW_CANTILLATION,
   Interest,
   KABBALAH_DEPTHS,
   KabbalahDepth,
@@ -32,6 +34,7 @@ import {
 import { getFramework } from './frameworks';
 import { getLevel, levelRank } from './learning-levels';
 import { applyLanguageMode, getLanguageDisplay } from './language';
+import { applyTextPreferences } from './text-display';
 import { SIDDUR_INTERESTS, getSiddurSequence } from './siddur-path';
 
 /** Target minutes per study length. */
@@ -161,7 +164,12 @@ export function generateDailyStudy(profile: UserProfile, date: string, library: 
   picked.sort((a, b) => order.indexOf(a.type) - order.indexOf(b.type));
   const selected = anchor ? [...picked, anchor] : picked;
 
-  const units = selected.map((u) => applyLanguageMode(toStudyUnit(u, date), display));
+  // Defaults guard callers that pass an unparsed (pre-v0.5) profile.
+  const prefs = {
+    showCantillation: profile.showCantillation ?? DEFAULT_SHOW_CANTILLATION,
+    divineName: profile.divineName ?? DEFAULT_DIVINE_NAME,
+  };
+  const units = selected.map((u) => applyTextPreferences(applyLanguageMode(toStudyUnit(u, date), display), prefs));
 
   return {
     date,
@@ -170,6 +178,8 @@ export function generateDailyStudy(profile: UserProfile, date: string, library: 
       level: profile.level,
       studyLength: profile.studyLength,
       languageMode: profile.languageMode,
+      showCantillation: prefs.showCantillation,
+      divineName: prefs.divineName,
     },
     display,
     units,

@@ -6,6 +6,7 @@
 import type { Rendered } from './language';
 import type {
   DailyStudy,
+  DivineNameMode,
   FrameworkId,
   Interest,
   LanguageDisplay,
@@ -49,6 +50,7 @@ export interface OptionsResponse {
   interests: Option<Interest>[];
   studyLengths: (Option<StudyLength> & { minutes: number })[];
   languageModes: Option<LanguageMode>[];
+  divineNames: Option<DivineNameMode>[];
 }
 
 /** GET /v1/auth/session */

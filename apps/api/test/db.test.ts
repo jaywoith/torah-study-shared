@@ -9,6 +9,8 @@ const profile = {
   interests: ['siddur' as const],
   studyLength: 'medium' as const,
   languageMode: 'mixed' as const,
+  showCantillation: false,
+  divineName: 'abbreviated' as const,
 };
 
 describe('migrations', () => {
@@ -39,6 +41,13 @@ describe('repository', () => {
     r.saveProfile(profile);
     r.saveProfile({ ...profile, level: 'advanced' });
     expect(r.getProfile()).toEqual({ ...profile, level: 'advanced' });
+  });
+
+  it('defaults v0.5 display settings on a profile saved by v0.4', () => {
+    const db = openDatabase(':memory:');
+    const { showCantillation, divineName, ...v04 } = profile;
+    db.prepare("INSERT INTO profile (id, data, updated_at) VALUES (1, ?, ?)").run(JSON.stringify(v04), '2026-11-01T00:00:00Z');
+    expect(createRepository(db).getProfile()).toEqual({ ...v04, showCantillation: false, divineName: 'abbreviated' });
   });
 
   it('records Siddur completion idempotently, in completion order', () => {

@@ -26,6 +26,7 @@ The response types are defined in `packages/core/src/models.ts` and `packages/co
 
 `GET` → `{ profile: UserProfile | null }` (`null` until saved; the web then uses the model-user default).
 `PUT` with a `UserProfile` body → `{ profile }`. 400 with `issues` if invalid.
+`showCantillation` (boolean, default `false`) and `divineName` (`abbreviated` | `full` | `yud_yud`, default `abbreviated`) were added in v0.5 and are optional on input: missing values are filled with the defaults, in responses and for profiles saved by v0.4.
 
 ## Progress
 
@@ -52,19 +53,26 @@ Generates, validates and returns the daily study.
     "interests": ["siddur", "musar", "kabbalah", "kavannah"],
     "studyLength": "medium",
     "languageMode": "mixed",
+    "showCantillation": false,
+    "divineName": "abbreviated",
     "practiceContext": "Attends Shacharit minyan"
   },
   "date": "2026-11-11"
 }
 ```
-`date` is optional (defaults to today, UTC). Allowed values for each field are listed in `models.ts` (`FRAMEWORK_IDS`, `LEARNING_LEVELS`, `INTERESTS`, `STUDY_LENGTHS`, `LANGUAGE_MODES`).
+`date` is optional (defaults to today, UTC). Allowed values for each field are listed in `models.ts` (`FRAMEWORK_IDS`, `LEARNING_LEVELS`, `INTERESTS`, `STUDY_LENGTHS`, `LANGUAGE_MODES`, `DIVINE_NAME_MODES`).
 
 **200**: `{ "study": DailyStudy, "validation": { "valid": true, "issues": [] } }`. A full example is in [examples/conservative-intermediate-daily.json](examples/conservative-intermediate-daily.json) (kept in sync by a test).
 
 Key `DailyStudy` fields:
 - `units[]`: `id` (`<date>-<contentId>`, unique within the study), `contentId` (stable, used for progress); text fields present depend on the language mode
 - `display`: `{ mode, showHebrew, showTransliteration, showEnglish, layout: "stacked" | "side-by-side" | "interleaved" }`. Clients lay out units using this.
+- `profile`: echoes `framework`, `level`, `studyLength`, `languageMode`, `showCantillation`, `divineName`
 - `totalEstimatedMinutes`, `budgetMinutes` (short 10 / medium 20 / long 35)
+
+**Display settings (ADR-011)** are applied to `hebrew` and `transliteration` after the language mode:
+- `showCantillation: false` removes te'amim (U+0591–U+05AF), meteg and paseq; nikkud, maqaf and sof pasuq stay.
+- `divineName` changes only the Tetragrammaton (any pointing, with prefixes). `abbreviated` → ה׳ and transliteration "Hashem"; `yud_yud` → יְיָ (ה׳ where the source points the Name to be read Elohim); `full` → as in the source. Transliteration reads "Adonai" for `full` and `yud_yud`. English is never changed.
 
 **400**: invalid profile (`issues` lists each problem) or bad date. **422**: the generated study failed validation (`issues`, `study` included for debugging).
 
@@ -75,13 +83,15 @@ Key `DailyStudy` fields:
 | `completed` | from the database | comma-separated Siddur unit ids; overrides the saved progress when given (even empty) |
 | `interests` | `siddur,kavannah` | comma-separated; needs one of `siddur`, `kavannah`, `prayerbook_hebrew` |
 | `languageMode` | `mixed` | `english` \| `hebrew` \| `split` \| `mixed` |
+| `showCantillation` | `false` | `true` \| `false` |
+| `divineName` | `abbreviated` | `abbreviated` \| `full` \| `yud_yud` |
 
 **200**
 ```json
 { "unit": SiddurUnit, "display": LanguageDisplay, "position": 2, "total": 3, "completedCount": 1 }
 ```
 Returns the earliest unit, in path order, that isn't in `completed`.
-**400**: unknown interest or language mode. **404**: path complete, or no Siddur-related interest.
+**400**: unknown interest, language mode, `showCantillation` or `divineName`. **404**: path complete, or no Siddur-related interest.
 
 ## `GET /v1/ui-strings`
 
@@ -97,7 +107,8 @@ Ids and display names for every profile field, so clients never hard-code them. 
   "levels":        [{ "id": "intermediate", "name": "Intermediate", "description": "…" }],
   "interests":     [{ "id": "siddur", "name": "Siddur" }],
   "studyLengths":  [{ "id": "medium", "name": "Medium", "minutes": 20 }],
-  "languageModes": [{ "id": "mixed", "name": "Mixed (Hebrew + transliteration + English)" }]
+  "languageModes": [{ "id": "mixed", "name": "Mixed (Hebrew + transliteration + English)" }],
+  "divineNames":   [{ "id": "abbreviated", "name": "Abbreviated (ה׳)" }]
 }
 ```
 Type: `OptionsResponse` in `packages/core/src/api-types.ts`.

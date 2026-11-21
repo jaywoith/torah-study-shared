@@ -6,6 +6,7 @@ export * from './models';
 export * from './frameworks';
 export * from './learning-levels';
 export * from './language';
+export * from './text-display';
 export * from './siddur-path';
 export * from './paths';
 export * from './study-generator';

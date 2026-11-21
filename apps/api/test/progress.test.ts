@@ -16,7 +16,10 @@ describe('/v1/profile', () => {
     expect((await request(app).get('/v1/profile')).body).toEqual({ profile: null });
     const put = await request(app).put('/v1/profile').send(profile);
     expect(put.status).toBe(200);
-    expect((await request(app).get('/v1/profile')).body).toEqual({ profile });
+    // Display settings added in v0.5 are filled with defaults when omitted.
+    const saved = { ...profile, showCantillation: false, divineName: 'abbreviated' };
+    expect(put.body).toEqual({ profile: saved });
+    expect((await request(app).get('/v1/profile')).body).toEqual({ profile: saved });
   });
 
   it('rejects an invalid profile', async () => {

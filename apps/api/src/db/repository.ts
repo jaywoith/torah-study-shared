@@ -1,6 +1,7 @@
 /**
  * All SQL lives here. Routes call these functions and never touch the db directly.
  */
+import { parseUserProfile } from '@torah/core';
 import type { DailyCompletion, ProgressPath, UserProfile } from '@torah/core';
 import type { Db } from './index';
 
@@ -32,7 +33,11 @@ export function createRepository(db: Db, now: () => Date = () => new Date()) {
   return {
     getProfile(): UserProfile | null {
       const row = stmts.getProfile.get() as { data: string } | undefined;
-      return row ? (JSON.parse(row.data) as UserProfile) : null;
+      if (!row) return null;
+      // Run stored data through the parser so profiles saved by older versions get
+      // defaults for newer fields (e.g. v0.5 display settings).
+      const parsed = parseUserProfile(JSON.parse(row.data));
+      return parsed.ok ? parsed.profile : (JSON.parse(row.data) as UserProfile);
     },
 
     saveProfile(profile: UserProfile): void {

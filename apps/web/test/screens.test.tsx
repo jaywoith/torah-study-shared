@@ -39,6 +39,21 @@ describe('SettingsScreen', () => {
     expect(saved.interests).not.toContain('musar');
   });
 
+  it('saves the cantillation toggle and Divine Name setting', async () => {
+    const onSave = vi.fn().mockResolvedValue(undefined);
+    renderWithText(<SettingsScreen profile={DEFAULT_PROFILE} onSave={onSave} />);
+    const toggle = screen.getByLabelText(uiStrings.settings.showCantillation) as HTMLInputElement;
+    expect(toggle.checked).toBe(false);
+    expect((screen.getByLabelText(uiStrings.settings.divineName) as HTMLSelectElement).value).toBe('abbreviated');
+
+    fireEvent.click(toggle);
+    fireEvent.change(screen.getByLabelText(uiStrings.settings.divineName), { target: { value: 'yud_yud' } });
+    fireEvent.click(screen.getByRole('button', { name: uiStrings.common.save }));
+
+    await screen.findByRole('status');
+    expect(onSave.mock.calls[0][0]).toMatchObject({ showCantillation: true, divineName: 'yud_yud' });
+  });
+
   it('shows an error when saving fails', async () => {
     renderWithText(<SettingsScreen profile={DEFAULT_PROFILE} onSave={vi.fn().mockRejectedValue(new Error('x'))} />);
     fireEvent.click(screen.getByRole('button', { name: uiStrings.common.save }));

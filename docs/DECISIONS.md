@@ -92,3 +92,11 @@ Short records of decisions that are settled. Each one has the context, the decis
 **Decision.** Content keeps the source text, including te'amim and the Name as written. Two profile settings control rendering in the API, alongside the language mode: `showCantillation` (default **off**) and `divineName`: `abbreviated` ה׳ (**default**), `full`, or `yud_yud` יְיָ. The transforms are pure functions in `@torah/core`.
 
 **Consequences.** One stored text serves every preference. Changing a setting needs no re-import. A future cantillation-reading track can use the same data.
+
+**Details settled 2026-11-21 (owner confirmed the first two):**
+- **Transliteration and English:** transliteration reads "Hashem" when `abbreviated` and "Adonai" for `full` and `yud_yud`. English is shown exactly as the translation renders it (no "LORD" → "Hashem" rewriting of licensed translations).
+- **Scope:** only the Tetragrammaton is transformed. אֱלֹהִים, אֲדֹנָי, אֵל, שַׁדַּי etc. render as in the source.
+- **Cantillation off** removes te'amim U+0591–U+05AF, meteg U+05BD and paseq U+05C0. It keeps nikkud, qamats qatan, maqaf and sof pasuq (the verse end appears in nikkud-only editions too). Meteg goes because our sources mark qamats qatan explicitly.
+- **Matching:** the Name is matched with any marks between letters and up to three one-letter prefixes (ו ב כ ל מ ש ה), which are kept (לַיהוָה → לַה׳ / לַיְיָ). A source that already writes יְיָ is abbreviated too.
+- **Elohim reading:** where the source points the Name to be read Elohim (hiriq, e.g. אֲדֹנָי יֱהֹוִה), `yud_yud` writes ה׳, because יְיָ would change the reading.
+- **Known limit:** in `abbreviated` mode every transliterated "Adonai" becomes "Hashem", including ones that render אֲדֹנָי (e.g. "Adonai sefatai"). The Hebrew אֲדֹנָי itself is unchanged. Te'amim on the Name are not carried onto the substitute.

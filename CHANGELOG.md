@@ -4,7 +4,15 @@ All notable changes. Format: [Keep a Changelog](https://keepachangelog.com); ver
 
 ## [Unreleased]
 
+### Added
+- **Display settings (ADR-011):** `showCantillation` (default off) and `divineName` (`abbreviated` ה׳ default, `full`, `yud_yud` יְיָ) on the profile. Applied by the API to daily study and `/v1/siddur/next` (new query params `showCantillation`, `divineName`). Transliteration reads "Hashem" when abbreviated; English is untouched.
+- Core: `stripCantillation`, `hasCantillation`, `applyDivineName`, `applyDivineNameTransliteration`, `applyTextPreferences`; `DIVINE_NAME_MODES` enum.
+- `GET /v1/options` returns `divineNames`; `study.profile` echoes both settings.
+- Web Settings: "Text display" group with the cantillation toggle and Divine Name selector.
+
 ### Changed
+- Profiles saved by v0.4 (or sent without the new fields) get the defaults; `GET /v1/profile` always returns both fields. Non-breaking.
+- With the default setting, Tanakh Hebrew now shows ה׳ and transliteration "Hashem" where they previously showed the Name and "Adonai".
 - Plan: v0.5.0 detailed with owner decisions: Sefaria build-time import (ADR-010); cantillation toggle and Divine Name setting, default ה׳ (ADR-011); full Sefaria mirror with monthly sync and a cantillation track added to the backlog. Deferred issue D3 decided.
 
 ## [0.4.0-rc.1] – 2026-11-21 — Persistence & Progress

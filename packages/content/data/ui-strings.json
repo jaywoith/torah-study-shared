@@ -72,6 +72,10 @@
     "saved": "Saved",
     "practiceContext": "Practice context (optional)",
     "practiceContextHint": "e.g. Attends Shacharit minyan",
+    "displayTitle": "Text display",
+    "showCantillation": "Show cantillation marks (te'amim)",
+    "divineName": "Divine Name",
+    "divineNameHint": "Transliteration reads \"Hashem\" when abbreviated and \"Adonai\" otherwise. English translations are shown as written.",
     "unverifiedNote": "Seed content is not yet verified against primary sources."
   },
   "options": {
@@ -94,6 +98,11 @@
       "hebrew": "Hebrew",
       "split": "Split (side by side)",
       "mixed": "Mixed (Hebrew + transliteration + English)"
+    },
+    "divineNames": {
+      "abbreviated": "Abbreviated (ה׳)",
+      "full": "Full, as in the source",
+      "yud_yud": "Yud-yud (יְיָ)"
     },
     "unitTypes": {
       "tanakh": "Tanakh",
