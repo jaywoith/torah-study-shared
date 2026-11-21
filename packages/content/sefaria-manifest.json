@@ -6052,10 +6052,39 @@
     {
       "section": "pesukei_dezimra",
       "id": "hodu",
-      "ref": "Siddur Ashkenaz, Weekday, Shacharit, Pesukei Dezimra, Hodu",
+      "ref": "Siddur Ashkenaz, Weekday, Shacharit, Pesukei Dezimra, Hodu 1",
       "versions": "siddur",
       "defaults": {
-        "blessingOrLine": "Hodu",
+        "blessingOrLine": "Hodu (1 of 3)",
+        "relatedInterests": [
+          "siddur",
+          "kavannah"
+        ]
+      },
+      "remove": [
+        "estimatedMinutes"
+      ]
+    },
+    {
+      "section": "pesukei_dezimra",
+      "id": "hodu_2",
+      "ref": "Siddur Ashkenaz, Weekday, Shacharit, Pesukei Dezimra, Hodu 2",
+      "versions": "siddur",
+      "defaults": {
+        "blessingOrLine": "Hodu (2 of 3)",
+        "relatedInterests": [
+          "siddur",
+          "kavannah"
+        ]
+      }
+    },
+    {
+      "section": "pesukei_dezimra",
+      "id": "hodu_3",
+      "ref": "Siddur Ashkenaz, Weekday, Shacharit, Pesukei Dezimra, Hodu 3-4",
+      "versions": "siddur",
+      "defaults": {
+        "blessingOrLine": "Hodu (3 of 3)",
         "relatedInterests": [
           "siddur",
           "kavannah"
@@ -6267,10 +6296,39 @@
     {
       "section": "shema",
       "id": "yotzer_or",
-      "ref": "Siddur Ashkenaz, Weekday, Shacharit, Blessings of the Shema, First Blessing before Shema",
+      "ref": "Siddur Ashkenaz, Weekday, Shacharit, Blessings of the Shema, First Blessing before Shema 1-2",
       "versions": "siddur",
       "defaults": {
-        "blessingOrLine": "First blessing before the Shema (Yotzer Or)",
+        "blessingOrLine": "Yotzer Or (1 of 3)",
+        "relatedInterests": [
+          "siddur",
+          "kavannah"
+        ]
+      },
+      "remove": [
+        "estimatedMinutes"
+      ]
+    },
+    {
+      "section": "shema",
+      "id": "yotzer_or_2",
+      "ref": "Siddur Ashkenaz, Weekday, Shacharit, Blessings of the Shema, First Blessing before Shema 3-7",
+      "versions": "siddur",
+      "defaults": {
+        "blessingOrLine": "Yotzer Or (2 of 3)",
+        "relatedInterests": [
+          "siddur",
+          "kavannah"
+        ]
+      }
+    },
+    {
+      "section": "shema",
+      "id": "yotzer_or_3",
+      "ref": "Siddur Ashkenaz, Weekday, Shacharit, Blessings of the Shema, First Blessing before Shema 8",
+      "versions": "siddur",
+      "defaults": {
+        "blessingOrLine": "Yotzer Or (3 of 3)",
         "relatedInterests": [
           "siddur",
           "kavannah"
@@ -6293,10 +6351,39 @@
     {
       "section": "shema",
       "id": "shema",
-      "ref": "Siddur Ashkenaz, Weekday, Shacharit, Blessings of the Shema, Shema",
+      "ref": "Siddur Ashkenaz, Weekday, Shacharit, Blessings of the Shema, Shema 1-6",
       "versions": "siddur",
       "defaults": {
-        "blessingOrLine": "The Shema",
+        "blessingOrLine": "The Shema: first paragraph (1 of 3)",
+        "relatedInterests": [
+          "siddur",
+          "kavannah"
+        ]
+      },
+      "remove": [
+        "estimatedMinutes"
+      ]
+    },
+    {
+      "section": "shema",
+      "id": "shema_2",
+      "ref": "Siddur Ashkenaz, Weekday, Shacharit, Blessings of the Shema, Shema 7",
+      "versions": "siddur",
+      "defaults": {
+        "blessingOrLine": "The Shema: second paragraph (2 of 3)",
+        "relatedInterests": [
+          "siddur",
+          "kavannah"
+        ]
+      }
+    },
+    {
+      "section": "shema",
+      "id": "shema_3",
+      "ref": "Siddur Ashkenaz, Weekday, Shacharit, Blessings of the Shema, Shema 8-12",
+      "versions": "siddur",
+      "defaults": {
+        "blessingOrLine": "The Shema: third paragraph (3 of 3)",
         "relatedInterests": [
           "siddur",
           "kavannah"
@@ -6306,10 +6393,351 @@
     {
       "section": "shema",
       "id": "emet_veyatziv",
-      "ref": "Siddur Ashkenaz, Weekday, Shacharit, Blessings of the Shema, Blessing after Shema",
+      "ref": "Siddur Ashkenaz, Weekday, Shacharit, Blessings of the Shema, Blessing after Shema 1-3",
       "versions": "siddur",
       "defaults": {
-        "blessingOrLine": "Blessing after the Shema (Emet Veyatziv)",
+        "blessingOrLine": "Emet Veyatziv (1 of 3)",
+        "relatedInterests": [
+          "siddur",
+          "kavannah"
+        ]
+      },
+      "remove": [
+        "estimatedMinutes"
+      ]
+    },
+    {
+      "section": "shema",
+      "id": "emet_veyatziv_2",
+      "ref": "Siddur Ashkenaz, Weekday, Shacharit, Blessings of the Shema, Blessing after Shema 4-6",
+      "versions": "siddur",
+      "defaults": {
+        "blessingOrLine": "Emet Veyatziv (2 of 3)",
+        "relatedInterests": [
+          "siddur",
+          "kavannah"
+        ]
+      }
+    },
+    {
+      "section": "shema",
+      "id": "emet_veyatziv_3",
+      "ref": "Siddur Ashkenaz, Weekday, Shacharit, Blessings of the Shema, Blessing after Shema 7-9",
+      "versions": "siddur",
+      "defaults": {
+        "blessingOrLine": "Emet Veyatziv (3 of 3)",
+        "relatedInterests": [
+          "siddur",
+          "kavannah"
+        ]
+      }
+    },
+    {
+      "section": "amidah",
+      "id": "amidah_avot",
+      "ref": "Siddur Ashkenaz, Weekday, Shacharit, Amidah, Patriarchs",
+      "versions": "siddur",
+      "defaults": {
+        "blessingOrLine": "Avot (Patriarchs)",
+        "relatedInterests": [
+          "siddur",
+          "kavannah"
+        ]
+      }
+    },
+    {
+      "section": "amidah",
+      "id": "amidah_gevurot",
+      "ref": "Siddur Ashkenaz, Weekday, Shacharit, Amidah, Divine Might",
+      "versions": "siddur",
+      "defaults": {
+        "blessingOrLine": "Gevurot (Divine Might)",
+        "relatedInterests": [
+          "siddur",
+          "kavannah"
+        ]
+      }
+    },
+    {
+      "section": "amidah",
+      "id": "amidah_kedushat_hashem",
+      "ref": "Siddur Ashkenaz, Weekday, Shacharit, Amidah, Holiness of God",
+      "versions": "siddur",
+      "defaults": {
+        "blessingOrLine": "Kedushat Hashem (Holiness of God)",
+        "relatedInterests": [
+          "siddur",
+          "kavannah"
+        ]
+      }
+    },
+    {
+      "section": "amidah",
+      "id": "amidah_kedushah",
+      "ref": "Siddur Ashkenaz, Weekday, Shacharit, Amidah, Kedushah",
+      "versions": "siddur",
+      "defaults": {
+        "blessingOrLine": "Kedushah (with a minyan)",
+        "relatedInterests": [
+          "siddur",
+          "kavannah"
+        ]
+      }
+    },
+    {
+      "section": "amidah",
+      "id": "amidah_binah",
+      "ref": "Siddur Ashkenaz, Weekday, Shacharit, Amidah, Knowledge",
+      "versions": "siddur",
+      "defaults": {
+        "blessingOrLine": "Binah (Knowledge)",
+        "relatedInterests": [
+          "siddur",
+          "kavannah"
+        ]
+      }
+    },
+    {
+      "section": "amidah",
+      "id": "amidah_teshuvah",
+      "ref": "Siddur Ashkenaz, Weekday, Shacharit, Amidah, Repentance",
+      "versions": "siddur",
+      "defaults": {
+        "blessingOrLine": "Teshuvah (Repentance)",
+        "relatedInterests": [
+          "siddur",
+          "kavannah"
+        ]
+      }
+    },
+    {
+      "section": "amidah",
+      "id": "amidah_selichah",
+      "ref": "Siddur Ashkenaz, Weekday, Shacharit, Amidah, Forgiveness",
+      "versions": "siddur",
+      "defaults": {
+        "blessingOrLine": "Selichah (Forgiveness)",
+        "relatedInterests": [
+          "siddur",
+          "kavannah"
+        ]
+      }
+    },
+    {
+      "section": "amidah",
+      "id": "amidah_geulah",
+      "ref": "Siddur Ashkenaz, Weekday, Shacharit, Amidah, Redemption",
+      "versions": "siddur",
+      "defaults": {
+        "blessingOrLine": "Ge’ulah (Redemption)",
+        "relatedInterests": [
+          "siddur",
+          "kavannah"
+        ]
+      }
+    },
+    {
+      "section": "amidah",
+      "id": "amidah_refuah",
+      "ref": "Siddur Ashkenaz, Weekday, Shacharit, Amidah, Healing",
+      "versions": "siddur",
+      "defaults": {
+        "blessingOrLine": "Refu’ah (Healing)",
+        "relatedInterests": [
+          "siddur",
+          "kavannah"
+        ]
+      }
+    },
+    {
+      "section": "amidah",
+      "id": "amidah_birkat_hashanim",
+      "ref": "Siddur Ashkenaz, Weekday, Shacharit, Amidah, Prosperity",
+      "versions": "siddur",
+      "defaults": {
+        "blessingOrLine": "Birkat Hashanim (Prosperity)",
+        "relatedInterests": [
+          "siddur",
+          "kavannah"
+        ]
+      }
+    },
+    {
+      "section": "amidah",
+      "id": "amidah_kibbutz_galuyot",
+      "ref": "Siddur Ashkenaz, Weekday, Shacharit, Amidah, Gathering the Exiles",
+      "versions": "siddur",
+      "defaults": {
+        "blessingOrLine": "Kibbutz Galuyot (Gathering the Exiles)",
+        "relatedInterests": [
+          "siddur",
+          "kavannah"
+        ]
+      }
+    },
+    {
+      "section": "amidah",
+      "id": "amidah_mishpat",
+      "ref": "Siddur Ashkenaz, Weekday, Shacharit, Amidah, Justice",
+      "versions": "siddur",
+      "defaults": {
+        "blessingOrLine": "Mishpat (Justice)",
+        "relatedInterests": [
+          "siddur",
+          "kavannah"
+        ]
+      }
+    },
+    {
+      "section": "amidah",
+      "id": "amidah_birkat_haminim",
+      "ref": "Siddur Ashkenaz, Weekday, Shacharit, Amidah, Against Enemies",
+      "versions": "siddur",
+      "defaults": {
+        "blessingOrLine": "Birkat Haminim (Against Enemies)",
+        "relatedInterests": [
+          "siddur",
+          "kavannah"
+        ]
+      }
+    },
+    {
+      "section": "amidah",
+      "id": "amidah_tzaddikim",
+      "ref": "Siddur Ashkenaz, Weekday, Shacharit, Amidah, The Righteous",
+      "versions": "siddur",
+      "defaults": {
+        "blessingOrLine": "Tzaddikim (The Righteous)",
+        "relatedInterests": [
+          "siddur",
+          "kavannah"
+        ]
+      }
+    },
+    {
+      "section": "amidah",
+      "id": "amidah_yerushalayim",
+      "ref": "Siddur Ashkenaz, Weekday, Shacharit, Amidah, Rebuilding Jerusalem",
+      "versions": "siddur",
+      "defaults": {
+        "blessingOrLine": "Boneh Yerushalayim (Rebuilding Jerusalem)",
+        "relatedInterests": [
+          "siddur",
+          "kavannah"
+        ]
+      }
+    },
+    {
+      "section": "amidah",
+      "id": "amidah_malchut_david",
+      "ref": "Siddur Ashkenaz, Weekday, Shacharit, Amidah, Kingdom of David",
+      "versions": "siddur",
+      "defaults": {
+        "blessingOrLine": "Malchut David (Kingdom of David)",
+        "relatedInterests": [
+          "siddur",
+          "kavannah"
+        ]
+      }
+    },
+    {
+      "section": "amidah",
+      "id": "amidah_shomea_tefillah",
+      "ref": "Siddur Ashkenaz, Weekday, Shacharit, Amidah, Response to Prayer",
+      "versions": "siddur",
+      "defaults": {
+        "blessingOrLine": "Shome’a Tefillah (Response to Prayer)",
+        "relatedInterests": [
+          "siddur",
+          "kavannah"
+        ]
+      }
+    },
+    {
+      "section": "amidah",
+      "id": "amidah_avodah",
+      "ref": "Siddur Ashkenaz, Weekday, Shacharit, Amidah, Temple Service",
+      "versions": "siddur",
+      "defaults": {
+        "blessingOrLine": "Avodah (Temple Service)",
+        "relatedInterests": [
+          "siddur",
+          "kavannah"
+        ]
+      }
+    },
+    {
+      "section": "amidah",
+      "id": "amidah_hodaah",
+      "ref": "Siddur Ashkenaz, Weekday, Shacharit, Amidah, Thanksgiving 1-6",
+      "versions": "siddur",
+      "defaults": {
+        "blessingOrLine": "Modim (Thanksgiving)",
+        "relatedInterests": [
+          "siddur",
+          "kavannah"
+        ]
+      }
+    },
+    {
+      "section": "amidah",
+      "id": "amidah_hodaah_2",
+      "ref": "Siddur Ashkenaz, Weekday, Shacharit, Amidah, Thanksgiving 7",
+      "versions": "siddur",
+      "defaults": {
+        "blessingOrLine": "Al Hanisim for Chanukah (in Modim)",
+        "relatedInterests": [
+          "siddur",
+          "kavannah"
+        ]
+      }
+    },
+    {
+      "section": "amidah",
+      "id": "amidah_hodaah_3",
+      "ref": "Siddur Ashkenaz, Weekday, Shacharit, Amidah, Thanksgiving 8-12",
+      "versions": "siddur",
+      "defaults": {
+        "blessingOrLine": "Al Hanisim for Purim, and the close of Modim",
+        "relatedInterests": [
+          "siddur",
+          "kavannah"
+        ]
+      }
+    },
+    {
+      "section": "amidah",
+      "id": "amidah_birkat_kohanim",
+      "ref": "Siddur Ashkenaz, Weekday, Shacharit, Amidah, Birkat Kohanim",
+      "versions": "siddur",
+      "defaults": {
+        "blessingOrLine": "Birkat Kohanim (Priestly Blessing)",
+        "relatedInterests": [
+          "siddur",
+          "kavannah"
+        ]
+      }
+    },
+    {
+      "section": "amidah",
+      "id": "amidah_shalom",
+      "ref": "Siddur Ashkenaz, Weekday, Shacharit, Amidah, Peace",
+      "versions": "siddur",
+      "defaults": {
+        "blessingOrLine": "Sim Shalom (Peace)",
+        "relatedInterests": [
+          "siddur",
+          "kavannah"
+        ]
+      }
+    },
+    {
+      "section": "amidah",
+      "id": "amidah_elokai_netzor",
+      "ref": "Siddur Ashkenaz, Weekday, Shacharit, Amidah, Concluding Passage",
+      "versions": "siddur",
+      "defaults": {
+        "blessingOrLine": "Elokai Netzor (concluding passage)",
         "relatedInterests": [
           "siddur",
           "kavannah"

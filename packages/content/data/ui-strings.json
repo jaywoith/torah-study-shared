@@ -75,7 +75,7 @@
     "displayTitle": "Text display",
     "showCantillation": "Show cantillation marks (te'amim)",
     "divineName": "Divine Name",
-    "divineNameHint": "Transliteration reads \"Hashem\" when abbreviated and \"Adonai\" otherwise. English translations are shown as written.",
+    "divineNameHint": "Transliteration reads \"Hashem\" when abbreviated and \"Adonai\" otherwise. English translations are shown as written, except that a spelled-out \"Adonoy\" also reads \"Hashem\".",
     "unverifiedNote": "Texts are imported from Sefaria and not yet reviewed by the owner. Commentary and kavannah prompts are drafts.",
     "sourcesLink": "Sources & licenses"
   },

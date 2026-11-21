@@ -17,14 +17,24 @@
   },
   "units": [
     {
-      "id": "2026-11-11-psalm_147",
+      "id": "2026-11-11-amidah_shomea_tefillah",
       "type": "siddur",
-      "title": "Pesukei Dezimra – Psalm 147",
-      "hebrew": "הַלְלוּיָהּ כִּי־טוֹב זַמְּרָה אֱלֹהֵינוּ, כִּי־נָעִים נָאוָה תְהִלָּה: בּוֹנֵה יְרוּשָׁלַםִ ה׳ נִדְחֵי יִשְׂרָאֵל יְכַנֵּס: הָרוֹפֵא לִשְׁבוּרֵי לֵב וּמְחַבֵּשׁ לְעַצְּבוֹתָם: מוֹנֶה מִסְפָּר לַכּוֹכָבִים לְכֻלָּם שֵׁמוֹת יִקְרָא: גָּדוֹל אֲדוֹנֵינוּ וְרַב־כֹּחַ לִתְבוּנָתוֹ אֵין מִסְפָּר: מְעוֹדֵד עֲנָוִים ה׳ מַשְׁפִּיל רְשָׁעִים עֲדֵי־אָרֶץ: עֱנוּ לַה׳ בְּתוֹדָה זַמְּרוּ לֵאלֹהֵינוּ בְכִנּוֹר: הַמְכַסֶּה שָׁמַיִם בְּעָבִים הַמֵּכִין לָאָרֶץ מָטָר הַמַּצְמִיחַ הָרִים חָצִיר: נוֹתֵן לִבְהֵמָה לַחְמָהּ לִבְנֵי עֹרֵב אֲשֶׁר יִקְרָאוּ: לֹא בִגְבוּרַת הַסּוּס יֶחְפָּץ לֹא בְשׁוֹקֵי הָאִישׁ יִרְצֶה: רוֹצֶה ה׳ אֶת־יְרֵאָיו אֶת־הַמְיַחֲלִים לְחַסְדּוֹ: שַׁבְּחִי יְרוּשָׁלַםִ אֶת ה׳ הַלְלִי אֱלֹהַיִךְ צִיּוֹן: כִּי־חִזַּק בְּרִיחֵי שְׁעָרָיִךְ בֵּרַךְ בָּנַיִךְ בְּקִרְבֵּךְ: הַשָּׂם־גְּבוּלֵךְ שָׁלוֹם חֵלֶב חִטִּים יַשְׂבִּיעֵךְ: הַשֹּׁלֵחַ אִמְרָתוֹ אָרֶץ עַד־מְהֵרָה יָרוּץ דְּבָרוֹ: הַנֹּתֵן שֶׁלֶג כַּצָּמֶר כְּפוֹר כָּאֵפֶר יְפַזֵּר: מַשְׁלִיךְ קַרְחוֹ כְפִתִּים לִפְנֵי קָרָתוֹ מִי יַעֲמֹד: יִשְׁלַח דְּבָרוֹ וְיַמְסֵם יַשֵּׁב רוּחוֹ יִזְּלוּ־מָיִם: מַגִּיד דְּבָרָיו לְיַעֲקֹב חֻקָּיו וּמִשְׁפָּטָיו לְיִשְׂרָאֵל: לֹא עָשָׂה כֵן לְכָל־גּוֹי וּמִשְׁפָּטִים בַּל־יְדָעוּם הַלְלוּיָהּ:",
-      "english": "Praise God! for it is good to sing to our God; for [His] praise is pleasant, befitting. The builder of Jerusalem is Adonoy; the banished ones of Israel He will gather. [He is] the Healer of the broken-hearted and [also] binds up their wounds. He fixes the number of stars; He calls all of them by names. Great is our Master and abundant in power; His understanding is beyond reckoning. Adonoy causes the humble to stand firm; He casts down the wicked to the ground. Cry out to Adonoy in thanksgiving; sing to our God with the harp. [He] Who covers the heaven with clouds, Who prepares rain for the earth; Who causes grass to grow upon the hills. Who gives the animal its fodder; [also] to the young ravens which call. Not the power of the horse does He desire, nor the thighs of man does He want. Adonoy wants those who fear Him, those who hope for His kindliness. Jerusalem, praise Adonoy; Zion, extol your God. For He has fortified the bars of your gates; He has blessed your children in your midst. He established peace at your border; with prime wheat He satisfies you. He dispatches His command earthward; His word races swiftly. He provides snow like fleece, He scatters frost like ashes. He hurls His ice like crumbs; who can withstand His cold? He dispatches His word and melts them; He blows His wind, they flow as water. He declares His word to Jacob, His statutes and His laws to Israel. He did not do so to any [other] nation; and of His laws they were not informed. Praise God.",
-      "source": "Siddur Ashkenaz, Weekday, Shacharit, Pesukei Dezimra, Psalm 147",
-      "estimatedMinutes": 11,
-      "contentId": "psalm_147"
+      "title": "Amidah – Shome’a Tefillah (Response to Prayer)",
+      "hebrew": "שְׁמַע קוֹלֵנוּ ה׳ אֱלֹהֵינוּ חוּס וְרַחֵם עָלֵינוּ וְקַבֵּל בְּרַחֲמִים וּבְרָצוֹן אֶת־תְּפִלָּתֵנוּ כִּי אֵל שׁוֹמֵעַ תְּפִלּוֹת וְתַחֲנוּנִים אָתָּה וּמִלְּפָנֶיךָ מַלְכֵּנוּ רֵיקָם אַל־תְּשִׁיבֵנוּ כִּי אַתָּה שׁוֹמֵעַ תְּפִלַּת עַמְּךָ יִשְׂרָאֵל בְּרַחֲמִים: בָּרוּךְ אַתָּה ה׳ שׁוֹמֵעַ תְּפִלָּה:",
+      "english": "Hear our voice, Hashem, our God; spare us and have compassion on us, and accept our prayers compassionately and willingly, for You are Almighty Who hears prayers and supplications; and do not turn us away empty-handed from Your Presence, our King, for You hear the prayers of Your people, Israel, with compassion. Blessed are You, Hashem, Who hears prayers.",
+      "source": "Siddur Ashkenaz, Weekday, Shacharit, Amidah, Response to Prayer",
+      "estimatedMinutes": 4,
+      "contentId": "amidah_shomea_tefillah"
+    },
+    {
+      "id": "2026-11-11-musar-mesillat-yesharim-26-18",
+      "estimatedMinutes": 9,
+      "type": "musar",
+      "title": "Mesillat Yesharim, chapter 26 (7 of 12)",
+      "hebrew": "אַךְ אַחֲרֵי הֲכִינוֹ אֶת עַצְמוֹ בְּכָל הֲכָנוֹת אֵלֶּה, אִם יַרְבֶּה לִדָּבֵק בְּתֹקֶף הָאַהֲבָה וְעֹצֶם הַיִּרְאָה בְּהַשְׂכָּלַת גְּדֻלָּתוֹ יִתְבָּרַךְ וְעֹצֶם רוֹמְמוּתוֹ, יַפְרִיד עַצְמוֹ מֵעִנְיְנֵי הַחֹמֶר מְעַט מְעַט, וּבְכָל פְּעֻלּוֹתָיו וּבְכָל תְּנוּעוֹתָיו, יְכַוֵּן לְבָבוֹ אֶל מַצְפּוּנֵי הַהִתְדַּבְּקוּת הָאֲמִתִּי, עַד שֶׁיַּעֲרֶה עָלָיו רוּחַ מִמָּרוֹם וְיַשְׁכִּין הַבּוֹרֵא יִתְבָּרַךְ אֶת שְׁמוֹ עָלָיו כְּמוֹ שֶׁעוֹשֶׂה לְכָל קְדֹשָׁיו. וְאָז יִהְיֶה כְּמַלְאַךְ ה' מַמָּשׁ וְכָל מַעֲשָׂיו אֲפִלּוּ הַשְּׁפָלִים וְהַגַּשְׁמִיִּים כְּקָרְבְּנוֹת וַעֲבוֹדוֹת. וְהִנְּךָ רוֹאֶה שֶׁדֶּרֶךְ קְנִיַּת זֹאת הַמִּדָּה הוּא עַל יְדֵי רֹב הַפְּרִישָׁה, וְהָעִיּוּן הֶעָצוּם בְּסִתְרֵי הַהַשְׁגָּחָה הָעֶלְיוֹנָה וּמַצְפּוּנֵי הַבְּרִיאָה, וִידִיעַת רוֹמְמוּתוֹ יִתְבָּרַךְ וּתְהִלּוֹתָיו עַד שֶׁיִּתְדַּבֵּק בּוֹ דְּבֵקוּת גָּדוֹל וְיֵדַע לְכַוֵּן מַחְשַׁבְתּוֹ בִּהְיוֹתוֹ הוֹלֵךְ וּמִשְׁתַּמֵּשׁ בַּדְּרָכִים הָאַרְצִיִּים כְּמוֹ שֶׁהָיָה רָאוּי לַכֹּהֵן שֶׁיִּתְכַּוֵּן בְּעוֹדוֹ שׁוֹחֵט הַזֶּבַח אוֹ מְקַבֵּל דָּמוֹ אוֹ זוֹרְקוֹ עַד שֶׁיַּמְשִׁיךְ בָּזֶה הַבְּרָכָה מִמֶּנּוּ יִתְבָּרַךְ הַחַיִּים וְהַשָּׁלוֹם.",
+      "english": "But if after he has prepared himself with all these preparations, he persistently clings with powerful love and intense fear in pondering G-d's greatness and infinite exaltedness, he will separate himself from physical matters little by little and will direct his heart in all his actions and movements to the true inner clinging, until, a spirit from on high will pour upon him and the Creator will cause His Name to rest upon him, as He does with all of His holy ones. He will then actually be like an angel of G-d, and all his actions, even the lowly and the physical ones, will be like Temple sacrifices and services. Behold, you can see that the way to acquire this trait is through much Separation, intense study of the secrets of divine providence, the hidden matters of the creation, and knowledge of His exaltedness, blessed be He, and His praises, until one clings greatly to Him, and knows how to have intent in his thoughts, as was proper for the Kohen to have intents while slaughtering the offering, receiving its blood, and sprinkling it, until he would draw down the blessing from G-d of life and peace.",
+      "source": "Mesillat Yesharim 26:18-20",
+      "contentId": "musar-mesillat-yesharim-26-18"
     },
     {
       "id": "2026-11-11-kabbalah-hidden-light",
@@ -48,7 +58,7 @@
       "contentId": "tanakh-zechariah-4-6"
     }
   ],
-  "totalEstimatedMinutes": 18,
+  "totalEstimatedMinutes": 20,
   "budgetMinutes": 20,
   "notes": "Generated for Masorti / Conservative – Intermediate, medium session (20 min target)."
 }

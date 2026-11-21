@@ -94,7 +94,7 @@ Short records of decisions that are settled. Each one has the context, the decis
 **Consequences.** One stored text serves every preference. Changing a setting needs no re-import. A future cantillation-reading track can use the same data.
 
 **Details settled 2026-11-21 (owner confirmed the first two):**
-- **Transliteration and English:** transliteration reads "Hashem" when `abbreviated` and "Adonai" for `full` and `yud_yud`. English is shown exactly as the translation renders it (no "LORD" → "Hashem" rewriting of licensed translations).
+- **Transliteration and English:** transliteration reads "Hashem" when `abbreviated` and "Adonai" for `full` and `yud_yud`. English is shown as the translation renders it (no "LORD" → "Hashem" rewriting), with one exception added the same day: Metsudah spells the Name out as "Adonoy", which reads "Hashem" when `abbreviated` (owner decision).
 - **Scope:** only the Tetragrammaton is transformed. אֱלֹהִים, אֲדֹנָי, אֵל, שַׁדַּי etc. render as in the source.
 - **Cantillation off** removes te'amim U+0591–U+05AF, meteg U+05BD and paseq U+05C0. It keeps nikkud, qamats qatan, maqaf and sof pasuq (the verse end appears in nikkud-only editions too). Meteg goes because our sources mark qamats qatan explicitly.
 - **Matching:** the Name is matched with any marks between letters and up to three one-letter prefixes (ו ב כ ל מ ש ה), which are kept (לַיהוָה → לַה׳ / לַיְיָ). A source that already writes יְיָ is abbreviated too.
@@ -112,4 +112,4 @@ Short records of decisions that are settled. Each one has the context, the decis
 - **License policy:** allowed = Public Domain, CC0, CC-BY, CC-BY-SA; CC-BY-NC allowed and flagged; anything else (including "unknown") is rejected **unless the manifest entry sets `personalUseOnly: true`**. Such entries get `provenance.personalUseOnly: true` and are listed by `npm run content:report`. Owner: "this is personal use and we'll review licensing before we go live."
 - **Pinned in** `packages/content/sefaria-manifest.json` (`versionSets`), so changing a version is a one-line edit plus a re-import.
 
-**Consequences.** Before the app is used beyond personal use: clear or replace every `personalUseOnly` entry, and every CC-BY-NC version (NJPS) if use becomes commercial. Metsudah's English writes the Name as "Adonoy"; under ADR-011, English is not rewritten, so it shows even when Hebrew shows ה׳ (open question for the owner).
+**Consequences.** Before the app is used beyond personal use: clear or replace every `personalUseOnly` entry, and every CC-BY-NC version (NJPS) if use becomes commercial. Metsudah's English writes the Name as "Adonoy"; per the owner it reads "Hashem" when the setting is abbreviated (ADR-011).

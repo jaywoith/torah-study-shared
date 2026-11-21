@@ -70,9 +70,9 @@ Key `DailyStudy` fields:
 - `profile`: echoes `framework`, `level`, `studyLength`, `languageMode`, `showCantillation`, `divineName`
 - `totalEstimatedMinutes`, `budgetMinutes` (short 10 / medium 20 / long 35)
 
-**Display settings (ADR-011)** are applied to `hebrew` and `transliteration` after the language mode:
+**Display settings (ADR-011)** are applied to `hebrew`, `transliteration` and `english` after the language mode:
 - `showCantillation: false` removes te'amim (U+0591–U+05AF), meteg and paseq; nikkud, maqaf and sof pasuq stay.
-- `divineName` changes only the Tetragrammaton (any pointing, with prefixes). `abbreviated` → ה׳ and transliteration "Hashem"; `yud_yud` → יְיָ (ה׳ where the source points the Name to be read Elohim); `full` → as in the source. Transliteration reads "Adonai" for `full` and `yud_yud`. English is never changed.
+- `divineName` changes only the Tetragrammaton (any pointing, with prefixes). `abbreviated` → ה׳ and transliteration "Hashem"; `yud_yud` → יְיָ (ה׳ where the source points the Name to be read Elohim); `full` → as in the source. Transliteration reads "Adonai" for `full` and `yud_yud`. English is left as translated, except that a spelled-out "Adonoy" (Metsudah) reads "Hashem" when `abbreviated`.
 
 **400**: invalid profile (`issues` lists each problem) or bad date. **422**: the generated study failed validation (`issues`, `study` included for debugging).
 

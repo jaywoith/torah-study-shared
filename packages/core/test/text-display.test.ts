@@ -6,6 +6,7 @@
 import { describe, expect, it } from 'vitest';
 import {
   applyDivineName,
+  applyDivineNameEnglish,
   applyDivineNameTransliteration,
   applyTextPreferences,
   hasCantillation,
@@ -135,6 +136,18 @@ describe('applyDivineNameTransliteration', () => {
   });
 });
 
+describe('applyDivineNameEnglish', () => {
+  it('replaces the spelled-out Name "Adonoy" only when abbreviated', () => {
+    expect(applyDivineNameEnglish('Blessed are You, Adonoy our God', 'abbreviated')).toBe('Blessed are You, Hashem our God');
+    expect(applyDivineNameEnglish('Blessed are You, Adonoy our God', 'full')).toBe('Blessed are You, Adonoy our God');
+    expect(applyDivineNameEnglish('Blessed are You, Adonoy our God', 'yud_yud')).toBe('Blessed are You, Adonoy our God');
+  });
+
+  it('leaves translations of the Name alone', () => {
+    expect(applyDivineNameEnglish('The LORD is my shepherd; God is good', 'abbreviated')).toBe('The LORD is my shepherd; God is good');
+  });
+});
+
 describe('applyTextPreferences', () => {
   const unit = {
     hebrew: `טוֹב־יְהֹוָ${MERKHA}ה לַכֹּל`,
@@ -142,7 +155,7 @@ describe('applyTextPreferences', () => {
     english: 'The LORD is good to all',
   };
 
-  it('defaults: abbreviated Name, cantillation hidden, English untouched', () => {
+  it('defaults: abbreviated Name, cantillation hidden, English translation untouched', () => {
     const out = applyTextPreferences(unit, { showCantillation: false, divineName: 'abbreviated' });
     expect(out).toEqual({ hebrew: 'טוֹב־ה׳ לַכֹּל', transliteration: 'Tov Hashem lakol', english: unit.english });
   });

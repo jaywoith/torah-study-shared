@@ -8,7 +8,8 @@
  * - Only the Tetragrammaton is transformed. Other Divine Names (אֱלֹהִים etc.)
  *   render as in the source.
  * - Transliteration follows the setting: "Hashem" when abbreviated, "Adonai"
- *   for full and yud-yud. English is left exactly as the translation renders it.
+ *   for full and yud-yud. English is left as the translation renders it, except
+ *   that a spelled-out "Adonoy" (Metsudah) reads "Hashem" when abbreviated.
  */
 
 import { DivineNameMode, TextFields } from './models';
@@ -104,14 +105,25 @@ export function applyDivineNameTransliteration(text: string, mode: DivineNameMod
   return text.replace(/\bADONAI\b/g, 'HASHEM').replace(/\bAdonai\b/g, 'Hashem').replace(/\badonai\b/g, 'hashem');
 }
 
+/**
+ * English: Metsudah's translation spells the Name "Adonoy". When abbreviated, it
+ * reads "Hashem" (owner decision 2026-11-21, amends ADR-011). Other renderings
+ * ("the LORD", "God") are translations, not the Name spelled out, and stay.
+ */
+export function applyDivineNameEnglish(text: string, mode: DivineNameMode): string {
+  if (mode !== 'abbreviated') return text;
+  return text.replace(/\bADONOY\b/g, 'HASHEM').replace(/\bAdonoy\b/g, 'Hashem');
+}
+
 export interface TextPreferences {
   showCantillation: boolean;
   divineName: DivineNameMode;
 }
 
 /**
- * Applies the display preferences to a unit's Hebrew and transliteration.
- * English is never changed. Run after applyLanguageMode (fields may be absent).
+ * Applies the display preferences to a unit's Hebrew, transliteration and English.
+ * English changes only where it spells the Name ("Adonoy"). Run after
+ * applyLanguageMode (fields may be absent).
  */
 export function applyTextPreferences<T extends TextFields>(unit: T, prefs: TextPreferences): T {
   const out = { ...unit };
@@ -123,5 +135,6 @@ export function applyTextPreferences<T extends TextFields>(unit: T, prefs: TextP
   if (out.transliteration !== undefined) {
     out.transliteration = applyDivineNameTransliteration(out.transliteration, prefs.divineName);
   }
+  if (out.english !== undefined) out.english = applyDivineNameEnglish(out.english, prefs.divineName);
   return out;
 }
