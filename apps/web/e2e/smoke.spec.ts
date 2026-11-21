@@ -36,11 +36,20 @@ test('sign in, study, progress persists on the server, sign out', async ({ page 
 
   // Siddur: complete the first unit; it survives a reload.
   await page.getByRole('link', { name: 'Siddur' }).click();
-  await expect(page.getByTestId('siddur-position')).toHaveText('Unit 1 of 3');
+  // (Counts come from content, so match the number rather than hard-coding it.)
+  await expect(page.getByTestId('siddur-position')).toHaveText(/^Unit 1 of \d+$/);
   await page.getByRole('button', { name: 'Mark complete' }).click();
-  await expect(page.getByTestId('siddur-position')).toHaveText('Unit 2 of 3');
+  await expect(page.getByTestId('siddur-position')).toHaveText(/^Unit 2 of \d+$/);
   await page.reload();
-  await expect(page.getByTestId('siddur-position')).toHaveText('Unit 2 of 3');
+  await expect(page.getByTestId('siddur-position')).toHaveText(/^Unit 2 of \d+$/);
+
+  // Musar path: separate progress from the Siddur path.
+  await page.getByRole('link', { name: 'Musar' }).click();
+  await expect(page.getByTestId('musar-position')).toHaveText(/^Unit 1 of \d+$/);
+  await page.getByRole('button', { name: 'Mark complete' }).click();
+  await expect(page.getByTestId('musar-position')).toHaveText(/^Unit 2 of \d+$/);
+  await page.reload();
+  await expect(page.getByTestId('musar-position')).toHaveText(/^Unit 2 of \d+$/);
 
   // Settings saved on the server: English mode removes Hebrew, also after reload.
   await page.getByRole('link', { name: 'Settings' }).click();

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "version": "0.4.0-rc.1",
+    "version": "0.5.0-rc.1",
     "description": "Shared UI strings that must stay consistent across clients. Served by the API at GET /v1/ui-strings. Platform-specific chrome stays in each client."
   },
   "common": {

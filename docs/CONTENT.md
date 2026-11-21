@@ -65,6 +65,10 @@ The import owns `hebrew`, `english`, `source` and `provenance`; every other fiel
 
 **Sanitizing:** HTML tags unwrapped; footnotes, `<sup>` markers and Masorah parasha markers ({פ}/{ס}) removed with their content; whole-segment editorial notes (Metsudah's `<small>`/`<i>` notes) skipped; whitespace collapsed. Te'amim are kept; hiding them is a display setting.
 
+## Drafted commentary
+
+Commentary and kavannah prompts may be drafted by an LLM, but only under these rules: no quotations or citations beyond the unit's own text (any quoted phrase must match the imported translation), a `reviewNote` saying it is a draft, and `verified: false` until the owner approves. A test enforces the last rule.
+
 ## After editing content
 
 ```bash

@@ -1,22 +1,26 @@
 # Next session: start here
 
-**Written:** 2026-11-21 · **Branch:** `claude/festive-curie-ueom6q` (not yet merged to `main`) · all tests green (`npm run check`, 1,668 tests)
+**Written:** 2026-11-21 · **Version:** 0.5.0-rc.1 on branch `claude/festive-curie-ueom6q` (not yet merged to `main`; tag not pushed) · `npm run check` (1,778 tests) and `npm run test:e2e` pass
 
 1. Read `AGENTS.md`.
-2. `docs/DEVELOPMENT_PLAN.md` → **v0.5.0: Real Content**. Most tasks are done; open items and **owner decisions pending** are at the top of the task list.
-3. ADR-010 (Sefaria import), ADR-011 (display settings, plus details settled this session), ADR-012 (versions chosen, personal-use license rule).
+2. `docs/DEVELOPMENT_PLAN.md`: v0.5.0 is rc.1. What remains is the owner's (below). The next milestone to build is **v0.6.0 AI Study Coach**.
+3. Decisions: ADR-010 (Sefaria import), ADR-011 (display settings, with the details settled on 2026-11-21), ADR-012 (versions, personal-use license rule).
 
-**Done this session**
-- Cantillation toggle and Divine Name setting (core transforms, profile fields, API, Settings UI).
-- `npm run content:import` (Sefaria, build time, pinned versions in `packages/content/sefaria-manifest.json`, cache in `.cache/sefaria`), `npm run content:report`, `GET /v1/sources` and a Sources & licenses screen.
-- Content: 70 Tanakh units (MAM + NJPS 1985), Pesukei Dezimra (19) and Shema with its Blessings (5) from Metsudah, Mesillat Yesharim (286) and Pirkei Avot (108). D2 resolved.
-- **Nothing is `verified: true`.** The owner must approve before anything is marked verified.
+**v0.5.0 delivered**
+- Cantillation toggle; Divine Name setting (ה׳ / full / יְיָ), including transliteration, plus English for Metsudah's "Adonoy".
+- `npm run content:import` (pinned versions in `packages/content/sefaria-manifest.json`), `npm run content:report`, `GET /v1/sources` and a Sources & licenses screen.
+- Content: 70 Tanakh units; Siddur: Pesukei Dezimra, Shema and its Blessings, weekday Amidah (56 units; long prayers split by Sefaria segment); Musar: Mesillat Yesharim (286) then Pirkei Avot (108).
+- Progress-tracked Musar path (`/v1/musar/next`, Musar tab, migration 002).
+- LLM-drafted commentary and kavannah for Siddur and Tanakh, flagged in `reviewNote`.
 
 **Waiting on the owner**
-- Amidah source (Metsudah is Orthodox; Sim Shalom isn't on Sefaria in usable form).
-- "Adonoy" in Metsudah's English when the Name setting is abbreviated.
-- Session length vs. long imported units; whether to build a progress-tracked Musar path.
-- Commentary/kavannah drafts for imported units, then review.
-- Licensing review before any use beyond personal: NJPS is CC-BY-NC (see `npm run content:report`).
+- Review texts and drafts. **Never mark anything `verified: true` without the owner's say-so**; a test blocks it for drafted entries.
+- G2 phone checklist (docs/TESTING.md), which needs hosting, then finalize 0.5.0 (`npm run version:bump -- patch`) and 0.4.0.
+- Merge this branch to `main` (PR) and push tags; cloud sessions got HTTP 403 on tag pushes before.
+- Licensing review before any use beyond personal: NJPS is CC-BY-NC (`npm run content:report`).
 
-**Still pending, outside v0.5.0:** hosting with the owner; git tags `v0.2.0`/`v0.4.0` (403 from cloud); repo privacy/archiving (owner, GitHub Settings).
+**Known limits / candidates for later**
+- Single-segment texts (Ashrei, Psalm 147, Az Yashir, Ahavah Rabbah) can't be split by Sefaria ref, so a medium session can still run long on those days.
+- The daily study's Musar slot rotates by date; the Musar path is the sequential reader.
+- No transliteration for imported texts (516 entries); writing them by hand risks errors, and automatic transliteration would be a project of its own.
+- Musar units have no commentary/kavannah (owner decision for now).

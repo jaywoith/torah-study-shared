@@ -166,3 +166,12 @@ describe('imported content provenance (ADR-010, ADR-012)', () => {
     expect(studyUnits.filter((u) => u.type === 'tanakh').length).toBeGreaterThanOrEqual(60);
   });
 });
+
+describe('owner review', () => {
+  it('no entry with LLM-drafted commentary is marked verified (owner approves first)', () => {
+    const all = [...studyUnits, ...siddurSections.flatMap((s) => s.units)];
+    const drafted = all.filter((u) => u.reviewNote?.includes('LLM draft'));
+    expect(drafted.length).toBeGreaterThan(0);
+    for (const u of drafted) expect(u.verified, u.id).toBe(false);
+  });
+});

@@ -4,8 +4,10 @@ All notable changes. Format: [Keep a Changelog](https://keepachangelog.com); ver
 
 ## [Unreleased]
 
+## [0.5.0-rc.1] – 2026-11-21 — Real Content
+
 ### Added
-- **Display settings (ADR-011):** `showCantillation` (default off) and `divineName` (`abbreviated` ה׳ default, `full`, `yud_yud` יְיָ) on the profile. Applied by the API to daily study and `/v1/siddur/next` (new query params `showCantillation`, `divineName`). Transliteration reads "Hashem" when abbreviated; English is untouched.
+- **Display settings (ADR-011):** `showCantillation` (default off) and `divineName` (`abbreviated` ה׳ default, `full`, `yud_yud` יְיָ) on the profile. Applied by the API to daily study and the path endpoints (query params `showCantillation`, `divineName`). Transliteration reads "Hashem" when abbreviated; English is untouched except Metsudah's spelled-out "Adonoy".
 - Core: `stripCantillation`, `hasCantillation`, `applyDivineName`, `applyDivineNameTransliteration`, `applyTextPreferences`; `DIVINE_NAME_MODES` enum.
 - `GET /v1/options` returns `divineNames`; `study.profile` echoes both settings.
 - Web Settings: "Text display" group with the cantillation toggle and Divine Name selector.
@@ -24,12 +26,14 @@ All notable changes. Format: [Keep a Changelog](https://keepachangelog.com); ver
 - **Siddur:** complete weekday Pesukei Dezimra in Ashkenaz order (19 units) and the Shema and its Blessings (5 units), Metsudah Hebrew + English (CC-BY). Existing ids kept: `baruch_sheamar`, `ashrei_opening` (now all of Ashrei), `yishtabach_opening` (now all of Yishtabach); their hand-written transliterations were removed because they covered only the opening lines. New units have no transliteration, commentary or kavannah yet (pending owner-reviewed drafts).
 - **Musar:** Mesillat Yesharim in full, in reading order (286 units of ~800 Hebrew characters; Hebrew *Sefaria Vocalized Edition*, CC0; English *Path of the Just*, trans. Yosef Sebag, CC-BY) followed by Pirkei Avot, one mishnah per unit (108 units; Hebrew *Torat Emet 357*, Public Domain; English *Mishnah Yomit*, Joshua Kulp, CC-BY). Existing `musar-avot-1-2` / `musar-avot-1-14` kept.
 - **D2 resolved:** removed the unverified, possibly paraphrased Mesillat Yesharim seed quote (`musar-mesillat-yesharim-kavannah`); the real text now comes from the import. The hidden-light unit now cites Chagigah 12a and Bereishit Rabbah 3:6, both checked against Sefaria.
-- All imported entries are `verified: false`.
+- **Commentary and kavannah drafts** for 53 Siddur units and 67 Tanakh units (LLM drafts, source-free, each flagged in `reviewNote`). Quoted phrases were checked against the imported translation. The Avot (Amidah) unit's commentary notes that many Conservative siddurim offer the Matriarchs. Musar units have none yet.
+- All imported entries are `verified: false`; a test fails if any LLM-drafted entry is marked verified.
 
 ### Changed
 - Long Siddur prayers split at Sefaria segment boundaries (Hodu, Yotzer Or, the Shema by paragraph, Emet Veyatziv): parts get ids `<id>_2`, `<id>_3`; the existing id keeps the first part so progress stays valid. Single-segment texts (Ashrei, Psalm 147, Az Yashir, Ahavah Rabbah) stay whole, because splitting them would misalign the Hebrew and English.
 - In abbreviated mode, Metsudah's spelled-out "Adonoy" reads "Hashem" in English (owner decision, ADR-011 amended). Other English is unchanged.
 - `ProgressResponse` gains `musar` (additive).
+- e2e smoke test no longer hard-codes the Siddur path length, and now covers the Musar path.
 - Profiles saved by v0.4 (or sent without the new fields) get the defaults; `GET /v1/profile` always returns both fields. Non-breaking.
 - `SiddurUnit.transliteration`, `commentary` and `kavannahPrompt` are optional (imported units may lack them). Additive for clients; the web already handled missing values.
 - Settings note now says texts are imported and not yet owner-reviewed.

@@ -22,6 +22,8 @@
       "title": "Amidah – Shome’a Tefillah (Response to Prayer)",
       "hebrew": "שְׁמַע קוֹלֵנוּ ה׳ אֱלֹהֵינוּ חוּס וְרַחֵם עָלֵינוּ וְקַבֵּל בְּרַחֲמִים וּבְרָצוֹן אֶת־תְּפִלָּתֵנוּ כִּי אֵל שׁוֹמֵעַ תְּפִלּוֹת וְתַחֲנוּנִים אָתָּה וּמִלְּפָנֶיךָ מַלְכֵּנוּ רֵיקָם אַל־תְּשִׁיבֵנוּ כִּי אַתָּה שׁוֹמֵעַ תְּפִלַּת עַמְּךָ יִשְׂרָאֵל בְּרַחֲמִים: בָּרוּךְ אַתָּה ה׳ שׁוֹמֵעַ תְּפִלָּה:",
       "english": "Hear our voice, Hashem, our God; spare us and have compassion on us, and accept our prayers compassionately and willingly, for You are Almighty Who hears prayers and supplications; and do not turn us away empty-handed from Your Presence, our King, for You hear the prayers of Your people, Israel, with compassion. Blessed are You, Hashem, Who hears prayers.",
+      "commentary": "Shome'a Tefillah asks God to hear and accept our prayer. Many add personal requests here.",
+      "kavannahPrompt": "Add one personal request in your own words before you finish the blessing.",
       "source": "Siddur Ashkenaz, Weekday, Shacharit, Amidah, Response to Prayer",
       "estimatedMinutes": 4,
       "contentId": "amidah_shomea_tefillah"
@@ -55,6 +57,8 @@
       "hebrew": "וַיַּעַן וַיֹּאמֶר אֵלַי לֵאמֹר זֶה דְּבַר־ה׳ אֶל־זְרֻבָּבֶל לֵאמֹר לֹא בְחַיִל וְלֹא בְכֹחַ כִּי אִם־בְּרוּחִי אָמַר ה׳ צְבָאוֹת׃",
       "english": "Then he explained to me as follows: “This is the word of the LORD to Zerubbabel: Not by might, nor by power, but by My spirit—said the LORD of Hosts.",
       "source": "Zechariah 4:6",
+      "commentary": "'Not by might, nor by power, but by My spirit—said the LORD of Hosts.' This passage is part of the haftarah read on Shabbat Chanukah.",
+      "kavannahPrompt": "Where are you relying on force or control when spirit, patience, or trust might do more?",
       "contentId": "tanakh-zechariah-4-6"
     }
   ],

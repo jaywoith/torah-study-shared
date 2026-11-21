@@ -30,7 +30,10 @@
             },
             "importedAt": "2026-11-21T13:56:07.200Z"
           },
-          "verified": false
+          "commentary": "Psalm 30 opens the morning's psalms with thanksgiving after distress: weeping in the evening gives way to joy in the morning, and the psalmist ends, 'You have turned my mourning into dancing.'",
+          "kavannahPrompt": "Where in your own life has a night of difficulty already given way to a morning? Carry that memory into today's prayer.",
+          "verified": false,
+          "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
         },
         {
           "id": "pd_mourners_kaddish",
@@ -57,7 +60,10 @@
             },
             "importedAt": "2026-11-21T13:56:07.200Z"
           },
-          "verified": false
+          "commentary": "The Mourner's Kaddish praises God's name and asks for peace; it says nothing about death. Mourners and those observing a yahrzeit recite it, and it requires a minyan.",
+          "kavannahPrompt": "Even if you are not saying Kaddish today, answer 'amen' with attention for someone in the room who is.",
+          "verified": false,
+          "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
         },
         {
           "id": "baruch_sheamar",
@@ -125,8 +131,11 @@
             },
             "importedAt": "2026-11-21T14:25:23.039Z"
           },
+          "estimatedMinutes": 10,
+          "commentary": "Hodu begins with the song of thanksgiving that, in the book of Chronicles, accompanies the Ark's arrival in Jerusalem: give thanks, call on God's name, make God's deeds known among the peoples.",
+          "kavannahPrompt": "Which of God's deeds would you 'make known' if you told one other person about it today?",
           "verified": false,
-          "estimatedMinutes": 10
+          "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
         },
         {
           "id": "hodu_2",
@@ -153,7 +162,10 @@
             },
             "importedAt": "2026-11-21T14:25:23.039Z"
           },
-          "verified": false
+          "commentary": "The second part of Hodu widens the praise to the whole creation: the heavens rejoice, the earth exults, the sea roars, the trees of the forest sing.",
+          "kavannahPrompt": "Pick one ordinary thing in creation you will see today and notice it as if it, too, were praising.",
+          "verified": false,
+          "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
         },
         {
           "id": "hodu_3",
@@ -180,7 +192,10 @@
             },
             "importedAt": "2026-11-21T14:25:23.039Z"
           },
-          "verified": false
+          "commentary": "Hodu closes with a chain of verses gathered from Psalms, moving from God's mercy and forgiveness to trust and to a request for help.",
+          "kavannahPrompt": "Which single verse in this passage do you most need today? Say it slowly once more.",
+          "verified": false,
+          "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
         },
         {
           "id": "mizmor_letodah",
@@ -207,7 +222,10 @@
             },
             "importedAt": "2026-11-21T13:56:07.200Z"
           },
-          "verified": false
+          "commentary": "Psalm 100 was associated with the thanksgiving offering. It calls the whole earth to serve God with gladness and to come before God with song.",
+          "kavannahPrompt": "Name one specific thing you are thankful for this morning before you say the psalm.",
+          "verified": false,
+          "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
         },
         {
           "id": "yehi_chevod",
@@ -234,7 +252,10 @@
             },
             "importedAt": "2026-11-21T13:56:07.200Z"
           },
-          "verified": false
+          "commentary": "Yehi Chevod is a mosaic of verses from Psalms and other books about God's glory, kingship, and enduring faithfulness to Israel.",
+          "kavannahPrompt": "The passage keeps returning to what lasts 'forever'. What in your life do you want to build to last?",
+          "verified": false,
+          "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
         },
         {
           "id": "ashrei_opening",
@@ -298,7 +319,10 @@
             },
             "importedAt": "2026-11-21T13:56:07.200Z"
           },
-          "verified": false
+          "commentary": "Psalm 146 warns against trusting in human rulers and praises the God who keeps faith, secures justice for the oppressed, gives food to the hungry, and frees the bound.",
+          "kavannahPrompt": "Which of the acts in this psalm (feeding, freeing, lifting up) can you imitate in a small way today?",
+          "verified": false,
+          "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
         },
         {
           "id": "psalm_147",
@@ -325,7 +349,10 @@
             },
             "importedAt": "2026-11-21T13:56:07.200Z"
           },
-          "verified": false
+          "commentary": "Psalm 147 joins cosmic and personal: the God who counts the stars also heals the brokenhearted and binds their wounds.",
+          "kavannahPrompt": "Bring to mind someone who is brokenhearted. How might you be part of their healing this week?",
+          "verified": false,
+          "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
         },
         {
           "id": "psalm_148",
@@ -352,7 +379,10 @@
             },
             "importedAt": "2026-11-21T13:56:07.200Z"
           },
-          "verified": false
+          "commentary": "Psalm 148 calls on everything to praise God, from the angels and the heavens to sea creatures, weather, mountains, animals, kings, and children.",
+          "kavannahPrompt": "Read the list slowly. Where do you fit in this chorus, and what is your particular voice?",
+          "verified": false,
+          "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
         },
         {
           "id": "psalm_149",
@@ -379,7 +409,10 @@
             },
             "importedAt": "2026-11-21T13:56:07.200Z"
           },
-          "verified": false
+          "commentary": "Psalm 149 calls for a new song by the community of the faithful, with dancing and music, and speaks of God's delight in the people.",
+          "kavannahPrompt": "What would a 'new song' look like for you: a fresh way of praying you have not tried before?",
+          "verified": false,
+          "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
         },
         {
           "id": "psalm_150",
@@ -406,7 +439,10 @@
             },
             "importedAt": "2026-11-21T13:56:07.200Z"
           },
-          "verified": false
+          "commentary": "Psalm 150 ends the book of Psalms with pure praise: every instrument, and finally 'Let every soul praise God.'",
+          "kavannahPrompt": "Take one slow breath before the last verse and let the breath itself be the praise.",
+          "verified": false,
+          "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
         },
         {
           "id": "baruch_hashem_leolam",
@@ -433,7 +469,10 @@
             },
             "importedAt": "2026-11-21T13:56:07.200Z"
           },
-          "verified": false
+          "commentary": "These closing verses seal the series of psalms with four blessings drawn from Psalms, each beginning 'Blessed'.",
+          "kavannahPrompt": "Say 'Amen and amen' as an agreement you mean, not a formula.",
+          "verified": false,
+          "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
         },
         {
           "id": "vayevarech_david",
@@ -460,7 +499,10 @@
             },
             "importedAt": "2026-11-21T13:56:07.200Z"
           },
-          "verified": false
+          "commentary": "Vayevarech David is David's blessing before the whole assembly in Chronicles, acknowledging that greatness, power, and everything in heaven and earth belong to God.",
+          "kavannahPrompt": "David speaks after gathering resources for something he would not live to build. What are you building that others will finish?",
+          "verified": false,
+          "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
         },
         {
           "id": "atah_hu",
@@ -487,7 +529,10 @@
             },
             "importedAt": "2026-11-21T13:56:07.200Z"
           },
-          "verified": false
+          "commentary": "Atah Hu continues from Nehemiah: the people recall creation, the choosing of Abraham, and the covenant, as the basis for their own renewed commitment.",
+          "kavannahPrompt": "The passage remembers that Abraham's heart was found 'faithful'. What would faithfulness look like in one decision today?",
+          "verified": false,
+          "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
         },
         {
           "id": "az_yashir",
@@ -514,7 +559,10 @@
             },
             "importedAt": "2026-11-21T13:56:07.200Z"
           },
-          "verified": false
+          "commentary": "Az Yashir, the Song at the Sea, is Israel's song after crossing the sea. It is recited daily as a memory of redemption.",
+          "kavannahPrompt": "Recall a time you were brought through something you thought would overwhelm you. Sing this with that memory in mind.",
+          "verified": false,
+          "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
         },
         {
           "id": "yishtabach_opening",
@@ -571,7 +619,10 @@
             },
             "importedAt": "2026-11-21T13:56:07.200Z"
           },
-          "verified": false
+          "commentary": "Psalm 130, 'Out of the depths', is added in many Ashkenazi communities during the Ten Days of Repentance. It asks to be heard and trusts in God's forgiveness.",
+          "kavannahPrompt": "Name one thing you would bring 'out of the depths' to God this season.",
+          "verified": false,
+          "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
         },
         {
           "id": "pd_half_kaddish",
@@ -598,7 +649,10 @@
             },
             "importedAt": "2026-11-21T13:56:07.200Z"
           },
-          "verified": false
+          "commentary": "The Half Kaddish marks a transition between sections of the service, here between Pesukei Dezimra and the Shema and its blessings. It requires a minyan.",
+          "kavannahPrompt": "Let the Kaddish be a pause: what are you carrying from the psalms into what comes next?",
+          "verified": false,
+          "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
         }
       ]
     },
@@ -632,7 +686,10 @@
             },
             "importedAt": "2026-11-21T13:56:07.200Z"
           },
-          "verified": false
+          "commentary": "Barchu is the leader's call to the congregation to bless God, and the congregation's response. It opens the formal communal service and requires a minyan.",
+          "kavannahPrompt": "Barchu is a call and an answer. Who in your life calls you to be better, and how do you answer?",
+          "verified": false,
+          "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
         },
         {
           "id": "yotzer_or",
@@ -658,8 +715,11 @@
             },
             "importedAt": "2026-11-21T14:25:23.039Z"
           },
+          "estimatedMinutes": 8,
+          "commentary": "Yotzer Or, the first blessing before the Shema, praises God as the Creator of light who renews creation every day.",
+          "kavannahPrompt": "What in your world feels 'renewed' this morning, even if it looks the same as yesterday?",
           "verified": false,
-          "estimatedMinutes": 8
+          "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
         },
         {
           "id": "yotzer_or_2",
@@ -686,7 +746,10 @@
             },
             "importedAt": "2026-11-21T14:25:23.039Z"
           },
-          "verified": false
+          "commentary": "The middle of Yotzer Or turns to the heavenly hosts, imagined as praising God together and giving one another permission to sanctify God's name.",
+          "kavannahPrompt": "The angels 'give permission' to one another. How can you make room for others to do good today?",
+          "verified": false,
+          "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
         },
         {
           "id": "yotzer_or_3",
@@ -713,7 +776,10 @@
             },
             "importedAt": "2026-11-21T14:25:23.039Z"
           },
-          "verified": false
+          "commentary": "The blessing returns to the renewal of creation and closes by blessing God as the Creator of the lights.",
+          "kavannahPrompt": "Before you close the blessing, look at the light around you and name it as a gift.",
+          "verified": false,
+          "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
         },
         {
           "id": "ahavah_rabbah",
@@ -740,7 +806,10 @@
             },
             "importedAt": "2026-11-21T13:56:07.200Z"
           },
-          "verified": false
+          "commentary": "Ahavah Rabbah, the second blessing before the Shema, speaks of God's great love shown through the gift of Torah, and asks for understanding and a united heart.",
+          "kavannahPrompt": "The blessing asks God to 'unite our hearts'. What is divided in your heart that you would ask to bring together?",
+          "verified": false,
+          "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
         },
         {
           "id": "shema",
@@ -766,8 +835,11 @@
             },
             "importedAt": "2026-11-21T14:25:23.039Z"
           },
+          "estimatedMinutes": 6,
+          "commentary": "The first paragraph of the Shema declares God's oneness and commands loving God with all one's heart, soul, and might, teaching these words to one's children and binding them on hand and doorpost.",
+          "kavannahPrompt": "Choose one of 'heart, soul, might' and think of one way to love God with it today.",
           "verified": false,
-          "estimatedMinutes": 6
+          "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
         },
         {
           "id": "shema_2",
@@ -794,7 +866,10 @@
             },
             "importedAt": "2026-11-21T14:25:23.039Z"
           },
-          "verified": false
+          "commentary": "The second paragraph of the Shema speaks to the community: faithfulness brings blessing, and turning away brings loss. It repeats the commands of teaching, tefillin, and mezuzah.",
+          "kavannahPrompt": "This paragraph is addressed to 'you' in the plural. How does your own practice support the people around you?",
+          "verified": false,
+          "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
         },
         {
           "id": "shema_3",
@@ -821,7 +896,10 @@
             },
             "importedAt": "2026-11-21T14:25:23.039Z"
           },
-          "verified": false
+          "commentary": "The third paragraph commands tzitzit as a reminder of all the mitzvot and ends by recalling the Exodus.",
+          "kavannahPrompt": "Tzitzit are a reminder 'not to follow your heart and eyes'. What reminder do you need to keep you on course today?",
+          "verified": false,
+          "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
         },
         {
           "id": "emet_veyatziv",
@@ -847,8 +925,11 @@
             },
             "importedAt": "2026-11-21T14:25:23.039Z"
           },
+          "estimatedMinutes": 8,
+          "commentary": "Emet Veyatziv affirms that the words just recited are true and enduring, linking the Shema to the story of redemption that follows.",
+          "kavannahPrompt": "What do you hold to be 'true and firm' enough to build your day on?",
           "verified": false,
-          "estimatedMinutes": 8
+          "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
         },
         {
           "id": "emet_veyatziv_2",
@@ -875,7 +956,10 @@
             },
             "importedAt": "2026-11-21T14:25:23.039Z"
           },
-          "verified": false
+          "commentary": "This part recalls God as the help of the ancestors in every generation and retells the redemption from Egypt.",
+          "kavannahPrompt": "Your ancestors relied on this help. What do you want to hand on to the next generation?",
+          "verified": false,
+          "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
         },
         {
           "id": "emet_veyatziv_3",
@@ -902,7 +986,10 @@
             },
             "importedAt": "2026-11-21T14:25:23.039Z"
           },
-          "verified": false
+          "commentary": "The blessing closes with the song the redeemed sang at the sea and blesses God as the Redeemer of Israel, leading directly into the Amidah.",
+          "kavannahPrompt": "Move from this blessing into the Amidah without a break, as the tradition does, carrying the sense of redemption with you.",
+          "verified": false,
+          "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
         }
       ]
     },
@@ -936,7 +1023,10 @@
             },
             "importedAt": "2026-11-21T14:25:23.039Z"
           },
-          "verified": false
+          "commentary": "Avot opens the Amidah by addressing the God of Abraham, Isaac, and Jacob, recalling the ancestors' merit and the promise of redemption. This text follows the Metsudah siddur; many Conservative siddurim offer the option of also naming the Matriarchs (Sarah, Rebecca, Rachel, and Leah) in this blessing.",
+          "kavannahPrompt": "Which ancestor, biblical or from your own family, do you want to stand behind you as you begin the Amidah?",
+          "verified": false,
+          "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
         },
         {
           "id": "amidah_gevurot",
@@ -963,7 +1053,10 @@
             },
             "importedAt": "2026-11-21T14:25:23.039Z"
           },
-          "verified": false
+          "commentary": "Gevurot praises God's power expressed as care: sustaining the living, supporting the falling, healing the sick, freeing the captive, and giving life to the dead. Seasonal lines for rain and dew are included.",
+          "kavannahPrompt": "Supporting the falling is one of God's 'mighty acts'. Who around you needs support today?",
+          "verified": false,
+          "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
         },
         {
           "id": "amidah_kedushat_hashem",
@@ -990,7 +1083,10 @@
             },
             "importedAt": "2026-11-21T14:25:23.039Z"
           },
-          "verified": false
+          "commentary": "Kedushat Hashem, the third blessing, affirms God's holiness. When praying alone, it is said in place of the Kedushah.",
+          "kavannahPrompt": "Holiness means set apart. What one moment of today could you set apart for something higher?",
+          "verified": false,
+          "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
         },
         {
           "id": "amidah_kedushah",
@@ -1017,7 +1113,10 @@
             },
             "importedAt": "2026-11-21T14:25:23.039Z"
           },
-          "verified": false
+          "commentary": "The Kedushah is recited in the leader's repetition with a minyan. It joins the congregation's voice to the angels' praise from Isaiah and Ezekiel: 'Holy, holy, holy'.",
+          "kavannahPrompt": "In the Kedushah, the community speaks with one voice. What does it mean to you to pray as part of a 'we'?",
+          "verified": false,
+          "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
         },
         {
           "id": "amidah_binah",
@@ -1044,7 +1143,10 @@
             },
             "importedAt": "2026-11-21T14:25:23.039Z"
           },
-          "verified": false
+          "commentary": "Binah asks for knowledge, understanding, and discernment. It is the first of the weekday requests.",
+          "kavannahPrompt": "What do you most need to understand better this week, about yourself, your work, or someone close to you?",
+          "verified": false,
+          "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
         },
         {
           "id": "amidah_teshuvah",
@@ -1071,7 +1173,10 @@
             },
             "importedAt": "2026-11-21T14:25:23.039Z"
           },
-          "verified": false
+          "commentary": "Teshuvah asks God to bring us back to Torah and service, and blesses God who desires repentance.",
+          "kavannahPrompt": "Name one small way you have drifted that you would like to return from.",
+          "verified": false,
+          "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
         },
         {
           "id": "amidah_selichah",
@@ -1098,7 +1203,10 @@
             },
             "importedAt": "2026-11-21T14:25:23.039Z"
           },
-          "verified": false
+          "commentary": "Selichah asks for forgiveness for wrongs done, and blesses God who forgives abundantly. It is customary to tap the heart at the words for sin.",
+          "kavannahPrompt": "Is there someone you need to ask for forgiveness, or forgive, before asking God for the same?",
+          "verified": false,
+          "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
         },
         {
           "id": "amidah_geulah",
@@ -1125,7 +1233,10 @@
             },
             "importedAt": "2026-11-21T14:25:23.039Z"
           },
-          "verified": false
+          "commentary": "Ge'ulah asks God to see our affliction, take up our cause, and redeem us soon.",
+          "kavannahPrompt": "Think of someone in real affliction today. What part of their cause can you take up?",
+          "verified": false,
+          "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
         },
         {
           "id": "amidah_refuah",
@@ -1152,7 +1263,10 @@
             },
             "importedAt": "2026-11-21T14:25:23.039Z"
           },
-          "verified": false
+          "commentary": "Refu'ah asks for healing, and makes room to add a personal prayer for people who are ill.",
+          "kavannahPrompt": "Hold specific names in mind as you say this blessing.",
+          "verified": false,
+          "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
         },
         {
           "id": "amidah_birkat_hashanim",
@@ -1179,7 +1293,10 @@
             },
             "importedAt": "2026-11-21T14:25:23.039Z"
           },
-          "verified": false
+          "commentary": "Birkat Hashanim asks for a good year and for the produce of the earth, with seasonal wording for rain.",
+          "kavannahPrompt": "Our livelihood depends on far more than our own effort. Whose work feeds you today?",
+          "verified": false,
+          "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
         },
         {
           "id": "amidah_kibbutz_galuyot",
@@ -1206,7 +1323,10 @@
             },
             "importedAt": "2026-11-21T14:25:23.039Z"
           },
-          "verified": false
+          "commentary": "Kibbutz Galuyot asks for the great shofar of freedom and for the gathering of the dispersed of Israel.",
+          "kavannahPrompt": "Who is scattered or isolated in your own community, and how could you help gather them in?",
+          "verified": false,
+          "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
         },
         {
           "id": "amidah_mishpat",
@@ -1233,7 +1353,10 @@
             },
             "importedAt": "2026-11-21T14:25:23.039Z"
           },
-          "verified": false
+          "commentary": "Mishpat asks for the restoration of just judges and counselors, and for God to reign with kindness and justice.",
+          "kavannahPrompt": "Where can you act with both justice and kindness in a decision you face today?",
+          "verified": false,
+          "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
         },
         {
           "id": "amidah_birkat_haminim",
@@ -1260,7 +1383,10 @@
             },
             "importedAt": "2026-11-21T14:25:23.039Z"
           },
-          "verified": false
+          "commentary": "This blessing asks for an end to slander and wickedness and for the humbling of those who do harm. Its wording has varied across communities and centuries.",
+          "kavannahPrompt": "Many read this blessing as a prayer for an end to wickedness rather than to wicked people. What harm do you want to see end?",
+          "verified": false,
+          "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
         },
         {
           "id": "amidah_tzaddikim",
@@ -1287,7 +1413,10 @@
             },
             "importedAt": "2026-11-21T14:25:23.039Z"
           },
-          "verified": false
+          "commentary": "Tzaddikim asks for compassion on the righteous, the pious, the elders, sincere converts, and ourselves, and for our trust in God never to be put to shame.",
+          "kavannahPrompt": "Converts are named among the righteous. Who are the people whose quiet goodness you want to bless today?",
+          "verified": false,
+          "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
         },
         {
           "id": "amidah_yerushalayim",
@@ -1314,7 +1443,10 @@
             },
             "importedAt": "2026-11-21T14:25:23.039Z"
           },
-          "verified": false
+          "commentary": "Boneh Yerushalayim asks God to return to Jerusalem in mercy and rebuild it.",
+          "kavannahPrompt": "What does Jerusalem represent to you, and what are you helping to build?",
+          "verified": false,
+          "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
         },
         {
           "id": "amidah_malchut_david",
@@ -1341,7 +1473,10 @@
             },
             "importedAt": "2026-11-21T14:25:23.039Z"
           },
-          "verified": false
+          "commentary": "Malchut David asks for the flourishing of the line of David and for salvation, expressing hope for redemption.",
+          "kavannahPrompt": "Hope is a discipline. What do you hope for that you are also working toward?",
+          "verified": false,
+          "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
         },
         {
           "id": "amidah_shomea_tefillah",
@@ -1368,7 +1503,10 @@
             },
             "importedAt": "2026-11-21T14:25:23.039Z"
           },
-          "verified": false
+          "commentary": "Shome'a Tefillah asks God to hear and accept our prayer. Many add personal requests here.",
+          "kavannahPrompt": "Add one personal request in your own words before you finish the blessing.",
+          "verified": false,
+          "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
         },
         {
           "id": "amidah_avodah",
@@ -1395,7 +1533,10 @@
             },
             "importedAt": "2026-11-21T14:25:23.039Z"
           },
-          "verified": false
+          "commentary": "Avodah asks God to accept Israel's prayer as the Temple service once was, and to return the Divine Presence to Zion. Seasonal additions for Rosh Chodesh and festivals appear here.",
+          "kavannahPrompt": "Prayer has taken the place of sacrifice. What are you offering of yourself in this prayer?",
+          "verified": false,
+          "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
         },
         {
           "id": "amidah_hodaah",
@@ -1422,7 +1563,10 @@
             },
             "importedAt": "2026-11-21T14:25:23.039Z"
           },
-          "verified": false
+          "commentary": "Modim thanks God for our lives, our souls, and the daily miracles that are with us 'evening, morning, and noon'. It is customary to bow at its start and end.",
+          "kavannahPrompt": "Name three 'daily miracles' from the last day that you would otherwise not notice.",
+          "verified": false,
+          "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
         },
         {
           "id": "amidah_hodaah_2",
@@ -1449,7 +1593,10 @@
             },
             "importedAt": "2026-11-21T14:25:23.039Z"
           },
-          "verified": false
+          "commentary": "Al Hanisim for Chanukah is added to Modim during Chanukah. It recalls the Hasmonean victory and the rededication of the Temple.",
+          "kavannahPrompt": "Chanukah celebrates the few standing for what is right. Where might you need that courage?",
+          "verified": false,
+          "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
         },
         {
           "id": "amidah_hodaah_3",
@@ -1476,7 +1623,10 @@
             },
             "importedAt": "2026-11-21T14:25:23.039Z"
           },
-          "verified": false
+          "commentary": "Al Hanisim for Purim, added on Purim, recalls how the decree against the Jews in Persia was overturned. The unit closes with the end of Modim: may all the living thank God.",
+          "kavannahPrompt": "Purim's story turns on people acting when it mattered. What is yours to do now?",
+          "verified": false,
+          "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
         },
         {
           "id": "amidah_birkat_kohanim",
@@ -1503,7 +1653,10 @@
             },
             "importedAt": "2026-11-21T14:25:23.039Z"
           },
-          "verified": false
+          "commentary": "In the repetition, the leader recites the priestly blessing (or the kohanim themselves bless the congregation, in some communities). It asks for blessing, protection, grace, and peace.",
+          "kavannahPrompt": "Picture someone you love and silently extend this blessing to them.",
+          "verified": false,
+          "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
         },
         {
           "id": "amidah_shalom",
@@ -1530,7 +1683,10 @@
             },
             "importedAt": "2026-11-21T14:25:23.039Z"
           },
-          "verified": false
+          "commentary": "Sim Shalom, the final blessing, asks for peace, goodness, blessing, grace, kindness, and compassion for us and all Israel.",
+          "kavannahPrompt": "Where is there conflict in your life that you could bring a step closer to peace today?",
+          "verified": false,
+          "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
         },
         {
           "id": "amidah_elokai_netzor",
@@ -1557,7 +1713,10 @@
             },
             "importedAt": "2026-11-21T14:25:23.039Z"
           },
-          "verified": false
+          "commentary": "The concluding passage asks God to guard our tongue from evil and deceit, to make us humble, and to open our hearts to Torah. It ends with the verse 'May the words of my mouth' and a request for peace.",
+          "kavannahPrompt": "Choose one way of speaking you want to guard against today, and keep it in mind as you step back from the Amidah.",
+          "verified": false,
+          "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
         }
       ]
     }

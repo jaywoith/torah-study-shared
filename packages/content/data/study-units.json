@@ -153,7 +153,10 @@
         },
         "importedAt": "2026-11-21T13:56:07.200Z"
       },
-      "verified": false
+      "commentary": "The Torah opens with creation by word alone: light first, then the separation of light from darkness, and the naming of day and night.",
+      "kavannahPrompt": "Creation begins with separating and naming. What in your day needs to be clearly separated or named?",
+      "verified": false,
+      "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
     },
     {
       "id": "tanakh-bereishit-1-26",
@@ -180,7 +183,10 @@
         },
         "importedAt": "2026-11-21T13:56:07.200Z"
       },
-      "verified": false
+      "commentary": "Every human being is created in the divine image, male and female alike, and given responsibility over the world.",
+      "kavannahPrompt": "Who will you meet today whom it is hardest to see as created in God's image?",
+      "verified": false,
+      "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
     },
     {
       "id": "tanakh-bereishit-2-15",
@@ -207,7 +213,10 @@
         },
         "importedAt": "2026-11-21T13:56:07.200Z"
       },
-      "verified": false
+      "commentary": "The first human is placed in the garden 'to till it and tend it': both to work the world and to protect it.",
+      "kavannahPrompt": "What have you been given to work and to guard, at home, at work, or in your community?",
+      "verified": false,
+      "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
     },
     {
       "id": "tanakh-bereishit-4-9",
@@ -234,7 +243,10 @@
         },
         "importedAt": "2026-11-21T13:56:07.200Z"
       },
-      "verified": false
+      "commentary": "After Abel's murder, God asks Cain where his brother is, and Cain answers with a question that still challenges us: 'Am I my brother's keeper?'",
+      "kavannahPrompt": "For whom are you, in fact, responsible, even if no one has asked you to be?",
+      "verified": false,
+      "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
     },
     {
       "id": "tanakh-bereishit-12-1",
@@ -261,7 +273,10 @@
         },
         "importedAt": "2026-11-21T13:56:07.200Z"
       },
-      "verified": false
+      "commentary": "Abram is told to leave land, birthplace, and father's house for a land God will show him, with a promise that through him all families of the earth will be blessed.",
+      "kavannahPrompt": "What would you need to leave behind to go where you are being called?",
+      "verified": false,
+      "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
     },
     {
       "id": "tanakh-bereishit-18-1",
@@ -288,7 +303,10 @@
         },
         "importedAt": "2026-11-21T13:56:07.200Z"
       },
-      "verified": false
+      "commentary": "Recovering in the heat of the day, Abraham runs to welcome three strangers, a model of hospitality the tradition calls hachnasat orchim.",
+      "kavannahPrompt": "Abraham runs to guests. Who could you welcome today, at home or at work?",
+      "verified": false,
+      "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
     },
     {
       "id": "tanakh-bereishit-18-23",
@@ -315,7 +333,10 @@
         },
         "importedAt": "2026-11-21T13:56:07.200Z"
       },
-      "verified": false
+      "commentary": "Abraham argues with God for the sake of Sodom, appealing to justice: 'Shall not the Judge of all the earth deal justly?'",
+      "kavannahPrompt": "Abraham speaks up for strangers. When is it right for you to question or argue on behalf of others?",
+      "verified": false,
+      "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
     },
     {
       "id": "tanakh-bereishit-22-1",
@@ -342,7 +363,10 @@
         },
         "importedAt": "2026-11-21T13:56:07.200Z"
       },
-      "verified": false
+      "commentary": "The Akedah begins with God's call and Abraham's answer, 'Here I am', followed by the hardest command in Genesis.",
+      "kavannahPrompt": "When were you last fully present enough to say 'Here I am'?",
+      "verified": false,
+      "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
     },
     {
       "id": "tanakh-bereishit-28-16",
@@ -369,7 +393,10 @@
         },
         "importedAt": "2026-11-21T13:56:07.200Z"
       },
-      "verified": false
+      "commentary": "Jacob wakes from his dream of the ladder and says that God was in this place and he did not know it.",
+      "kavannahPrompt": "Where might God be present in an ordinary place you pass through today?",
+      "verified": false,
+      "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
     },
     {
       "id": "tanakh-bereishit-32-25",
@@ -396,7 +423,10 @@
         },
         "importedAt": "2026-11-21T13:56:07.200Z"
       },
-      "verified": false
+      "commentary": "Jacob, alone at night, wrestles a man until dawn, refuses to let go without a blessing, and receives the name Israel: one who has striven and prevailed.",
+      "kavannahPrompt": "What struggle are you in that might end with a blessing if you do not let go too soon?",
+      "verified": false,
+      "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
     },
     {
       "id": "tanakh-shemot-3-1",
@@ -423,7 +453,10 @@
         },
         "importedAt": "2026-11-21T13:56:07.200Z"
       },
-      "verified": false
+      "commentary": "While tending sheep, Moses turns aside to see a bush that burns without being consumed. Only when he turns aside does God call to him.",
+      "kavannahPrompt": "What would you notice today if you 'turned aside' from your routine for a moment?",
+      "verified": false,
+      "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
     },
     {
       "id": "tanakh-shemot-3-13",
@@ -450,7 +483,10 @@
         },
         "importedAt": "2026-11-21T13:56:07.200Z"
       },
-      "verified": false
+      "commentary": "Asked for God's name, God answers 'Ehyeh asher ehyeh', often translated 'I will be what I will be'.",
+      "kavannahPrompt": "What does it mean to you that God's name points to the future rather than a fixed description?",
+      "verified": false,
+      "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
     },
     {
       "id": "tanakh-shemot-14-30",
@@ -477,7 +513,10 @@
         },
         "importedAt": "2026-11-21T13:56:07.200Z"
       },
-      "verified": false
+      "commentary": "After the crossing of the sea, Israel sees the great power God has shown and trusts in God and in Moses. These verses lead into the Song at the Sea.",
+      "kavannahPrompt": "Trust here follows seeing. What have you already seen that could ground your trust today?",
+      "verified": false,
+      "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
     },
     {
       "id": "tanakh-shemot-20-1",
@@ -504,7 +543,10 @@
         },
         "importedAt": "2026-11-21T13:56:07.200Z"
       },
-      "verified": false
+      "commentary": "The Ten Commandments begin with God's self-introduction as the One who brought Israel out of slavery, and the command to have no other gods.",
+      "kavannahPrompt": "The commandments start from freedom. What 'other gods' (money, approval, fear) compete for your loyalty?",
+      "verified": false,
+      "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
     },
     {
       "id": "tanakh-shemot-20-8",
@@ -531,7 +573,10 @@
         },
         "importedAt": "2026-11-21T13:56:07.200Z"
       },
-      "verified": false
+      "commentary": "Remember the Sabbath day: six days of work, and a seventh day of rest for everyone in the household, including workers, animals, and strangers.",
+      "kavannahPrompt": "How can your next Shabbat be rest not only for you but for those who serve you?",
+      "verified": false,
+      "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
     },
     {
       "id": "tanakh-shemot-23-9",
@@ -558,7 +603,10 @@
         },
         "importedAt": "2026-11-21T13:56:07.200Z"
       },
-      "verified": false
+      "commentary": "Do not oppress the stranger, for you know the feelings of the stranger, having been strangers in Egypt.",
+      "kavannahPrompt": "When did you last feel like an outsider? Let that memory shape how you treat someone new.",
+      "verified": false,
+      "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
     },
     {
       "id": "tanakh-shemot-34-6",
@@ -585,7 +633,10 @@
         },
         "importedAt": "2026-11-21T13:56:07.200Z"
       },
-      "verified": false
+      "commentary": "God's self-description to Moses: compassionate and gracious, slow to anger, abounding in kindness and truth. These attributes are central to the liturgy of forgiveness.",
+      "kavannahPrompt": "Choose one of these attributes to imitate deliberately in one conversation today.",
+      "verified": false,
+      "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
     },
     {
       "id": "tanakh-vayikra-19-1",
@@ -612,7 +663,10 @@
         },
         "importedAt": "2026-11-21T13:56:07.200Z"
       },
-      "verified": false
+      "commentary": "The Holiness Code opens: 'You shall be holy, for I, the Lord your God, am holy.' What follows ties holiness to everyday ethics.",
+      "kavannahPrompt": "Holiness here is a command to ordinary people. What would make one part of your day holier?",
+      "verified": false,
+      "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
     },
     {
       "id": "tanakh-vayikra-19-16",
@@ -639,7 +693,10 @@
         },
         "importedAt": "2026-11-21T13:56:07.200Z"
       },
-      "verified": false
+      "commentary": "These verses are traditionally read as forbidding gossip and standing idly by while a neighbor is in danger, and they continue: no hatred in the heart, honest reproof, no vengeance or grudges, and 'Love your fellow as yourself.'",
+      "kavannahPrompt": "Which of these is hardest for you right now: avoiding gossip, rebuking honestly, or letting go of a grudge?",
+      "verified": false,
+      "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
     },
     {
       "id": "tanakh-vayikra-19-32",
@@ -666,7 +723,10 @@
         },
         "importedAt": "2026-11-21T13:56:07.200Z"
       },
-      "verified": false
+      "commentary": "Rise before the aged and honor the presence of the old.",
+      "kavannahPrompt": "Who is an elder in your life whom you could honor with time or attention this week?",
+      "verified": false,
+      "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
     },
     {
       "id": "tanakh-vayikra-25-10",
@@ -693,7 +753,10 @@
         },
         "importedAt": "2026-11-21T13:56:07.200Z"
       },
-      "verified": false
+      "commentary": "In the Jubilee year, liberty is proclaimed throughout the land and each person returns to their family holding.",
+      "kavannahPrompt": "What would a 'release' look like in your own life: a debt, a grudge, or a habit to let go?",
+      "verified": false,
+      "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
     },
     {
       "id": "tanakh-bamidbar-6-24",
@@ -720,7 +783,10 @@
         },
         "importedAt": "2026-11-21T13:56:07.200Z"
       },
-      "verified": false
+      "commentary": "The Priestly Blessing asks that God bless and protect, shine with grace, and grant peace. It is used in the synagogue and by parents blessing children.",
+      "kavannahPrompt": "Silently bless one person with these words today.",
+      "verified": false,
+      "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
     },
     {
       "id": "tanakh-bamidbar-15-37",
@@ -747,7 +813,10 @@
         },
         "importedAt": "2026-11-21T13:56:07.200Z"
       },
-      "verified": false
+      "commentary": "The command of tzitzit: fringes on the corners of garments, to look at and remember the commandments. This passage is the Shema's third paragraph.",
+      "kavannahPrompt": "What physical reminder in your day could help you remember what matters most?",
+      "verified": false,
+      "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
     },
     {
       "id": "tanakh-devarim-6-4",
@@ -774,7 +843,10 @@
         },
         "importedAt": "2026-11-21T13:56:07.200Z"
       },
-      "verified": false
+      "commentary": "The Shema: God is one, and we are to love God with all our heart, soul, and might, keep these words on our heart, teach them to our children, and bind them on hand, forehead, and doorposts.",
+      "kavannahPrompt": "Which of these practices (teaching, speaking, binding, writing) could you strengthen this week?",
+      "verified": false,
+      "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
     },
     {
       "id": "tanakh-devarim-10-12",
@@ -801,7 +873,10 @@
         },
         "importedAt": "2026-11-21T13:56:07.200Z"
       },
-      "verified": false
+      "commentary": "Moses asks what God requires: to revere God, walk in God's ways, love and serve God with heart and soul, and keep the commandments for our own good.",
+      "kavannahPrompt": "'For your good': how has a commitment you keep turned out to be good for you?",
+      "verified": false,
+      "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
     },
     {
       "id": "tanakh-devarim-10-17",
@@ -828,7 +903,10 @@
         },
         "importedAt": "2026-11-21T13:56:07.200Z"
       },
-      "verified": false
+      "commentary": "The great and awesome God shows no favor and takes no bribe, upholds the orphan and widow, and loves the stranger. Therefore you too must love the stranger.",
+      "kavannahPrompt": "God's greatness is described through care for the vulnerable. How does that change what 'greatness' means to you?",
+      "verified": false,
+      "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
     },
     {
       "id": "tanakh-devarim-16-20",
@@ -855,7 +933,10 @@
         },
         "importedAt": "2026-11-21T13:56:07.200Z"
       },
-      "verified": false
+      "commentary": "'Justice, justice shall you pursue', so that you may live and possess the land.",
+      "kavannahPrompt": "Justice is to be pursued, not just admired. What is one concrete step toward fairness you could take?",
+      "verified": false,
+      "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
     },
     {
       "id": "tanakh-devarim-30-11",
@@ -882,7 +963,10 @@
         },
         "importedAt": "2026-11-21T13:56:07.200Z"
       },
-      "verified": false
+      "commentary": "The commandment is not too hard or too far away, not in the heavens or across the sea, but very near: in your mouth and in your heart, to do it.",
+      "kavannahPrompt": "What good thing have you been treating as 'too far away' that is actually within reach?",
+      "verified": false,
+      "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
     },
     {
       "id": "tanakh-devarim-30-19",
@@ -909,7 +993,10 @@
         },
         "importedAt": "2026-11-21T13:56:07.200Z"
       },
-      "verified": false
+      "commentary": "Heaven and earth are called as witnesses: life and death, blessing and curse are set before you; choose life.",
+      "kavannahPrompt": "What is one choice you face today that is, in a small way, a choice for life?",
+      "verified": false,
+      "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
     },
     {
       "id": "tanakh-devarim-34-10",
@@ -936,7 +1023,10 @@
         },
         "importedAt": "2026-11-21T13:56:07.200Z"
       },
-      "verified": false
+      "commentary": "After Moses' death, the Torah says no prophet arose in Israel like Moses, whom God knew face to face.",
+      "kavannahPrompt": "Moses' greatness is described as closeness to God. What brings you closer?",
+      "verified": false,
+      "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
     },
     {
       "id": "tanakh-yehoshua-1-9",
@@ -963,7 +1053,10 @@
         },
         "importedAt": "2026-11-21T13:56:07.200Z"
       },
-      "verified": false
+      "commentary": "God tells Joshua, taking over after Moses, to be strong and resolute and not to fear, for God is with him wherever he goes.",
+      "kavannahPrompt": "What new responsibility are you carrying that needs strength and resolve rather than fear?",
+      "verified": false,
+      "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
     },
     {
       "id": "tanakh-shmuel-1-16-7",
@@ -990,7 +1083,10 @@
         },
         "importedAt": "2026-11-21T13:56:07.200Z"
       },
-      "verified": false
+      "commentary": "When Samuel looks for a king among Jesse's sons, God tells him not to judge by appearance or stature: people see what is visible, but God sees into the heart.",
+      "kavannahPrompt": "Whom have you judged by appearance? Look again at their heart.",
+      "verified": false,
+      "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
     },
     {
       "id": "tanakh-melachim-1-19-11",
@@ -1017,7 +1113,10 @@
         },
         "importedAt": "2026-11-21T13:56:07.200Z"
       },
-      "verified": false
+      "commentary": "Elijah on the mountain finds that God is not in the wind, earthquake, or fire, but in a soft murmuring sound.",
+      "kavannahPrompt": "Make a few minutes of quiet today. What do you hear when the noise stops?",
+      "verified": false,
+      "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
     },
     {
       "id": "tanakh-yeshayahu-2-4",
@@ -1044,7 +1143,10 @@
         },
         "importedAt": "2026-11-21T13:56:07.200Z"
       },
-      "verified": false
+      "commentary": "Isaiah envisions nations beating swords into plowshares and spears into pruning hooks, never again learning war.",
+      "kavannahPrompt": "What 'weapon' (a sharp word or a defensive habit) could you turn into a tool for building?",
+      "verified": false,
+      "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
     },
     {
       "id": "tanakh-yeshayahu-6-1",
@@ -1071,7 +1173,10 @@
         },
         "importedAt": "2026-11-21T13:56:07.200Z"
       },
-      "verified": false
+      "commentary": "Isaiah's vision of God enthroned, with seraphim calling 'Holy, holy, holy'. These words are the heart of the Kedushah.",
+      "kavannahPrompt": "When you next say 'Kadosh, kadosh, kadosh' in prayer, picture this scene.",
+      "verified": false,
+      "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
     },
     {
       "id": "tanakh-yeshayahu-11-6",
@@ -1098,7 +1203,10 @@
         },
         "importedAt": "2026-11-21T13:56:07.200Z"
       },
-      "verified": false
+      "commentary": "Isaiah's vision of peace: the wolf with the lamb, the leopard with the kid, and a little child leading them, with the earth full of the knowledge of God.",
+      "kavannahPrompt": "Which relationship in your life most needs the kind of peace Isaiah imagines?",
+      "verified": false,
+      "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
     },
     {
       "id": "tanakh-yeshayahu-40-28",
@@ -1125,7 +1233,10 @@
         },
         "importedAt": "2026-11-21T13:56:07.200Z"
       },
-      "verified": false
+      "commentary": "God never grows faint or weary and gives strength to the weary; those who trust in God renew their strength and soar as on eagles' wings.",
+      "kavannahPrompt": "Where are you weary right now, and what renews your strength?",
+      "verified": false,
+      "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
     },
     {
       "id": "tanakh-yeshayahu-42-6",
@@ -1152,7 +1263,10 @@
         },
         "importedAt": "2026-11-21T13:56:07.200Z"
       },
-      "verified": false
+      "commentary": "God calls the servant to be a covenant people and a light of nations: opening eyes deprived of light and rescuing prisoners from the dungeon.",
+      "kavannahPrompt": "What does it mean for you to be 'a light of nations' in the places you work and live?",
+      "verified": false,
+      "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
     },
     {
       "id": "tanakh-yeshayahu-58-6",
@@ -1179,7 +1293,10 @@
         },
         "importedAt": "2026-11-21T13:56:07.200Z"
       },
-      "verified": false
+      "commentary": "The fast God desires: to loosen the bonds of injustice, free the oppressed, share bread with the hungry, shelter the poor, and clothe the naked.",
+      "kavannahPrompt": "Ritual and ethics belong together here. What act of kindness would make your observance more complete this week?",
+      "verified": false,
+      "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
     },
     {
       "id": "tanakh-yirmeyahu-9-22",
@@ -1206,7 +1323,10 @@
         },
         "importedAt": "2026-11-21T13:56:07.200Z"
       },
-      "verified": false
+      "commentary": "Let not the wise glory in wisdom, the strong in strength, or the rich in riches, but in devotion to God, who acts with kindness, justice, and equity in the world.",
+      "kavannahPrompt": "What are you most tempted to take pride in? How could it serve kindness and justice instead?",
+      "verified": false,
+      "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
     },
     {
       "id": "tanakh-yirmeyahu-17-7",
@@ -1233,7 +1353,10 @@
         },
         "importedAt": "2026-11-21T13:56:07.200Z"
       },
-      "verified": false
+      "commentary": "Blessed is the one who trusts in God: like a tree planted by water, its roots reaching the stream, unafraid of heat and still bearing fruit in drought.",
+      "kavannahPrompt": "What keeps your roots near the water when life feels dry?",
+      "verified": false,
+      "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
     },
     {
       "id": "tanakh-yechezkel-37-4",
@@ -1260,7 +1383,10 @@
         },
         "importedAt": "2026-11-21T13:56:07.200Z"
       },
-      "verified": false
+      "commentary": "In the valley of dry bones, Ezekiel is told to prophesy that God will lay sinews and flesh on them and put breath into them, and they will live.",
+      "kavannahPrompt": "What in you feels dried out, and what would 'breath' returning look like?",
+      "verified": false,
+      "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
     },
     {
       "id": "tanakh-hoshea-2-21",
@@ -1287,7 +1413,10 @@
         },
         "importedAt": "2026-11-21T13:56:07.200Z"
       },
-      "verified": false
+      "commentary": "God's betrothal of Israel 'forever, in righteousness and justice, kindness and mercy, and faithfulness'. These words are said while wrapping the tefillin strap on the hand.",
+      "kavannahPrompt": "Which quality in this betrothal do you most want to bring to your closest relationships?",
+      "verified": false,
+      "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
     },
     {
       "id": "tanakh-amos-5-24",
@@ -1314,7 +1443,10 @@
         },
         "importedAt": "2026-11-21T13:56:07.200Z"
       },
-      "verified": false
+      "commentary": "Amos calls for justice to roll down like water, and righteousness like an unfailing stream.",
+      "kavannahPrompt": "Justice like a stream is constant, not occasional. Where could you be more consistent?",
+      "verified": false,
+      "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
     },
     {
       "id": "tanakh-yonah-4-10",
@@ -1341,7 +1473,10 @@
         },
         "importedAt": "2026-11-21T13:56:07.200Z"
       },
-      "verified": false
+      "commentary": "God answers Jonah, who grieved over a plant, by asking whether God should not care about Nineveh, with its many people who do not know their right hand from their left, and its many animals.",
+      "kavannahPrompt": "Whom do you find it hard to care about? What would God's compassion ask of you?",
+      "verified": false,
+      "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
     },
     {
       "id": "tanakh-zechariah-4-6",
@@ -1368,7 +1503,10 @@
         },
         "importedAt": "2026-11-21T13:56:07.200Z"
       },
-      "verified": false
+      "commentary": "'Not by might, nor by power, but by My spirit—said the LORD of Hosts.' This passage is part of the haftarah read on Shabbat Chanukah.",
+      "kavannahPrompt": "Where are you relying on force or control when spirit, patience, or trust might do more?",
+      "verified": false,
+      "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
     },
     {
       "id": "tanakh-zechariah-14-9",
@@ -1395,7 +1533,10 @@
         },
         "importedAt": "2026-11-21T13:56:07.200Z"
       },
-      "verified": false
+      "commentary": "Zechariah foresees the day when God will be king over all the earth, and God and God's name will be one. This verse closes the Aleinu prayer.",
+      "kavannahPrompt": "What would it look like for your own life to be more 'one': consistent in public and private?",
+      "verified": false,
+      "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
     },
     {
       "id": "tanakh-malachi-3-23",
@@ -1422,7 +1563,10 @@
         },
         "importedAt": "2026-11-21T13:56:07.200Z"
       },
-      "verified": false
+      "commentary": "The last words of the Prophets promise that Elijah will come before the great day and turn the hearts of parents to children and children to parents.",
+      "kavannahPrompt": "Which family relationship most needs a turning of hearts, and what first step could you take?",
+      "verified": false,
+      "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
     },
     {
       "id": "tanakh-tehillim-1-1",
@@ -1449,7 +1593,10 @@
         },
         "importedAt": "2026-11-21T13:56:07.200Z"
       },
-      "verified": false
+      "commentary": "Psalm 1 contrasts two paths: the one who delights in God's teaching is like a tree planted by streams of water that yields fruit in season.",
+      "kavannahPrompt": "What do you delight in daily? Does it help you grow fruit?",
+      "verified": false,
+      "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
     },
     {
       "id": "tanakh-tehillim-15-1",
@@ -1476,7 +1623,10 @@
         },
         "importedAt": "2026-11-21T13:56:07.200Z"
       },
-      "verified": false
+      "commentary": "Psalm 15 asks who may dwell on God's holy mountain and answers with ethics: walking blamelessly, speaking truth from the heart, no slander, keeping one's word even when it costs.",
+      "kavannahPrompt": "This psalm defines closeness to God by conduct. Which line is a challenge for you this week?",
+      "verified": false,
+      "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
     },
     {
       "id": "tanakh-tehillim-19-8",
@@ -1503,7 +1653,10 @@
         },
         "importedAt": "2026-11-21T13:56:07.200Z"
       },
-      "verified": false
+      "commentary": "The teaching of the LORD is perfect, renewing life; God's decrees are enduring, making the simple wise.",
+      "kavannahPrompt": "When has a teaching restored your soul or made you wiser?",
+      "verified": false,
+      "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
     },
     {
       "id": "tanakh-tehillim-23-1",
@@ -1530,7 +1683,10 @@
         },
         "importedAt": "2026-11-21T13:56:07.200Z"
       },
-      "verified": false
+      "commentary": "Psalm 23: God as shepherd, leading to still waters and right paths, present even in the valley of deepest darkness, with goodness and steadfast love to follow.",
+      "kavannahPrompt": "Where are you walking through a dark valley, and where do you feel accompanied?",
+      "verified": false,
+      "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
     },
     {
       "id": "tanakh-tehillim-24-3",
@@ -1557,7 +1713,10 @@
         },
         "importedAt": "2026-11-21T13:56:07.200Z"
       },
-      "verified": false
+      "commentary": "Who may ascend the mountain of the Lord? One with clean hands and a pure heart, who has not sworn falsely.",
+      "kavannahPrompt": "What would 'clean hands and a pure heart' mean in your work today?",
+      "verified": false,
+      "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
     },
     {
       "id": "tanakh-tehillim-27-1",
@@ -1584,7 +1743,10 @@
         },
         "importedAt": "2026-11-21T13:56:07.200Z"
       },
-      "verified": false
+      "commentary": "'The LORD is my light and my help; whom should I fear?' Many communities recite Psalm 27 daily during Elul and the High Holiday season.",
+      "kavannahPrompt": "Name one fear you carry and set it beside this verse.",
+      "verified": false,
+      "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
     },
     {
       "id": "tanakh-tehillim-27-4",
@@ -1611,7 +1773,10 @@
         },
         "importedAt": "2026-11-21T13:56:07.200Z"
       },
-      "verified": false
+      "commentary": "One thing the psalmist asks: to dwell in God's house all the days of life, to gaze on God's beauty, and to frequent God's temple.",
+      "kavannahPrompt": "If you could ask for only one thing in your spiritual life, what would it be?",
+      "verified": false,
+      "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
     },
     {
       "id": "tanakh-tehillim-34-13",
@@ -1638,7 +1803,10 @@
         },
         "importedAt": "2026-11-21T13:56:07.200Z"
       },
-      "verified": false
+      "commentary": "Who desires life and long days to see good? Guard your tongue from evil and your lips from deceit; turn from evil, do good, seek peace and pursue it.",
+      "kavannahPrompt": "Watch your speech for one day. What did you notice?",
+      "verified": false,
+      "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
     },
     {
       "id": "tanakh-tehillim-90-12",
@@ -1665,7 +1833,10 @@
         },
         "importedAt": "2026-11-21T13:56:07.200Z"
       },
-      "verified": false
+      "commentary": "'Teach us to count our days rightly, that we may obtain a wise heart.' Psalm 90 is introduced as a prayer of Moses.",
+      "kavannahPrompt": "If you counted your days rather than spending them, what would you do differently today?",
+      "verified": false,
+      "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
     },
     {
       "id": "tanakh-tehillim-92-2",
@@ -1692,7 +1863,10 @@
         },
         "importedAt": "2026-11-21T13:56:07.200Z"
       },
-      "verified": false
+      "commentary": "Psalm 92, the Song for the Sabbath day: it is good to give thanks to God, proclaiming God's kindness in the morning and faithfulness at night.",
+      "kavannahPrompt": "Practice the psalm's rhythm: name a kindness this morning and a faithfulness tonight.",
+      "verified": false,
+      "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
     },
     {
       "id": "tanakh-tehillim-100-1",
@@ -1719,7 +1893,10 @@
         },
         "importedAt": "2026-11-21T13:56:07.200Z"
       },
-      "verified": false
+      "commentary": "Psalm 100 calls the whole earth to serve God with gladness, come before God with joyful song, and give thanks.",
+      "kavannahPrompt": "Can you do one task today 'with gladness' that you usually do grudgingly?",
+      "verified": false,
+      "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
     },
     {
       "id": "tanakh-tehillim-121-1",
@@ -1746,7 +1923,10 @@
         },
         "importedAt": "2026-11-21T13:56:07.200Z"
       },
-      "verified": false
+      "commentary": "'I turn my eyes to the mountains; from where will my help come?' Help comes from God, maker of heaven and earth, the guardian of Israel who neither slumbers nor sleeps.",
+      "kavannahPrompt": "Where do you look first for help? What would it mean to look up?",
+      "verified": false,
+      "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
     },
     {
       "id": "tanakh-tehillim-133-1",
@@ -1773,7 +1953,10 @@
         },
         "importedAt": "2026-11-21T13:56:07.200Z"
       },
-      "verified": false
+      "commentary": "'How good and how pleasant it is that brothers dwell together.' A short psalm about the blessing of living in harmony.",
+      "kavannahPrompt": "Who in your family or community could you reach out to in the spirit of this verse?",
+      "verified": false,
+      "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
     },
     {
       "id": "tanakh-mishlei-3-5",
@@ -1800,7 +1983,10 @@
         },
         "importedAt": "2026-11-21T13:56:07.200Z"
       },
-      "verified": false
+      "commentary": "Trust in God with all your heart and do not rely on your own understanding; acknowledge God in all your ways, and God will make your paths straight.",
+      "kavannahPrompt": "Where are you over-relying on your own plans, and what would trust look like there?",
+      "verified": false,
+      "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
     },
     {
       "id": "tanakh-mishlei-3-17",
@@ -1827,7 +2013,10 @@
         },
         "importedAt": "2026-11-21T13:56:07.200Z"
       },
-      "verified": false
+      "commentary": "Wisdom's ways are ways of pleasantness and all her paths are peace; she is a tree of life to those who hold her fast. These verses are sung when the Torah is returned to the ark.",
+      "kavannahPrompt": "What practice of yours leads to pleasantness and peace? Hold on to it.",
+      "verified": false,
+      "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
     },
     {
       "id": "tanakh-kohelet-3-1",
@@ -1854,7 +2043,10 @@
         },
         "importedAt": "2026-11-21T13:56:07.200Z"
       },
-      "verified": false
+      "commentary": "Ecclesiastes: there is a season for everything and a time for every purpose under heaven: to plant and to uproot, to weep and to laugh, to be silent and to speak.",
+      "kavannahPrompt": "What season are you in right now, and what is it asking of you?",
+      "verified": false,
+      "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
     },
     {
       "id": "tanakh-kohelet-12-13",
@@ -1881,7 +2073,10 @@
         },
         "importedAt": "2026-11-21T13:56:07.200Z"
       },
-      "verified": false
+      "commentary": "Ecclesiastes ends: the sum of the matter, when all is heard, is to revere God and keep the commandments, for that is the whole of a person.",
+      "kavannahPrompt": "After all the questions, what is the one commitment you return to?",
+      "verified": false,
+      "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
     },
     {
       "id": "tanakh-ruth-1-16",
@@ -1908,7 +2103,10 @@
         },
         "importedAt": "2026-11-21T13:56:07.200Z"
       },
-      "verified": false
+      "commentary": "Ruth tells Naomi: wherever you go I will go; your people shall be my people, and your God my God. Ruth is the model of the convert.",
+      "kavannahPrompt": "Ruth's loyalty is a choice. To whom have you chosen to bind yourself, and how do you show it?",
+      "verified": false,
+      "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
     },
     {
       "id": "tanakh-eicha-3-22",
@@ -1935,7 +2133,10 @@
         },
         "importedAt": "2026-11-21T13:56:07.200Z"
       },
-      "verified": false
+      "commentary": "Even in Lamentations, hope breaks through: God's kindness has not ended and God's mercies are new every morning; great is God's faithfulness.",
+      "kavannahPrompt": "What is 'new every morning' in your life that you can be grateful for today?",
+      "verified": false,
+      "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
     },
     {
       "id": "musar-mesillat-yesharim-intro-1",

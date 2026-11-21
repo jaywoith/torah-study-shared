@@ -1,7 +1,7 @@
 # Development Plan
 
-**Current version:** 0.4.0-rc.1
-**Current milestone:** v0.4.0, Persistence & Progress (rc.1 cut; waiting on owner phone check) → **next: v0.5.0 Real Content. A new session starts at the v0.5.0 section.** Hosting on the owner's server whenever the owner is at a computer (see "Hosting" under v0.3.0).
+**Current version:** 0.5.0-rc.1
+**Current milestone:** v0.5.0 Real Content, **rc.1 cut**. Waiting on the owner: content review (nothing is `verified` yet) and the G2 phone check (needs hosting). v0.4.0 is likewise waiting on its phone check. **Next: v0.6.0 AI Study Coach.** Hosting on the owner's server whenever the owner is at a computer (see "Hosting" under v0.3.0).
 **Last updated:** 2026-11-21
 
 This is the master plan. Every milestone is a minor version (pre-1.0). Tick the boxes as work lands; an agent picking up the project starts at the first unchecked task in the current milestone. Release gates (G1–G3) are defined in [TESTING.md](TESTING.md#release-gates).
@@ -22,7 +22,7 @@ This is the master plan. Every milestone is a minor version (pre-1.0). Tick the 
 | **0.2.0** | **Foundation** ✅ | Monorepo, bugs fixed, content as data, 87 tests, CI, docs | G1 |
 | 0.3.0 | Web App Shell ✅ (superseded by 0.4.0-rc.1) | Usable daily study + Siddur path in a browser | G2 |
 | 0.4.0 | Persistence & Progress 🟡 rc.1 | Profile and progress saved server-side; sign-in; backups | G2 |
-| 0.5.0 | Real Content | Verified texts from a licensed source; full Pesukei Dezimra; Musar sequence | G2 |
+| 0.5.0 | Real Content 🟡 rc.1 | Verified texts from a licensed source; full Pesukei Dezimra; Musar sequence | G2 |
 | 0.6.0 | AI Study Coach | Real LLM coach bound by shared personas and constraints, with an eval suite | G3 |
 | 0.7.0 | Review & Check-ins | Spaced-repetition review from reviewItems; weekly check-in | G2 |
 | 0.8.0 | PWA & Deploy | Installed on phone, works offline, hosted privately | G2 |
@@ -103,7 +103,7 @@ Updated 2026-11-21: the owner has a server and will set it up from a computer. D
 
 **Done when:** gate G2 passes on the hosted app.
 
-## v0.5.0: Real Content (next, start here)
+## v0.5.0: Real Content (rc.1 cut 2026-11-21)
 
 **Goal:** content you can trust, at enough volume for months of daily use, imported from Sefaria, with display preferences for cantillation and the Divine Name.
 
@@ -129,11 +129,13 @@ Updated 2026-11-21: the owner has a server and will set it up from a computer. D
 - [x] **Profile fields:** `showCantillation: boolean` (default false), `divineName: 'abbreviated' | 'full' | 'yud_yud'` (default 'abbreviated'). Enum arrays in `models.ts`; `parseUserProfile` defaults missing fields so saved v0.4 profiles keep working; option labels in `ui-strings.json` and `/v1/options`
 - [x] **Apply at render time** in the API (daily study and Siddur) next to the language mode, so clients stay dumb
 - [x] **Open questions to settle and record** (settled 2026-11-21, recorded in ADR-011: plan recommendation for (a), Tetragrammaton only for (b)): (a) transliteration and English when abbreviated, e.g. "Adonai" → "Hashem"? Recommendation: Hebrew follows the setting, transliteration uses "Adonai" for full/yud-yud and "Hashem" for abbreviated, English is left as the translation renders it; (b) other Divine Names (אֱלֹהִים etc.): out of scope unless the owner asks
-- [ ] **Siddur:** ✅ Pesukei Dezimra (19 units) and ✅ Shema and its Blessings (5 units), Metsudah he+en (ADR-012). ✅ Amidah (Metsudah, 24 units; Imahot note on Avot). ✅ Long prayers split by segment. ✅ Seed units replaced, ids kept.
+- [x] **Siddur:** ✅ Pesukei Dezimra (19 units) and ✅ Shema and its Blessings (5 units), Metsudah he+en (ADR-012). ✅ Amidah (Metsudah, 24 units; Imahot note on Avot). ✅ Long prayers split by segment. ✅ Seed units replaced, ids kept.
 - [x] **Musar:** Mesillat Yesharim (CC0 + CC-BY) in reading order, then Pirkei Avot (PD + CC-BY): 394 units. The daily rotation steps through them in order by date. ✅ Progress-tracked Musar path (`/v1/musar/next`, Musar tab)
 - [x] **Tanakh pool:** at least 60 units (70) so rotation doesn't repeat for two months
 - [x] Resolve deferred D2: replace or verify the Mesillat Yesharim seed quote; cite Chagigah 12a / Bereishit Rabbah 3:6 for the hidden-light unit
-- [ ] **Owner:** decide whether to draft commentary/kavannah for the 480 imported units that lack them (LLM drafts, all `verified: false` until approved), and review what exists. Commentary and kavannah prompts on imported units stay **owner-reviewed**. An LLM may draft them, but they're marked `verified: false` until the owner approves
+- [x] Drafts written for Siddur (53) and Tanakh (67), flagged in `reviewNote`; Musar left without (owner decision).
+- [ ] **Owner:** review the drafts and texts; tell the agent which entries to mark `verified: true` (never marked without the owner)
+- [ ] **Owner:** G2 phone checklist (docs/TESTING.md) once hosted, then release 0.5.0 Commentary and kavannah prompts on imported units stay **owner-reviewed**. An LLM may draft them, but they're marked `verified: false` until the owner approves
 - [x] `npm run content:report`: counts by type, unverified entries, NC-licensed entries, missing fields
 - [x] Content tests: required license/provenance fields; allowed licenses only; no HTML left in text; te'amim present only where the source has them
 - [x] Web: Settings gets the cantillation toggle and Divine Name selector; Hebrew font check (verified 2026-11-21) with te'amim (Noto Serif Hebrew supports them; verify visually)

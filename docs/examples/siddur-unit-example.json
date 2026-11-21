@@ -23,5 +23,8 @@
     },
     "importedAt": "2026-11-21T13:56:07.200Z"
   },
-  "verified": false
+  "commentary": "Psalm 30 opens the morning's psalms with thanksgiving after distress: weeping in the evening gives way to joy in the morning, and the psalmist ends, 'You have turned my mourning into dancing.'",
+  "kavannahPrompt": "Where in your own life has a night of difficulty already given way to a morning? Carry that memory into today's prayer.",
+  "verified": false,
+  "reviewNote": "Commentary and kavannah prompt are LLM drafts (2026-11-21), not yet reviewed by the owner."
 }
